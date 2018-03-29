@@ -1,12 +1,10 @@
 {
   "name": "NTH-start-project",
-  "version": "3.1.0",
-  "description": "Startkit for HTML/CSS/JS pages layout.",
+  "description": "",
   "author": "Nikolay Gromov",
-  "license": "WTFPL",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicothin/NTH-start-project.git"
+    "url": "https://github.com/nicothin/terranesia.git"
   },
   "scripts": {
     "test:style": "stylelint \"src/**/*.scss\" --syntax=scss",
