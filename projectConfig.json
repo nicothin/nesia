@@ -2,7 +2,13 @@
   "blocks": {
     "sprite-svg": [],
     "sprite-png": [],
-    "object-fit-polyfill": []
+    "object-fit-polyfill": [],
+    "b-page-header": [],
+    "b-burger": [],
+    "b-logo": [],
+    "b-main-nav": [],
+    "b-currency": [],
+    "b-language": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

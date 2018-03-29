@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js"> <!-- nicothin: Добавил класс no-js -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,6 +10,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet">
+    <!-- nicothin: Добавил новый стилевой файл -->
+    <link href="css/style-18-spring.min.css" rel="stylesheet">
+    <!-- /nicothin: Добавил новый стилевой файл -->
     <link href="css/jquery.formstyler.css" rel="stylesheet">
     <link href="css/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
     <script src="js/jquery-1.11.0.min.js"></script>
@@ -24,6 +27,10 @@
     <script src="js/jquery.Jcrop.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- nicothin: Добавил одну строку JS -->
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+    <!-- /nicothin: Добавил одну строку JS -->
   </head>
   <body id="body">
 
@@ -55,10 +62,11 @@
         }
       </style>
 
+      <!-- nicothin: Добавил новый хедер -->
       <header class="b-page-header">
         <div class="container-fluid">
 
-          <button class="b-burger" aria-label="Show menu" data-target-id="burger-code" data-target-class-toggle="TEST">
+          <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
             <span>Show menu</span>
           </button>
 
@@ -75,8 +83,8 @@
             </ul>
           </nav>
 
-          <div class="dropdown b-currency">
-            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">RUB</button>
+          <div class="dropdown  b-currency">
+            <button class="" type="button" data-toggle="dropdown">RUB</button>
             <ul class="dropdown-menu">
               <li>
                 <div class="cline">
@@ -153,8 +161,8 @@
             </ul>
           </div>
 
-          <div class="dropdown b-language">
-            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">RU</button>
+          <div class="dropdown  b-language">
+            <button class="" type="button" data-toggle="dropdown">RU</button>
             <ul class="dropdown-menu">
               <li>
                 <a href="#" onclick="change_language('en')">English</a>
@@ -174,9 +182,24 @@
             </ul>
           </div>
 
+          <div class="b-user">
+            <button class="b-user__login" type="button">
+              <span class="b-user__login-icon">Login</span>
+            </button>
+            <button class="b-user__drop" data-toggle="dropdown" type="button">
+              <img src="" alt="" class="b-user__avatar">
+              <span class="b-user__username">Newton</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>111</li>
+            </ul>
+          </div>
+
         </div>
       </header>
+      <!-- /nicothin: Добавил новый хедер -->
 
+      <!-- старая шапка
       <header>
         <div class="container-fluid">
           <div class="click_space"></div>
@@ -432,6 +455,7 @@
           </nav>
         </div>
       </header>
+      -->
 
       <div class="content">
         <div class="container-fluid">
@@ -472,6 +496,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- nicothin: Добавил новый скриптовой файл -->
+    <script src="js/script-18-spring.js"></script>
+    <!-- /nicothin: Добавил новый скриптовой файл -->
 
   </body>
 </html>

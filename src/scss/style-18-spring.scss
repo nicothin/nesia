@@ -9,17 +9,9 @@
 @import './src/scss/functions.scss';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
-@import './src/blocks/sprite-svg/sprite-svg.scss';
-@import './src/blocks/page-header/page-header.scss';
-@import './src/blocks/burger/burger.scss';
-@import './src/blocks/logo/logo.scss';
-@import './src/blocks/main-nav/main-nav.scss';
-@import './src/blocks/object-fit-polyfill/object-fit-polyfill.scss';
-/*!*
- * ВНИМАНИЕ! Этот файл генерируется автоматически.
- * Не пишите сюда ничего вручную, все такие правки будут потеряны при следующей компиляции.
- * Правки без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-3 раза.
- * Нужны дополнительные стили? Создайте новый css-файл и подключите его к странице.
- * Читайте ./README.md для понимания.
- */
-
+@import './src/blocks/b-page-header/b-page-header.scss';
+@import './src/blocks/b-burger/b-burger.scss';
+@import './src/blocks/b-logo/b-logo.scss';
+@import './src/blocks/b-main-nav/b-main-nav.scss';
+@import './src/blocks/b-currency/b-currency.scss';
+@import './src/blocks/b-language/b-language.scss';

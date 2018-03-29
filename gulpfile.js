@@ -40,7 +40,6 @@ let styleImports = styleFileMsg;
 lists.css.forEach(function(blockPath) {
   styleImports += '@import \''+blockPath+'\';\n';
 });
-styleImports = styleImports += styleFileMsg;
 fs.writeFileSync(dirs.srcPath + 'scss/style-18-spring.scss', styleImports);
 
 // Определение: разработка это или финальная сборка
@@ -260,7 +259,7 @@ gulp.task('js', function (callback) {
           this.emit('end');
         }
       }))
-      .pipe(concat('script.min.js'))
+      .pipe(concat('script-18-spring.js'))
       .pipe(gulpIf(!isDev, uglify().on('error', function(e){console.log(e);})))
       .pipe(size({
         title: 'Размер',
