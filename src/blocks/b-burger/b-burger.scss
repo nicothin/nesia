@@ -1,0 +1,74 @@
+// В этом файле должны быть стили для БЭМ-блока b-burger, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-burger {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 16px;
+  width: 50px;
+  line-height: 18px;
+  background: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+
+  > span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 2px;
+    font-size: 0;
+    color: transparent;
+    background: #fff;
+    transition: background 0.3s 0.3s;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      transform-origin: 50% 50%;
+      transition: top 0.3s 0.3s, transform 0.3s;
+    }
+
+    &:before {
+      top: -6px;
+    }
+
+    &:after {
+      top: 6px;
+    }
+  }
+
+  &--close {
+
+    > span {
+      transition: background 0.3s 0s;
+      background: transparent;
+
+      &:before,
+      &:after {
+        transition: top 0.3s, transform 0.3s 0.3s;
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

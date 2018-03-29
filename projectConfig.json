@@ -34,6 +34,7 @@
     "src/css/jquery-ui-1.10.0.custom.min.css"
   ],
   "copiedJs": [
+    "node_modules/picturefill/dist/picturefill.min.js",
     "src/js/analytics.js",
     "src/js/watch.js",
     "src/js/jquery-1.11.0.min.js",

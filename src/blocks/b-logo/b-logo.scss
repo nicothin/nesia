@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока b-logo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-logo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: 50px;
+  width: 60px;
+  padding-right: 5px;
+  background-color: #fff;
+
+  &__img {
+    display: block;
+    width: 31px;
+    height: 29px;
+
+    @media (min-width: $screen-md) {
+      width: 127px;
+      height: 29px;
+    }
+  }
+}
