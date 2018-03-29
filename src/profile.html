@@ -55,6 +55,128 @@
         }
       </style>
 
+      <header class="b-page-header">
+        <div class="container-fluid">
+
+          <button class="b-burger" aria-label="Show menu" data-target-id="burger-code" data-target-class-toggle="TEST">
+            <span>Show menu</span>
+          </button>
+
+          <a href="" class="b-logo">
+            <img src="img/logo.png" alt="" width="127" height="29">
+          </a>
+
+          <nav class="b-main-nav" id="nav">
+            <ul class="b-main-nav__list">
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить объект бесплатно</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
+            </ul>
+          </nav>
+
+          <div class="dropdown b-currency">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">RUB</button>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=US$">
+                    <div class="csymbol">US$</div>
+                    <div class="ctext">Доллар США</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=€">
+                    <div class="csymbol">€</div>
+                    <div class="ctext">Евро</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=RUB">
+                    <div class="csymbol">RUB</div>
+                    <div class="ctext">Рубль РФ</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=£">
+                    <div class="csymbol">£</div>
+                    <div class="ctext">Фунт стерлингов</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=CAD">
+                    <div class="csymbol">CAD</div>
+                    <div class="ctext">Канадский доллар</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=AUD">
+                    <div class="csymbol">AUD</div>
+                    <div class="ctext">Австралийский доллар</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=CNY">
+                    <div class="csymbol">CNY</div>
+                    <div class="ctext">Китайский юань</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=TL">
+                    <div class="csymbol">TL</div>
+                    <div class="ctext">Турецкая лира</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="cline">
+                  <a href="?change_currency_to=UAH">
+                    <div class="csymbol">UAH</div>
+                    <div class="ctext">Украинская гривна</div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="dropdown b-language">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">RU</button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" onclick="change_language('en')">English</a>
+              </li>
+              <li>
+                <a href="#" onclick="change_language('ru')">Русский</a>
+              </li>
+              <li>
+                <a href="#" onclick="change_language('ua')">Українська</a>
+              </li>
+              <li>
+                <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+              </li>
+              <li>
+                <a href="#" onclick="change_language('rs')">Srpski</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </header>
+
       <header>
         <div class="container-fluid">
           <div class="click_space"></div>
@@ -68,7 +190,6 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="/">
-                <img src="img/logo.png" alt="" width="127" height="29">
               </a>
               <div class="dropdown language mobile">
                 <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">RU</button>

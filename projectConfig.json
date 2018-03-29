@@ -1,7 +1,7 @@
 {
   "blocks": {
     "sprite-svg": [],
-    "page-header": [],
+    "sprite-png": [],
     "object-fit-polyfill": []
   },
   "addCssBefore": [
