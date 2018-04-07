@@ -1,0 +1,10 @@
+// В этом файле должны быть стили для БЭМ-блока b-user, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-user {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+}
