@@ -2,9 +2,15 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.b-user {
+.dropdown-menu {
 
   $block-name:                &; // #{$block-name}__element
 
-  display: block;
+  &__link {
+    transition: color;
+
+    &:hover {
+      color: #98c12f;
+    }
+  }
 }
