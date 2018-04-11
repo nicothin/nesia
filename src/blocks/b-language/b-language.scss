@@ -1,8 +1,39 @@
-// В этом файле должны быть стили для БЭМ-блока b-language, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока b-language, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .b-language {
 
   $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  transition: all 0.3s;
+
+  &.open {
+    background-color: $color-main--dark;
+  }
+
+  &__btn {
+    display: inline-block;
+    border: 0;
+    padding: 0 20px 0 10px;
+    overflow: hidden;
+    line-height: 50px;
+    background: transparent;
+    color: #fff;
+    white-space: nowrap;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 7px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 4px 0 4px;
+      border-color: $gray-lightest-2 transparent transparent transparent;
+    }
+  }
 }

@@ -6,20 +6,136 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  overflow-x: hidden;
+
   .js & {
     // display: none;
   }
 
-  @media (max-width: ($screen-md - 1)) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-  }
-
   &__list {
+    position: relative;
+    z-index: 2;
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (max-width: ($screen-md - 1)) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      max-width: 480px;
+      padding-top: 4px;
+      background-color: #fff;
+      transform: translateX(-101%);
+      // transition: transform 0.2s;
+
+      #{$block-name}--show & {
+        transform: translateX(0);
+        transition: transform 0.2s 0.2s;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      padding-left: 10px;
+    }
   }
+
+  &__item {
+    position: relative;
+
+    @media (max-width: ($screen-md - 1)) {
+
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        height: 1px;
+        background: $gray-lightest;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    @media (max-width: ($screen-md - 1)) {
+      padding: 13px 15px;
+      font-size: $font-size;
+      color: $color-main;
+
+      &:hover,
+      &:focus {
+        color: $color-main--dark;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+      line-height: 24px;
+      padding: 13px 11px;
+      color: #fff;
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: $color-main--dark;
+      }
+
+      #{$block-name}__item:not(:last-child) & {
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 13px;
+          right: 0;
+          bottom: 13px;
+          width: 1px;
+          background-color: $color-main--dark;
+        }
+      }
+    }
+  }
+
+  &__link-long-text {
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: inline;
+    }
+  }
+
+  &__backdrop {
+
+    @media (max-width: ($screen-md - 1)) {
+      position: fixed;
+      z-index: 1;
+      top: 50px;
+      left: 0;
+      background: rgba(0,0,0,0.65);
+      opacity: 0;
+      transition: opacity 0.3s;
+
+      #{$block-name}--show & {
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+
 }

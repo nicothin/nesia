@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js"> <!-- nicothin: Добавил класс no-js -->
+<html class="no-js"> <!-- nicothin: Добавил класс no-js b  -->
   <head>
 
     <meta charset="utf-8">
@@ -61,18 +61,19 @@
             </picture>
           </a>
 
-          <nav class="b-main-nav" id="nav">
+          <nav class="b-page-header__nav  b-main-nav" id="nav">
             <ul class="b-main-nav__list">
               <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
               <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить объект бесплатно</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить<span class="b-main-nav__link-long-text"> объект бесплатно</span></a></li>
               <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
             </ul>
+            <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
           </nav>
 
           <div class="dropdown  b-currency">
-            <button class="" type="button" data-toggle="dropdown">RUB</button>
-            <ul class="dropdown-menu">
+            <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+            <ul class="dropdown-menu b-dropdown">
               <li>
                 <div class="cline">
                   <a href="?change_currency_to=US$">
@@ -149,8 +150,8 @@
           </div>
 
           <div class="dropdown  b-language">
-            <button class="" type="button" data-toggle="dropdown">RU</button>
-            <ul class="dropdown-menu">
+            <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+            <ul class="dropdown-menu b-dropdown">
               <li>
                 <a href="#" onclick="change_language('en')">English</a>
               </li>

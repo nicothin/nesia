@@ -1,0 +1,64 @@
+// В этом файле должны быть стили для БЭМ-блока b-dropdown, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-dropdown {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  box-shadow: none;
+  // border: none;
+  border-radius: 0;
+  transition: opacity 0.3s;
+
+  .open & {
+    width: auto;
+    height: auto;
+    padding: 3px 0;
+    opacity: 1;
+    background: #fff;
+  }
+
+  a {
+    padding: 8px 15px !important; // тут и ниже: перебивать стили по умолчанию
+    line-height: 1 !important;
+    color: inherit !important;
+    text-decoration: none !important;
+
+    &:hover,
+    &:focus {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $gray-lightest-2 !important;
+    }
+  }
+
+  .cline {
+    font-size: $font-size;
+    padding: 0;
+    height: auto;
+    color: $text-color;
+  }
+
+  .cline a {
+    display: flex;
+  }
+
+  .csymbol {
+    color: inherit;
+  }
+
+  .ctext {
+    text-decoration: none !important;
+  }
+}

@@ -30,5 +30,16 @@
 
   &__logo {
     margin-right: auto;
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+    }
+  }
+
+  &__nav {
+
+    @media (min-width: $screen-md) {
+      margin-right: auto;
+    }
   }
 }

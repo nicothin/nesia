@@ -3,8 +3,11 @@
 $gray-dark:                   #535353;
 $gray:                        hsl(0, 0%, 50%);
 $gray-lightest:               #e9e9e9;
+$gray-lightest-2:             #f0f0f0;
 
 $color-main:                  #98c12f;
+$color-main--dark:            #8ab125;
+$color-main--light:           #cbec77;
 $color-second:                #d84b2a;
 $color-second--light:         #e16042;
 
@@ -24,13 +27,11 @@ $border-color:                $gray-lightest;
 
 // Базовая типографика
 
-$font-size--root:             14px;
+$font-size:                   14px;
 
-$font-size:                   1rem; // rem(16px)
-
-$font-size--h1:               rem(36px);
-$font-size--h2:               rem(19px);
-$font-size--h3:               rem(16px);
+$font-size--h1:               36px;
+$font-size--h2:               19px;
+$font-size--h3:               16px;
 
 $font-size--small:            80%;
 
@@ -44,7 +45,7 @@ $font-family:                 Roboto, sans-serif;
 
 $screen-xs:                   0;
 $screen-sm:                   480px;
-$screen-md:                   769px;
+$screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1200px;
 

@@ -9,7 +9,8 @@
     "b-main-nav": [],
     "b-currency": [],
     "b-language": [],
-    "b-user": []
+    "b-user": [],
+    "b-dropdown": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
