@@ -73,16 +73,16 @@
 
           <div class="b-page-header__settings">
 
-            <!-- Юзер не авторизован -->
+            <!-- Юзер не авторизован
             <div class="b-user">
               <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
                 <svg width="20" height="20">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
                 </svg>
               </button>
-            </div>
+            </div> -->
 
-            <!-- Юзер авторизован
+            <!-- Юзер авторизован -->
             <div class="b-user" id="b-user-drop">
               <button class="b-user__drop" data-toggle="dropdown" type="button">
                 <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
@@ -144,7 +144,7 @@
                   </a>
                 </li>
               </ul>
-            </div> -->
+            </div>
 
             <div class="dropdown  b-currency">
               <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
@@ -499,6 +499,36 @@
 
         </div>
       </div>
+    </div>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="alert">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              Текст вопроса, задаваемого пользователю. Может быть длинным и раскидистым.
+            </h4>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn  btn-default  b-btn" data-dismiss="modal">Да</button>
+            <button class="btn  btn-success  b-btn" data-dismiss="modal">Нет</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0.5em;
+    background-color: #fff;">
+      <a href="#alert" data-toggle="modal">alert</a>
+      <a href="#reg" data-toggle="modal">reg</a>
+      <a href="#login" data-toggle="modal">login</a>
     </div>
 
     <!-- nicothin: Добавил новый скриптовой файл -->

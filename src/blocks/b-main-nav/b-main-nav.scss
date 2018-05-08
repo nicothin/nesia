@@ -25,11 +25,14 @@
       left: 0;
       width: 100%;
       max-width: 480px;
+      height: 0;
+      overflow: hidden;
       padding-top: 4px;
       background-color: #fff;
       opacity: 0;
 
       #{$block-name}--show & {
+        height: auto;
         opacity: 1;
         transition: opacity 0.2s;
       }
