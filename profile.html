@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js"> <!-- nicothin: Добавил класс no-js b  -->
+<html class="no-js"> <!-- nicothin: Добавил класс no-js -->
   <head>
 
     <meta charset="utf-8">
@@ -71,116 +71,180 @@
             <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
           </nav>
 
-          <div class="dropdown  b-currency">
-            <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
-            <ul class="dropdown-menu b-dropdown">
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=US$">
-                    <div class="csymbol">US$</div>
-                    <div class="ctext">Доллар США</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=€">
-                    <div class="csymbol">€</div>
-                    <div class="ctext">Евро</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=RUB">
-                    <div class="csymbol">RUB</div>
-                    <div class="ctext">Рубль РФ</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=£">
-                    <div class="csymbol">£</div>
-                    <div class="ctext">Фунт стерлингов</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=CAD">
-                    <div class="csymbol">CAD</div>
-                    <div class="ctext">Канадский доллар</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=AUD">
-                    <div class="csymbol">AUD</div>
-                    <div class="ctext">Австралийский доллар</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=CNY">
-                    <div class="csymbol">CNY</div>
-                    <div class="ctext">Китайский юань</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=TL">
-                    <div class="csymbol">TL</div>
-                    <div class="ctext">Турецкая лира</div>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="cline">
-                  <a href="?change_currency_to=UAH">
-                    <div class="csymbol">UAH</div>
-                    <div class="ctext">Украинская гривна</div>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
+          <div class="b-page-header__settings">
 
-          <div class="dropdown  b-language">
-            <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
-            <ul class="dropdown-menu b-dropdown">
-              <li>
-                <a href="#" onclick="change_language('en')">English</a>
-              </li>
-              <li>
-                <a href="#" onclick="change_language('ru')">Русский</a>
-              </li>
-              <li>
-                <a href="#" onclick="change_language('ua')">Українська</a>
-              </li>
-              <li>
-                <a href="#" onclick="change_language('gr')">Ελληνικά</a>
-              </li>
-              <li>
-                <a href="#" onclick="change_language('rs')">Srpski</a>
-              </li>
-            </ul>
-          </div>
+            <!-- Юзер не авторизован -->
+            <div class="b-user">
+              <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
+                <svg width="20" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
+                </svg>
+              </button>
+            </div>
 
-          <div class="b-user">
-            <button class="b-user__login" type="button">
-              <span class="b-user__login-icon">Login</span>
-            </button>
-            <button class="b-user__drop" data-toggle="dropdown" type="button">
-              <img src="" alt="" class="b-user__avatar">
-              <span class="b-user__username">Newton</span>
-            </button>
-            <ul class="dropdown-menu">
-              <li>111</li>
-            </ul>
+            <!-- Юзер авторизован
+            <div class="b-user" id="b-user-drop">
+              <button class="b-user__drop" data-toggle="dropdown" type="button">
+                <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
+                <span class="b-user__username">Yevheniy</span>
+              </button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-user__dropdown">
+                <li>
+                  <a href="" class="b-user__link  b-user__link--divider">
+                    <svg class="b-user__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home"></use>
+                    </svg>
+                    <span class="b-user__link-text">Мой кабинет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user__link">
+                    <svg class="b-user__link-icon  b-user__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-comments"></use>
+                    </svg>
+                    <span class="b-user__link-text">Сообщения</span>
+                    <span class="b-label  b-user__link-label">99+</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user__link  b-user__link--divider">
+                    <svg class="b-user__link-icon  b-user__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
+                    </svg>
+                    <span class="b-user__link-text">Фолловинг</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user__link">
+                    <svg class="b-user__link-icon  b-user__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-reviews"></use>
+                    </svg>
+                    <span class="b-user__link-text">Получить отзывы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user__link">
+                    <svg class="b-user__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-share"></use>
+                    </svg>
+                    <span class="b-user__link-text">Поделиться объектом</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user__link  b-user__link--divider">
+                    <svg class="b-user__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-add"></use>
+                    </svg>
+                    <span class="b-user__link-text">Добавить объект</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user__link  b-user__link--no-icon">
+                    <span class="b-user__link-text">Выйти</span>
+                  </a>
+                </li>
+              </ul>
+            </div> -->
+
+            <div class="dropdown  b-currency">
+              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=US$">
+                      <div class="csymbol">US$</div>
+                      <div class="ctext">Доллар США</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=€">
+                      <div class="csymbol">€</div>
+                      <div class="ctext">Евро</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=RUB">
+                      <div class="csymbol">RUB</div>
+                      <div class="ctext">Рубль РФ</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=£">
+                      <div class="csymbol">£</div>
+                      <div class="ctext">Фунт стерлингов</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CAD">
+                      <div class="csymbol">CAD</div>
+                      <div class="ctext">Канадский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=AUD">
+                      <div class="csymbol">AUD</div>
+                      <div class="ctext">Австралийский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CNY">
+                      <div class="csymbol">CNY</div>
+                      <div class="ctext">Китайский юань</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=TL">
+                      <div class="csymbol">TL</div>
+                      <div class="ctext">Турецкая лира</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=UAH">
+                      <div class="csymbol">UAH</div>
+                      <div class="ctext">Украинская гривна</div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown  b-language">
+              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <a href="#" onclick="change_language('en')">English</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ru')">Русский</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ua')">Українська</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('rs')">Srpski</a>
+                </li>
+              </ul>
+            </div>
+
           </div>
 
         </div>
@@ -226,6 +290,217 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <!-- Раскомментить, чтоб появилась кнопка «Назад»
+              <a href="" class="b-modal__back-btn">
+                <svg width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-left-arrow"></use>
+                </svg>
+              </a> -->
+              <div class="b-modal__title-inner">
+                Добавьте свои данные
+                <small>и пользуйтесь Терранезией бесплатно</small>
+              </div>
+            </h4>
+          </div>
+
+          <!-- Первый шаг -->
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="email" class="form-control  b-form-control" placeholder="Email">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Продолжить</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Второй шаг
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-user-avatar">
+                  <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
+                  <div class="b-user-avatar__name">Исаак Ньютон</div>
+                  <a href="mailto:test@test.ru" class="b-user-avatar__email">test@test.ru</a>
+                </div>
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div> -->
+
+          <!-- Третий шаг
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Придумайте пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="login">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <div class="b-modal__title-inner">
+                Вход в личный кабинет
+              </div>
+            </h4>
+          </div>
+
+          <!-- Первый шаг -->
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-modal__field-group">
+                  <input type="email" class="form-control  b-form-control" placeholder="Email">
+                  <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                </div>
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox  b-modal__gray-checkbox--mb0">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <!-- nicothin: Добавил новый скриптовой файл -->
     <script src="js/script-18-spring.js"></script>

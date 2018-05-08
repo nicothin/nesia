@@ -379,25 +379,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
-// Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
+$( document ).ready(function() {
 
-// Изоляция без jQuery
-// (function(){
-//   // code
-// }());
+  // Меню юзера: мегадизайнер мегадизайнерит
+  $('#b-user-drop').on('show.bs.dropdown', function(){
+    $(this).after('<div class="b-user__backdrop" id="b-user-backdrop" />');
+  });
+  $('#b-user-drop').on('hide.bs.dropdown', function(){
+    $('#b-user-backdrop').remove();
+  });
 
-// На проекте нет jQuery, но хочется $( document ).ready...
-// function ready(fn) {
-//   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-//     fn();
-//   } else {
-//     document.addEventListener('DOMContentLoaded', fn);
-//   }
-// }
-//
-// ready(function(){
-//   // code
-// });
+});
+
