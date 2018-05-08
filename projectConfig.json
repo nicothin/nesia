@@ -11,7 +11,13 @@
     "b-language": [],
     "b-user": [],
     "b-dropdown": [],
-    "b-label": []
+    "b-label": [],
+    "b-modal": [],
+    "b-btn": [],
+    "b-form-control": [],
+    "b-or": [],
+    "b-social": [],
+    "b-user-avatar": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

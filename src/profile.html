@@ -73,16 +73,16 @@
 
           <div class="b-page-header__settings">
 
-            <!--
+            <!-- Юзер не авторизован -->
             <div class="b-user">
-              <button class="b-user__login" type="button" title="Log in">
+              <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
                 <svg width="20" height="20">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
                 </svg>
               </button>
             </div>
-            -->
 
+            <!-- Юзер авторизован
             <div class="b-user" id="b-user-drop">
               <button class="b-user__drop" data-toggle="dropdown" type="button">
                 <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
@@ -144,7 +144,7 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
             <div class="dropdown  b-currency">
               <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
@@ -290,6 +290,217 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <!-- Раскомментить, чтоб появилась кнопка «Назад»
+              <a href="" class="b-modal__back-btn">
+                <svg width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-left-arrow"></use>
+                </svg>
+              </a> -->
+              <div class="b-modal__title-inner">
+                Добавьте свои данные
+                <small>и пользуйтесь Терранезией бесплатно</small>
+              </div>
+            </h4>
+          </div>
+
+          <!-- Первый шаг -->
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="email" class="form-control  b-form-control" placeholder="Email">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Продолжить</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Второй шаг
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-user-avatar">
+                  <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
+                  <div class="b-user-avatar__name">Исаак Ньютон</div>
+                  <a href="mailto:test@test.ru" class="b-user-avatar__email">test@test.ru</a>
+                </div>
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div> -->
+
+          <!-- Третий шаг
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Придумайте пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="login">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <div class="b-modal__title-inner">
+                Вход в личный кабинет
+              </div>
+            </h4>
+          </div>
+
+          <!-- Первый шаг -->
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-modal__field-group">
+                  <input type="email" class="form-control  b-form-control" placeholder="Email">
+                  <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                </div>
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox  b-modal__gray-checkbox--mb0">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <!-- nicothin: Добавил новый скриптовой файл -->
     <script src="js/script-18-spring.js"></script>

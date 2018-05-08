@@ -1,0 +1,51 @@
+// В этом файле должны быть стили для БЭМ-блока b-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 10px 12px !important;
+  height: 40px !important;
+
+  &__icon {
+    fill: #fff;
+  }
+
+
+
+  &--vk {
+    position: relative;
+    display: block;
+    width: 130px;
+    padding-left: 40px !important;
+    border: none;
+    background-color: #4d75a3 !important;
+    color: #fff !important;
+
+    #{$block-name}__icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--fb {
+    position: relative;
+    display: block;
+    width: 130px;
+    padding-left: 40px !important;
+    border: none;
+    background-color: #3b5998 !important;
+    color: #fff !important;
+
+    #{$block-name}__icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока b-user-avatar, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-user-avatar {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 15px;
+  text-align: center;
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    color: #000;
+    line-height: 1;
+  }
+
+  &__email {
+    font-size: 12px;
+    color: $text-color !important;
+  }
+}

@@ -59,6 +59,13 @@
     }
   }
 
+  &__avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
   &__username {
     display: none;
 
