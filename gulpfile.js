@@ -336,6 +336,7 @@ gulp.task('serve', gulp.series('build', function() {
     port: 8080,
     startPath: 'index.html',
     open: false,
+    notify: false,
   });
 
   // Стили
