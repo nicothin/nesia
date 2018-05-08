@@ -1,0 +1,34 @@
+// В этом файле должны быть стили для БЭМ-блока b-mobile-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-mobile-header {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  margin: 0 -15px 10px;
+  padding: 9px 15px;
+  color: $gray-light;
+  background: $gray-lightest;
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+
+  a {
+    color: $color-main;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-main--dark;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-right: auto;
+  }
+}
