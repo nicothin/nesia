@@ -155,6 +155,10 @@
   &__title-inner {
     max-width: 290px;
     margin: auto;
+
+    @media (min-width: $screen-sm) {
+      display: block;
+    }
   }
 
   &__back-btn {
@@ -172,6 +176,10 @@
       top: 42px;
       left: 50%;
       transform: translateX(-195px);
+    }
+
+    @media (min-width: $screen-md) {
+      top: 14px;
     }
   }
 

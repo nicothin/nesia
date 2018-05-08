@@ -253,7 +253,41 @@
 
       <div class="content">
         <div class="container-fluid">
-          111
+          <h1 class="b-main-header">Мой кабинет</h1>
+          <div class="row">
+            <div class="col-xs-12  col-sm-4">
+              <div class="b-mobile-header">
+                <div class="b-mobile-header__title">Информация</div>
+                <a href="" class="b-mobile-header__edit">Редактировать</a>
+              </div>
+              <div class="b-user-avatar  b-user-avatar--profile">
+                <div class="b-user-avatar__img-wrap">
+                  <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
+                  <button class="b-user-avatar__new-img">
+                    <svg width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-camera"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="b-user-avatar__descr">
+                  <div class="b-user-avatar__name"><strong>Исаак Ньютон</strong></div>
+                  <span class="b-user-avatar__name-descr">Дизайнер физики</span>
+                </div>
+              </div>
+              <div class="b-progress">
+                <div class="b-progress__text">Заполнение профиля</div>
+                <div class="b-progress__line">
+                  <div class="b-progress__num" style="width:68%">68%</div>
+                </div>
+                <div class="b-progress__action">Укажите номер телефона (+12%)</div>
+              </div>
+            </div>
+            <div class="col-xs-12  col-sm-8">
+              <div class="b-mobile-header">
+                <div class="b-mobile-header__title">Объекты</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -297,16 +331,15 @@
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title">
-              <!-- Раскомментить, чтоб появилась кнопка «Назад»
               <a href="" class="b-modal__back-btn">
                 <svg width="24" height="24">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-left-arrow"></use>
                 </svg>
-              </a> -->
-              <div class="b-modal__title-inner">
+              </a>
+              <span class="b-modal__title-inner">
                 Добавьте свои данные
                 <small>и пользуйтесь Терранезией бесплатно</small>
-              </div>
+              </span>
             </h4>
           </div>
 
@@ -356,12 +389,11 @@
 
           </div>
 
-          <!-- Второй шаг
           <div class="b-modal__step">
 
             <form class="modal-body">
               <div class="b-modal__form">
-                <div class="b-user-avatar">
+                <div class="b-user-avatar  b-user-avatar">
                   <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
                   <div class="b-user-avatar__name">Исаак Ньютон</div>
                   <a href="mailto:test@test.ru" class="b-user-avatar__email">test@test.ru</a>
@@ -383,9 +415,8 @@
               </div>
             </form>
 
-          </div> -->
+          </div>
 
-          <!-- Третий шаг
           <div class="b-modal__step">
 
             <form class="modal-body">
@@ -429,7 +460,7 @@
               </a>
             </div>
 
-          </div> -->
+          </div>
 
         </div>
       </div>
@@ -441,9 +472,9 @@
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title">
-              <div class="b-modal__title-inner">
+              <span class="b-modal__title-inner">
                 Вход в личный кабинет
-              </div>
+              </span>
             </h4>
           </div>
 
@@ -512,6 +543,10 @@
             </h4>
           </div>
 
+          <div class="modal-body">
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вершину своего пояс себя имени строчка рукопись вскоре прямо семь, наш грустный, коварный курсивных рот диких страну, предупредила. Сбить, семантика.</p>
+          </div>
+
           <div class="modal-footer">
             <button class="btn  btn-default  b-btn" data-dismiss="modal">Да</button>
             <button class="btn  btn-success  b-btn" data-dismiss="modal">Нет</button>
@@ -521,11 +556,7 @@
       </div>
     </div>
 
-    <div style="position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 0.5em;
-    background-color: #fff;">
+    <div style="position: fixed;bottom: 0;right: 0;padding: 0.5em;background-color: #fff;">
       <a href="#alert" data-toggle="modal">alert</a>
       <a href="#reg" data-toggle="modal">reg</a>
       <a href="#login" data-toggle="modal">login</a>

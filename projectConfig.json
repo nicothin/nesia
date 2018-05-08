@@ -17,7 +17,10 @@
     "b-form-control": [],
     "b-or": [],
     "b-social": [],
-    "b-user-avatar": []
+    "b-user-avatar": [],
+    "b-main-header": [],
+    "b-mobile-header": [],
+    "b-progress": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
