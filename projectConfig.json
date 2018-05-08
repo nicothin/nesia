@@ -10,7 +10,8 @@
     "b-currency": [],
     "b-language": [],
     "b-user": [],
-    "b-dropdown": []
+    "b-dropdown": [],
+    "b-label": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

@@ -27,17 +27,18 @@
       max-width: 480px;
       padding-top: 4px;
       background-color: #fff;
-      transform: translateX(-101%);
-      // transition: transform 0.2s;
+      opacity: 0;
 
       #{$block-name}--show & {
-        transform: translateX(0);
-        transition: transform 0.2s 0.2s;
+        opacity: 1;
+        transition: opacity 0.2s;
       }
     }
 
     @media (min-width: $screen-md) {
       display: flex;
+      // flex-wrap: wrap;
+      max-height: 50px;
       padding-left: 10px;
     }
   }

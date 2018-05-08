@@ -1,0 +1,15 @@
+// В этом файле должны быть стили для БЭМ-блока b-label, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-label {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline;
+  padding: 1px 5px;
+  border-radius: 3px;
+  line-height: 1;
+  color: #fff;
+  background-color: $color-second;
+}

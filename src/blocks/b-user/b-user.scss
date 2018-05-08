@@ -2,15 +2,150 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.dropdown-menu {
+.b-user {
 
   $block-name:                &; // #{$block-name}__element
 
-  &__link {
-    transition: color;
+  position: relative;
+  margin-left: 5px;
+  order: 2;
 
-    &:hover {
-      color: #98c12f;
+  &__login {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 50px;
+    background: none;
+    outline: none;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: #fff;
+    }
+  }
+
+  &__drop {
+    position: relative;
+    height: 50px;
+    border: 0;
+    padding: 0 30px 0 10px;
+    margin: 0;
+    line-height: 50px;
+    background: none;
+    color: #fff;
+    transition: all 0.3s;
+    outline: none;
+
+    .open &,
+    &:focus {
+      background-color: $color-main--dark;
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 7px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 4px 0 4px;
+      border-color: $gray-lightest-2 transparent transparent transparent;
+    }
+  }
+
+  &__username {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 55px;
+      margin-left: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .b-dropdown &__link {
+    display: block;
+    position: relative;
+    min-height: 48px;
+    max-width: 480px;
+    padding-left: 50px !important;
+    padding-top: 17px !important;
+
+    &--divider {
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        bottom: 0;
+        height: 1px;
+        background: $gray-lightest;
+      }
+    }
+
+    &--no-icon {
+      padding-left: 15px !important;
+    }
+  }
+
+  &__link-icon {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    fill: $color-second--light;
+    opacity: 0.75;
+
+    &--to-down {
+      top: 14px;
+    }
+  }
+
+  &__link-text {
+    white-space: normal;
+  }
+
+  &__dropdown {
+    min-width: 240px;
+    max-width: 480px !important;
+
+    @media (max-width: ($screen-md - 1)) {
+      width: 100vw !important;
+      max-width: 480px !important;
+      margin: 0;
+    }
+  }
+
+  &__link-label {
+    margin-left: 20px;
+  }
+
+  &__backdrop {
+
+    @media (max-width: ($screen-md - 1)) {
+      position: fixed;
+      z-index: 1;
+      top: 50px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0,0,0,0.65);
+      opacity: 0;
+      animation: usermenu-backgrop-opa 0.3s 1 forwards;
+
+      @keyframes usermenu-backgrop-opa {
+        to { opacity: 1; }
+      }
     }
   }
 }

@@ -9,7 +9,8 @@
   position: relative;
   transition: all 0.3s;
 
-  &.open {
+  &.open,
+  &:focus {
     background-color: $color-main--dark;
   }
 
@@ -22,6 +23,7 @@
     background: transparent;
     color: #fff;
     white-space: nowrap;
+    outline: none;
 
     &:after {
       position: absolute;
