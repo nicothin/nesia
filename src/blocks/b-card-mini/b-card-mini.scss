@@ -1,0 +1,88 @@
+// В этом файле должны быть стили для БЭМ-блока b-card-mini, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-card-mini {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 18px 15px 0;
+  border-top: 1px solid $gray-lightest;
+  border-bottom: 1px solid $gray-lightest;
+  text-align: left;
+
+  &__img-wrap {
+    width: 145px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    display: block;
+    width: 145px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  &__text-wrap {
+    position: relative;
+    width: calc(100% - 160px);
+  }
+
+  &__type {
+    margin-bottom: 14px;
+    margin-right: 25px;
+    color: #000;
+    line-height: 1;
+  }
+
+  &__address {
+    display: block;
+    margin: 0 0 4px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: $font-size;
+    font-weight: 400;
+    color: $color-second;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__descr {
+    font-size: $font-size--small;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: $font-size--h3;
+  }
+
+  &__drop-wrap {
+    position: absolute;
+    top: -8px;
+    right: 0;
+  }
+
+  &__footer {
+    width: 100%;
+    margin: 0;
+    min-height: auto;
+    background: transparent;
+  }
+
+  &__edit {
+  }
+
+  &__stats {
+    width: 100%;
+  }
+}

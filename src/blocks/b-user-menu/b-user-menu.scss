@@ -1,0 +1,78 @@
+// В этом файле должны быть стили для БЭМ-блока b-user-menu, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-user-menu {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  #{$block-name} &__link {
+    display: block;
+    position: relative;
+    min-height: 48px;
+    max-width: 480px;
+    padding: 17px 10px 17px 50px !important;
+    color: $text-color;
+    line-height: 1 !important;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+      text-decoration: none;
+      background-color: $gray-lightest-2;
+    }
+
+    &--divider {
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        bottom: 0;
+        height: 1px;
+        background: $gray-lightest;
+      }
+    }
+
+    &--no-icon {
+      padding-left: 15px !important;
+    }
+  }
+
+  &__link-icon {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    fill: $color-second--light;
+    opacity: 0.75;
+
+    &--to-down {
+      top: 14px;
+    }
+  }
+
+  &__link-text {
+    white-space: normal;
+  }
+
+  &__dropdown {
+    min-width: 240px;
+    max-width: 480px !important;
+
+    @media (max-width: ($screen-md - 1)) {
+      width: 100vw !important;
+      max-width: 480px !important;
+      margin: 0;
+    }
+  }
+
+  &__link-label {
+    margin-left: 20px;
+  }
+}

@@ -80,49 +80,7 @@
     }
   }
 
-  .b-dropdown &__link {
-    display: block;
-    position: relative;
-    min-height: 48px;
-    max-width: 480px;
-    padding-left: 50px !important;
-    padding-top: 17px !important;
-
-    &--divider {
-
-      &:after {
-        content: '';
-        position: absolute;
-        right: 15px;
-        left: 15px;
-        bottom: 0;
-        height: 1px;
-        background: $gray-lightest;
-      }
-    }
-
-    &--no-icon {
-      padding-left: 15px !important;
-    }
-  }
-
-  &__link-icon {
-    position: absolute;
-    top: 12px;
-    left: 15px;
-    fill: $color-second--light;
-    opacity: 0.75;
-
-    &--to-down {
-      top: 14px;
-    }
-  }
-
-  &__link-text {
-    white-space: normal;
-  }
-
-  &__dropdown {
+  &__menu {
     min-width: 240px;
     max-width: 480px !important;
 
@@ -133,9 +91,6 @@
     }
   }
 
-  &__link-label {
-    margin-left: 20px;
-  }
 
   &__backdrop {
 

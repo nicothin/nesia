@@ -1,5 +1,6 @@
 {
   "blocks": {
+    "b-page": [],
     "sprite-svg": [],
     "sprite-png": [],
     "object-fit-polyfill": [],
@@ -20,7 +21,14 @@
     "b-user-avatar": [],
     "b-main-header": [],
     "b-mobile-header": [],
-    "b-progress": []
+    "b-progress": [],
+    "b-profile": [],
+    "b-user-menu": [],
+    "b-tabs": [],
+    "b-card-mini": [],
+    "b-card-list": [],
+    "b-drop-more": [],
+    "b-stats": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

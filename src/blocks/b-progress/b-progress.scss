@@ -6,12 +6,14 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  margin-bottom: 10px;
+
   &__line {
     position: relative;
     width: 100%;
     height: 16px;
     border: 1px solid $gray-lightest;
-    border-radius: 8px;
+    border-radius: 7px;
   }
 
   &__num {
@@ -20,8 +22,16 @@
     font-size: 12px;
     font-weight: 700;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 6px;
     color: #fff;
     background: $color-main;
+  }
+
+  &__action {
+    display: block;
+    padding: 6px 0 0;
+    font-size: $font-size--small;
+    line-height: $line-height;
+    color: $color-main;
   }
 }

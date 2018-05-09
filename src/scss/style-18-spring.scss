@@ -9,6 +9,7 @@
 @import './src/scss/functions.scss';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
+@import './src/blocks/b-page/b-page.scss';
 @import './src/blocks/b-page-header/b-page-header.scss';
 @import './src/blocks/b-burger/b-burger.scss';
 @import './src/blocks/b-logo/b-logo.scss';
@@ -27,3 +28,10 @@
 @import './src/blocks/b-main-header/b-main-header.scss';
 @import './src/blocks/b-mobile-header/b-mobile-header.scss';
 @import './src/blocks/b-progress/b-progress.scss';
+@import './src/blocks/b-profile/b-profile.scss';
+@import './src/blocks/b-user-menu/b-user-menu.scss';
+@import './src/blocks/b-tabs/b-tabs.scss';
+@import './src/blocks/b-card-mini/b-card-mini.scss';
+@import './src/blocks/b-card-list/b-card-list.scss';
+@import './src/blocks/b-drop-more/b-drop-more.scss';
+@import './src/blocks/b-stats/b-stats.scss';

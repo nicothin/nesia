@@ -1,0 +1,36 @@
+// В этом файле должны быть стили для БЭМ-блока b-profile, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-profile {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__user-menu {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-top: 20px;
+      border: 1px solid $gray-lightest;
+      border-radius: 3px;
+    }
+  }
+
+  &__top {
+
+    @media (min-width: $screen-md) {
+      padding: 28px 18px 18px;
+      border: 1px solid $gray-lightest;
+      border-radius: 3px;
+    }
+  }
+
+  &__progress {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+}

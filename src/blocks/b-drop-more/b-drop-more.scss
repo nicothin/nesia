@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока b-drop-more, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-drop-more {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__btn {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: $gray-light-2;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    border: 1px solid $gray-lightest;
+    border-radius: 3px;
+    opacity: 0;
+    background: #fcfcfc;
+    box-shadow: 1px 0 6px rgba(0,0,0,0.08);
+    transition: opacity 0.3s;
+
+    .open & {
+      height: auto;
+      width: 170px;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--divider {
+      margin-bottom: 7px;
+      padding-bottom: 7px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        height: 1px;
+        background: $gray-lightest;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 2px 15px;
+    font-size: $font-size--small;
+    color: $text-color;
+
+    &:hover,
+    &:focus {
+      color: $text-color;
+      text-decoration: none;
+      background-color: $gray-lightest;
+    }
+  }
+}

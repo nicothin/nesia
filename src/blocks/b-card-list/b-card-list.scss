@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока b-card-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-card-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 20px;
+  }
+}
