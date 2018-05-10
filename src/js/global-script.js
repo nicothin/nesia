@@ -24,8 +24,19 @@ $( document ).ready(function() {
       keepInViewport: false,
   });
 
+  // Работы выбора страны проживания
+  $('#country').countrySelect({
+    defaultCountry: 'ru',
+    preferredCountries: ['ru', 'ua'],
+  });
+
+
   // Включение селектора телефонного кода
-  $('#b-phone').intlTelInput();
+  $('#b-phone').intlTelInput({
+    autoHideDialCode: false,
+    initialCountry: 'ru',
+    preferredCountries: ['ru', 'ua'],
+  });
 
 });
 

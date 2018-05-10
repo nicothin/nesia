@@ -31,7 +31,8 @@
     "b-stats": [],
     "b-info-bottom": [],
     "b-country-select": [],
-    "b-form": []
+    "b-form": [],
+    "b-phone-select": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
@@ -43,7 +44,6 @@
   "addJsBefore": [
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "src/js/bootstrap-formhelpers-countries.js",
     "src/js/jquery.selectBox.js"
   ],
   "addJsAfter": [
@@ -73,8 +73,8 @@
     "src/js/jquery.cookie.js",
     "src/js/jquery.Jcrop.min.js",
     "src/js/jquery.touchSwipe.min.js",
-    "src/js/bootstrap-formhelpers-countries.en_US.js",
-    "src/js/intlTelInput.min.js",
+    "src/js/intlTelInput.js",
+    "src/js/countrySelect.js",
     "src/js/script.js"
   ],
   "dirs": {

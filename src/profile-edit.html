@@ -33,10 +33,10 @@
 
     <!-- nicothin: Добавил новые файлы -->
     <script src="js/picturefill.min.js" async></script>
-    <script src="js/bootstrap-formhelpers-countries.en_US.js"></script> <!-- Список названий стран -->
-    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/countrySelect.js"></script> <!-- Работа селектора страны -->
+    <script src="js/intlTelInput.js"></script> <!-- Работа селектора кода телефона -->
     <script src="js/script-18-spring.js"></script>
-    <!-- /nicothin: Добавил новый скриптовой файл -->
+    <!-- /nicothin: Добавил новые файлы -->
 
     <!-- nicothin: Добавил одну строку JS -->
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
@@ -365,32 +365,24 @@
                     <form action="" class="b-form">
                       <div class="form-group">
                         <label for="first-name">Имя *</label>
-                        <input type="text" class="form-control" id="first-name" placeholder="">
+                        <input type="text" class="form-control" id="first-name" placeholder="" required>
                       </div>
                       <div class="form-group">
                         <label for="last-name">Фамилия *</label>
-                        <input type="text" class="form-control" id="last-name" placeholder="">
+                        <input type="text" class="form-control" id="last-name" placeholder="" required>
                       </div>
                       <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="" value="newton@phisics.science">
                       </div>
-                      <div class="bfh-selectbox  bfh-countries  b-country-select" data-country="RU" data-flags="true">
-                        <input type="hidden" value="">
-                        <a class="bfh-selectbox-toggle" role="button" href="#" data-toggle="dropdown">
-                          <span class="bfh-selectbox-option" data-option=""></span>
-                          <b class="caret"></b>
-                        </a>
-                        <div class="bfh-selectbox-options">
-                          <div role="listbox">
-                          <ul role="option">
-                          </ul>
-                          </div>
-                        </div>
+                      <div class="form-group  b-country-select">
+                        <label for="country">Страна</label>
+                        <input type="text" class="form-control" id="country" placeholder="">
+                        <input type="hidden" id="country_code" />
                       </div>
-                      <div class="form-group">
+                      <div class="form-group  b-phone-select">
                         <label for="b-phone">Телефон *</label>
-                        <input type="tel" class="form-control" id="b-phone" placeholder="">
+                        <input type="tel" class="form-control" id="b-phone" placeholder="" required>
                       </div>
                       <div class="form-group  b-select">
                         <label for="agents">Агентам</label>
