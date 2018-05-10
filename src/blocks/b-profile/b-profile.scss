@@ -33,4 +33,14 @@
       margin-bottom: 0;
     }
   }
+
+  &__sidebar {
+
+    &--hide-xs {
+
+      @media (max-width: ($screen-md - 1)) {
+        display: none;
+      }
+    }
+  }
 }

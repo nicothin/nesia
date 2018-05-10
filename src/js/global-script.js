@@ -13,5 +13,19 @@ $( document ).ready(function() {
     $(this).toggleClass('b-card-mini__footer-part--active').closest('[data-b-card]').find('[data-b-card-stats]').slideToggle();
   });
 
+  // Сокрытие нижнего инфоблока
+  $('[data-b-info-bottom] .close').on('click', function(){
+    $(this).closest('[data-b-info-bottom]').fadeOut();
+  });
+
+  // Включение кастомных селектов для новых форм
+  $('.b-select select').selectBox({
+      mobile: true,
+      keepInViewport: false,
+  });
+
+  // Включение селектора телефонного кода
+  $('#b-phone').intlTelInput();
+
 });
 

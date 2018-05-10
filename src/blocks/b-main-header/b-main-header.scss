@@ -9,4 +9,18 @@
   margin: 36px 0;
   font-size: $font-size--h1;
   color: #000;
+
+  &__hide-xs {
+
+    @media (max-width: ($screen-md - 1)) {
+      display: none;
+    }
+  }
+
+  &__separator {
+
+    @media (max-width: ($screen-md - 1)) {
+      display: none;
+    }
+  }
 }

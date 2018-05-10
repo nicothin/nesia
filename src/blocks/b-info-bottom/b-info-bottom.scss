@@ -1,0 +1,58 @@
+// В этом файле должны быть стили для БЭМ-блока b-info-bottom, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-info-bottom {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    padding: 15px 15px;
+    max-width: 980px;
+    margin: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 1;
+    background: #fff !important;
+
+    span {
+      color: #ccc;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+
+      span {
+        color: #000;
+      }
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+  }
+}
