@@ -32,7 +32,8 @@
     "b-info-bottom": [],
     "b-country-select": [],
     "b-form": [],
-    "b-phone-select": []
+    "b-phone-select": [],
+    "b-select": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
