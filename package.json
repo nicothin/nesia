@@ -12,19 +12,12 @@
     "test": "npm run test:style && npm run test:editorconfig && npm run build",
     "start": "gulp",
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy",
-    "build": "cross-env NODE_ENV=production npm start build",
-    "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
+    "build": "cross-env NODE_ENV=production npm start build"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
-  "lint-staged": {
-    "*.js": "editorconfig-cli",
-    "*.css": "stylelint",
-    "*.scss": "stylelint --syntax=scss"
-  },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^8.0.0",
@@ -59,7 +52,6 @@
     "gulp.spritesmith": "^6.3.0",
     "husky": "^0.14.3",
     "jstransformer-markdown-it": "^2.0.0",
-    "lint-staged": "^7.0.0",
     "merge-stream": "^1.0.1",
     "mkdirp": "^0.5.1",
     "postcss-import": "^11.0.0",
