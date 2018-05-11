@@ -91,14 +91,14 @@
             // Note: for some reason jasmine breaks if you put this in the main Plugin function with the rest of these declarations
             // Note: to target Android Mobiles (and not Tablets), we must find "Android" and "Mobile"
             this.isMobile = /Android.+Mobile|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            if (this.isMobile) {
-                // trigger the mobile dropdown css
-                $("body").addClass("iti-mobile");
-                // on mobile, we want a full screen dropdown, so we must append it to the body
-                if (!this.options.dropdownContainer) {
-                    this.options.dropdownContainer = "body";
-                }
-            }
+            // if (this.isMobile) {
+            //     // trigger the mobile dropdown css
+            //     $("body").addClass("iti-mobile");
+            //     // on mobile, we want a full screen dropdown, so we must append it to the body
+            //     if (!this.options.dropdownContainer) {
+            //         this.options.dropdownContainer = "body";
+            //     }
+            // }
             // we return these deferred objects from the _init() call so they can be watched, and then we resolve them when each specific request returns
             // Note: again, jasmine breaks when I put these in the Plugin function
             this.autoCountryDeferred = new $.Deferred();

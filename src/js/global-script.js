@@ -36,6 +36,7 @@ $( document ).ready(function() {
     autoHideDialCode: false,
     initialCountry: 'ru',
     preferredCountries: ['ru', 'ua'],
+    // dropdownContainer: '#b-phone-select',
   });
 
 });
