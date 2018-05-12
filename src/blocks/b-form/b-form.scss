@@ -6,6 +6,14 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  @media (min-width: $screen-md) {
+    padding: 20px 0;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
   .form-control {
     padding: 10px 14px;
     height: 42px;
@@ -24,8 +32,36 @@
     text-decoration: none;
   }
 
+  &__group {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__label {
+    color: #000;
+    line-height: 1;
+
+    @media (min-width: $screen-md) {
+      width: 160px;
+      text-align: right;
+      padding: 13px 18px 0 0;
+
+      .b-select & {
+        padding-top: 12px;
+      }
+    }
+  }
+
   &__field {
     position: relative;
+
+    @media (min-width: $screen-md) {
+      flex-shrink: 0;
+      width: 300px;
+    }
   }
 
   &__option-inactive {
@@ -34,5 +70,9 @@
 
   &__btns {
     margin-top: 30px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 160px;
+    }
   }
 }

@@ -364,7 +364,7 @@
                 <div class="b-tabs__content-wrap">
                   <div class="b-tabs__item  active" id="tab-01">
                     <form action="" class="b-form">
-                      <div class="form-group">
+                      <div class="form-group  b-form__group">
                         <div class="b-form__label">
                           <label for="first-name">Имя *</label>
                         </div>
@@ -372,7 +372,7 @@
                           <input type="text" class="form-control" id="first-name" placeholder="" required>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group  b-form__group">
                         <div class="b-form__label">
                           <label for="last-name">Фамилия *</label>
                         </div>
@@ -380,7 +380,7 @@
                           <input type="text" class="form-control" id="last-name" placeholder="" required>
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group  b-form__group">
                         <div class="b-form__label">
                           <label for="email">Email</label>
                         </div>
@@ -388,7 +388,7 @@
                           <input type="email" class="form-control" id="email" placeholder="" value="newton@phisics.science">
                         </div>
                       </div>
-                      <div class="form-group  b-country-select">
+                      <div class="form-group  b-form__group  b-country-select">
                         <div class="b-form__label">
                           <label for="country">Страна</label>
                         </div>
@@ -397,7 +397,7 @@
                           <input type="hidden" id="country_code" />
                         </div>
                       </div>
-                      <div class="form-group  b-phone-select" id="b-phone-select">
+                      <div class="form-group  b-form__group  b-phone-select" id="b-phone-select">
                         <div class="b-form__label">
                           <label for="b-phone">Телефон *</label>
                         </div>
@@ -405,7 +405,7 @@
                           <input type="tel" class="form-control" id="b-phone" placeholder="" required>
                         </div>
                       </div>
-                      <div class="form-group  b-tags">
+                      <div class="form-group  b-form__group  b-tags">
                         <div class="b-form__label">
                           <label for="b-langs">Языки</label>
                         </div>
@@ -418,7 +418,7 @@
                           </select>
                         </div>
                       </div>
-                      <div class="form-group  b-select">
+                      <div class="form-group  b-form__group  b-select">
                         <div class="b-form__label">
                           <label for="agents">Агентам</label>
                         </div>
@@ -430,7 +430,7 @@
                           </select>
                         </div>
                       </div>
-                      <div class="form-group  b-select">
+                      <div class="form-group  b-form__group  b-select">
                         <div class="b-form__label">
                           <label for="profession">Род занятий</label>
                         </div>
@@ -442,7 +442,7 @@
                           </select>
                         </div>
                       </div>
-                      <div class="form-group  b-select">
+                      <div class="form-group  b-form__group  b-select">
                         <div class="b-form__label">
                           <label for="contact">Связь через</label>
                         </div>
@@ -460,10 +460,63 @@
                     </form>
                   </div>
                   <div class="b-tabs__item" id="tab-02">
-                    222
+                    <form action="" class="b-form">
+                      <div class="form-group  b-form__group">
+                        <div class="b-form__label">
+                          <label for="old-password">Старый пароль</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="password" class="form-control" id="old-password" required>
+                          <div class="b-form__field-descr  text-right"><a href="">Я забыл пароль</a></div>
+                        </div>
+                      </div>
+                      <div class="form-group  b-form__group">
+                        <div class="b-form__label">
+                          <label for="new-password">Новый пароль</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="password" class="form-control" id="new-password" required>
+                        </div>
+                      </div>
+                      <div class="form-group  b-form__group">
+                        <div class="b-form__label">
+                          <label for="new-password-2">Новый пароль <div class="small  text-muted">(повторите)</div></label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="password" class="form-control" id="new-password-2" required>
+                        </div>
+                      </div>
+                      <div class="b-form__btns">
+                        <button class="btn  btn-black  b-btn" type="reset">Отмена</button>
+                        <button class="btn  btn-success  b-btn">Изменить пароль</button>
+                      </div>
+                    </form>
                   </div>
                   <div class="b-tabs__item" id="tab-03">
-                    333
+                    <div class="b-form">
+                      <div class="form-group  b-form__group">
+                        <div class="b-form__label">Вконтакте</div>
+                        <div class="b-form__field">
+                          <button class="b-social-btn  b-social-btn--vk">
+                            <svg width="20" height="18" class="b-social-btn__icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                            </svg>
+                            <span class="b-social-btn__text">Подключить</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-group  b-form__group">
+                        <div class="b-form__label">Facebook</div>
+                        <div class="b-form__field">
+                          <button class="b-social-btn  b-social-btn--accept  b-social-btn--fb">
+                            <svg width="20" height="16" class="b-social-btn__icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                            </svg>
+                            <span class="b-social-btn__text">Отключить</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

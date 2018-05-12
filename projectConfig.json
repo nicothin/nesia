@@ -34,7 +34,8 @@
     "b-form": [],
     "b-phone-select": [],
     "b-select": [],
-    "b-tags": []
+    "b-tags": [],
+    "b-social-btn": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
