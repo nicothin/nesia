@@ -33,7 +33,8 @@
     "b-country-select": [],
     "b-form": [],
     "b-phone-select": [],
-    "b-select": []
+    "b-select": [],
+    "b-tags": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
@@ -76,6 +77,7 @@
     "src/js/jquery.touchSwipe.min.js",
     "src/js/intlTelInput.js",
     "src/js/countrySelect.js",
+    "src/js/jquery.tagsinput.min.js",
     "src/js/script.js"
   ],
   "dirs": {

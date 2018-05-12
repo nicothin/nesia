@@ -35,6 +35,7 @@
     <script src="js/picturefill.min.js" async></script>
     <script src="js/countrySelect.js"></script> <!-- Работа селектора страны -->
     <script src="js/intlTelInput.js"></script> <!-- Работа селектора кода телефона -->
+    <script src="js/jquery.tagsinput.min.js"></script> <!-- Работа селектора языков -->
     <script src="js/script-18-spring.js"></script>
     <!-- /nicothin: Добавил новые файлы -->
 
@@ -364,51 +365,98 @@
                   <div class="b-tabs__item  active" id="tab-01">
                     <form action="" class="b-form">
                       <div class="form-group">
-                        <label for="first-name">Имя *</label>
-                        <input type="text" class="form-control" id="first-name" placeholder="" required>
+                        <div class="b-form__label">
+                          <label for="first-name">Имя *</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="text" class="form-control" id="first-name" placeholder="" required>
+                        </div>
                       </div>
                       <div class="form-group">
-                        <label for="last-name">Фамилия *</label>
-                        <input type="text" class="form-control" id="last-name" placeholder="" required>
+                        <div class="b-form__label">
+                          <label for="last-name">Фамилия *</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="text" class="form-control" id="last-name" placeholder="" required>
+                        </div>
                       </div>
                       <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="" value="newton@phisics.science">
+                        <div class="b-form__label">
+                          <label for="email">Email</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="email" class="form-control" id="email" placeholder="" value="newton@phisics.science">
+                        </div>
                       </div>
                       <div class="form-group  b-country-select">
-                        <label for="country">Страна</label>
-                        <input type="text" class="form-control" id="country" placeholder="">
-                        <input type="hidden" id="country_code" />
+                        <div class="b-form__label">
+                          <label for="country">Страна</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="text" class="form-control" id="country" placeholder="">
+                          <input type="hidden" id="country_code" />
+                        </div>
                       </div>
                       <div class="form-group  b-phone-select" id="b-phone-select">
-                        <label for="b-phone">Телефон *</label>
-                        <input type="tel" class="form-control" id="b-phone" placeholder="" required>
+                        <div class="b-form__label">
+                          <label for="b-phone">Телефон *</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="tel" class="form-control" id="b-phone" placeholder="" required>
+                        </div>
+                      </div>
+                      <div class="form-group  b-tags">
+                        <div class="b-form__label">
+                          <label for="b-langs">Языки</label>
+                        </div>
+                        <div class="b-form__field">
+                          <input type="text" class="form-control" id="b-langs" placeholder="Выберите язык" value="Монгольский">
+                          <select class="form-control" id="b-lang-select">
+                            <option value="Английский">English</option>
+                            <option value="Русский">Русский</option>
+                            <option value="Украинский">Украинска</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="form-group  b-select">
-                        <label for="agents">Агентам</label>
-                        <select class="form-control" id="agents">
-                          <option selected disabled>Не выбрано</option>
-                          <option>Беспокоиться</option>
-                          <option>Не беспокоиться</option>
-                        </select>
+                        <div class="b-form__label">
+                          <label for="agents">Агентам</label>
+                        </div>
+                        <div class="b-form__field">
+                          <select class="form-control" id="agents">
+                            <option selected disabled>Не выбрано</option>
+                            <option>Беспокоиться</option>
+                            <option>Не беспокоиться</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="form-group  b-select">
-                        <label for="profession">Род занятий</label>
-                        <select class="form-control" id="profession">
-                          <option selected disabled>Не выбрано</option>
-                          <option>Дизайнер</option>
-                          <option>Программист</option>
-                        </select>
+                        <div class="b-form__label">
+                          <label for="profession">Род занятий</label>
+                        </div>
+                        <div class="b-form__field">
+                          <select class="form-control" id="profession">
+                            <option selected disabled>Не выбрано</option>
+                            <option>Дизайнер</option>
+                            <option>Программист</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="form-group  b-select">
-                        <label for="contact">Связь через</label>
-                        <select class="form-control" id="contact">
-                          <option selected disabled>Не выбрано</option>
-                          <option>email</option>
-                          <option>SMS</option>
-                        </select>
+                        <div class="b-form__label">
+                          <label for="contact">Связь через</label>
+                        </div>
+                        <div class="b-form__field">
+                          <select class="form-control" id="contact">
+                            <option selected disabled>Не выбрано</option>
+                            <option>email</option>
+                            <option>SMS</option>
+                          </select>
+                        </div>
                       </div>
-                      <button class="btn  btn-success  b-btn">Сохранить изменения</button>
+                      <div class="b-form__btns">
+                        <button class="btn  btn-success  b-btn">Сохранить изменения</button>
+                      </div>
                     </form>
                   </div>
                   <div class="b-tabs__item" id="tab-02">

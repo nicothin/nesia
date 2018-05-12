@@ -19,7 +19,20 @@
     margin-top: 2px;
   }
 
+  .form-group .selectBox a {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  &__field {
+    position: relative;
+  }
+
   &__option-inactive {
     color: $gray-light;
+  }
+
+  &__btns {
+    margin-top: 30px;
   }
 }
