@@ -1,0 +1,45 @@
+// В этом файле должны быть стили для БЭМ-блока b-social-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-social-btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0;
+  padding: 0;
+  height: 42px;
+  width: 100%;
+  max-width: 220px;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3em;
+    fill: #fff;
+  }
+
+  &--vk {
+    background: #5375A4;
+  }
+
+  &--fb {
+    background: #40599A;
+  }
+
+  &--accept {
+    background: #fff;
+    color: $text-color;
+    border: 1px solid $gray-light;
+
+    #{$block-name}__icon {
+      fill: $gray-light;
+    }
+  }
+}

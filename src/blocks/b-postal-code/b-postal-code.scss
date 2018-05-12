@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока b-postal-code, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-postal-code {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__group {
+    display: flex;
+
+    @media (min-width: 551px) {
+      width: 330px;
+    }
+
+    .form-control {
+      width: auto !important;
+      flex-grow: 1;
+    }
+
+    .btn {
+      flex-shrink: 0;
+      margin: 0 !important;
+      height: 34px !important;
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html class="no-js  b-page"> <!-- nicothin: Добавил классы -->
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Terranesia</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery.formstyler.css" rel="stylesheet">
+    <link href="css/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+    <!-- nicothin: Добавил новый стилевой файл -->
+    <link href="css/style-18-spring.min.css" rel="stylesheet">
+    <!-- /nicothin: Добавил новый стилевой файл -->
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.formstyler.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ng-file-upload.min.js"></script>
+    <script src="js/jquery-scrollTo.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.Jcrop.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- nicothin: Добавил новые файлы -->
+    <script src="js/picturefill.min.js" async></script>
+    <script src="js/script-18-spring.js"></script>
+    <!-- /nicothin: Добавил новые файлы -->
+
+    <!-- nicothin: Добавил одну строку JS -->
+    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+    <!-- /nicothin: Добавил одну строку JS -->
+
+  </head>
+  <body id="body">
+
+    <div id="wrap">
+
+      <!-- nicothin: Добавил новый хедер -->
+      <header class="b-page-header">
+        <div class="container-fluid  b-page-header__inner">
+
+          <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
+            <span>Show menu</span>
+          </button>
+
+          <a href="" class="b-page-header__logo  b-logo">
+            <picture>
+              <source srcset="img/logo.png" media="(min-width: 769px)">
+              <!-- <img src="img/logo.png" alt="" width="127" height="29"> -->
+              <!-- width="31" height="29" -->
+              <img class="b-logo__img" src="img/logo--sm.png" alt="">
+            </picture>
+          </a>
+
+          <nav class="b-page-header__nav  b-main-nav" id="nav">
+            <ul class="b-main-nav__list">
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить<span class="b-main-nav__link-long-text"> объект бесплатно</span></a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
+            </ul>
+            <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
+          </nav>
+
+          <div class="b-page-header__settings">
+
+            <!-- Юзер не авторизован
+            <div class="b-user">
+              <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
+                <svg width="20" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
+                </svg>
+              </button>
+            </div> -->
+
+            <!-- Юзер авторизован -->
+            <div class="b-user" id="b-user-drop">
+              <button class="b-user__drop" data-toggle="dropdown" type="button">
+                <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
+                <span class="b-user__username">Yevheniy</span>
+              </button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-user-menu  b-user__menu">
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Мой кабинет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-comments"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Сообщения</span>
+                    <span class="b-label  b-user-menu__link-label">99+</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Фолловинг</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-reviews"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Получить отзывы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-share"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Поделиться объектом</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-add"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Добавить объект</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--no-icon">
+                    <span class="b-user-menu__link-text">Выйти</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown  b-currency">
+              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=US$">
+                      <div class="csymbol">US$</div>
+                      <div class="ctext">Доллар США</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=€">
+                      <div class="csymbol">€</div>
+                      <div class="ctext">Евро</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=RUB">
+                      <div class="csymbol">RUB</div>
+                      <div class="ctext">Рубль РФ</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=£">
+                      <div class="csymbol">£</div>
+                      <div class="ctext">Фунт стерлингов</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CAD">
+                      <div class="csymbol">CAD</div>
+                      <div class="ctext">Канадский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=AUD">
+                      <div class="csymbol">AUD</div>
+                      <div class="ctext">Австралийский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CNY">
+                      <div class="csymbol">CNY</div>
+                      <div class="ctext">Китайский юань</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=TL">
+                      <div class="csymbol">TL</div>
+                      <div class="ctext">Турецкая лира</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=UAH">
+                      <div class="csymbol">UAH</div>
+                      <div class="ctext">Украинская гривна</div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown  b-language">
+              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <a href="#" onclick="change_language('en')">English</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ru')">Русский</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ua')">Українська</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('rs')">Srpski</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </header>
+      <!-- /nicothin: Добавил новый хедер -->
+
+      <div class="content">
+        <div class="container-fluid simple_page">
+          <h2>Размещение объекта</h2>
+
+
+          <div class="overflow">
+            <ul class="steps four_steps step_one">
+              <li class="active">
+                <div class="a">
+                  <div class="number">
+                    1
+                  </div>
+
+
+                  <div class="name">
+                    Нанести на карту
+                  </div>
+                </div>
+              </li>
+
+
+              <li>
+                <div class="a">
+                  <div class="number">
+                    2
+                  </div>
+
+
+                  <div class="name">
+                    Добавить фотографии
+                  </div>
+                </div>
+              </li>
+
+
+              <li>
+                <div class="a">
+                  <div class="number">
+                    3
+                  </div>
+
+
+                  <div class="name">
+                    Добавить описание
+                  </div>
+                </div>
+              </li>
+
+
+              <li>
+                <div class="a">
+                  <div class="number">
+                    4
+                  </div>
+
+
+                  <div class="name">
+                    Опубликовать
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="step_first">
+            <div class="field mapsearch">
+              <div class="name">
+                Введите адрес объекта. Установите маркер в точном месте расположения Вашей недвижимости.
+              </div>
+
+
+              <div class="map_search_form">
+                <div id="locationField">
+                  <input class="form-control" id="autocomplete" name="full_address" placeholder="Введите адрес, район или город" type="text" value="">
+                </div>
+                <button class="btn btn-success" id="autocomplete_btn"></button>
+
+                <div class="col-xs-6">
+                  <div class="finded" style="font-size: 18px; color: #000; padding: 5px 0 0 0; }">
+                    <span id="count_objects"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div style="padding: 0 50px;">
+          <div id="map" style="height:400px">
+          </div>
+        </div>
+
+
+        <form action="" id="locate_form" method="post" name="locate_form" role="form">
+          <input name="full_address" type="hidden"> <input name='csrfmiddlewaretoken' type='hidden' value='1U4ED1yqj0qAS48xiTznxlsEi4rZTESD'>
+
+          <div class="container-fluid step_first">
+            <div class="form-group">
+              <div class="checkbox">
+                <label class="change_checkbox"><input id="my_property" type="checkbox">Я являюсь собственником данного объекта недвижимости.*</label>
+              </div>
+              <input class="form-control" id="lat" name="lat" placeholder="" type="hidden" value="">
+              <input class="form-control" id="lng" name="lng" placeholder="" type="hidden" value="">
+              <label>Номер дома</label>
+              <input class="form-control" id="street_number" name="street_number" placeholder="" type="text" value="">
+              <label>Маршрут</label>
+              <input class="form-control" id="route" name="route" placeholder="" type="text" value="">
+              <label>Область/Район</label>
+              <input class="form-control" id="administrative_area_level_1" name="locality" placeholder="" type="text" value="">
+              <label>Город</label>
+              <input class="form-control" id="locality" name="city" placeholder="" type="text" value="">
+              <label>Страна</label>
+              <input class="form-control" id="country" name="country" placeholder="" type="text" value="">
+
+              <!-- Новая разметка для индекса -->
+              <div class="b-postal-code">
+                <label>Почтовый индекс</label>
+                <div class="b-postal-code__group">
+                  <input class="form-control" type="text" id="postal_code" placeholder="">
+                  <button class="btn  btn-info" type="button">Обновить</button>
+                </div>
+              </div>
+              <!-- /Новая разметка для индекса -->
+
+              <button class="btn btn-success gonext" onclick="onSubmit();" style="float:left;" type="button">Продолжить<span></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="pfooter"></div>
+
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-2">
+              <a class="navbar-brand" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
+            </div>
+            <div class="col-xs-7">
+              <div class="copyright">© 2018 Terranesia.com. Недвижимость без посредников. <nobr>Designed by Dolphin Studio.</nobr></div>
+              <ul class="nav navbar-nav">
+                  <li><a href="/search/buy/">Продажа</a></li>
+                  <li><a href="/search/rent/">Аренда</a></li>
+                  <li><a href="/object/add/">Разместить объект бесплатно</a></li>
+                  <li><a href="/pages/how-it-works/">Cоветы</a></li>
+                  <li><a href="/support/">Поддержка</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-3">
+              <ul class="footer-social">
+                <li class="item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/"><span class="fb"></span></a></li>
+                <li class="item"><a target="_blank" href="https://twitter.com/pp45637809"><span class="tw"></span></a></li>
+                <li class="item"><a target="_blank" href="https://www.pinterest.com/pp45637809/"><span class="p"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <a href="" class="b-modal__back-btn">
+                <svg width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-left-arrow"></use>
+                </svg>
+              </a>
+              <span class="b-modal__title-inner">
+                Добавьте свои данные
+                <small>и пользуйтесь Терранезией бесплатно</small>
+              </span>
+            </h4>
+          </div>
+
+          <!-- Первый шаг -->
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="email" class="form-control  b-form-control" placeholder="Email">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Продолжить</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-user-avatar  b-user-avatar">
+                  <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
+                  <div class="b-user-avatar__name">Исаак Ньютон</div>
+                  <a href="mailto:test@test.ru" class="b-user-avatar__email">test@test.ru</a>
+                </div>
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Придумайте пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="login">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <span class="b-modal__title-inner">
+                Вход в личный кабинет
+              </span>
+            </h4>
+          </div>
+
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-modal__field-group">
+                  <input type="email" class="form-control  b-form-control" placeholder="Email">
+                  <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                </div>
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox  b-modal__gray-checkbox--mb0">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="alert">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              Текст вопроса, задаваемого пользователю. Может быть длинным и раскидистым.
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вершину своего пояс себя имени строчка рукопись вскоре прямо семь, наш грустный, коварный курсивных рот диких страну, предупредила. Сбить, семантика.</p>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn  btn-default  b-btn" data-dismiss="modal">Да</button>
+            <button class="btn  btn-success  b-btn" data-dismiss="modal">Нет</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="b-info-bottom" data-b-info-bottom>
+      <div class="b-info-bottom__inner">
+        <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="b-info-bottom__text">Текст</div>
+        <div class="b-info-bottom__btn">
+          <button class="btn  btn-success">Кнопка</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: fixed;bottom: 0;left: 50%;transform:translateX(-50%);padding: 0.5em;background-color: #fff;">
+      <a href="#alert" data-toggle="modal">alert</a>
+      <a href="#reg" data-toggle="modal">reg</a>
+      <a href="#login" data-toggle="modal">login</a>
+    </div>
+
+  </body>
+</html>
+
