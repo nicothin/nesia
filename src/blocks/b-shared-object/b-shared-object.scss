@@ -1,0 +1,51 @@
+// В этом файле должны быть стили для БЭМ-блока b-shared-object, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-shared-object {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__img-wrap {
+    width: 80px;
+    flex-shrink: 0;
+    margin-right: 14px;
+  }
+
+  &__img {
+    display: block;
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  &__descr {
+    flex-grow: 1;
+    min-width: 0;
+    padding: 6px 0;
+  }
+
+  &__type {
+    margin: 0 0 9px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    font-size: $font-size;
+    line-height: 1;
+    color: #000;
+  }
+
+  &__address {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+    color: $text-color;
+    font-size: $font-size--small;
+  }
+}

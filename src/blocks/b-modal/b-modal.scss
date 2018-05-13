@@ -18,7 +18,7 @@
     &:hover,
     &:focus {
       color: $color-main--dark;
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
@@ -232,6 +232,23 @@
 
     .b-form-control + .b-form-control {
       margin-top: -1px;
+    }
+  }
+
+  &--lg {
+
+    @media (min-width: $screen-md) {
+
+      .modal-dialog {
+        width: 700px;
+      }
+    }
+
+    @media (min-width: $screen-lg) {
+
+      .modal-dialog {
+        width: 940px;
+      }
     }
   }
 

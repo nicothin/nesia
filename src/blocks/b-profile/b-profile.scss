@@ -6,6 +6,17 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  a {
+    color: $color-main;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-main--dark;
+      text-decoration: underline;
+    }
+  }
+
   &__user-menu {
     display: none;
 

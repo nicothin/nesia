@@ -10,6 +10,15 @@
   font-size: $font-size--h1;
   color: #000;
 
+  a {
+    color: $color-main;
+
+    &:hover,
+    &:focus {
+      color: $color-main--dark;
+    }
+  }
+
   &__hide-xs {
 
     @media (max-width: ($screen-md - 1)) {

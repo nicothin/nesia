@@ -19,36 +19,67 @@ $( document ).ready(function() {
   });
 
   // Включение кастомных селектов для новых форм (заменяют обычные select-ы)
-  $('.b-select select').selectBox({
-    mobile: true,
-    keepInViewport: false,
-  });
+  if($('.b-select select').length) {
+    $('.b-select select').selectBox({
+      mobile: true,
+      keepInViewport: false,
+    });
+  }
+
 
   // Работы выбора страны проживания
-  $('#country').countrySelect({
-    defaultCountry: 'ru',
-    preferredCountries: ['ru', 'ua'],
-  });
+  if($('#country').length) {
+    $('#country').countrySelect({
+      defaultCountry: 'ru',
+      preferredCountries: ['ru', 'ua'],
+    });
+  }
 
   // Включение селектора телефонного кода
-  $('#b-phone').intlTelInput({
-    autoHideDialCode: false,
-    initialCountry: 'ru',
-    preferredCountries: ['ru', 'ua'],
-  });
+  if($('#b-phone').length) {
+    $('#b-phone').intlTelInput({
+      autoHideDialCode: false,
+      initialCountry: 'ru',
+      preferredCountries: ['ru', 'ua'],
+    });
+  }
 
   // Включение селектора языков
-  $('#b-langs').tagsInput({
-    'height':'auto',
-    'width':'100%',
-    'interactive': false,
+  if($('#b-langs').length) {
+    $('#b-langs').tagsInput({
+      'height':'auto',
+      'width':'100%',
+      'interactive': false,
+    });
+  }
+  if($('#b-lang-select').length) {
+    $('#b-lang-select').selectBox({
+      mobile: true,
+      keepInViewport: false,
+    }).change(function() {
+      console.log( $(this).val() );
+      $('#b-langs').addTag( $(this).val() );
+    });
+  }
+
+  // Показ/сокрытие чекбоксов при выделении объектов в списке расшаривания
+  $(document).on('change', '[data-b-object-list-checkbox]', function(){
+    if($(this).is(':checked')) {
+      $(this).closest('.b-object-list__item').addClass('b-object-list__item--pseudohover');
+    }
+    else {
+      $(this).closest('.b-object-list__item').removeClass('b-object-list__item--pseudohover');
+    }
   });
-  $('#b-lang-select').selectBox({
-    mobile: true,
-    keepInViewport: false,
-  }).change(function() {
-    console.log( $(this).val() );
-    $('#b-langs').addTag( $(this).val() );
+
+  // Выделение обертки блока с email в списке адресатов
+  $(document).on('change', '[data-b-mail-checkbox]', function(){
+    if($(this).is(':checked')) {
+      $(this).closest('.b-field-checkbox').addClass('b-field-checkbox--mail-check');
+    }
+    else {
+      $(this).closest('.b-field-checkbox').removeClass('b-field-checkbox--mail-check');
+    }
   });
 
 });

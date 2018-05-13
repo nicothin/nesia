@@ -45,8 +45,8 @@
   }
 
   &__img-add {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;

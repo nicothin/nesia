@@ -33,9 +33,6 @@
 
     <!-- nicothin: Добавил новые файлы -->
     <script src="js/picturefill.min.js" async></script>
-    <script src="js/countrySelect.js"></script> <!-- Работа селектора страны -->
-    <script src="js/intlTelInput.js"></script> <!-- Работа селектора кода телефона -->
-    <script src="js/jquery.tagsinput.min.js"></script> <!-- Работа селектора языков -->
     <script src="js/script-18-spring.js"></script>
     <!-- /nicothin: Добавил новые файлы -->
 
@@ -260,11 +257,15 @@
           <h1 class="b-main-header">
             <a href="" class="b-main-header__hide-xs">Мой кабинет</a>
             <span class="b-main-header__separator">></span>
-            Редактирование
+            Поделиться объектом
           </h1>
           <div class="b-profile  row">
-            <div class="b-profile__sidebar  b-profile__sidebar--hide-xs  col-sm-4">
+            <div class="b-profile__sidebar    b-profile__sidebar--hide-xs  col-xs-12  col-sm-4">
               <div class="b-profile__top">
+                <div class="b-mobile-header">
+                  <div class="b-mobile-header__title">Информация</div>
+                  <a href="" class="b-mobile-header__edit">Редактировать</a>
+                </div>
                 <div class="b-user-avatar  b-user-avatar--profile">
                   <div class="b-user-avatar__img-wrap">
                     <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
@@ -342,182 +343,120 @@
               </div>
             </div>
             <div class="b-profile__content  col-xs-12  col-sm-8">
-
-              <div class="b-tabs">
-                <ul class="b-tabs__list" role="tablist">
-                  <li role="presentation" class="active">
-                    <a href="#tab-01" role="tab" data-toggle="tab" aria-expanded="true">
-                      <span class="b-tabs__text-show-xs">Основное</span>
-                      <span class="b-tabs__text-hide-xs">Основная информация</span>
-                    </a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#tab-02" role="tab" data-toggle="tab" aria-expanded="false">
-                      <span class="b-tabs__text-show-xs">Безопасность</span>
-                      <span class="b-tabs__text-hide-xs">Настройки безопасности</span>
-                    </a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#tab-03" role="tab" data-toggle="tab" aria-expanded="false">Соц. сети</a>
-                  </li>
-                </ul>
-                <div class="b-tabs__content-wrap">
-                  <div class="b-tabs__item  active" id="tab-01">
-                    <form action="" class="b-form">
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="first-name">Имя *</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="first-name" placeholder="" required>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="last-name">Фамилия *</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="last-name" placeholder="" required>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="email">Email</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="email" class="form-control" id="email" placeholder="" value="newton@phisics.science">
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-country-select">
-                        <div class="b-form__label">
-                          <label for="country">Страна</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="country" placeholder="">
-                          <input type="hidden" id="country_code" />
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-phone-select" id="b-phone-select">
-                        <div class="b-form__label">
-                          <label for="b-phone">Телефон *</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="tel" class="form-control" id="b-phone" placeholder="" required>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-tags">
-                        <div class="b-form__label">
-                          <label for="b-langs">Языки</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="b-langs" placeholder="Выберите язык" value="Монгольский">
-                          <select class="form-control" id="b-lang-select">
-                            <option value="Английский">English</option>
-                            <option value="Русский">Русский</option>
-                            <option value="Украинский">Украинска</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-select">
-                        <div class="b-form__label">
-                          <label for="agents">Агентам</label>
-                        </div>
-                        <div class="b-form__field">
-                          <select class="form-control" id="agents">
-                            <option selected disabled>Не выбрано</option>
-                            <option>Беспокоиться</option>
-                            <option>Не беспокоиться</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-select">
-                        <div class="b-form__label">
-                          <label for="profession">Род занятий</label>
-                        </div>
-                        <div class="b-form__field">
-                          <select class="form-control" id="profession">
-                            <option selected disabled>Не выбрано</option>
-                            <option>Дизайнер</option>
-                            <option>Программист</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-select">
-                        <div class="b-form__label">
-                          <label for="contact">Связь через</label>
-                        </div>
-                        <div class="b-form__field">
-                          <select class="form-control" id="contact">
-                            <option selected disabled>Не выбрано</option>
-                            <option>email</option>
-                            <option>SMS</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="b-form__btns">
-                        <button class="btn  btn-success  b-btn">Сохранить изменения</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="b-tabs__item" id="tab-02">
-                    <form action="" class="b-form">
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="old-password">Старый пароль</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="password" class="form-control" id="old-password" required>
-                          <div class="b-form__field-descr  text-right"><a href="">Я забыл пароль</a></div>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="new-password">Новый пароль</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="password" class="form-control" id="new-password" required>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="new-password-2">Новый пароль <span class="b-form__label-descr">(повторите)</span></label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="password" class="form-control" id="new-password-2" required>
-                        </div>
-                      </div>
-                      <div class="b-form__btns">
-                        <button class="btn  btn-black  b-btn" type="reset">Отмена</button>
-                        <button class="btn  btn-success  b-btn">Изменить пароль</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="b-tabs__item" id="tab-03">
-                    <div class="b-form">
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">Вконтакте</div>
-                        <div class="b-form__field">
-                          <button class="b-social-btn  b-social-btn--vk">
-                            <svg width="20" height="18" class="b-social-btn__icon">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
-                            </svg>
-                            <span class="b-social-btn__text">Подключить</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">Facebook</div>
-                        <div class="b-form__field">
-                          <!-- b-social-btn--accept даст состояние «готово к отключению» -->
-                          <button class="b-social-btn  b-social-btn--accept  b-social-btn--fb">
-                            <svg width="20" height="16" class="b-social-btn__icon">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
-                            </svg>
-                            <span class="b-social-btn__text">Отключить</span>
-                          </button>
-                        </div>
-                      </div>
+              <div class="b-mobile-header  b-mobile-header--always-show">
+                <div class="b-mobile-header__title">Шаг 1. Отметьте нужные объекты</div>
+              </div>
+              <form action=""> <!-- если форма не нужна, можно безболезненно убрать этот тег -->
+                <section class="b-object-list">
+                  <header class="b-object-list__header">
+                    <div class="b-object-list__check-wrap"></div>
+                    <div class="b-object-list__content">
+                      <h2 class="b-object-list__title">Объекты</h2>
                     </div>
+                    <div class="b-object-list__view-num">Просмотров</div>
+                  </header>
+                  <ul class="b-object-list__list">
+                    <li class="b-object-list__item  b-object-list__item--pseudohover">
+                      <div class="b-object-list__check-wrap">
+                        <label class="b-field-checkbox">
+                          <input type="checkbox" class="b-field-checkbox__check" data-b-object-list-checkbox checked>
+                          <span class="b-field-checkbox__name-wrap"></span>
+                        </label>
+                      </div>
+                      <div class="b-object-list__content">
+                        <article class="b-shared-object">
+                          <div class="b-shared-object__img-wrap">
+                            <img src="img/TEMP-object-img.jpg" alt="" class="b-shared-object__img">
+                          </div>
+                          <div class="b-shared-object__descr">
+                            <h3 class="b-shared-object__type">Квартира на продажу</h3>
+                            <div class="b-shared-object__address">ул. Большая-Васильковская, 176/2, Киев, Украина</div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="b-object-list__view-num">12</div>
+                    </li>
+                    <li class="b-object-list__item">
+                      <div class="b-object-list__check-wrap">
+                        <label class="b-field-checkbox">
+                          <input type="checkbox" class="b-field-checkbox__check" data-b-object-list-checkbox>
+                          <span class="b-field-checkbox__name-wrap"></span>
+                        </label>
+                      </div>
+                      <div class="b-object-list__content">
+                        <article class="b-shared-object">
+                          <div class="b-shared-object__img-wrap">
+                            <img src="img/object-no-photo--sm.png" alt="" class="b-shared-object__img">
+                          </div>
+                          <div class="b-shared-object__descr">
+                            <h3 class="b-shared-object__type">Длинное название рубрики не увеличивает высоту</h3>
+                            <div class="b-shared-object__address">ул. Большая-Васильковская, 176/2, Киев, Украина</div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="b-object-list__view-num">12</div>
+                    </li>
+                    <li class="b-object-list__item">
+                      <div class="b-object-list__check-wrap">
+                        <label class="b-field-checkbox">
+                          <input type="checkbox" class="b-field-checkbox__check" data-b-object-list-checkbox>
+                          <span class="b-field-checkbox__name-wrap"></span>
+                        </label>
+                      </div>
+                      <div class="b-object-list__content">
+                        <article class="b-shared-object">
+                          <div class="b-shared-object__img-wrap">
+                            <img src="img/TEMP-object-img.jpg" alt="" class="b-shared-object__img">
+                          </div>
+                          <div class="b-shared-object__descr">
+                            <h3 class="b-shared-object__type">Квартира на продажу</h3>
+                            <div class="b-shared-object__address">ул. Большая-Васильковская, 176/2, Киев, Украина</div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="b-object-list__view-num">12</div>
+                    </li>
+                    <li class="b-object-list__item">
+                      <div class="b-object-list__check-wrap">
+                        <label class="b-field-checkbox">
+                          <input type="checkbox" class="b-field-checkbox__check" data-b-object-list-checkbox>
+                          <span class="b-field-checkbox__name-wrap"></span>
+                        </label>
+                      </div>
+                      <div class="b-object-list__content">
+                        <article class="b-shared-object">
+                          <div class="b-shared-object__img-wrap">
+                            <img src="img/TEMP-object-img.jpg" alt="" class="b-shared-object__img">
+                          </div>
+                          <div class="b-shared-object__descr">
+                            <h3 class="b-shared-object__type">Квартира на продажу</h3>
+                            <div class="b-shared-object__address">ул. Большая-Васильковская, 176/2, Киев, Украина</div>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="b-object-list__view-num">12</div>
+                    </li>
+                  </ul>
+                </section>
+              </form>
+              <div class="b-mobile-header  b-mobile-header--always-show">
+                <div class="b-mobile-header__title">Шаг 2. Отправьте пользователям</div>
+              </div>
+              <div class="b-share">
+                <div class="b-share__item">
+                  <div class="b-share__msg">Выслать приглашение через почту</div>
+                  <div class="b-share__btn-wrap">
+                    <button class="b-share__btn  b-share__btn--gmail" data-toggle="modal" data-target="#b-mail-share">Поделиться через Gmail</button>
+                  </div>
+                  <div class="b-share__descr">Мы не собираем почту для спам-рассылок</div>
+                </div>
+                <div class="b-share__item">
+                  <div class="b-share__msg">Дополнительные способы пригласить друзей</div>
+                  <div class="b-share__btn-wrap">
+                    <button class="b-share__btn  b-share__btn--fb">Опубликовать в Facebook</button>
+                  </div>
+                  <div class="b-share__btn-wrap">
+                    <button class="b-share__btn  b-share__btn--msg">Отправить в Messenger</button>
                   </div>
                 </div>
               </div>
@@ -556,6 +495,104 @@
           </div>
         </div>
     </footer>
+
+    <form class="modal  b-modal  b-modal--lg  fade" tabindex="-1" role="dialog" id="b-mail-share">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              Поделиться через Gmail
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="b-share-mail-contacts">
+              <div class="b-share-mail-contacts__header">
+                <div class="b-share-mail-contacts__header-inner">
+                  <button class="b-share-mail-contacts__select-all  btn" type="button">Снять выделение</button>
+                  <span class="b-share-mail-contacts__selected-num"><b>28</b> контактов получат это сообщение</span>
+                  <label class="b-share-mail-contacts__search-wrap">
+                    <input class="form-control  b-share-mail-contacts__search" type="search" placeholder="Введите имя или email">
+                  </label>
+                </div>
+              </div>
+              <div class="b-share-mail-contacts__list-wrapper">
+                <div class="b-mail-list">
+                  <ul class="b-mail-list__list">
+                    <li class="b-mail-list__item-wrap">
+                      <label class="b-field-checkbox  b-field-checkbox--mail  b-field-checkbox--mail-check">
+                        <input type="checkbox" class="b-field-checkbox__check" data-b-mail-checkbox checked>
+                        <span class="b-field-checkbox__name-wrap">
+                          <div class="b-field-checkbox__name-text">Dmitriy Melnichenko</div>
+                          <div class="b-field-checkbox__email">dmitriymel@gmail.com</div>
+                        </span>
+                      </label>
+                    </li>
+                    <li class="b-mail-list__item-wrap">
+                      <label class="b-field-checkbox  b-field-checkbox--mail">
+                        <input type="checkbox" class="b-field-checkbox__check" data-b-mail-checkbox>
+                        <span class="b-field-checkbox__name-wrap">
+                          <div class="b-field-checkbox__name-text">Delnichenko</div>
+                          <div class="b-field-checkbox__email">dm@gmail.com</div>
+                        </span>
+                      </label>
+                    </li>
+                    <li class="b-mail-list__item-wrap">
+                      <label class="b-field-checkbox  b-field-checkbox--mail">
+                        <input type="checkbox" class="b-field-checkbox__check" data-b-mail-checkbox>
+                        <span class="b-field-checkbox__name-wrap">
+                          <div class="b-field-checkbox__name-text">Dmitriy Melnichenko</div>
+                          <div class="b-field-checkbox__email">dmitriymel@gmail.com</div>
+                        </span>
+                      </label>
+                    </li>
+                    <li class="b-mail-list__item-wrap">
+                      <label class="b-field-checkbox  b-field-checkbox--mail  b-field-checkbox--mail-check">
+                        <input type="checkbox" class="b-field-checkbox__check" data-b-mail-checkbox checked>
+                        <span class="b-field-checkbox__name-wrap">
+                          <div class="b-field-checkbox__name-text">Dmitriy Melnichenko</div>
+                          <div class="b-field-checkbox__email">dmitriymel@gmail.com</div>
+                        </span>
+                      </label>
+                    </li>
+                    <li class="b-mail-list__item-wrap">
+                      <label class="b-field-checkbox  b-field-checkbox--mail">
+                        <input type="checkbox" class="b-field-checkbox__check" data-b-mail-checkbox>
+                        <span class="b-field-checkbox__name-wrap">
+                          <div class="b-field-checkbox__name-text">Delnichenko</div>
+                          <div class="b-field-checkbox__email">dm@gmail.com</div>
+                        </span>
+                      </label>
+                    </li>
+                    <li class="b-mail-list__item-wrap">
+                      <label class="b-field-checkbox  b-field-checkbox--mail">
+                        <input type="checkbox" class="b-field-checkbox__check" data-b-mail-checkbox>
+                        <span class="b-field-checkbox__name-wrap">
+                          <div class="b-field-checkbox__name-text">Dmitriy Melnichenko</div>
+                          <div class="b-field-checkbox__email">dmitriymel@gmail.com</div>
+                        </span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="b-share-mail-contacts__footer">
+                <div class="b-share-mail-contacts__comment-wrap">
+                  <textarea class="form-control" placeholder="Введите свое сообщение"></textarea>
+                  <div class="b-share-mail-contacts__comment-descr">Символов осталось: 999+</div>
+                </div>
+                <div class="b-share-mail-contacts__btns">
+                  <button class="btn  btn-success  b-btn  b-btn--wide">Отправить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </form>
 
   </body>
 </html>

@@ -31,4 +31,18 @@
     font-weight: 700;
     margin-right: auto;
   }
+
+
+
+  &--always-show {
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin: 0 0 30px;
+      padding: 0;
+      color: $text-color;
+      line-height: 1;
+      background-color: transparent;
+    }
+  }
 }

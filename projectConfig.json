@@ -36,7 +36,13 @@
     "b-select": [],
     "b-tags": [],
     "b-social-btn": [],
-    "b-postal-code": []
+    "b-postal-code": [],
+    "b-object-list": [],
+    "b-field-checkbox": [],
+    "b-shared-object": [],
+    "b-share": [],
+    "b-share-mail-contacts": [],
+    "b-mail-list": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

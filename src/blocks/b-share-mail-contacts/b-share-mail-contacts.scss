@@ -1,0 +1,114 @@
+// В этом файле должны быть стили для БЭМ-блока b-share-mail-contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-share-mail-contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0 -15px;
+  border-top: 1px solid $gray-lightest;
+
+  &__header {
+    border-bottom: 1px solid $gray-lightest;
+    margin-bottom: 0;
+  }
+
+  &__header-inner {
+    padding: 20px 15px;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__select-all {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__selected-num {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      padding: 0 15px;
+      line-height: 34px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+  }
+
+  &__search-wrap {
+    margin: 0;
+    width: 100%;
+    font-weight: 400;
+
+    @media (min-width: $screen-sm) {
+      width: auto;
+      flex-grow: 1;
+      margin-left: 15px;
+      min-width: 200px;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-grow: 0;
+      width: 280px;
+      margin-left: auto;
+    }
+  }
+
+  &__search {
+    padding-left: 40px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M15.85 15.85a.5.5 0 0 1-.7 0l-5.02-5.07a.5.5 0 0 1 0-.71.5.5 0 0 1 .7 0l5.02 5.07a.5.5 0 0 1 0 .71zM6.23 0A6.25 6.25 0 1 1 0 6.25 6.242 6.242 0 0 1 6.23 0zm0 .99A5.26 5.26 0 1 1 .99 6.25 5.256 5.256 0 0 1 6.23.99z' fill='%23c4c4c4' fill-rule='evenodd'/%3E%3C/svg%3E") 13px 9px no-repeat;
+  }
+
+  &__list-wrapper {
+    padding: 20px 15px;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 30px;
+    max-height: 234px;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    padding: 0 15px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+  }
+
+  &__comment-wrap {
+    margin-bottom: 22px;
+
+    .form-control {
+      min-height: 94px;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-grow: 1;
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-grow: 0;
+      width: 570px;
+      margin-right: auto;
+    }
+  }
+
+  &__comment-descr {
+    flex-shrink: 0;
+    text-align: right;
+    font-size: $font-size--small;
+    color: $gray-light;
+  }
+}

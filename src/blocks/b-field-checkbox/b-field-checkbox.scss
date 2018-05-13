@@ -1,0 +1,120 @@
+// В этом файле должны быть стили для БЭМ-блока b-field-checkbox, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-field-checkbox {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  margin: 0;
+  min-width: 18px;
+  min-height: 18px;
+  font-weight: 400;
+
+  &__check {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__name-wrap {
+    display: block;
+    position: relative;
+    padding: 0 0 0 24px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #c4c4c4;
+      border-radius: 3px;
+      transition: all 0.3s;
+    }
+
+    &:hover:before {
+      border: 1px solid $color-main;
+      background: $gray-lightest-2
+    }
+
+    input:checked ~ &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $color-main;
+      border-radius: 3px;
+      background: $gray-lightest-2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8.03' viewBox='0 0 12 8.03'%3E%3Cpath data-name='2' d='M3.63 7.568c-.033.26.05.262.05.262L.19 4.56a.635.635 0 0 1 0-.93.738.738 0 0 1 1 0l2.978 2.786s-.489.743-.539 1.152zm.05.262c.283.25.795.171 1.078-.079L11.79 1.12a.635.635 0 0 0 0-.93.739.739 0 0 0-1 0L4.168 6.416S3.4 7.579 3.68 7.83z' fill='#{$color-main}' /%3E%3C/svg%3E") center no-repeat;
+    }
+  }
+
+  &__name-text,
+  &__email {
+    width: 60%;
+    padding-right: 15px;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+    }
+  }
+
+  &__email {
+    width: 40%;
+
+    @media (min-width: $screen-md) {
+      margin-top: 5px;
+    }
+  }
+
+  &--mail {
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+
+    #{$block-name}__name-wrap {
+      display: flex;
+      align-items: center;
+      height: 42px;
+      width: 100%;
+      padding: 0 0 0 48px;
+      border: 1px solid #c4c4c4;
+      border-radius: 3px;
+      transition: all 0.3s;
+
+      &:before,
+      &:after {
+        top: 11px !important;
+        left: 14px !important;
+      }
+
+      @media (min-width: $screen-md) {
+        flex-direction: column;
+        height: 60px;
+        padding-top: 12px;
+
+        &:before,
+        &:after {
+          top: 20px !important;
+        }
+      }
+    }
+  }
+
+  &--mail-check {
+
+    #{$block-name}__name-wrap {
+      border-color: $color-main;
+    }
+  }
+}

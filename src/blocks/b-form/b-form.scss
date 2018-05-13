@@ -41,6 +41,8 @@
   }
 
   &__label {
+    display: block;
+    padding-bottom: 5px;
     color: #000;
     line-height: 1;
 
@@ -52,6 +54,15 @@
       .b-select & {
         padding-top: 12px;
       }
+    }
+  }
+
+  &__label-descr {
+    color: $gray-light;
+    font-size: $font-size--small;
+
+    @media (min-width: $screen-md) {
+      display: block;
     }
   }
 

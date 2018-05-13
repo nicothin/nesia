@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока b-share, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-share {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__msg {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  &__btn-wrap {
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 42px;
+    width: 280px;
+    height: 42px;
+    border: 1px solid;
+    border-radius: 3px;
+    line-height: 42px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    background: #fff;
+    color: $text-color;
+    text-decoration: none !important;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 42px;
+    }
+
+    &--gmail {
+      border-color: #CF4922;
+
+      &:before {
+        background: #CF4922 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAARCAMAAADwppwCAAAB0VBMVEXm49b19OzmWU2xS0KxOS7mWUy2urLm1cjxSjzjOSv5///m//P6//+sy8PmRTfn5tnqgXXmWUuuxLvmX1Hj7eDrUELl4tXjQTLncWStraXnZ1nkY1bm49bvraTIkojs6Nrh3tLe28/18+roVUoAAADm///Z1su3u7KsqaGot6+mT0fxXE7m3dD3+/Xx7d/pVUjkTD73//q4sKfmrJ/Zd2voZFfmzcDmxrm9qJ702NO1urLwuLDri4DmfnHbbmHDUUb28ezz19Hd287tnZPmk4bm4tXyy8TsoJPp+evw7d+tRz7k4dS4wLe5uK7QcmbZ6t7MysDc2c3Ix7zo6dvDx72vLSLe6NzfzcGxOi/toJX3//z4///18+vpgnb5///3//+qOCuuOC3eVUXjY1TxSD7mWU3jWUvoRDrrS0C0NC/3VVHm49b29Ou3tazmVEaxKyH28+rm7+Lm4dS2ubDo5df6///nW03kRznlRDbjPS/w7N+ztKvnWErmT0LmPTD4//v3+vLq59qvxr7lYVTlSj3mRzr3+vbm//P3+/P3+PH29ezm9Ofp8uX14t3o2Mu1vLOtsamvrqasq6Prhnvoal3uYlTsVkjST0TpTD7uQTOnLiXSpjjzAAAAa3RSTlPxvID9sfr89/7++v79/fr29vX9/fz8+vr49/f29fX18OfkvLsA/v7+/v39/Pr5+fn59/f39/f29vb19fX19fX19PT09PTy8vLx8fDu7u7t6urp6eHf3drawL++vby6ubizqo6NjYp1Y0lDCjndvscAAAE9SURBVBjTXcvVcsJQAEXRW6gkuDsUq7u7u7u7y0VCSHArUndvv7ZBBobux7PmAOPJ1s6GfjMnk359e23fCE6FzvcH8gYzpcJM5OWbK3IIDhwOd20HI5gSLMTqU6K+DwOgOXz+KNpZR5rihJEMtdT1WfG1B2i+iMzlRxVtrBCG3ZK9PNSPNPX87gKaRTjUwIm5OGpG8Jo1zEfFSGN7uTWXgrzKomZFIOrmVTEGpE6kRsMO05NQYGOKBjkxt4zn/ka669lP+WnAbcwWfsDpRMQagcBszwDE4RW3K/CjbGXbzVkAIX7HHJkuC5vN2RAX7ujMZKn3PxCSCQA9hbPylywgCK1ORUD8onpu6tVbkoAjCu4lOi0kIBV1mpd7E3BscTyK+vHkDKmTp9j+TLeugnMDf2UZcEE61djC4vjS2R/poW+g150qSwAAAABJRU5ErkJggg==) center no-repeat;
+      }
+    }
+
+    &--fb {
+      border-color: #40599A;
+
+      &:before {
+        background: #40599A url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAYAAAAvf+5AAAAAr0lEQVQokc2QvQkCQRCFvzsOLjDRShQb0NAajKzAAkx2BxPL0B40sQEDK7AB4zPzh/OZ7MFwHGjog4U3bz9mhslijHiFEGbAGhgDeYrnRQuaAAcHNCrbwaoDAqiLVjBy/ggsgQdwbYOl8yczuzRFJmkADFO9B3rJ74Bt8mckLfRd067FO5UDrx+4Gkm5pH56Nzdu0+QxRgozewMVQAhBrsvdzCo/+ucd/wT0p3r6jw9ETGiy9t3/7gAAAABJRU5ErkJggg==) center no-repeat;
+      }
+    }
+
+    &--msg {
+      border-color: #3285FF;
+
+      &:before {
+        background: #3285FF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAInRSTlMA0ZF49fDqjSIL+tq6qYZpQfG+s6KAcldQNiwpBgKXfmhbpCmv+QAAAJFJREFUGBldwQcCgjAABMFLQu9Ksbf9/yOFKArMyDvFZsfOxCfNkoJZkchrQv7CRqNzwFJwlm6GNXPTga2DWj5KJmEArSI8pwEyewci4VWSXJk4JmJi08dRUo2nHOieEVmjF14uC2HOKHAZntWFrYtkWYslXfcs7a8apQV/ZSqvZ2aO+uqJhjruqjrRj6tSLb0BYsgfUrlpJLsAAAAASUVORK5CYII=) center no-repeat;
+      }
+    }
+  }
+
+  &__descr {
+    display: block;
+    width: 280px;
+    padding-top: 2px;
+    font-size: $font-size--small;
+    color: $gray-light;
+
+    & + #{$block-name}__btn-wrap {
+      margin-top: 20px;
+    }
+  }
+
+}
