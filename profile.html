@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js"> <!-- nicothin: Добавил класс no-js -->
+<html class="no-js  b-page"> <!-- nicothin: Добавил классы -->
   <head>
 
     <meta charset="utf-8">
@@ -31,9 +31,10 @@
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/script.js"></script>
 
-    <!-- nicothin: Добавил полифил для picture -->
+    <!-- nicothin: Добавил новые файлы -->
     <script src="js/picturefill.min.js" async></script>
-    <!-- /nicothin: Добавил полифил для picture -->
+    <script src="js/script-18-spring.js"></script>
+    <!-- /nicothin: Добавил новые файлы -->
 
     <!-- nicothin: Добавил одну строку JS -->
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
@@ -264,11 +265,11 @@
                 <div class="b-user-avatar  b-user-avatar--profile">
                   <div class="b-user-avatar__img-wrap">
                     <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
-                    <button class="b-user-avatar__new-img">
+                    <!-- <button class="b-user-avatar__new-img">
                       <svg width="18" height="18">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-camera"></use>
                       </svg>
-                    </button>
+                    </button> -->
                   </div>
                   <div class="b-user-avatar__descr">
                     <div class="b-user-avatar__name"><strong>Исаак Ньютон</strong></div>
@@ -984,15 +985,21 @@
       </div>
     </div>
 
-    <div style="position: fixed;bottom: 0;right: 0;padding: 0.5em;background-color: #fff;">
+    <div class="b-info-bottom" data-b-info-bottom>
+      <div class="b-info-bottom__inner">
+        <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="b-info-bottom__text">Текст</div>
+        <div class="b-info-bottom__btn">
+          <button class="btn  btn-success">Кнопка</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: fixed;bottom: 0;left: 50%;transform:translateX(-50%);padding: 0.5em;background-color: #fff;">
       <a href="#alert" data-toggle="modal">alert</a>
       <a href="#reg" data-toggle="modal">reg</a>
       <a href="#login" data-toggle="modal">login</a>
     </div>
-
-    <!-- nicothin: Добавил новый скриптовой файл -->
-    <script src="js/script-18-spring.js"></script>
-    <!-- /nicothin: Добавил новый скриптовой файл -->
 
   </body>
 </html>
