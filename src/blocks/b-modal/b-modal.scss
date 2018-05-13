@@ -252,6 +252,16 @@
     }
   }
 
+  &--md {
+
+    @media (min-width: $screen-md) {
+
+      .modal-dialog {
+        width: 620px;
+      }
+    }
+  }
+
 }
 
 .modal-backdrop {

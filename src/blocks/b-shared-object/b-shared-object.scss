@@ -7,6 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   display: flex;
+  min-width: 0;
 
   &__img-wrap {
     width: 80px;
@@ -26,9 +27,17 @@
     flex-grow: 1;
     min-width: 0;
     padding: 6px 0;
+
+    @media all and (-ms-high-contrast:none) {
+      *::-ms-backdrop, & {
+        width: 300px;
+      }
+    }
   }
 
   &__type {
+    width: 100%;
+    min-width: 0;
     margin: 0 0 9px;
     padding: 0;
     white-space: nowrap;

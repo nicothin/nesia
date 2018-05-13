@@ -77,6 +77,8 @@
     display: none;
     width: 110px;
     flex-shrink: 0;
+    text-align: right;
+    padding-right: 24px;
 
     @media (min-width: $screen-md) {
       display: block;
@@ -102,6 +104,7 @@
     list-style: none;
     max-height: 213px;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   &__item {
@@ -111,7 +114,16 @@
     border-bottom: 1px solid $gray-lightest;
 
     #{$block-name}__view-num {
+      padding-right: 10px;
       color: #000;
+
+      @media (min-width: $screen-md) {
+        padding-right: 24px;
+
+        // .desktop & {
+        //   padding-right: 10px;
+        // }
+      }
     }
 
     @media (min-width: $screen-md) {

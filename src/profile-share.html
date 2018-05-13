@@ -389,7 +389,7 @@
                             <img src="img/object-no-photo--sm.png" alt="" class="b-shared-object__img">
                           </div>
                           <div class="b-shared-object__descr">
-                            <h3 class="b-shared-object__type">Длинное название рубрики не увеличивает высоту</h3>
+                            <h3 class="b-shared-object__type">Длинное название рубрики не увеличивает высоту не увеличивает высоту</h3>
                             <div class="b-shared-object__address">ул. Большая-Васильковская, 176/2, Киев, Украина</div>
                           </div>
                         </article>
@@ -453,10 +453,10 @@
                 <div class="b-share__item">
                   <div class="b-share__msg">Дополнительные способы пригласить друзей</div>
                   <div class="b-share__btn-wrap">
-                    <button class="b-share__btn  b-share__btn--fb">Опубликовать в Facebook</button>
+                    <button class="b-share__btn  b-share__btn--fb" data-toggle="modal" data-target="#b-copy-link">Опубликовать в Facebook</button>
                   </div>
                   <div class="b-share__btn-wrap">
-                    <button class="b-share__btn  b-share__btn--msg">Отправить в Messenger</button>
+                    <button class="b-share__btn  b-share__btn--msg" data-toggle="modal" data-target="#b-copy-link">Отправить в Messenger</button>
                   </div>
                 </div>
               </div>
@@ -511,7 +511,7 @@
             <div class="b-share-mail-contacts">
               <div class="b-share-mail-contacts__header">
                 <div class="b-share-mail-contacts__header-inner">
-                  <button class="b-share-mail-contacts__select-all  btn" type="button">Снять выделение</button>
+                  <button class="b-share-mail-contacts__select-all  btn  btn-gray" type="button">Снять выделение</button>
                   <span class="b-share-mail-contacts__selected-num"><b>28</b> контактов получат это сообщение</span>
                   <label class="b-share-mail-contacts__search-wrap">
                     <input class="form-control  b-share-mail-contacts__search" type="search" placeholder="Введите имя или email">
@@ -593,6 +593,33 @@
         </div>
       </div>
     </form>
+
+    <div class="modal  b-modal  b-modal--md  fade" tabindex="-1" role="dialog" id="b-copy-link">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              Скопировать ссылку объекта
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="b-copy-link  b-form">
+              <input type="text" class="form-control" value="https://www.terranesia.com/i/36640704/">
+              <button class="btn  btn-default  b-btn  b-btn--ph24">
+                <svg class="b-btn__icon" width="16" height="16">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-link"></use>
+                </svg>
+                Скопировать
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>

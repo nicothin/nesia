@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока b-copy-link, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-copy-link {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .form-control {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      margin: 0;
+      order: 1;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .btn {
+    height: 42px !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  @media (min-width: $screen-md) {
+    display: flex;
+  }
+}

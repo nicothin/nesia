@@ -42,7 +42,8 @@
     "b-shared-object": [],
     "b-share": [],
     "b-share-mail-contacts": [],
-    "b-mail-list": []
+    "b-mail-list": [],
+    "b-copy-link": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
