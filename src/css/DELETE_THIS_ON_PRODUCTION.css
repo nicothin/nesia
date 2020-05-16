@@ -1,0 +1,16 @@
+/*
+  Файл НЕЛЬЗА использовать на проде.
+  Файл нужен только для работоспособности растрового спрайта на этапе разработки.
+*/
+
+.same_slider .jcarousel-control-next:before,
+.same_slider .jcarousel-control-prev:before,
+.facilities li .icon,
+.leftmain li .icon,
+.field .map_search_form .btn.btn-success:before,
+.product_cart_form .btn-success:before,
+.footer-social li a span,
+.big_img_slider .jcarousel-control-next:before,
+.big_img_slider .jcarousel-control-prev:before {
+  background-image: url(../img/sprite.png);
+ }

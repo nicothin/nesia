@@ -1,0 +1,458 @@
+@@include('./html-includes/header.html')
+
+      <!-- nicothin: Добавил новый хедер -->
+      <header class="b-page-header">
+        <div class="container-fluid  b-page-header__inner">
+
+          <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
+            <span>Show menu 1</span>
+          </button>
+
+          <a href="" class="b-page-header__logo  b-logo">
+            <picture>
+              <source srcset="img/logo.png" media="(min-width: 769px)">
+              <!-- <img src="img/logo.png" alt="" width="127" height="29"> -->
+              <!-- width="31" height="29" -->
+              <img class="b-logo__img" src="img/logo--sm.png" alt="">
+            </picture>
+          </a>
+
+          <nav class="b-page-header__nav  b-main-nav" id="nav">
+            <ul class="b-main-nav__list">
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить<span class="b-main-nav__link-long-text"> объект бесплатно</span></a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
+            </ul>
+            <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
+          </nav>
+
+          <div class="b-page-header__settings">
+
+            <!-- Юзер не авторизован
+            <div class="b-user">
+              <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
+                <svg width="20" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
+                </svg>
+              </button>
+            </div> -->
+
+            <!-- Юзер авторизован -->
+            <div class="b-user" id="b-user-drop">
+              <button class="b-user__drop" data-toggle="dropdown" type="button">
+                <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
+                <span class="b-user__username">Yevheniy</span>
+              </button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-user-menu  b-user__menu">
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Мой кабинет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-comments"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Сообщения</span>
+                    <span class="b-label  b-user-menu__link-label">99+</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Фолловинг</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-reviews"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Получить отзывы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-share"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Поделиться объектом</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-add"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Добавить объект</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--no-icon">
+                    <span class="b-user-menu__link-text">Выйти</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown  b-currency">
+              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=US$">
+                      <div class="csymbol">US$</div>
+                      <div class="ctext">Доллар США</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=€">
+                      <div class="csymbol">€</div>
+                      <div class="ctext">Евро</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=RUB">
+                      <div class="csymbol">RUB</div>
+                      <div class="ctext">Рубль РФ</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=£">
+                      <div class="csymbol">£</div>
+                      <div class="ctext">Фунт стерлингов</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CAD">
+                      <div class="csymbol">CAD</div>
+                      <div class="ctext">Канадский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=AUD">
+                      <div class="csymbol">AUD</div>
+                      <div class="ctext">Австралийский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CNY">
+                      <div class="csymbol">CNY</div>
+                      <div class="ctext">Китайский юань</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=TL">
+                      <div class="csymbol">TL</div>
+                      <div class="ctext">Турецкая лира</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=UAH">
+                      <div class="csymbol">UAH</div>
+                      <div class="ctext">Украинская гривна</div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown  b-language">
+              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <a href="#" onclick="change_language('en')">English</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ru')">Русский</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ua')">Українська</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('rs')">Srpski</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </header>
+      <!-- /nicothin: Добавил новый хедер -->
+
+      <div class="content">
+
+        <div class="container-fluid">
+
+          <div class="product_cart">
+
+            <ul class="leftmain">
+              <li class="active choose_show">
+                <a href="javascript:void(0);"><span class="icon icon1"></span>Фото</a>
+              </li>
+              <li class="choose_show">
+                <a href="javascript:void(0);"><span class="icon icon2"></span>Карта</a>
+              </li>
+              <li class="choose_show" id="sw_street" style="display: none;">
+                <a href="javascript:void(0);"><span class="icon icon8"></span>Улица</a>
+              </li>
+            </ul>
+
+            <div class="row">
+              <div class="col-xs-3">
+                <form class="product_cart_form small" id="search_form1" name="search_form1">
+                  <input class="form-control" id="autocomplete" placeholder="Введите адрес, район или город" type="text">
+                  <button class="btn btn-success" onclick="go();" type="button"></button>
+                </form>
+              </div>
+              <div class="col-xs-6">
+                <form class="product_cart_form" id="search_form2" name="search_form2">
+                  <input class="form-control" id="autocomplete2" placeholder="Введите адрес, район или город" type="text">
+                  <button class="btn btn-success" onclick="go();" type="button"></button>
+                </form>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-9 sw_show sw_photo">
+                <ul class="breadcrumb">
+                  <li>
+                    <a href="">Продажа</a>
+                  </li>
+                  <li>
+                    <a href="">Апартаменты</a>
+                  </li>
+                  <li>
+                    <a href="">Россия</a>
+                  </li>
+                  <li>
+                    <a href="">Москва</a>
+                  </li>
+                  <li class="active">
+                    <a href="">ул. Кутузова, 21, Загорянский, Московская обл., Россия, 141180</a>
+                  </li>
+                </ul><a class="complain" href="/support/department/report/">Пожаловаться на объект</a>
+                <!-- big_img_slider begin -->
+                <div class="big_img_slider" id="big_img_slider">
+                  <a class="jcarousel-control-prev noSwipe" href="javascript:;" id="big-img-prev"></a> <a
+                    class="jcarousel-control-next noSwipe" href="javascript:;" id="big-img-next"></a>
+                  <p class="jcarousel-pagination"></p>
+                  <div class="jcarousel">
+                    <ul class="list">
+                      <li class="item"><img alt="" src="img/1114055462980_700_500.jpg"></li>
+                      <li class="item"><img alt="" src="img/1509899842063_700_500.jpg"></li>
+                      <li class="item"><img alt="" src="img/3373285711666_700_500.jpg"></li>
+                      <li class="item"><img alt="" src="img/3726833055307_700_500.jpg"></li>
+                    </ul>
+                    <div class="clear"></div>
+                  </div>
+                </div><!-- big_img_slider end -->
+                <ul class="small_img_list">
+                  <li class="item">
+                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(0).click()"><img alt=""
+                        src="img/1114055462980_112_94.jpg"></a>
+                  </li>
+                  <li class="item">
+                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(1).click()"><img alt=""
+                        src="img/1509899842063_112_94.jpg"></a>
+                  </li>
+                  <li class="item">
+                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(2).click()"><img alt=""
+                        src="img/3373285711666_112_94.jpg"></a>
+                  </li>
+                  <li class="item">
+                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(3).click()"><img alt=""
+                        src="img/3726833055307_112_94.jpg"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-9 sw_show sw_street">
+                <div class="col-xs-14">
+                  <div class="object_details">
+                    <div class="price" style="font-size:25px!important">
+                      Р 5 500 000
+                    </div>
+                    <div class="perprice">
+                      Цена
+                    </div>
+                    <div class="object_address">
+                      Апартаменты в Москва<br>
+                      <span>Нижегородская ул., 63, Москва, Россия, 109052. 109052</span>
+                    </div>
+                    <div class="for_sale">
+                      ПРОДАЖА
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="facilities">
+              <li><span class="icon icon1"></span><span class="facilities_name">Жилая площадь 30 м<sup>2</sup></span></li>
+              <li><span class="icon icon2"></span><span class="facilities_name">16 Спальни</span></li>
+              <li><span class="icon icon3"></span><span class="facilities_name">3 Ванные</span></li>
+              <li><span class="icon icon4"></span><span class="facilities_name">2 Этаж</span></li>
+            </ul>
+            <div class="details">
+              <div class="inside">
+                <ul class="details_list">
+                  <li>Этажей в здании: 5</li>
+                  <li>Балкон: Да</li>
+                  <li>Отопление: Центральное</li>
+                  <li>Паркинг: на территории</li>
+                  <li>Вид на город</li>
+                </ul>
+              </div>
+            </div>
+            <div class="about_object">
+              <div class="inside">
+                <p>Продаётся однокомнатная кв с мебелью хороший ремонт!рядом метро Нижегородская</p>
+              </div><!-- <div class="expand"><a href="#">Развернуть</a></div> -->
+            </div>
+            <div class="in840">
+              <div class="user">
+                <div class="img"><img height="150" src="/media/no-img.jpg"
+                    style="border-radius: 100px; width:64px; height:64px;" width="150"></div>
+                <div class="about">
+                  <div class="name">
+                    Сева<br>
+                    Виноградов
+                  </div>
+                </div>
+                <script>
+                  $(".user_phone").live('click', function () {
+                    if ($(this).find(".phone_type").val() != 0) {
+                      var fill = $(this).find('.data');
+                      fill.html("Запрос номера...");
+                      $.ajax({
+                        type: "GET",
+                        url: "/object/41065624/" + $(this).find(".phone_type").val() + "/",
+                        success: function (data) {
+                          fill.html(data);
+
+                        }
+                      });
+                      $(this).find(".phone_type").val(0);
+                    }
+                  })
+                </script>
+                <div class="user_contact">
+                  <a class="user_phone" href="javascript:%20void(0);"><input class="phone_type" type="hidden" value="phone">
+                    Тел: <span class="data">+78... (Показать номер)</span></a><br>
+                  <a class="user_phone" href="javascript:%20void(0);"><input class="phone_type" type="hidden"
+                      value="additional_phone">Моб: <span class="data">+78... (Показать номер)</span></a>
+                  <p>Связь: телефон<br>
+                    Агентам не беспокоить<br>
+                    <br>
+                    Владею языками: Английский</p>
+                </div>
+              </div><a class="btn btn-success" href="mailto:privet.13.94@mail.ru"
+                style="margin: 10px 0 0 0; width: 100%;">Отправить email</a>
+            </div>
+
+          </div>
+
+          <div class="same_slider" id="list-nearby">
+            <h2>Ближайшие объекты</h2><a class="jcarousel-control-prev noSwipe" href="javascript:;" id="nearby-prev"></a> <a
+              class="jcarousel-control-next noSwipe" href="javascript:;" id="nearby-next"></a>
+            <p class="jcarousel-pagination"></p>
+            <div class="jcarousel">
+              <ul class="list">
+                <li class="item alx-swipe-item">
+                  <a href="/i/12447522/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 49 000 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">3 Спальни, 3 Ванные, 300
+                      м<sup>2</sup>,<br>
+                      ул. Кутузова, 21, Загорянский, Московская обл., Россия, 141180</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/88983852/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 4 990 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">3 Спальни, 2 Ванные, 115
+                      м<sup>2</sup>,<br>
+                      62, Алешкино-3 Дп, Московская обл., Россия, 141623</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/97509564/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 800 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">1 Спальни, 1 Ванные, 33
+                      м<sup>2</sup>,<br>
+                      Unnamed Road, Балакирево, Тверская обл., Россия, 171067</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/58449756/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 1 293 401</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">1 Спальни, 1 Ванные, 14
+                      м<sup>2</sup>,<br>
+                      Шевченківський провулок, 30, Харків, Харківська область, Украина</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/73934064/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 3 674 435</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">2 Спальни, 1 Ванные, 75
+                      м<sup>2</sup>,<br>
+                      ул. Тамары Кисляковой, Полтавська область, Украина</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/77379730/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 7 400 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">3 Спальни, 1 Ванные, 47
+                      м<sup>2</sup>,<br>
+                      ул. Восстания, 23, Санкт-Петербург, Россия, 191014</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/51087554/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 19 320</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part"><br>
+                      вулиця Залізнична, Дніпрорудне, Запорізька область, Украина</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/36640704/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 6 246 539</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">4 Спальни, 2 Ванные, 56
+                      м<sup>2</sup>,<br>
+                      вулиця Пушкіна, 17, Ірпінь, Київська область, Украина</span></a>
+                </li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+@@include('./html-includes/footer.html')

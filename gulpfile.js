@@ -155,7 +155,7 @@ gulp.task('copy:js', function (callback) {
 gulp.task('copy:html', function () {
   console.log('---------- Копирование html');
   return gulp.src(dirs.srcPath + '/*.html')
-    .pipe(newer(dirs.buildPath))  // оставить в потоке только изменившиеся файлы
+    //.pipe(newer(dirs.buildPath))  // оставить в потоке только изменившиеся файлы
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file',
@@ -373,7 +373,7 @@ gulp.task('serve', gulp.series('build', function() {
     gulp.watch(projectConfig.copiedJs, gulp.series('copy:js', reload));
   }
 
-  gulp.watch(dirs.srcPath + '*.html', gulp.series('copy:html', reload));
+  gulp.watch([dirs.srcPath + '*.html', dirs.srcPath + 'html-includes/*.html'], gulp.series('copy:html', reload));
 
   // JS-файлы блоков
   if(lists.js.length) {
