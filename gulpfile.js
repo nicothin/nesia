@@ -13,6 +13,8 @@ const cleanss = require('gulp-cleancss');
 const inlineSVG = require('postcss-inline-svg');
 const objectFitImages = require('postcss-object-fit-images');
 
+const fileinclude = require('gulp-file-include');
+
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const gulpIf = require('gulp-if');
@@ -154,6 +156,11 @@ gulp.task('copy:html', function () {
   console.log('---------- Копирование html');
   return gulp.src(dirs.srcPath + '/*.html')
     .pipe(newer(dirs.buildPath))  // оставить в потоке только изменившиеся файлы
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file',
+      indent: true,
+    }))
     .pipe(gulp.dest(dirs.buildPath));
 });
 
