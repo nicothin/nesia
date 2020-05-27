@@ -211,34 +211,316 @@
 
         <div class="container-fluid">
 
-          <div class="product_cart">
+          <div class="b-location">
 
-            <ul class="leftmain">
-              <li class="active choose_show">
-                <a href="javascript:void(0);"><span class="icon icon1"></span>Фото</a>
-              </li>
-              <li class="choose_show">
-                <a href="javascript:void(0);"><span class="icon icon2"></span>Карта</a>
-              </li>
-              <li class="choose_show" id="sw_street" style="display: none;">
-                <a href="javascript:void(0);"><span class="icon icon8"></span>Улица</a>
-              </li>
-            </ul>
-
-            <div class="row">
-              <div class="col-xs-3">
-                <form class="product_cart_form small" id="search_form1" name="search_form1">
-                  <input class="form-control" id="autocomplete" placeholder="Введите адрес, район или город" type="text">
-                  <button class="btn btn-success" onclick="go();" type="button"></button>
-                </form>
-              </div>
-              <div class="col-xs-6">
-                <form class="product_cart_form" id="search_form2" name="search_form2">
-                  <input class="form-control" id="autocomplete2" placeholder="Введите адрес, район или город" type="text">
-                  <button class="btn btn-success" onclick="go();" type="button"></button>
+            <div class="b-location__search-wrap  b-search-fast  row">
+              <div class="col-xs-12  col-sm-8">
+                <form class="b-search-fast__search" name="search_form">
+                  <input class="form-control  b-form-control  b-search-fast__search-input" placeholder="Введите адрес, район или город" type="text">
+                  <button class="b-search-fast__search-btn  btn  btn-success" type="button"></button>
                 </form>
               </div>
             </div>
+
+            <div class="b-location__inner  row">
+              <div class="b-location__top  col-xs-12  col-sm-8">
+
+                <a href="/" class="b-location__back  b-back-btn">
+                  <svg width="11" height="11" class="b-back-btn__icon"><path d="M2.443 6.167l3.528 3.528a.667.667 0 11-.942.943L.362 5.971a.667.667 0 010-.942L5.029.362a.667.667 0 11.942.943L2.443 4.833h7.765c.345 0 .625.299.625.667 0 .368-.28.667-.625.667z" /></svg>
+                  <span class="b-back-btn__text">Назад</span>
+                </a>
+
+                <!-- Добавить класс b-save-btn--active для показа активного состояния -->
+                <button class="b-location__save  b-save-btn" id="temp-id1">
+                  <svg class="b-save-btn__icon" width="16" height="14" viewBox="0 0 16 14">
+                    <path d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
+                  </svg>
+                  <svg class="b-save-btn__icon-active" width="16" height="14" viewBox="0 0 16 14">
+                    <path d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
+                  </svg>
+                  <span class="b-save-btn__text">Save</span>
+                </button>
+
+                <script>
+                  // ВРЕМЕННЫЙ КОД для показа работы кнопки Save
+                  $('#temp-id1').on('click', function() { console.log(111);  $(this).toggleClass('b-save-btn--active'); })
+                </script>
+
+                <ul class="b-location__breadcrumbs  b-breadcrumbs">
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Продажа</a>
+                  </li>
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Апартаменты</a>
+                  </li>
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Россия</a>
+                  </li>
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Москва</a>
+                  </li>
+                </ul>
+
+                <a class="b-location__abuse-link" href="/">Пожаловаться на объект</a>
+
+                <div class="b-location__main-block  sw_show sw_photo" id="sw_photo">
+                  <!-- big_img_slider begin -->
+                  <div class="big_img_slider" id="big_img_slider">
+                    <a class="jcarousel-control-prev noSwipe" href="javascript:;" id="big-img-prev"></a> <a
+                      class="jcarousel-control-next noSwipe" href="javascript:;" id="big-img-next"></a>
+                    <p class="jcarousel-pagination"></p>
+                    <div class="jcarousel">
+                      <ul class="list">
+                        <li class="item"><img alt="" src="img/1114055462980_700_500.jpg"></li>
+                        <li class="item"><img alt="" src="img/1509899842063_700_500.jpg"></li>
+                        <li class="item"><img alt="" src="img/3373285711666_700_500.jpg"></li>
+                        <li class="item"><img alt="" src="img/3726833055307_700_500.jpg"></li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                  </div><!-- big_img_slider end -->
+                  <ul class="small_img_list">
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(0).click()"><img alt="" src="img/1114055462980_112_94.jpg"></a>
+                    </li>
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(1).click()"><img alt="" src="img/1509899842063_112_94.jpg"></a>
+                    </li>
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(2).click()"><img alt="" src="img/3373285711666_112_94.jpg"></a>
+                    </li>
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(3).click()"><img alt="" src="img/3726833055307_112_94.jpg"></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="b-location__main-block  sw_show  sw_map" id="sw_map" style="display:none;">
+                  <p>TEMP for map</p>
+                </div>
+
+                <div class="b-location__main-block  sw_show  sw_street" id="sw_street" style="display:none;">
+                  <p>TEMP for street</p>
+                </div>
+
+                <div class="b-location__main-block  sw_show  sw_borders" id="sw_borders" style="display:none;">
+                  <p>TEMP for borders</p>
+                </div>
+
+                <ul class="b-location__left-tabs  leftmain">
+                  <li class="active choose_show">
+                    <a href="#sw_photo"><span class="icon icon1"></span>Фото</a>
+                  </li>
+                  <li class="choose_show">
+                    <a href="#sw_map"><span class="icon icon2"></span>Карта</a>
+                  </li>
+                  <li class="choose_show">
+                    <a href="#sw_street"><span class="icon icon8"></span>Улица</a>
+                  </li>
+                  <li class="choose_show">
+                    <a href="#sw_borders"><span class="icon icon3"></span>Borders</a>
+                  </li>
+                  <li class="report">
+                    <a href="/">Report listing</a>
+                  </li>
+                </ul>
+                <script>
+                  // переключение «вкладок» фото/карта/улицы/
+                  $('.choose_show a').on('click', function(e) {
+                    e.preventDefault();
+                    $('.sw_show').hide();
+                    $($(this).attr('href')).show();
+                  })
+                </script>
+
+                <div class="b-info">
+
+                  <p class="b-info__type">Sale</p>
+
+                  <div class="b-info__item">
+                    <div class="row  b-info__flex-line">
+                      <div class="b-info__name-wrap  col-xs-12  col-md-8  col-lg-9">
+                        <h1 class="b-info__name">Апартаменты в Москвe</h1>
+                        <p class="b-info__name-descr">Нижегородская ул., 63, Москва, Россия, 109052. 109052</p>
+                      </div>
+                      <div class="b-info__price-wrap  col-xs-12  col-md-4  col-lg-3">
+                        <p class="b-info__price">€ 69,000</p>
+                        <button class="b-info__trigger  b-link" type="button" data-target="price-change" data-closed-text="See price change" data-opened-text="Hide price change">See price changes</button>
+                      </div>
+                    </div>
+                    <div class="b-info__hidden-block" id="price-change" style="display: none;">
+                      <ul class="b-info__price-list">
+                        <li class="b-info__price-item">
+                          <span class="b-info__price-item-text">OCT 23/20</span>
+                          <span class="b-info__price-item-sum">€ 100, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <span class="b-info__price-item-text">OCT 23/20</span>
+                          <span class="b-info__price-item-sum">€ 90, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <span class="b-info__price-item-text">OCT 23/20</span>
+                          <span class="b-info__price-item-sum">€ 100, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                      </ul>
+                      <a href="" class="b-info__follow  b-link">Follow price change</a>
+                    </div>
+                  </div>
+
+                  <div class="b-info__item  b-info__item--auction">
+                    <div class="row  b-info__flex-line">
+                      <div class="col-xs-12  col-md-3">
+                        <div class="b-info__auction-wrap">
+                          <h2  class="b-info__auction">Auction</h2 >
+                          <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
+                        </div>
+                        <button class="b-info__trigger  b-link" type="button" data-target="last-offers" data-closed-text="See last offers"
+                          data-opened-text="Hide last offers">See last offers</button>
+                      </div>
+                      <div class="b-info__price-change-wrap  col-xs-12  col-md-3">
+                        <div class="b-field-num">
+                          <span class="b-field-num__input-and-btns">
+                            <input class="b-field-num__input" type="number" value="69400" name="price" max="100000" min="50000" step="100">
+                            <button class="b-field-num__btn  b-field-num__btn--minus" type="button">
+                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1"/><rect x="8" y="12" width="10" height="1" fill="#A1A1A1"/></svg>
+                            </button>
+                            <span class="b-field-num__text-wrap">
+                              <span class="b-field-num__text-currency">€</span>
+                              <span class="b-field-num__text-num">69,400</span>
+                            </span>
+                            <button class="b-field-num__btn  b-field-num__btn--plus" type="button">
+                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1"/><rect x="8" y="12" width="10" height="1" fill="#A1A1A1"/><rect x="13.5" y="7.5" width="10" height="1" transform="rotate(90 13.5 7.5)" fill="#A1A1A1"/></svg>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
+                        <button class="b-btn-2  b-btn-2--secondary">Offer your price</button>
+                      </div>
+                      <script>
+                        // Поля формы с выбором кол-ва
+                        var fieldsNum = document.querySelectorAll('.b-field-num');
+                        if (fieldsNum.length) {
+                          Array.prototype.forEach.call(fieldsNum, function (field) {
+                            const input = field.querySelector('.b-field-num__input');
+                            const text = field.querySelector('.b-field-num__text-num');
+                            const valueMin = input.getAttribute('min') ? +input.getAttribute('min') : -Infinity;
+                            const valueMax = input.getAttribute('max') ? +input.getAttribute('max') : Infinity;
+                            const valueStep = input.getAttribute('step') ? +input.getAttribute('step') : 1;
+                            field.addEventListener('click', function (event) {
+                              if (event.target.classList.contains('b-field-num__btn') && !input.getAttribute('disabled')) {
+                                var num = parseInt(input.value);
+                                if (isNaN(num)) num = 0;
+                                if (event.target.classList.contains('b-field-num__btn--plus')) {
+                                  if (num < valueMax) input.value = num + valueStep;
+                                }
+                                if (event.target.classList.contains('b-field-num__btn--minus')) {
+                                  if (num > valueMin) input.value = num - valueStep;
+                                }
+                                if (text) {
+                                  text.innerText = new Intl.NumberFormat('en-IN').format(input.value);
+                                }
+                              }
+                            });
+                          });
+                        }
+                      </script>
+                    </div>
+                    <div class="b-info__hidden-block" id="last-offers" style="display: none;">
+                      <ul class="b-info__price-list  b-info__price-list--avatars">
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+                          </a>
+                          <span class="b-info__price-item-text">highest bid</span>
+                          <span class="b-info__price-item-sum">€ 70, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+                          </a>
+                          <span class="b-info__price-item-text">lowest ask</span>
+                          <span class="b-info__price-item-sum">€ 68, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                      </ul>
+                      <span class="b-info__total">Total offers <b>12</b></span>
+                    </div>
+                  </div>
+
+                  <script>
+                    // показ и сокрытие аккордеон-областей
+                    $('[data-target]').on('click', function(e){
+                      e.preventDefault();
+                      var trigger = this;
+                      var target = '#' + $(this).data('target');
+                      var openText = $(this).data('opened-text');
+                      var closeText = $(this).data('closed-text');
+                      $(target).slideToggle(250, function(){
+                        console.log(111);
+                        if ($(this).is(':visible')) {
+                          $(trigger).text(openText);
+                        }
+                        else {
+                          $(trigger).text(closeText);
+                        }
+                      });
+                    });
+                    // включение popover
+                    $('[data-toggle="popover"]').popover();
+                    // закрытие popover при клике вне его
+                    $(document).on('click', function (e) {
+                      $('[data-toggle="popover"],[data-original-title]').each(function () {
+                        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                          (($(this).popover('hide').data('bs.popover') || {}).inState || {}).click = false  // fix for BS 3.3.6
+                        }
+                      });
+                    });
+                  </script>
+
+                  <div class="b-info__item">
+                    icons
+                    <div class="row">
+                      <div class="col-xs-3">
+                        <ul>
+                          <li>1</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-3">
+                        <ul>
+                          <li>2</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-3">
+                        <ul>
+                          <li>3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="col-xs-4  col-sm 4">
+                sidebar
+              </div>
+            </div>
+
+
+
+            <hr>
+            <p>Далее — части старого варианта для переноса</p>
+            <hr>
+
+
+
+
 
             <div class="row">
               <div class="col-xs-9 sw_show sw_photo">
@@ -258,40 +540,9 @@
                   <li class="active">
                     <a href="">ул. Кутузова, 21, Загорянский, Московская обл., Россия, 141180</a>
                   </li>
-                </ul><a class="complain" href="/support/department/report/">Пожаловаться на объект</a>
-                <!-- big_img_slider begin -->
-                <div class="big_img_slider" id="big_img_slider">
-                  <a class="jcarousel-control-prev noSwipe" href="javascript:;" id="big-img-prev"></a> <a
-                    class="jcarousel-control-next noSwipe" href="javascript:;" id="big-img-next"></a>
-                  <p class="jcarousel-pagination"></p>
-                  <div class="jcarousel">
-                    <ul class="list">
-                      <li class="item"><img alt="" src="img/1114055462980_700_500.jpg"></li>
-                      <li class="item"><img alt="" src="img/1509899842063_700_500.jpg"></li>
-                      <li class="item"><img alt="" src="img/3373285711666_700_500.jpg"></li>
-                      <li class="item"><img alt="" src="img/3726833055307_700_500.jpg"></li>
-                    </ul>
-                    <div class="clear"></div>
-                  </div>
-                </div><!-- big_img_slider end -->
-                <ul class="small_img_list">
-                  <li class="item">
-                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(0).click()"><img alt=""
-                        src="img/1114055462980_112_94.jpg"></a>
-                  </li>
-                  <li class="item">
-                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(1).click()"><img alt=""
-                        src="img/1509899842063_112_94.jpg"></a>
-                  </li>
-                  <li class="item">
-                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(2).click()"><img alt=""
-                        src="img/3373285711666_112_94.jpg"></a>
-                  </li>
-                  <li class="item">
-                    <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(3).click()"><img alt=""
-                        src="img/3726833055307_112_94.jpg"></a>
-                  </li>
                 </ul>
+                <a class="complain" href="/support/department/report/">Пожаловаться на объект</a>
+                111
               </div>
               <div class="col-xs-9 sw_show sw_street">
                 <div class="col-xs-14">

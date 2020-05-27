@@ -1,0 +1,142 @@
+// В этом файле должны быть стили для БЭМ-блока b-location, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-location {
+
+  &__search-wrap {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 18px;
+      padding-top: 32px !important;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 8px;
+  }
+
+  &__back {
+    margin-left: -12px;
+    margin-right: 12px;
+    color: #D84B2A;
+    font-size: 12px;
+  }
+
+  &__save {
+    position: relative;
+    margin-left: auto;
+    margin-right: -12px;
+
+    @media (min-width: $screen-md) {
+      display: none !important;
+    }
+  }
+
+  &__breadcrumbs {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__abuse-link {
+    display: none;
+    margin-left: auto;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 0;
+    color: #535353;
+    text-decoration: underline;
+
+    @media (min-width: $screen-md) {
+      display: inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      color: #535353;
+      text-decoration: none;
+    }
+  }
+
+  &__main-block {
+    min-width: 100%;
+    margin: 0 -15px;
+    padding-top: 6px;
+
+    @media (min-width: $screen-md) {
+      margin: 0;
+      padding-top: 10px;
+    }
+
+    .big_img_slider {
+      padding-bottom: 0;
+    }
+
+    .big_img_slider .jcarousel-control-next,
+    .big_img_slider .jcarousel-control-prev {
+      display: none;
+
+      @media (min-width: $screen-xs) {
+        display: block;
+      }
+    }
+  }
+
+  &__left-tabs {
+    position: static;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 8px 0 0;
+
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      top: 50px;
+      left: -43px;
+      margin: 0;
+      width: auto;
+      flex-direction: column;
+    }
+
+    li {
+      margin: 0 8px 0 0;
+
+      @media (min-width: $screen-xl) {
+        margin: 0 0 8px;
+      }
+    }
+
+    .report {
+      margin-left: auto;
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+
+      a {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        color: #535353;
+        font-size: 12px;
+        line-height: 1;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+          color: #535353;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

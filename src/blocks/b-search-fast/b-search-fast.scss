@@ -1,0 +1,70 @@
+// В этом файле должны быть стили для БЭМ-блока b-search-fast, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-search-fast {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 8px 1px;
+  background: #98c12f;
+
+  @media (min-width: $screen-md) {
+    padding: 0;
+    background: transparent;
+  }
+
+  &__search {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.9333 13.8667L10.64 9.45778C11.4 8.44444 11.8222 7.26222 11.8222 5.91111C11.8222 2.61778 9.20444 0 5.91111 0C2.61778 0 0 2.61778 0 5.91111C0 9.20444 2.61778 11.8222 5.91111 11.8222C7.26222 11.8222 8.44444 11.4 9.45778 10.64L13.7511 15.0489C13.92 15.2178 14.1733 15.3022 14.3422 15.3022C14.5956 15.3022 14.7644 15.2178 14.9333 15.0489C15.2711 14.7111 15.2711 14.2044 14.9333 13.8667ZM1.6888 5.95573C1.6888 3.5664 3.56614 1.68906 5.95547 1.68906C8.3448 1.68906 10.2221 3.5664 10.2221 5.95573C10.2221 8.34506 8.3448 10.2224 5.95547 10.2224C3.56614 10.2224 1.6888 8.34506 1.6888 5.95573Z' fill='%23CFCECE'/%3E%3C/svg%3E");
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &__search-input {
+    padding-left: 40px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 12px;
+      padding-right: 50px;
+    }
+  }
+
+  &__search-btn {
+    display: none;
+    width: 40px;
+    height: 40px !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    border-radius: 0 3px 3px 0 !important;
+    border: 1px solid #d84b2a;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+
+    &:before {
+      content: '';
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -6px 0 0 -6px;
+      background: url(../images/sprite.png) -248px 0/750px no-repeat;
+    }
+  }
+}

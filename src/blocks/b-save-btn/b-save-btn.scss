@@ -1,0 +1,68 @@
+// В этом файле должны быть стили для БЭМ-блока b-save-btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-save-btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 16px;
+  padding: 8px 12px 8px 38px;
+  // font-size: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #535353;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  // border: 1px solid #E8E8E8;
+  border: none;
+  border-radius: 2px;
+  // box-shadow: 2px 2px 8px rgba(151, 151, 151, 0.15);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: #535353;
+    text-decoration: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    fill: #CFCECE;
+    transition: none;
+  }
+
+  &__icon-active {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    opacity: 0;
+    fill: #D84B2A;
+    transition: all 0.2s ease;
+  }
+
+  &--active {
+
+    #{$block-name}__icon {
+      opacity: 0;
+      transform: scale(1.6);
+      transition: opacity 0.2s 0.2s ease, transform 0.3s ease;
+    }
+
+    #{$block-name}__icon-active {
+      opacity: 1;
+    }
+  }
+}

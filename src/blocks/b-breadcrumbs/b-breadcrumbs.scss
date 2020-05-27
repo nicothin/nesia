@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока b-breadcrumbs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #a1a1a1;
+  font-size: 12px;
+  font-weight: 500;
+
+  a {
+    display: inline-block;
+    line-height: 16px;
+    padding: 8px 0;
+    color: #a1a1a1;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #a1a1a1;
+      text-decoration: underline;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: inline;
+
+    & + &:before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 8px;
+      margin: 0 3px 0 2px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABySURBVHgBXU3BDYAgDITqAI7AKLqBE5B0IkdowiI4Ck+fTABeURK0CfR67d0ZgxKR3fyKQC5EdIQQ5LNg5lxK2Wqt67i0HUDpoIzW2tN7zzSoM15SpQ7ze605EXBR25bRvoc0SiIzKZ70Gt3BAhxf3fcGku0v2CA7E+8AAAAASUVORK5CYII=);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+// В этом файле должны быть стили для БЭМ-блока b-btn-2, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-btn-2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 16px 5px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  background: #D84B2A;
+  color: #fff;
+  border: 1px solid #D84B2A;
+  border-radius: 2px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background: #C24629;
+    border: 1px solid #C24629;
+  }
+
+  &--secondary {
+    border: 1px solid #D84B2A;
+    background: #ffffff;
+    color: #D84B2A;
+
+    &:hover,
+    &:focus {
+      color: #C24629;
+      background: #fff;
+      border: 1px solid #C24629;
+    }
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--lg {
+    padding: 10px 37px 9px;
+  }
+}

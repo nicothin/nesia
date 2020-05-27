@@ -1,8 +1,9 @@
 /*
-  Файл НЕЛЬЗА использовать на проде.
+  Файл НЕЛЬЗА использовать на проде!!1111адинадин
   Файл нужен только для работоспособности растрового спрайта на этапе разработки.
 */
 
+.b-search-fast__search-btn:before,
 .same_slider .jcarousel-control-next:before,
 .same_slider .jcarousel-control-prev:before,
 .facilities li .icon,
@@ -12,5 +13,5 @@
 .footer-social li a span,
 .big_img_slider .jcarousel-control-next:before,
 .big_img_slider .jcarousel-control-prev:before {
-  background-image: url(../img/sprite.png);
+  background-image: url(../img/sprite.png) !important;
  }

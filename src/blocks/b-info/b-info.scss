@@ -1,0 +1,255 @@
+// В этом файле должны быть стили для БЭМ-блока b-info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-info {
+
+  $block-name:                &; // #{$block-name}__element
+
+  width: 100%;
+  padding-top: 32px;
+
+  &__type {
+    margin: 0 0 13px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 2px;
+    color: #799234;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #E8E8E8;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--auction {
+      padding-bottom: 120px;
+
+      @media (min-width: $screen-lg) {
+        padding-bottom: 22px;
+      }
+    }
+  }
+
+  &__flex-line {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__price {
+    margin: 0 0 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+
+    @media (min-width: $screen-md) {
+      font-size: 24px;
+    }
+  }
+
+  &__price-wrap {
+    min-width: 100%;
+
+    @media (min-width: $screen-lg) {
+      min-width: 0;
+    }
+  }
+
+  &__name-wrap {
+    min-width: 100%;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-lg) {
+      order: 1;
+      min-width: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    margin: 0 0 5px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  &__name-descr {
+    margin: 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: #A1A1A1;
+  }
+
+  &__trigger {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+
+    &:after {
+      content: '';
+      width: 10px;
+      height: 6px;
+      margin-left: 12px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB+SURBVHgBbY3BEYIwFER3YyMeJTlYh8aDHTh2YAdqBaEDaAI6ATKcqIQPgYEJDHv6+/bNfNa35AmFsy6aFAfxNvn0PTp1Iq8KdM1D//bSzOiCMwNrcm+1xHK4A/N3k4XOdRhlQl5C/KdB8IUwv5TVeyPG8lQi6TCtNW55F2cAy0cumN3ngnkAAAAASUVORK5CYII=);
+    }
+  }
+
+  &__price-list {
+    margin: 0 0 24px;
+    padding: 22px 0 0;
+    max-width: 491px;
+    list-style: none;
+    font-size: 12px;
+    line-height: 20px;
+
+    &--avatars {
+      margin-bottom: 18px;
+      padding-top: 14px;
+
+      #{$block-name}__price-item {
+        margin-bottom: 11px;
+      }
+
+      #{$block-name}__price-item-sum {
+        min-width: 54px;
+      }
+    }
+  }
+
+  &__price-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 9px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price-item-avatar {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translateY(8px);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__price-item-text {
+    display: flex;
+    align-items: baseline;
+    flex-grow: 1;
+    text-transform: uppercase;
+    color: #A1A1A1;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 14px;
+      margin: 0 0 0 8px;
+      flex-grow: 1;
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+
+  &__price-item-sum {
+    min-width: 64px;
+    padding-left: 8px;
+    text-align: right;
+    color: #000;
+  }
+
+  &__price-item-change {
+    min-width: 38px;
+    padding-left: 6px;
+    text-align: right;
+    color: #A1BF4B;
+
+    &--up {
+      color: #2F80ED;;
+    }
+  }
+
+  &__follow {
+    font-size: 14px;
+    line-height: 20px;
+    color: #D84B2A;
+  }
+
+  &__auction-wrap {
+    display: flex;
+    margin-bottom: 4px;
+  }
+
+  &__auction {
+    padding: 0;
+    margin: 0 5px 0 0;
+    text-align: left;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__total {
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #A1A1A1;
+
+    b {
+      margin-left: 5px;
+      color: #000;
+    }
+  }
+
+  &__price-change-wrap {
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+    padding: 0;
+    margin: 20px 0;
+
+    @media (min-width: $screen-lg) {
+      position: static;
+      padding: 0 15px;
+      margin: 8px 0 0;
+    }
+  }
+
+  &__btn-offer-wrap {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    bottom: 24px;
+
+    @media (min-width: $screen-lg) {
+      position: static;
+      padding: 0 15px;
+      margin-top: 3px;
+    }
+  }
+}
