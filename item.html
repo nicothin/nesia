@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<!-- nicothin: Добавил классы на html-->
+<html class="no-js  b-page">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- nicothin: Добавил meta name="format-detection" -->
+  <meta name="format-detection" content="telephone=no">
+  <title>Terranesia</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- nicothin: Изменена ссылка на шрифт -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/jquery.formstyler.css" rel="stylesheet">
+  <link href="css/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+  <!-- nicothin: Добавил новый стилевой файл, УБРАТЬ НА ПРОДАКШЕНЕ!!! -->
+  <link href="css/DELETE_THIS_ON_PRODUCTION.css" rel="stylesheet">
+  <!-- /nicothin: Добавил новый стилевой файл, УБРАТЬ НА ПРОДАКШЕНЕ!!! -->
+  <link href="css/style-18-spring.min.css" rel="stylesheet">
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.formstyler.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/ng-file-upload.min.js"></script>
+  <script src="js/jquery-scrollTo.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.Jcrop.min.js"></script>
+  <script src="js/jquery.touchSwipe.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script src="js/picturefill.min.js" async></script>
+  <script src="js/script-18-spring.js"></script>
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+</head>
+
+<body id="body">
+
+  <div id="wrap">
+
+
+      <!-- nicothin: Добавил новый хедер -->
+      <header class="b-page-header">
+        <div class="container-fluid  b-page-header__inner">
+
+          <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
+            <span>Show menu 1</span>
+          </button>
+
+          <a href="" class="b-page-header__logo  b-logo">
+            <picture>
+              <source srcset="img/logo.png" media="(min-width: 769px)">
+              <!-- <img src="img/logo.png" alt="" width="127" height="29"> -->
+              <!-- width="31" height="29" -->
+              <img class="b-logo__img" src="img/logo--sm.png" alt="">
+            </picture>
+          </a>
+
+          <nav class="b-page-header__nav  b-main-nav" id="nav">
+            <ul class="b-main-nav__list">
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить<span class="b-main-nav__link-long-text"> объект бесплатно</span></a></li>
+              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
+            </ul>
+            <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
+          </nav>
+
+          <div class="b-page-header__settings">
+
+            <!-- Юзер не авторизован
+            <div class="b-user">
+              <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
+                <svg width="20" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
+                </svg>
+              </button>
+            </div> -->
+
+            <!-- Юзер авторизован -->
+            <div class="b-user" id="b-user-drop">
+              <button class="b-user__drop" data-toggle="dropdown" type="button">
+                <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
+                <span class="b-user__username">Yevheniy</span>
+              </button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-user-menu  b-user__menu">
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Мой кабинет</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-comments"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Сообщения</span>
+                    <span class="b-label  b-user-menu__link-label">99+</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Фолловинг</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-reviews"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Получить отзывы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-share"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Поделиться объектом</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
+                    <svg class="b-user-menu__link-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-add"></use>
+                    </svg>
+                    <span class="b-user-menu__link-text">Добавить объект</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="b-user-menu__link  b-user-menu__link--no-icon">
+                    <span class="b-user-menu__link-text">Выйти</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown  b-currency">
+              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=US$">
+                      <div class="csymbol">US$</div>
+                      <div class="ctext">Доллар США</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=€">
+                      <div class="csymbol">€</div>
+                      <div class="ctext">Евро</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=RUB">
+                      <div class="csymbol">RUB</div>
+                      <div class="ctext">Рубль РФ</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=£">
+                      <div class="csymbol">£</div>
+                      <div class="ctext">Фунт стерлингов</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CAD">
+                      <div class="csymbol">CAD</div>
+                      <div class="ctext">Канадский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=AUD">
+                      <div class="csymbol">AUD</div>
+                      <div class="ctext">Австралийский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CNY">
+                      <div class="csymbol">CNY</div>
+                      <div class="ctext">Китайский юань</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=TL">
+                      <div class="csymbol">TL</div>
+                      <div class="ctext">Турецкая лира</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=UAH">
+                      <div class="csymbol">UAH</div>
+                      <div class="ctext">Украинская гривна</div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown  b-language">
+              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                <li>
+                  <a href="#" onclick="change_language('en')">English</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ru')">Русский</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ua')">Українська</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('rs')">Srpski</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </header>
+      <!-- /nicothin: Добавил новый хедер -->
+
+      <div class="content">
+
+        <div class="container-fluid">
+
+          <div class="b-location">
+
+            <div class="b-location__search-wrap  b-search-fast  row">
+              <div class="col-xs-12  col-sm-8">
+                <form class="b-search-fast__search" name="search_form">
+                  <input class="form-control  b-form-control  b-search-fast__search-input" placeholder="Введите адрес, район или город" type="text">
+                  <button class="b-search-fast__search-btn  btn  btn-success" type="button"></button>
+                </form>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="b-location__top  col-xs-12  col-sm-8">
+
+                <a href="/" class="b-location__back  b-back-btn">
+                  <svg width="11" height="11" class="b-back-btn__icon">
+                    <path
+                      d="M2.443 6.167l3.528 3.528a.667.667 0 11-.942.943L.362 5.971a.667.667 0 010-.942L5.029.362a.667.667 0 11.942.943L2.443 4.833h7.765c.345 0 .625.299.625.667 0 .368-.28.667-.625.667z" />
+                  </svg>
+                  <span class="b-back-btn__text">Назад</span>
+                </a>
+
+                <!-- Добавить класс b-save-btn--active для показа активного состояния -->
+                <button class="b-location__save  b-save-btn" id="temp-id1">
+                  <svg class="b-save-btn__icon" width="16" height="14" viewBox="0 0 16 14">
+                    <path
+                      d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
+                  </svg>
+                  <svg class="b-save-btn__icon-active" width="16" height="14" viewBox="0 0 16 14">
+                    <path
+                      d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
+                  </svg>
+                  <span class="b-save-btn__text">Save</span>
+                </button>
+
+                <script>
+                  // ВРЕМЕННЫЙ КОД для показа работы кнопки Save
+                  $('#temp-id1').on('click', function () { console.log(111); $(this).toggleClass('b-save-btn--active'); })
+                </script>
+
+                <ul class="b-location__breadcrumbs  b-breadcrumbs">
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Продажа</a>
+                  </li>
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Апартаменты</a>
+                  </li>
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Россия</a>
+                  </li>
+                  <li class="b-breadcrumbs__item">
+                    <a href="">Москва</a>
+                  </li>
+                </ul>
+
+                <a class="b-location__abuse-link" href="/">Пожаловаться на объект</a>
+
+              </div>
+            </div>
+
+            <div class="b-location__inner  row">
+              <div class="b-location__content  col-xs-12  col-sm-8">
+
+                <div class="b-location__main-block  sw_show sw_photo" id="sw_photo">
+                  <!-- big_img_slider begin -->
+                  <div class="big_img_slider" id="big_img_slider">
+                    <a class="jcarousel-control-prev noSwipe" href="javascript:;" id="big-img-prev"></a> <a
+                      class="jcarousel-control-next noSwipe" href="javascript:;" id="big-img-next"></a>
+                    <p class="jcarousel-pagination"></p>
+                    <div class="jcarousel">
+                      <ul class="list">
+                        <li class="item"><img alt="" src="img/1114055462980_700_500.jpg"></li>
+                        <li class="item"><img alt="" src="img/1509899842063_700_500.jpg"></li>
+                        <li class="item"><img alt="" src="img/3373285711666_700_500.jpg"></li>
+                        <li class="item"><img alt="" src="img/3726833055307_700_500.jpg"></li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                  </div><!-- big_img_slider end -->
+                  <ul class="small_img_list">
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(0).click()"><img alt="" src="img/1114055462980_112_94.jpg"></a>
+                    </li>
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(1).click()"><img alt="" src="img/1509899842063_112_94.jpg"></a>
+                    </li>
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(2).click()"><img alt="" src="img/3373285711666_112_94.jpg"></a>
+                    </li>
+                    <li class="item">
+                      <a href="javascript:;" onclick="$('#big_img_slider .jcarousel-pagination a').eq(3).click()"><img alt="" src="img/3726833055307_112_94.jpg"></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="b-location__main-block  sw_show  sw_map" id="sw_map" style="display:none;">
+                  <p>TEMP for map</p>
+                </div>
+
+                <div class="b-location__main-block  sw_show  sw_street" id="sw_street" style="display:none;">
+                  <p>TEMP for street</p>
+                </div>
+
+                <div class="b-location__main-block  sw_show  sw_borders" id="sw_borders" style="display:none;">
+                  <p>TEMP for borders</p>
+                </div>
+
+                <ul class="b-location__left-tabs  leftmain">
+                  <li class="active choose_show">
+                    <a href="#sw_photo"><span class="icon icon1"></span>Фото</a>
+                  </li>
+                  <li class="choose_show">
+                    <a href="#sw_map"><span class="icon icon2"></span>Карта</a>
+                  </li>
+                  <li class="choose_show">
+                    <a href="#sw_street"><span class="icon icon8"></span>Улица</a>
+                  </li>
+                  <li class="choose_show">
+                    <a href="#sw_borders"><span class="icon icon3"></span>Borders</a>
+                  </li>
+                  <li class="report">
+                    <a href="/">Report listing</a>
+                  </li>
+                </ul>
+                <script>
+                  // переключение «вкладок» фото/карта/улицы/
+                  $('.choose_show a').on('click', function(e) {
+                    e.preventDefault();
+                    $('.sw_show').hide();
+                    $($(this).attr('href')).show();
+                  })
+                </script>
+
+                <div class="b-info">
+
+                  <p class="b-info__type">Sale</p>
+
+                  <div class="b-info__item">
+                    <div class="row  b-info__flex-line">
+                      <div class="b-info__name-wrap  col-xs-12  col-md-8  col-lg-9">
+                        <h1 class="b-info__name">Апартаменты в Москвe</h1>
+                        <p class="b-info__name-descr">Нижегородская ул., 63, Москва, Россия, 109052. 109052</p>
+                      </div>
+                      <div class="b-info__price-wrap  col-xs-12  col-md-4  col-lg-3">
+                        <p class="b-info__price">€ 69,000</p>
+                        <button class="b-info__trigger  b-link" type="button" data-target="price-change" data-closed-text="See price change" data-opened-text="Hide price change">See price changes</button>
+                      </div>
+                    </div>
+                    <div class="b-info__hidden-block" id="price-change" style="display: none;">
+                      <ul class="b-info__price-list">
+                        <li class="b-info__price-item">
+                          <span class="b-info__price-item-text">OCT 23/20</span>
+                          <span class="b-info__price-item-sum">€ 100, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <span class="b-info__price-item-text">OCT 23/20</span>
+                          <span class="b-info__price-item-sum">€ 90, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <span class="b-info__price-item-text">OCT 23/20</span>
+                          <span class="b-info__price-item-sum">€ 100, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                      </ul>
+                      <a href="" class="b-info__follow  b-link">Follow price change</a>
+                    </div>
+                  </div>
+
+                  <div class="b-info__item  b-info__item--auction">
+                    <form class="row  b-info__flex-line">
+                      <div class="col-xs-12  col-md-3">
+                        <div class="b-info__auction-wrap">
+                          <h2  class="b-info__title  b-info__title--auction">Auction</h2 >
+                          <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
+                        </div>
+                        <button class="b-info__trigger  b-link" type="button" data-target="last-offers" data-closed-text="See last offers"
+                          data-opened-text="Hide last offers">See last offers</button>
+                      </div>
+                      <div class="b-info__price-change-wrap  col-xs-12  col-md-3">
+                        <div class="b-field-num">
+                          <span class="b-field-num__input-and-btns">
+                            <input class="b-field-num__input" type="number" value="69400" name="price" max="100000" min="50000" step="100">
+                            <button class="b-field-num__btn  b-field-num__btn--minus" type="button">
+                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/></svg>
+                            </button>
+                            <span class="b-field-num__text-wrap">
+                              <span class="b-field-num__text-currency">€</span>
+                              <span class="b-field-num__text-num">69,400</span>
+                            </span>
+                            <button class="b-field-num__btn  b-field-num__btn--plus" type="button">
+                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/><rect class="b-field-num__icon-symbol" x="13.5" y="7.5" width="10" height="1" transform="rotate(90 13.5 7.5)" fill="#A1A1A1"/></svg>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
+                          <span class="b-btn-2__text">Offer your price</span>
+                        </button>
+                      </div>
+                      <script>
+                        // Поля формы с выбором кол-ва
+                        var fieldsNum = document.querySelectorAll('.b-field-num');
+                        if (fieldsNum.length) {
+                          Array.prototype.forEach.call(fieldsNum, function (field) {
+                            const input = field.querySelector('.b-field-num__input');
+                            const text = field.querySelector('.b-field-num__text-num');
+                            const valueMin = input.getAttribute('min') ? +input.getAttribute('min') : -Infinity;
+                            const valueMax = input.getAttribute('max') ? +input.getAttribute('max') : Infinity;
+                            const valueStep = input.getAttribute('step') ? +input.getAttribute('step') : 1;
+                            field.addEventListener('click', function (event) {
+                              if (event.target.classList.contains('b-field-num__btn') && !input.getAttribute('disabled')) {
+                                var num = parseInt(input.value);
+                                if (isNaN(num)) num = 0;
+                                if (event.target.classList.contains('b-field-num__btn--plus')) {
+                                  if (num < valueMax) input.value = num + valueStep;
+                                }
+                                if (event.target.classList.contains('b-field-num__btn--minus')) {
+                                  if (num > valueMin) input.value = num - valueStep;
+                                }
+                                if (text) {
+                                  text.innerText = new Intl.NumberFormat('en-IN').format(input.value);
+                                }
+                              }
+                            });
+                          });
+                        }
+                      </script>
+                    </form>
+                    <div class="b-info__hidden-block" id="last-offers" style="display: none;">
+                      <ul class="b-info__price-list  b-info__price-list--avatars">
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+                          </a>
+                          <span class="b-info__price-item-text">highest bid</span>
+                          <span class="b-info__price-item-sum">€ 70, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' />
+                          </a>
+                          <span class="b-info__price-item-text">lowest ask</span>
+                          <span class="b-info__price-item-sum">€ 68, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                      </ul>
+                      <span class="b-info__total">Total offers <b>12</b></span>
+                    </div>
+                  </div>
+
+                  <script>
+                    // показ и сокрытие аккордеон-областей
+                    $('[data-target]').on('click', function(e){
+                      e.preventDefault();
+                      var trigger = this;
+                      var target = '#' + $(this).data('target');
+                      var openText = $(this).data('opened-text');
+                      var closeText = $(this).data('closed-text');
+                      $(target).slideToggle(250, function(){
+                        console.log(111);
+                        if ($(this).is(':visible')) {
+                          $(trigger).text(openText);
+                        }
+                        else {
+                          $(trigger).text(closeText);
+                        }
+                      });
+                    });
+                    // включение popover
+                    $('[data-toggle="popover"]').popover();
+                    // закрытие popover при клике вне его
+                    $(document).on('click', function (e) {
+                      $('[data-toggle="popover"],[data-original-title]').each(function () {
+                        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                          (($(this).popover('hide').data('bs.popover') || {}).inState || {}).click = false  // fix for BS 3.3.6
+                        }
+                      });
+                    });
+                  </script>
+
+                  <div class="b-info__item">
+                    <h2 class="b-info__title  b-info__title--about">About property</h2>
+                    <ul class="b-info__facilities  facilities">
+                      <li><span class="icon icon1"></span><span class="facilities_name">30 м<sup>2</sup></span></li>
+                      <li><span class="icon icon2"></span><span class="facilities_name">2 Спальни</span></li>
+                      <li><span class="icon icon3"></span><span class="facilities_name">1 Ванна</span></li>
+                      <li><span class="icon icon4"></span><span class="facilities_name">2 Этаж</span></li>
+                    </ul>
+                    <div class="b-info__about-lists-wrap  row">
+                      <div class="col-xs-6  col-sm-4  col-md-3">
+                        <ul class="b-info__props-list">
+                          <li class="b-info__prop">3 bedrooms</li>
+                          <li class="b-info__prop">Construction license: Available</li>
+                          <li class="b-info__prop">Ceiling Fan</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-6  col-sm-4  col-md-3">
+                        <ul class="b-info__props-list">
+                          <li class="b-info__prop">Heating</li>
+                          <li class="b-info__prop">Townhouse</li>
+                          <li class="b-info__prop">Water: Yes</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-6  col-sm-4  col-md-3">
+                        <ul class="b-info__props-list">
+                          <li class="b-info__prop">Floor area ratio: 3%</li>
+                          <li class="b-info__prop">Electricity: Yes</li>
+                          <li class="b-info__prop">Patio</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="b-info__about-text">
+                      Πωλούνται ή δίνεται αντιπαροχή.Το οικόπεδο έχει συνολική έκταση 153 τ.μ. με συντελεστή δόμησης 2,4 - στους Αμπελόκηπους Θεσσαλονίκης. Δίπλα σε κεντρικό δρόμο , αγορά και αθλητικές εγκαταστάσεις. Η διώροφη μονοκατοικία αποτελείται από 2 οροφοδιαμερίσματα, χωρίς κοινόχρηστα, με ξεχωριστή είσοδο το καθένα και ελεύθερη αυλή 53 τ.μ. Αποτελείται από ένα ανώγειο διαμέρισμα (76 τμ, καθαρά), κουζίνα, δύο δωμάτια, σαλόνι, χoλ, μπάνιο, 2 βεράντες - υπάρχει σχέδιο με κάτοψη τουανώγειου.Το διαμέρισμα του 1ου ορόφου (90 τ.μ.καθαρά), έχει τρία δωμάτια, σαλοκουζίνα, μπάνιο μεγάλο, χολ- υπάρχει σχέδιο. Μπαλκόνια με τέντες και ηλιακό.Η αυλή 53 τ.μ. μπορεί να ανοικοδομηθεί, να γίνει κήπος ή πάρκινγκ για 3 - 4 αυτοκίνητα. ’Εχει άδεια για είσοδο πάρκινγκ. Στην αυλή μία αποθήκη. Πωλούνται και χωριστά, πληροφορίες από το τηλέφωνο.
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="b-location__sidebar  col-sm-4">
+                <div class="b-location__user-data-wrap  hidden-xs">
+                  <!-- До отправки первого сообщения -->
+                  <div class="b-user-data">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <div class="b-user-data__msg-wrap">
+                        <div class="b-user-data__msg">Is this available?</div>
+                      </div>
+                      <div class="b-user-data__btn-wrap">
+                        <a href="" class="b-btn-2  b-btn-2--block">
+                          <span class="b-btn-2__text">Ask owner</span>
+                        </a>
+                      </div>
+                      <p class="b-user-data__muted-text">You will be given full access to contact after confirmation of availability</p>
+                    </div>
+                  </div>
+                  <!-- После отправки первого сообщения -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <div class="b-user-data__msg-wrap">
+                        <div class="b-user-data__msg  b-user-data__msg--send">Is this available?</div>
+                        <div class="b-user-data__send-label">send</div>
+                      </div>
+                      <div class="b-user-data__btn-wrap">
+                        <button class="b-btn-2  b-btn-2--block  b-btn-2--secondary">
+                          <span class="b-btn-2__text">Unlock contacts now</span>
+                        </button>
+                      </div>
+                      <p class="b-user-data__muted-text">You can contact free with Lara if user will buy acsess or you can unlock contacts</p>
+                    </div>
+                  </div>
+                  <!-- После получения первого ответа -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <p class="b-user-data__msg-notification">
+                        You get a new message from owner
+                      </p>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20">
+                        <button class="b-btn-2  b-btn-2--block">
+                          <span class="b-btn-2__text">Open messages</span>
+                        </button>
+                        <span class="b-user-data__btn-label">1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- После разблакировки контактов. Новое сообщение -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <ul class="b-user-data__contacts-list">
+                        <li class="b-user-data__contact-wrap">
+                          <a href="tel:+3022714444" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.22365 6.05459C8.37755 6.8817 8.04038 7.13105 8.04038 7.13105L7.0581 7.78413C6.66661 8.02943 6.8798 8.54283 6.8798 8.54283C8.41472 12.0667 10.1126 13.1271 10.7306 13.5978C11.1779 13.9383 11.4502 13.6957 11.4502 13.6957L12.7155 12.5795C13.1648 12.1138 13.5073 12.4341 13.5073 12.4341L16.0035 14.4073C16.4281 14.7221 16.2375 15.3609 15.9314 15.9118C15.6286 16.4564 14.3661 17.7548 12.7975 17.4559C11.2284 17.1573 8.43982 15.9774 6.5337 12.954C4.60871 9.90104 3.93849 7.22797 3.93849 7.22797C3.12344 4.44958 5.21553 2.97015 5.21553 2.97015C6.86207 1.87223 7.63258 3.04141 7.63258 3.04141C7.63258 3.04141 8.07031 5.22703 8.22365 6.05459Z" fill="#CFCECE"/></svg>
+                            +30 2271 44 44
+                          </a>
+                        </li>
+                        <li class="b-user-data__contact-wrap">
+                          <a href="mailto:somemail@gmail.com" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.00451 4.9044C1.00153 4.93586 1 4.96775 1 5V15C1 15.5523 1.44772 16 2 16H18C18.5523 16 19 15.5523 19 15V5C19 4.96775 18.9985 4.93586 18.9955 4.9044L10.416 10.624C10.1641 10.792 9.8359 10.792 9.58397 10.624L1.00451 4.9044ZM17.6479 4H2.35208L10 9.09861L17.6479 4Z" fill="#CFCECE"/></svg>
+                            somemail@gmail.com
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2">
+                          <span class="b-btn-2__text">Open messages</span>
+                        </button>
+                        <span class="b-user-data__btn-label">1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- После разблакировки контактов -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <ul class="b-user-data__contacts-list">
+                        <li class="b-user-data__contact-wrap">
+                          <a href="tel:+3022714444" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.22365 6.05459C8.37755 6.8817 8.04038 7.13105 8.04038 7.13105L7.0581 7.78413C6.66661 8.02943 6.8798 8.54283 6.8798 8.54283C8.41472 12.0667 10.1126 13.1271 10.7306 13.5978C11.1779 13.9383 11.4502 13.6957 11.4502 13.6957L12.7155 12.5795C13.1648 12.1138 13.5073 12.4341 13.5073 12.4341L16.0035 14.4073C16.4281 14.7221 16.2375 15.3609 15.9314 15.9118C15.6286 16.4564 14.3661 17.7548 12.7975 17.4559C11.2284 17.1573 8.43982 15.9774 6.5337 12.954C4.60871 9.90104 3.93849 7.22797 3.93849 7.22797C3.12344 4.44958 5.21553 2.97015 5.21553 2.97015C6.86207 1.87223 7.63258 3.04141 7.63258 3.04141C7.63258 3.04141 8.07031 5.22703 8.22365 6.05459Z" fill="#CFCECE"/></svg>
+                            +30 2271 44 44
+                          </a>
+                        </li>
+                        <li class="b-user-data__contact-wrap">
+                          <a href="mailto:somemail@gmail.com" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.00451 4.9044C1.00153 4.93586 1 4.96775 1 5V15C1 15.5523 1.44772 16 2 16H18C18.5523 16 19 15.5523 19 15V5C19 4.96775 18.9985 4.93586 18.9955 4.9044L10.416 10.624C10.1641 10.792 9.8359 10.792 9.58397 10.624L1.00451 4.9044ZM17.6479 4H2.35208L10 9.09861L17.6479 4Z" fill="#CFCECE"/></svg>
+                            somemail@gmail.com
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2  b-btn-2--secondary">
+                          <span class="b-btn-2__text">Open messages</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Если истекла подписка -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <p class="b-user-data__expired">Your monthly subscription has expired</p>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2  b-btn-2--secondary">
+                          <span class="b-btn-2__text">Unlock contacts</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Карточка на объявлении для владельца объявления -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <ul class="b-user-data__contacts-list">
+                        <li class="b-user-data__contact-wrap">
+                          <a href="tel:+3022714444" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.22365 6.05459C8.37755 6.8817 8.04038 7.13105 8.04038 7.13105L7.0581 7.78413C6.66661 8.02943 6.8798 8.54283 6.8798 8.54283C8.41472 12.0667 10.1126 13.1271 10.7306 13.5978C11.1779 13.9383 11.4502 13.6957 11.4502 13.6957L12.7155 12.5795C13.1648 12.1138 13.5073 12.4341 13.5073 12.4341L16.0035 14.4073C16.4281 14.7221 16.2375 15.3609 15.9314 15.9118C15.6286 16.4564 14.3661 17.7548 12.7975 17.4559C11.2284 17.1573 8.43982 15.9774 6.5337 12.954C4.60871 9.90104 3.93849 7.22797 3.93849 7.22797C3.12344 4.44958 5.21553 2.97015 5.21553 2.97015C6.86207 1.87223 7.63258 3.04141 7.63258 3.04141C7.63258 3.04141 8.07031 5.22703 8.22365 6.05459Z" fill="#CFCECE"/></svg>
+                            +30 2271 44 44
+                          </a>
+                        </li>
+                        <li class="b-user-data__contact-wrap">
+                          <a href="mailto:somemail@gmail.com" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.00451 4.9044C1.00153 4.93586 1 4.96775 1 5V15C1 15.5523 1.44772 16 2 16H18C18.5523 16 19 15.5523 19 15V5C19 4.96775 18.9985 4.93586 18.9955 4.9044L10.416 10.624C10.1641 10.792 9.8359 10.792 9.58397 10.624L1.00451 4.9044ZM17.6479 4H2.35208L10 9.09861L17.6479 4Z" fill="#CFCECE"/></svg>
+                            somemail@gmail.com
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2">
+                          <span class="b-btn-2__text">Edit contacts</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="b-slider  same_slider" id="list-nearby">
+            <h2 class="b-slider__title">Ближайшие объекты</h2>
+            <button class="jcarousel-control-prev noSwipe" id="nearby-prev" type="button"></button>
+            <button class="jcarousel-control-next noSwipe" id="nearby-next" type="button"></button>
+            <!-- <p class="jcarousel-pagination"></p> -->
+            <div class="jcarousel">
+              <ul class="list">
+                <li class="item alx-swipe-item">
+                  <a href="/i/12447522/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 49 000 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">3 Спальни, 3 Ванные, 300
+                      м<sup>2</sup>,<br>
+                      ул. Кутузова, 21, Загорянский, Московская обл., Россия, 141180</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/88983852/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 4 990 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">3 Спальни, 2 Ванные, 115
+                      м<sup>2</sup>,<br>
+                      62, Алешкино-3 Дп, Московская обл., Россия, 141623</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/97509564/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 800 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">1 Спальни, 1 Ванные, 33
+                      м<sup>2</sup>,<br>
+                      Unnamed Road, Балакирево, Тверская обл., Россия, 171067</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/58449756/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 1 293 401</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">1 Спальни, 1 Ванные, 14
+                      м<sup>2</sup>,<br>
+                      Шевченківський провулок, 30, Харків, Харківська область, Украина</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/73934064/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 3 674 435</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">2 Спальни, 1 Ванные, 75
+                      м<sup>2</sup>,<br>
+                      ул. Тамары Кисляковой, Полтавська область, Украина</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/77379730/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 7 400 000</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">3 Спальни, 1 Ванные, 47
+                      м<sup>2</sup>,<br>
+                      ул. Восстания, 23, Санкт-Петербург, Россия, 191014</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/51087554/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 19 320</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part"><br>
+                      вулиця Залізнична, Дніпрорудне, Запорізька область, Украина</span></a>
+                </li>
+                <li class="item alx-swipe-item">
+                  <a href="/i/36640704/" style="color: #535353; text-decoration: none;"><span class="img"><img alt=""
+                        src="img/5992347876743_220_160.jpg"> <span class="text_hint"><span
+                          class="name"><span class="price" style="color: #FFFFFF;">Р 6 246 539</span> <span
+                            class="sale"></span></span></span></span> <span class="bottom_part">4 Спальни, 2 Ванные, 56
+                      м<sup>2</sup>,<br>
+                      вулиця Пушкіна, 17, Ірпінь, Київська область, Украина</span></a>
+                </li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  visible-xs-block">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__text">
+            <div class="b-user-2">
+              <a href="/" class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                  alt="USERNAME">
+              </a>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara</div>
+              </div>
+            </div>
+          </div>
+          <div class="b-info-bottom__btn">
+            <a href="#contact-owner" class="b-btn-2" data-toggle="modal">
+              <span class="b-btn-2__text">Contact owner</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__text">
+            <div class="b-user-2">
+              <a href="/" class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                  alt="USERNAME">
+              </a>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara</div>
+              </div>
+            </div>
+          </div>
+          <div class="b-info-bottom__btn">
+            <button class="b-btn-2  b-btn-2--secondary">
+              <span class="b-btn-2__text">Unlock contacts now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__text">
+            <div class="b-user-2">
+              <a href="/" class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                  alt="USERNAME">
+              </a>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara</div>
+              </div>
+            </div>
+          </div>
+          <div class="b-info-bottom__btn">
+            <button class="b-btn-2">
+              <span class="b-btn-2__text">Open messages</span>
+            </button>
+            <span class="b-user-data__btn-label">1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  b-info-bottom--buttons-only  visible-xs-block" style="display: none !important;">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__btn">
+            <button class="b-btn-2  b-btn-2--secondary  b-btn-2--block">
+              <span class="b-btn-2__text">Show contacts</span>
+            </button>
+          </div>
+          <div class="b-info-bottom__btn">
+            <a href="" class="b-btn-2  b-btn-2--secondary  b-btn-2--block">
+              <span class="b-btn-2__text">Open messages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="contact-owner">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="b-user-data  b-user-data--modal">
+                <div class="b-user-2  b-user-data__user">
+                  <a href="/" class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                      alt="USERNAME">
+                  </a>
+                  <div class="b-user-2__avatar-info">
+                    <div class="b-user-2__name">Lara</div>
+                    <div class="b-user-2__descr">Owner</div>
+                  </div>
+                </div>
+                <div class="b-user-data__info">
+                  <div class="b-user-data__msg-wrap">
+                    <div class="b-user-data__msg">Is this available?</div>
+                  </div>
+                  <div class="b-user-data__btn-wrap">
+                    <a href="" class="b-btn-2  b-btn-2--block">
+                      <span class="b-btn-2__text">Ask owner</span>
+                    </a>
+                  </div>
+                  <p class="b-user-data__muted-text">You will be given full access to contact after confirmation of availability</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pfooter"></div>
+
+    </div>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2">
+            <a class="navbar-brand" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
+          </div>
+          <div class="col-xs-7">
+            <div class="copyright">© 2018 Terranesia.com. Недвижимость без посредников. <nobr>Designed by Dolphin Studio.</nobr></div>
+            <ul class="nav navbar-nav">
+                <li><a href="/search/buy/">Продажа</a></li>
+                <li><a href="/search/rent/">Аренда</a></li>
+                <li><a href="/object/add/">Разместить объект бесплатно</a></li>
+                <li><a href="/pages/how-it-works/">Cоветы</a></li>
+                <li><a href="/support/">Поддержка</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <ul class="footer-social">
+              <li class="item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/"><span class="fb"></span></a></li>
+              <li class="item"><a target="_blank" href="https://twitter.com/pp45637809"><span class="tw"></span></a></li>
+              <li class="item"><a target="_blank" href="https://www.pinterest.com/pp45637809/"><span class="p"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <a href="" class="b-modal__back-btn">
+                <svg width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-left-arrow"></use>
+                </svg>
+              </a>
+              <span class="b-modal__title-inner">
+                Добавьте свои данные
+                <small>и пользуйтесь Терранезией бесплатно</small>
+              </span>
+            </h4>
+          </div>
+
+          <!-- Первый шаг -->
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="email" class="form-control  b-form-control" placeholder="Email">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Продолжить</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-user-avatar  b-user-avatar">
+                  <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
+                  <div class="b-user-avatar__name">Исаак Ньютон</div>
+                  <a href="mailto:test@test.ru" class="b-user-avatar__email">test@test.ru</a>
+                </div>
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Придумайте пароль">
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="modal-footer">
+              Уже зарегистрированы? <br>
+              <a href="#login" class="b-modal__link-arr" data-toggle="modal">
+                Войдите в аккаунт
+                <svg class="b-btn__icon" width="8" height="8">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="login">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <span class="b-modal__title-inner">
+                Вход в личный кабинет
+              </span>
+            </h4>
+          </div>
+
+          <div class="b-modal__step">
+
+            <form class="modal-body">
+              <div class="b-modal__form">
+                <div class="b-modal__field-group">
+                  <input type="email" class="form-control  b-form-control" placeholder="Email">
+                  <input type="password" class="form-control  b-form-control  b-form-control--password" placeholder="Пароль">
+                </div>
+                <button type="submit" class="btn  btn-success  btn-block  b-btn  b-modal__form-btn">Войти</button>
+                <div class="b-modal__form-forgot">
+                  <div class="b-modal__form-forgot-left">
+                    <div class="checkbox  b-modal__gray-checkbox  b-modal__gray-checkbox--mb0">
+                      <label>
+                        <input type="checkbox"> Запомнить меня
+                      </label>
+                    </div>
+                  </div>
+                  <div class="b-modal__form-forgot-right">
+                    <a href="">Забыли пароль?</a>
+                  </div>
+                </div>
+              </div>
+              <div class="b-or  b-modal__or">
+                <div class="b-or__inner">или</div>
+              </div>
+              <div class="b-social">
+                <div class="b-social__text">Войдите с помощью</div>
+                <ul class="b-social__list">
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--vk" type="button">
+                      <svg class="b-btn__icon" width="20" height="20">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
+                      </svg>
+                      Вконтакте
+                    </button>
+                  </li>
+                  <li class="b-social__item">
+                    <button class="btn  b-btn  b-btn--fb" type="button">
+                      <svg class="b-btn__icon" width="18" height="18">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
+                      </svg>
+                      Facebook
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="alert">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              Текст вопроса, задаваемого пользователю. Может быть длинным и раскидистым.
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вершину своего пояс себя имени строчка рукопись вскоре прямо семь, наш грустный, коварный курсивных рот диких страну, предупредила. Сбить, семантика.</p>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn  btn-default  b-btn" data-dismiss="modal">Да</button>
+            <button class="btn  btn-success  b-btn" data-dismiss="modal">Нет</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="b-info-bottom" data-b-info-bottom>
+      <div class="b-info-bottom__inner">
+        <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="b-info-bottom__text">Текст</div>
+        <div class="b-info-bottom__btn">
+          <button class="btn  btn-success">Кнопка</button>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <!--
+    <div style="position: fixed;bottom: 0;left: 50%;z-index:11;transform:translateX(-50%);padding: 0.5em;background-color: #fff;">
+      <a href="#alert" data-toggle="modal">alert</a>
+      <a href="#reg" data-toggle="modal">reg</a>
+      <a href="#login" data-toggle="modal">login</a>
+    </div>
+    -->
+
+  </body>
+</html>
+

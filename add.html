@@ -1,56 +1,59 @@
 <!DOCTYPE html>
-<html class="no-js  b-page"> <!-- nicothin: Добавил классы -->
-  <head>
+<!-- nicothin: Добавил классы на html-->
+<html class="no-js  b-page">
 
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Terranesia</title>
+<head>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/jquery.formstyler.css" rel="stylesheet">
-    <link href="css/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
-    <!-- nicothin: Добавил новый стилевой файл -->
-    <link href="css/style-18-spring.min.css" rel="stylesheet">
-    <!-- /nicothin: Добавил новый стилевой файл -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- nicothin: Добавил meta name="format-detection" -->
+  <meta name="format-detection" content="telephone=no">
+  <title>Terranesia</title>
 
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.formstyler.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/ng-file-upload.min.js"></script>
-    <script src="js/jquery-scrollTo.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/jquery.Jcrop.min.js"></script>
-    <script src="js/jquery.touchSwipe.min.js"></script>
-    <script src="js/script.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- nicothin: Изменена ссылка на шрифт -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/jquery.formstyler.css" rel="stylesheet">
+  <link href="css/jquery-ui-1.10.0.custom.min.css" rel="stylesheet">
+  <!-- nicothin: Добавил новый стилевой файл, УБРАТЬ НА ПРОДАКШЕНЕ!!! -->
+  <link href="css/DELETE_THIS_ON_PRODUCTION.css" rel="stylesheet">
+  <!-- /nicothin: Добавил новый стилевой файл, УБРАТЬ НА ПРОДАКШЕНЕ!!! -->
+  <link href="css/style-18-spring.min.css" rel="stylesheet">
 
-    <!-- nicothin: Добавил новые файлы -->
-    <script src="js/picturefill.min.js" async></script>
-    <script src="js/script-18-spring.js"></script>
-    <!-- /nicothin: Добавил новые файлы -->
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.formstyler.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/ng-file-upload.min.js"></script>
+  <script src="js/jquery-scrollTo.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.Jcrop.min.js"></script>
+  <script src="js/jquery.touchSwipe.min.js"></script>
+  <script src="js/script.js"></script>
 
-    <!-- nicothin: Добавил одну строку JS -->
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-    <!-- /nicothin: Добавил одну строку JS -->
+  <script src="js/picturefill.min.js" async></script>
+  <script src="js/script-18-spring.js"></script>
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
-  </head>
-  <body id="body">
+</head>
 
-    <div id="wrap">
+<body id="body">
+
+  <div id="wrap">
+
 
       <!-- nicothin: Добавил новый хедер -->
       <header class="b-page-header">
         <div class="container-fluid  b-page-header__inner">
 
           <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
-            <span>Show menu</span>
+            <span>Show menu 1</span>
           </button>
 
           <a href="" class="b-page-header__logo  b-logo">
@@ -389,30 +392,30 @@
     </div>
 
     <footer>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-2">
-              <a class="navbar-brand" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
-            </div>
-            <div class="col-xs-7">
-              <div class="copyright">© 2018 Terranesia.com. Недвижимость без посредников. <nobr>Designed by Dolphin Studio.</nobr></div>
-              <ul class="nav navbar-nav">
-                  <li><a href="/search/buy/">Продажа</a></li>
-                  <li><a href="/search/rent/">Аренда</a></li>
-                  <li><a href="/object/add/">Разместить объект бесплатно</a></li>
-                  <li><a href="/pages/how-it-works/">Cоветы</a></li>
-                  <li><a href="/support/">Поддержка</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-3">
-              <ul class="footer-social">
-                <li class="item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/"><span class="fb"></span></a></li>
-                <li class="item"><a target="_blank" href="https://twitter.com/pp45637809"><span class="tw"></span></a></li>
-                <li class="item"><a target="_blank" href="https://www.pinterest.com/pp45637809/"><span class="p"></span></a></li>
-              </ul>
-            </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-2">
+            <a class="navbar-brand" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
+          </div>
+          <div class="col-xs-7">
+            <div class="copyright">© 2018 Terranesia.com. Недвижимость без посредников. <nobr>Designed by Dolphin Studio.</nobr></div>
+            <ul class="nav navbar-nav">
+                <li><a href="/search/buy/">Продажа</a></li>
+                <li><a href="/search/rent/">Аренда</a></li>
+                <li><a href="/object/add/">Разместить объект бесплатно</a></li>
+                <li><a href="/pages/how-it-works/">Cоветы</a></li>
+                <li><a href="/support/">Поддержка</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <ul class="footer-social">
+              <li class="item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/"><span class="fb"></span></a></li>
+              <li class="item"><a target="_blank" href="https://twitter.com/pp45637809"><span class="tw"></span></a></li>
+              <li class="item"><a target="_blank" href="https://www.pinterest.com/pp45637809/"><span class="p"></span></a></li>
+            </ul>
           </div>
         </div>
+      </div>
     </footer>
 
     <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
@@ -646,6 +649,7 @@
       </div>
     </div>
 
+    <!--
     <div class="b-info-bottom" data-b-info-bottom>
       <div class="b-info-bottom__inner">
         <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -655,12 +659,15 @@
         </div>
       </div>
     </div>
+    -->
 
-    <div style="position: fixed;bottom: 0;left: 50%;transform:translateX(-50%);padding: 0.5em;background-color: #fff;">
+    <!--
+    <div style="position: fixed;bottom: 0;left: 50%;z-index:11;transform:translateX(-50%);padding: 0.5em;background-color: #fff;">
       <a href="#alert" data-toggle="modal">alert</a>
       <a href="#reg" data-toggle="modal">reg</a>
       <a href="#login" data-toggle="modal">login</a>
     </div>
+    -->
 
   </body>
 </html>
