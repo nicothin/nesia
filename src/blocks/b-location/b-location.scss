@@ -19,6 +19,14 @@
     padding-top: 8px;
   }
 
+  &__content {
+    position: relative;
+  }
+
+  &__sidebar {
+    padding-top: 10px;
+  }
+
   &__back {
     margin-left: -12px;
     margin-right: 12px;
@@ -97,7 +105,7 @@
 
     @media (min-width: $screen-xl) {
       position: absolute;
-      top: 50px;
+      top: 10px;
       left: -43px;
       margin: 0;
       width: auto;
@@ -138,5 +146,10 @@
         }
       }
     }
+  }
+
+  &__user-data-wrap {
+    display: flex;
+    justify-content: flex-end;
   }
 }

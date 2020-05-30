@@ -47,6 +47,15 @@
     &:hover,
     &:focus {
       cursor: pointer;
+
+      .b-field__icon-circle {
+        fill: rgba(152, 193, 47, 0.1);
+        stroke: #A1BF4B;
+      }
+
+      .b-field-num__icon-symbol {
+        fill: #A1BF4B;
+      }
     }
   }
 

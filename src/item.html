@@ -222,28 +222,33 @@
               </div>
             </div>
 
-            <div class="b-location__inner  row">
+            <div class="row">
               <div class="b-location__top  col-xs-12  col-sm-8">
 
                 <a href="/" class="b-location__back  b-back-btn">
-                  <svg width="11" height="11" class="b-back-btn__icon"><path d="M2.443 6.167l3.528 3.528a.667.667 0 11-.942.943L.362 5.971a.667.667 0 010-.942L5.029.362a.667.667 0 11.942.943L2.443 4.833h7.765c.345 0 .625.299.625.667 0 .368-.28.667-.625.667z" /></svg>
+                  <svg width="11" height="11" class="b-back-btn__icon">
+                    <path
+                      d="M2.443 6.167l3.528 3.528a.667.667 0 11-.942.943L.362 5.971a.667.667 0 010-.942L5.029.362a.667.667 0 11.942.943L2.443 4.833h7.765c.345 0 .625.299.625.667 0 .368-.28.667-.625.667z" />
+                  </svg>
                   <span class="b-back-btn__text">Назад</span>
                 </a>
 
                 <!-- Добавить класс b-save-btn--active для показа активного состояния -->
                 <button class="b-location__save  b-save-btn" id="temp-id1">
                   <svg class="b-save-btn__icon" width="16" height="14" viewBox="0 0 16 14">
-                    <path d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
+                    <path
+                      d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
                   </svg>
                   <svg class="b-save-btn__icon-active" width="16" height="14" viewBox="0 0 16 14">
-                    <path d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
+                    <path
+                      d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
                   </svg>
                   <span class="b-save-btn__text">Save</span>
                 </button>
 
                 <script>
                   // ВРЕМЕННЫЙ КОД для показа работы кнопки Save
-                  $('#temp-id1').on('click', function() { console.log(111);  $(this).toggleClass('b-save-btn--active'); })
+                  $('#temp-id1').on('click', function () { console.log(111); $(this).toggleClass('b-save-btn--active'); })
                 </script>
 
                 <ul class="b-location__breadcrumbs  b-breadcrumbs">
@@ -262,6 +267,12 @@
                 </ul>
 
                 <a class="b-location__abuse-link" href="/">Пожаловаться на объект</a>
+
+              </div>
+            </div>
+
+            <div class="b-location__inner  row">
+              <div class="b-location__content  col-xs-12  col-sm-8">
 
                 <div class="b-location__main-block  sw_show sw_photo" id="sw_photo">
                   <!-- big_img_slider begin -->
@@ -371,10 +382,10 @@
                   </div>
 
                   <div class="b-info__item  b-info__item--auction">
-                    <div class="row  b-info__flex-line">
+                    <form class="row  b-info__flex-line">
                       <div class="col-xs-12  col-md-3">
                         <div class="b-info__auction-wrap">
-                          <h2  class="b-info__auction">Auction</h2 >
+                          <h2  class="b-info__title  b-info__title--auction">Auction</h2 >
                           <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
                         </div>
                         <button class="b-info__trigger  b-link" type="button" data-target="last-offers" data-closed-text="See last offers"
@@ -385,20 +396,22 @@
                           <span class="b-field-num__input-and-btns">
                             <input class="b-field-num__input" type="number" value="69400" name="price" max="100000" min="50000" step="100">
                             <button class="b-field-num__btn  b-field-num__btn--minus" type="button">
-                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1"/><rect x="8" y="12" width="10" height="1" fill="#A1A1A1"/></svg>
+                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/></svg>
                             </button>
                             <span class="b-field-num__text-wrap">
                               <span class="b-field-num__text-currency">€</span>
                               <span class="b-field-num__text-num">69,400</span>
                             </span>
                             <button class="b-field-num__btn  b-field-num__btn--plus" type="button">
-                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1"/><rect x="8" y="12" width="10" height="1" fill="#A1A1A1"/><rect x="13.5" y="7.5" width="10" height="1" transform="rotate(90 13.5 7.5)" fill="#A1A1A1"/></svg>
+                              <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/><rect class="b-field-num__icon-symbol" x="13.5" y="7.5" width="10" height="1" transform="rotate(90 13.5 7.5)" fill="#A1A1A1"/></svg>
                             </button>
                           </span>
                         </div>
                       </div>
                       <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
-                        <button class="b-btn-2  b-btn-2--secondary">Offer your price</button>
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
+                          <span class="b-btn-2__text">Offer your price</span>
+                        </button>
                       </div>
                       <script>
                         // Поля формы с выбором кол-ва
@@ -428,7 +441,7 @@
                           });
                         }
                       </script>
-                    </div>
+                    </form>
                     <div class="b-info__hidden-block" id="last-offers" style="display: none;">
                       <ul class="b-info__price-list  b-info__price-list--avatars">
                         <li class="b-info__price-item">
@@ -483,23 +496,38 @@
                   </script>
 
                   <div class="b-info__item">
-                    icons
-                    <div class="row">
-                      <div class="col-xs-3">
-                        <ul>
-                          <li>1</li>
+                    <h2 class="b-info__title  b-info__title--about">About property</h2>
+                    <ul class="b-info__facilities  facilities">
+                      <li><span class="icon icon1"></span><span class="facilities_name">30 м<sup>2</sup></span></li>
+                      <li><span class="icon icon2"></span><span class="facilities_name">2 Спальни</span></li>
+                      <li><span class="icon icon3"></span><span class="facilities_name">1 Ванна</span></li>
+                      <li><span class="icon icon4"></span><span class="facilities_name">2 Этаж</span></li>
+                    </ul>
+                    <div class="b-info__about-lists-wrap  row">
+                      <div class="col-xs-6  col-sm-4  col-md-3">
+                        <ul class="b-info__props-list">
+                          <li class="b-info__prop">3 bedrooms</li>
+                          <li class="b-info__prop">Construction license: Available</li>
+                          <li class="b-info__prop">Ceiling Fan</li>
                         </ul>
                       </div>
-                      <div class="col-xs-3">
-                        <ul>
-                          <li>2</li>
+                      <div class="col-xs-6  col-sm-4  col-md-3">
+                        <ul class="b-info__props-list">
+                          <li class="b-info__prop">Heating</li>
+                          <li class="b-info__prop">Townhouse</li>
+                          <li class="b-info__prop">Water: Yes</li>
                         </ul>
                       </div>
-                      <div class="col-xs-3">
-                        <ul>
-                          <li>3</li>
+                      <div class="col-xs-6  col-sm-4  col-md-3">
+                        <ul class="b-info__props-list">
+                          <li class="b-info__prop">Floor area ratio: 3%</li>
+                          <li class="b-info__prop">Electricity: Yes</li>
+                          <li class="b-info__prop">Patio</li>
                         </ul>
                       </div>
+                    </div>
+                    <div class="b-info__about-text">
+                      Πωλούνται ή δίνεται αντιπαροχή.Το οικόπεδο έχει συνολική έκταση 153 τ.μ. με συντελεστή δόμησης 2,4 - στους Αμπελόκηπους Θεσσαλονίκης. Δίπλα σε κεντρικό δρόμο , αγορά και αθλητικές εγκαταστάσεις. Η διώροφη μονοκατοικία αποτελείται από 2 οροφοδιαμερίσματα, χωρίς κοινόχρηστα, με ξεχωριστή είσοδο το καθένα και ελεύθερη αυλή 53 τ.μ. Αποτελείται από ένα ανώγειο διαμέρισμα (76 τμ, καθαρά), κουζίνα, δύο δωμάτια, σαλόνι, χoλ, μπάνιο, 2 βεράντες - υπάρχει σχέδιο με κάτοψη τουανώγειου.Το διαμέρισμα του 1ου ορόφου (90 τ.μ.καθαρά), έχει τρία δωμάτια, σαλοκουζίνα, μπάνιο μεγάλο, χολ- υπάρχει σχέδιο. Μπαλκόνια με τέντες και ηλιακό.Η αυλή 53 τ.μ. μπορεί να ανοικοδομηθεί, να γίνει κήπος ή πάρκινγκ για 3 - 4 αυτοκίνητα. ’Εχει άδεια για είσοδο πάρκινγκ. Στην αυλή μία αποθήκη. Πωλούνται και χωριστά, πληροφορίες από το τηλέφωνο.
                     </div>
                   </div>
 
@@ -507,132 +535,209 @@
 
               </div>
 
-              <div class="col-xs-4  col-sm 4">
-                sidebar
-              </div>
-            </div>
-
-
-
-            <hr>
-            <p>Далее — части старого варианта для переноса</p>
-            <hr>
-
-
-
-
-
-            <div class="row">
-              <div class="col-xs-9 sw_show sw_photo">
-                <ul class="breadcrumb">
-                  <li>
-                    <a href="">Продажа</a>
-                  </li>
-                  <li>
-                    <a href="">Апартаменты</a>
-                  </li>
-                  <li>
-                    <a href="">Россия</a>
-                  </li>
-                  <li>
-                    <a href="">Москва</a>
-                  </li>
-                  <li class="active">
-                    <a href="">ул. Кутузова, 21, Загорянский, Московская обл., Россия, 141180</a>
-                  </li>
-                </ul>
-                <a class="complain" href="/support/department/report/">Пожаловаться на объект</a>
-                111
-              </div>
-              <div class="col-xs-9 sw_show sw_street">
-                <div class="col-xs-14">
-                  <div class="object_details">
-                    <div class="price" style="font-size:25px!important">
-                      Р 5 500 000
+              <div class="b-location__sidebar  col-sm-4">
+                <div class="b-location__user-data-wrap  hidden-xs">
+                  <!-- До отправки первого сообщения -->
+                  <div class="b-user-data">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
                     </div>
-                    <div class="perprice">
-                      Цена
+                    <div class="b-user-data__info">
+                      <div class="b-user-data__msg-wrap">
+                        <div class="b-user-data__msg">Is this available?</div>
+                      </div>
+                      <div class="b-user-data__btn-wrap">
+                        <a href="" class="b-btn-2  b-btn-2--block">
+                          <span class="b-btn-2__text">Ask owner</span>
+                        </a>
+                      </div>
+                      <p class="b-user-data__muted-text">You will be given full access to contact after confirmation of availability</p>
                     </div>
-                    <div class="object_address">
-                      Апартаменты в Москва<br>
-                      <span>Нижегородская ул., 63, Москва, Россия, 109052. 109052</span>
+                  </div>
+                  <!-- После отправки первого сообщения -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
                     </div>
-                    <div class="for_sale">
-                      ПРОДАЖА
+                    <div class="b-user-data__info">
+                      <div class="b-user-data__msg-wrap">
+                        <div class="b-user-data__msg  b-user-data__msg--send">Is this available?</div>
+                        <div class="b-user-data__send-label">send</div>
+                      </div>
+                      <div class="b-user-data__btn-wrap">
+                        <button class="b-btn-2  b-btn-2--block  b-btn-2--secondary">
+                          <span class="b-btn-2__text">Unlock contacts now</span>
+                        </button>
+                      </div>
+                      <p class="b-user-data__muted-text">You can contact free with Lara if user will buy acsess or you can unlock contacts</p>
+                    </div>
+                  </div>
+                  <!-- После получения первого ответа -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <p class="b-user-data__msg-notification">
+                        You get a new message from owner
+                      </p>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20">
+                        <button class="b-btn-2  b-btn-2--block">
+                          <span class="b-btn-2__text">Open messages</span>
+                        </button>
+                        <span class="b-user-data__btn-label">1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- После разблакировки контактов. Новое сообщение -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <ul class="b-user-data__contacts-list">
+                        <li class="b-user-data__contact-wrap">
+                          <a href="tel:+3022714444" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.22365 6.05459C8.37755 6.8817 8.04038 7.13105 8.04038 7.13105L7.0581 7.78413C6.66661 8.02943 6.8798 8.54283 6.8798 8.54283C8.41472 12.0667 10.1126 13.1271 10.7306 13.5978C11.1779 13.9383 11.4502 13.6957 11.4502 13.6957L12.7155 12.5795C13.1648 12.1138 13.5073 12.4341 13.5073 12.4341L16.0035 14.4073C16.4281 14.7221 16.2375 15.3609 15.9314 15.9118C15.6286 16.4564 14.3661 17.7548 12.7975 17.4559C11.2284 17.1573 8.43982 15.9774 6.5337 12.954C4.60871 9.90104 3.93849 7.22797 3.93849 7.22797C3.12344 4.44958 5.21553 2.97015 5.21553 2.97015C6.86207 1.87223 7.63258 3.04141 7.63258 3.04141C7.63258 3.04141 8.07031 5.22703 8.22365 6.05459Z" fill="#CFCECE"/></svg>
+                            +30 2271 44 44
+                          </a>
+                        </li>
+                        <li class="b-user-data__contact-wrap">
+                          <a href="mailto:somemail@gmail.com" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.00451 4.9044C1.00153 4.93586 1 4.96775 1 5V15C1 15.5523 1.44772 16 2 16H18C18.5523 16 19 15.5523 19 15V5C19 4.96775 18.9985 4.93586 18.9955 4.9044L10.416 10.624C10.1641 10.792 9.8359 10.792 9.58397 10.624L1.00451 4.9044ZM17.6479 4H2.35208L10 9.09861L17.6479 4Z" fill="#CFCECE"/></svg>
+                            somemail@gmail.com
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2">
+                          <span class="b-btn-2__text">Open messages</span>
+                        </button>
+                        <span class="b-user-data__btn-label">1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- После разблакировки контактов -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <ul class="b-user-data__contacts-list">
+                        <li class="b-user-data__contact-wrap">
+                          <a href="tel:+3022714444" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.22365 6.05459C8.37755 6.8817 8.04038 7.13105 8.04038 7.13105L7.0581 7.78413C6.66661 8.02943 6.8798 8.54283 6.8798 8.54283C8.41472 12.0667 10.1126 13.1271 10.7306 13.5978C11.1779 13.9383 11.4502 13.6957 11.4502 13.6957L12.7155 12.5795C13.1648 12.1138 13.5073 12.4341 13.5073 12.4341L16.0035 14.4073C16.4281 14.7221 16.2375 15.3609 15.9314 15.9118C15.6286 16.4564 14.3661 17.7548 12.7975 17.4559C11.2284 17.1573 8.43982 15.9774 6.5337 12.954C4.60871 9.90104 3.93849 7.22797 3.93849 7.22797C3.12344 4.44958 5.21553 2.97015 5.21553 2.97015C6.86207 1.87223 7.63258 3.04141 7.63258 3.04141C7.63258 3.04141 8.07031 5.22703 8.22365 6.05459Z" fill="#CFCECE"/></svg>
+                            +30 2271 44 44
+                          </a>
+                        </li>
+                        <li class="b-user-data__contact-wrap">
+                          <a href="mailto:somemail@gmail.com" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.00451 4.9044C1.00153 4.93586 1 4.96775 1 5V15C1 15.5523 1.44772 16 2 16H18C18.5523 16 19 15.5523 19 15V5C19 4.96775 18.9985 4.93586 18.9955 4.9044L10.416 10.624C10.1641 10.792 9.8359 10.792 9.58397 10.624L1.00451 4.9044ZM17.6479 4H2.35208L10 9.09861L17.6479 4Z" fill="#CFCECE"/></svg>
+                            somemail@gmail.com
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2  b-btn-2--secondary">
+                          <span class="b-btn-2__text">Open messages</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Если истекла подписка -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <p class="b-user-data__expired">Your monthly subscription has expired</p>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2  b-btn-2--secondary">
+                          <span class="b-btn-2__text">Unlock contacts</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Карточка на объявлении для владельца объявления -->
+                  <div class="b-user-data" style="display: none;">
+                    <div class="b-user-2  b-user-data__user">
+                      <a href="/" class="b-user-2__avatar-wrap">
+                        <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                      </a>
+                      <div class="b-user-2__avatar-info">
+                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__descr">Owner</div>
+                      </div>
+                    </div>
+                    <div class="b-user-data__info">
+                      <ul class="b-user-data__contacts-list">
+                        <li class="b-user-data__contact-wrap">
+                          <a href="tel:+3022714444" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.22365 6.05459C8.37755 6.8817 8.04038 7.13105 8.04038 7.13105L7.0581 7.78413C6.66661 8.02943 6.8798 8.54283 6.8798 8.54283C8.41472 12.0667 10.1126 13.1271 10.7306 13.5978C11.1779 13.9383 11.4502 13.6957 11.4502 13.6957L12.7155 12.5795C13.1648 12.1138 13.5073 12.4341 13.5073 12.4341L16.0035 14.4073C16.4281 14.7221 16.2375 15.3609 15.9314 15.9118C15.6286 16.4564 14.3661 17.7548 12.7975 17.4559C11.2284 17.1573 8.43982 15.9774 6.5337 12.954C4.60871 9.90104 3.93849 7.22797 3.93849 7.22797C3.12344 4.44958 5.21553 2.97015 5.21553 2.97015C6.86207 1.87223 7.63258 3.04141 7.63258 3.04141C7.63258 3.04141 8.07031 5.22703 8.22365 6.05459Z" fill="#CFCECE"/></svg>
+                            +30 2271 44 44
+                          </a>
+                        </li>
+                        <li class="b-user-data__contact-wrap">
+                          <a href="mailto:somemail@gmail.com" class="b-user-data__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.00451 4.9044C1.00153 4.93586 1 4.96775 1 5V15C1 15.5523 1.44772 16 2 16H18C18.5523 16 19 15.5523 19 15V5C19 4.96775 18.9985 4.93586 18.9955 4.9044L10.416 10.624C10.1641 10.792 9.8359 10.792 9.58397 10.624L1.00451 4.9044ZM17.6479 4H2.35208L10 9.09861L17.6479 4Z" fill="#CFCECE"/></svg>
+                            somemail@gmail.com
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
+                        <button class="b-btn-2">
+                          <span class="b-btn-2__text">Edit contacts</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <ul class="facilities">
-              <li><span class="icon icon1"></span><span class="facilities_name">Жилая площадь 30 м<sup>2</sup></span></li>
-              <li><span class="icon icon2"></span><span class="facilities_name">16 Спальни</span></li>
-              <li><span class="icon icon3"></span><span class="facilities_name">3 Ванные</span></li>
-              <li><span class="icon icon4"></span><span class="facilities_name">2 Этаж</span></li>
-            </ul>
-            <div class="details">
-              <div class="inside">
-                <ul class="details_list">
-                  <li>Этажей в здании: 5</li>
-                  <li>Балкон: Да</li>
-                  <li>Отопление: Центральное</li>
-                  <li>Паркинг: на территории</li>
-                  <li>Вид на город</li>
-                </ul>
-              </div>
-            </div>
-            <div class="about_object">
-              <div class="inside">
-                <p>Продаётся однокомнатная кв с мебелью хороший ремонт!рядом метро Нижегородская</p>
-              </div><!-- <div class="expand"><a href="#">Развернуть</a></div> -->
-            </div>
-            <div class="in840">
-              <div class="user">
-                <div class="img"><img height="150" src="/media/no-img.jpg"
-                    style="border-radius: 100px; width:64px; height:64px;" width="150"></div>
-                <div class="about">
-                  <div class="name">
-                    Сева<br>
-                    Виноградов
-                  </div>
-                </div>
-                <script>
-                  $(".user_phone").live('click', function () {
-                    if ($(this).find(".phone_type").val() != 0) {
-                      var fill = $(this).find('.data');
-                      fill.html("Запрос номера...");
-                      $.ajax({
-                        type: "GET",
-                        url: "/object/41065624/" + $(this).find(".phone_type").val() + "/",
-                        success: function (data) {
-                          fill.html(data);
-
-                        }
-                      });
-                      $(this).find(".phone_type").val(0);
-                    }
-                  })
-                </script>
-                <div class="user_contact">
-                  <a class="user_phone" href="javascript:%20void(0);"><input class="phone_type" type="hidden" value="phone">
-                    Тел: <span class="data">+78... (Показать номер)</span></a><br>
-                  <a class="user_phone" href="javascript:%20void(0);"><input class="phone_type" type="hidden"
-                      value="additional_phone">Моб: <span class="data">+78... (Показать номер)</span></a>
-                  <p>Связь: телефон<br>
-                    Агентам не беспокоить<br>
-                    <br>
-                    Владею языками: Английский</p>
-                </div>
-              </div><a class="btn btn-success" href="mailto:privet.13.94@mail.ru"
-                style="margin: 10px 0 0 0; width: 100%;">Отправить email</a>
             </div>
 
           </div>
 
-          <div class="same_slider" id="list-nearby">
-            <h2>Ближайшие объекты</h2><a class="jcarousel-control-prev noSwipe" href="javascript:;" id="nearby-prev"></a> <a
-              class="jcarousel-control-next noSwipe" href="javascript:;" id="nearby-next"></a>
-            <p class="jcarousel-pagination"></p>
+          <div class="b-slider  same_slider" id="list-nearby">
+            <h2 class="b-slider__title">Ближайшие объекты</h2>
+            <button class="jcarousel-control-prev noSwipe" id="nearby-prev" type="button"></button>
+            <button class="jcarousel-control-next noSwipe" id="nearby-next" type="button"></button>
+            <!-- <p class="jcarousel-pagination"></p> -->
             <div class="jcarousel">
               <ul class="list">
                 <li class="item alx-swipe-item">
@@ -704,6 +809,118 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  visible-xs-block">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__text">
+            <div class="b-user-2">
+              <a href="/" class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                  alt="USERNAME">
+              </a>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara</div>
+              </div>
+            </div>
+          </div>
+          <div class="b-info-bottom__btn">
+            <a href="#contact-owner" class="b-btn-2" data-toggle="modal">
+              <span class="b-btn-2__text">Contact owner</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__text">
+            <div class="b-user-2">
+              <a href="/" class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                  alt="USERNAME">
+              </a>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara</div>
+              </div>
+            </div>
+          </div>
+          <div class="b-info-bottom__btn">
+            <button class="b-btn-2  b-btn-2--secondary">
+              <span class="b-btn-2__text">Unlock contacts now</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__text">
+            <div class="b-user-2">
+              <a href="/" class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                  alt="USERNAME">
+              </a>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara</div>
+              </div>
+            </div>
+          </div>
+          <div class="b-info-bottom__btn">
+            <button class="b-btn-2">
+              <span class="b-btn-2__text">Open messages</span>
+            </button>
+            <span class="b-user-data__btn-label">1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="b-info-bottom  b-info-bottom--location  b-info-bottom--buttons-only  visible-xs-block" style="display: none !important;">
+        <div class="b-info-bottom__inner">
+          <div class="b-info-bottom__btn">
+            <button class="b-btn-2  b-btn-2--secondary  b-btn-2--block">
+              <span class="b-btn-2__text">Show contacts</span>
+            </button>
+          </div>
+          <div class="b-info-bottom__btn">
+            <a href="" class="b-btn-2  b-btn-2--secondary  b-btn-2--block">
+              <span class="b-btn-2__text">Open messages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="contact-owner">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="b-user-data  b-user-data--modal">
+                <div class="b-user-2  b-user-data__user">
+                  <a href="/" class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                      alt="USERNAME">
+                  </a>
+                  <div class="b-user-2__avatar-info">
+                    <div class="b-user-2__name">Lara</div>
+                    <div class="b-user-2__descr">Owner</div>
+                  </div>
+                </div>
+                <div class="b-user-data__info">
+                  <div class="b-user-data__msg-wrap">
+                    <div class="b-user-data__msg">Is this available?</div>
+                  </div>
+                  <div class="b-user-data__btn-wrap">
+                    <a href="" class="b-btn-2  b-btn-2--block">
+                      <span class="b-btn-2__text">Ask owner</span>
+                    </a>
+                  </div>
+                  <p class="b-user-data__muted-text">You will be given full access to contact after confirmation of availability</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
 @@include('./html-includes/footer.html')

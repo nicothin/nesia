@@ -1,0 +1,171 @@
+// В этом файле должны быть стили для БЭМ-блока b-user-data, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-user-data {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 264px;
+  min-width: 0;
+  min-height: 212px;
+  padding: 12px;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background: #FFFFFF;
+
+  &__user {
+    padding-bottom: 12px;
+    margin-bottom: auto;
+  }
+
+  &__msg-wrap {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  &__msg {
+    flex-grow: 1;
+    padding: 7px 12px 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 143%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+    background: #F1F1F1;
+
+    &--send {
+      color: #fff;
+      background: #989898;
+    }
+  }
+
+  &__btn-wrap {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &--mb20 {
+      margin-bottom: 20px;
+    }
+
+    &--short {
+      display: inline-block;
+    }
+  }
+
+  &__btn-label {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #A1BF4B;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &__send-label {
+    position: relative;
+    padding-left: 14px;
+    font-size: 12px;
+    line-height: 167%;
+    color: #A1BF4B;
+
+    @media (min-width: $screen-lg) {
+      padding-right: 10px;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: -0.1em;
+      width: 12px;
+      height: 9px;
+      margin-right: 5px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.74139 7.83624C4.07825 8.25097 4.70488 8.27968 5.07882 7.89752C5.07882 7.89752 11.0701 1.85666 11.4141 1.50515C11.758 1.15364 11.7497 0.591992 11.3954 0.250678C11.0412 -0.090635 10.4752 -0.0823679 10.1313 0.269143L4.48249 5.96262L1.59007 3.22367C1.28023 2.8422 0.71742 2.78221 0.333004 3.08968C-0.0514121 3.39715 -0.111865 3.95564 0.197978 4.33711L3.74139 7.83624Z' fill='%23A1BF4B'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__muted-text {
+    margin: 0;
+    padding: 0 4px;
+    font-size: 12px;
+    line-height: 167%;
+    text-align: center;
+    color: #A1A1A1;
+  }
+
+  &__msg-notification {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 143%;
+    color: #000000;
+  }
+
+  &__contacts-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__contact-wrap {
+    display: flex;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353 !important;
+    text-decoration: none !important;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  }
+
+  &__expired {
+    margin: 0 0 28px;
+    padding-right: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+  }
+
+  &--modal {
+    min-height: 0;
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

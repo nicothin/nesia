@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока b-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .jcarousel-control-prev,
+  .jcarousel-control-next {
+    background: transparent;
+    outline: none;
+  }
+
+  &__title {}
+
+}
