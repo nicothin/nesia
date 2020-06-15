@@ -391,16 +391,18 @@
                         <button class="b-info__trigger  b-link" type="button" data-target="last-offers" data-closed-text="See last offers"
                           data-opened-text="Hide last offers">See last offers</button>
                       </div>
-                      <div class="b-info__price-change-wrap  col-xs-12  col-md-3">
+
+                      <!-- Посетитель еще не делал предложений в аукционе -->
+                      <div class="b-info__price-change-wrap" style="display: none"> <!-- Скрыто для показа других состояний -->
                         <div class="b-field-num">
                           <span class="b-field-num__input-and-btns">
-                            <input class="b-field-num__input" type="number" value="69400" name="price" max="100000" min="50000" step="100">
+                            <input class="b-field-num__input" type="number" value="234123" name="price" max="2000000" min="50000" step="100">
                             <button class="b-field-num__btn  b-field-num__btn--minus" type="button">
                               <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/></svg>
                             </button>
                             <span class="b-field-num__text-wrap">
                               <span class="b-field-num__text-currency">€</span>
-                              <span class="b-field-num__text-num">69,400</span>
+                              <span class="b-field-num__text-num">234,123</span>
                             </span>
                             <button class="b-field-num__btn  b-field-num__btn--plus" type="button">
                               <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/><rect class="b-field-num__icon-symbol" x="13.5" y="7.5" width="10" height="1" transform="rotate(90 13.5 7.5)" fill="#A1A1A1"/></svg>
@@ -408,10 +410,43 @@
                           </span>
                         </div>
                       </div>
+                      <!-- / Посетитель еще не делал предложений в аукционе -->
+
+                      <!-- Посетитель сделал предложение и ждёт ответа -->
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid">
+                        <p class="b-info__bid-text">
+                          Your offer is <strong class="b-info__bid-sum">€ 68,900</strong>
+                        </p>
+                        <div class="b-info__response-status">
+                          <div class="b-label  b-label--light-danger" style="display: none">Relected</div> <!-- Если отказали -->
+                          <div class="b-label  b-label--light-success">Accepted</div> <!-- Если приняли -->
+                        </div>
+                      </div>
+                      <!-- / Посетитель сделал предложение и ждёт ответа -->
+
+                      <!-- Аукцион завершен, выбрали другого -->
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid" style="display: none"> <!-- Скрыто для показа других состояний -->
+                        <p class="b-info__bid-text  b-info__bid-text--danger">
+                          Sorry, auction was closed
+                        </p>
+                        <div class="b-info__response-status">
+                          Your offer € 65,333 was rejected
+                        </div>
+                      </div>
+                      <!-- / Аукцион завершен, выбрали другого -->
+
                       <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
-                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
+                        <!-- Посетитель еще не делал предложений в аукционе -->
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit" style="display: none;"> <!-- Скрыто для показа других состояний -->
                           <span class="b-btn-2__text">Offer your price</span>
                         </button>
+                        <!-- / Посетитель еще не делал предложений в аукционе -->
+
+                        <!-- Посетитель сделал предложение и ждёт ответа -->
+                        <button class="b-btn-2" type="submit">
+                          <span class="b-btn-2__text">Contact owner</span>
+                        </button>
+                        <!-- / Посетитель сделал предложение и ждёт ответа -->
                       </div>
                       <script>
                         // Поля формы с выбором кол-ва
@@ -434,7 +469,7 @@
                                   if (num > valueMin) input.value = num - valueStep;
                                 }
                                 if (text) {
-                                  text.innerText = new Intl.NumberFormat('en-IN').format(input.value);
+                                  text.innerText = new Intl.NumberFormat('en-US').format(input.value);
                                 }
                               }
                             });

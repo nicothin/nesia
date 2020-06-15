@@ -12,4 +12,20 @@
   line-height: 1;
   color: #fff;
   background-color: $color-second;
+
+  &--light-danger {
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+    color: #D84B2A;
+    background: #F7E4DF;
+  }
+
+  &--light-success {
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+    color: #799234;
+    background: #F1F6E3;
+  }
 }

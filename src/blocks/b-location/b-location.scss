@@ -150,6 +150,7 @@
 
   &__user-data-wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
   }
 }
