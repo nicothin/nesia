@@ -30,6 +30,11 @@
   // box-shadow: 2px 2px 8px rgba(151, 151, 151, 0.15);
   outline: none;
 
+  @media (min-width: $screen-md) {
+    background: #fff;
+    box-shadow: 2px 2px 8px rgba(151, 151, 151, 0.15);
+  }
+
   &:hover,
   &:focus {
     color: #535353;
@@ -53,6 +58,16 @@
     transition: all 0.2s ease;
   }
 
+  &__text-to {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: inline;
+    }
+  }
+
+
+
   &--active {
 
     #{$block-name}__icon {
@@ -63,6 +78,13 @@
 
     #{$block-name}__icon-active {
       opacity: 1;
+    }
+  }
+
+  &--hidden {
+
+    @media (min-width: $screen-md) {
+      display: none;
     }
   }
 }

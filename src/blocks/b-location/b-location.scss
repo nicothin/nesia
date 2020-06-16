@@ -3,12 +3,67 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .b-location {
+  position: relative;
+
+  @media (max-width: ($screen-md - 1)) {
+    padding-top: 96px; // 56 поиск + 40 строка с кнопками Назад и Сохранить
+  }
 
   &__search-wrap {
+    position: relative;
+    z-index: 99;
+
+    @media (max-width: ($screen-md - 1)) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      .scroll-to-up & {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        transition: top 0.3s ease;
+      }
+    }
 
     @media (min-width: $screen-md) {
       margin-bottom: 18px;
       padding-top: 32px !important;
+    }
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
+  }
+
+  &__top-wrap {
+    position: relative;
+    z-index: 99;
+    background: #fff;
+    transition: all 0.3s ease;
+
+    @media (max-width: ($screen-md - 1)) {
+      position: absolute;
+      top: 56px;
+      left: 0;
+      right: 0;
+      margin: 0;
+      transition: top 0.3s ease;
+
+      .scroll-to-up & {
+        position: fixed;
+        top: 106px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding-bottom: 8px;
+      }
     }
   }
 
@@ -40,7 +95,9 @@
     margin-right: -12px;
 
     @media (min-width: $screen-md) {
-      display: none !important;
+      position: fixed;
+      bottom: 20px;
+      right: 40px;
     }
   }
 
@@ -149,6 +206,8 @@
   }
 
   &__user-data-wrap {
+    position: sticky;
+    top: 60px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;

@@ -250,6 +250,7 @@
 
     &--bid {
       margin-top: 0;
+      bottom: 48px;
 
       @media (min-width: $screen-lg) {
         padding-right: 35px;
@@ -325,5 +326,10 @@
 
   &__response-status {
     color: #A1A1A1;
+  }
+
+  &__hr-hide-favorite-btn {
+    border: 0;
+    margin: 0;
   }
 }

@@ -222,7 +222,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="b-location__top-wrap row">
               <div class="b-location__top  col-xs-12  col-sm-8">
 
                 <a href="/" class="b-location__back  b-back-btn">
@@ -243,12 +243,27 @@
                     <path
                       d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
                   </svg>
-                  <span class="b-save-btn__text">Save</span>
+                  <span class="b-save-btn__text-wrap">
+
+                    <span class="b-save-btn__text-save" data-inactive-text="Save" data-active-text="Saved">Save</span>
+                    <span class="b-save-btn__text-to"> to Favorites</span>
+                  </span>
                 </button>
 
                 <script>
-                  // ВРЕМЕННЫЙ КОД для показа работы кнопки Save
-                  $('#temp-id1').on('click', function () { console.log(111); $(this).toggleClass('b-save-btn--active'); })
+                  // Работа кнопки Save
+                  $('#temp-id1').on('click', function () {
+                    var saveTextNode = $(this).find('.b-save-btn__text-save');
+                    var inactiveText = $(saveTextNode).data('inactive-text');
+                    var activeText = $(saveTextNode).data('active-text');
+                    $(this).toggleClass('b-save-btn--active');
+                    if( $(this).is('.b-save-btn--active') ) {
+                      $(saveTextNode).text(activeText);
+                    }
+                    else {
+                      $(saveTextNode).text(inactiveText);
+                    }
+                  })
                 </script>
 
                 <ul class="b-location__breadcrumbs  b-breadcrumbs">
@@ -425,7 +440,7 @@
                       <!-- / Посетитель сделал предложение и ждёт ответа -->
 
                       <!-- Аукцион завершен, выбрали другого -->
-                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid" style="display: none"> <!-- Скрыто для показа других состояний -->
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid" style="display: none">
                         <p class="b-info__bid-text  b-info__bid-text--danger">
                           Sorry, auction was closed
                         </p>
@@ -437,7 +452,7 @@
 
                       <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
                         <!-- Посетитель еще не делал предложений в аукционе -->
-                        <button class="b-btn-2  b-btn-2--secondary" type="submit" style="display: none;"> <!-- Скрыто для показа других состояний -->
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit" style="display: none;">
                           <span class="b-btn-2__text">Offer your price</span>
                         </button>
                         <!-- / Посетитель еще не делал предложений в аукционе -->
@@ -564,10 +579,12 @@
                     <div class="b-info__about-text">
                       Πωλούνται ή δίνεται αντιπαροχή.Το οικόπεδο έχει συνολική έκταση 153 τ.μ. με συντελεστή δόμησης 2,4 - στους Αμπελόκηπους Θεσσαλονίκης. Δίπλα σε κεντρικό δρόμο , αγορά και αθλητικές εγκαταστάσεις. Η διώροφη μονοκατοικία αποτελείται από 2 οροφοδιαμερίσματα, χωρίς κοινόχρηστα, με ξεχωριστή είσοδο το καθένα και ελεύθερη αυλή 53 τ.μ. Αποτελείται από ένα ανώγειο διαμέρισμα (76 τμ, καθαρά), κουζίνα, δύο δωμάτια, σαλόνι, χoλ, μπάνιο, 2 βεράντες - υπάρχει σχέδιο με κάτοψη τουανώγειου.Το διαμέρισμα του 1ου ορόφου (90 τ.μ.καθαρά), έχει τρία δωμάτια, σαλοκουζίνα, μπάνιο μεγάλο, χολ- υπάρχει σχέδιο. Μπαλκόνια με τέντες και ηλιακό.Η αυλή 53 τ.μ. μπορεί να ανοικοδομηθεί, να γίνει κήπος ή πάρκινγκ για 3 - 4 αυτοκίνητα. ’Εχει άδεια για είσοδο πάρκινγκ. Στην αυλή μία αποθήκη. Πωλούνται και χωριστά, πληροφορίες από το τηλέφωνο.
                     </div>
+
                   </div>
 
                 </div>
 
+                <hr class="b-info__hr-hide-favorite-btn" id="hide-favorite-btn">
               </div>
 
               <div class="b-location__sidebar  col-sm-4">
@@ -843,6 +860,26 @@
             </div>
           </div>
         </div>
+
+        <script>
+          // Метод, определяющий видиомость чего-либо во вьюпорте
+          $.fn.showInViewport = function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+          };
+
+          // Показ/сокрытие кнопки добавления в избранное
+          $(window).on('resize scroll', function () {
+            if ($('#hide-favorite-btn').showInViewport()) {
+              $('#temp-id1').addClass('b-save-btn--hidden');
+            } else {
+              $('#temp-id1').removeClass('b-save-btn--hidden');
+            }
+          });
+        </script>
 
       </div>
 

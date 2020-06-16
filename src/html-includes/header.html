@@ -45,4 +45,18 @@
 
 <body id="body">
 
+  <script>
+    // Детектор направления скролла
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function () {
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) {
+        $('body').addClass('scroll-to-down').removeClass('scroll-to-up');
+      } else {
+        $('body').removeClass('scroll-to-down').addClass('scroll-to-up');
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    }, false);
+  </script>
+
   <div id="wrap">
