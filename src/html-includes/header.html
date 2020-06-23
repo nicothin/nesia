@@ -43,28 +43,24 @@
 
 </head>
 
-<body id="body">
+<body id="body" class="@@if (context.isMainPage) {no-search-xs}">
 
   <div id="wrap">
 
       <!-- nicothin: новый хедер -->
       <header class="b-page-header">
-        <div class="container-fluid  b-page-header__inner">
-
-          <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
-            <span>Show menu</span>
-          </button>
+        <div class="b-page-header__inner">
 
           <a href="" class="b-page-header__logo  b-logo">
-            <picture>
-              <source srcset="img/logo.png" media="(min-width: 769px)">
-              <!-- <img src="img/logo.png" alt="" width="127" height="29"> -->
-              <!-- width="31" height="29" -->
-              <img class="b-logo__img" src="img/logo--sm.png" alt="">
-            </picture>
+            <img class="b-logo__img" src="img/logo.png" width="105" height="23" alt="terranesia">
           </a>
 
-          <nav class="b-page-header__nav  b-main-nav" id="nav">
+          <button class="b-page-header__burger  b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
+            <span>Show menu</span>
+            <b class="b-burger__label"></b>
+          </button>
+
+          <!-- <nav class="b-page-header__nav  b-main-nav" id="nav">
             <ul class="b-main-nav__list">
               <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
               <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
@@ -72,9 +68,13 @@
               <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
             </ul>
             <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
-          </nav>
+          </nav> -->
 
           <div class="b-page-header__settings">
+
+            <!-- @@show-search-md-plus -->
+
+
 
             <!-- Юзер не авторизован
             <div class="b-user">
@@ -86,7 +86,7 @@
             </div> -->
 
             <!-- Юзер авторизован -->
-            <div class="b-user" id="b-user-drop">
+            <!-- <div class="b-user" id="b-user-drop">
               <button class="b-user__drop" data-toggle="dropdown" type="button">
                 <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
                 <span class="b-user__username">Yevheniy</span>
@@ -147,9 +147,9 @@
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
-            <div class="dropdown  b-currency">
+            <!-- <div class="dropdown  b-currency">
               <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
               <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
                 <li>
@@ -225,9 +225,9 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
-            <div class="dropdown  b-language">
+            <!-- <div class="dropdown  b-language">
               <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
               <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
                 <li>
@@ -246,14 +246,15 @@
                   <a href="#" onclick="change_language('rs')">Srpski</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
           </div>
 
         </div>
 
-        <div class="b-search-fast  b-search-fast--shown-md  row">
-          <div class="col-xs-12  col-sm-8">
+        <!-- Увы, на странице локации (item.html) придётся продублировать этот поиск для не-мобильных ширин -->
+        <div class="b-page-header__search-wrap">
+          <div class="b-search-fast">
             <form class="b-search-fast__search" name="search_form">
               <input class="form-control  b-form-control  b-search-fast__search-input"
                 placeholder="Введите адрес, район или город" type="text">

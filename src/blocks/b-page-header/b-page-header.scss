@@ -11,43 +11,100 @@
   left: 0;
   right: 0;
   z-index: 999;
-  min-height: 50px;
+  height: 40px;
+  background: #fff;
+  overflow: visible;
 
-  .container-fluid {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-
-    @media (min-width: $screen-md) {
-      padding-left: 15px !important;
-      padding-right: 15px !important;
-    }
+  @media (min-width: $screen-md) {
+    height: 50px;
+    background: #98c12f;
   }
 
   &__inner {
+    position: relative;
+    z-index: 1;
     display: flex;
-    // align-items: flex-start;
+    align-items: center;
+    padding: 0 8px 0 12px;
+    border-bottom: 1px solid #E8E8E8;
+    background: #fff;
+
+    @media (min-width: $screen-md) {
+      height: 100%;
+      padding-left: 10px;
+      border-bottom: 0;
+      background: #98c12f;
+    }
   }
 
   &__logo {
-    margin-right: auto;
+    height: 34px;
+    background: #fff;
 
     @media (min-width: $screen-md) {
-      margin-right: 0;
+      height: 100%;
     }
   }
 
-  &__nav {
+  &__burger {
+    margin-left: auto;
+  }
+
+  &__search-wrap {
+    position: relative;
+    z-index: 0;
+    padding: 8px 16px;
+    background: #A1BF4B;
+    transition: all 0.3s ease;
+
+    .hide-header-search-xs & {
+      transform: translateY(-101%);
+    }
+
+    .no-search-xs & {
+      display: none;
+    }
 
     @media (min-width: $screen-md) {
-      margin-right: auto;
+      display: none;
     }
   }
 
-  &__settings {
-    display: flex;
+  // .container-fluid {
+  //   padding-left: 0 !important;
+  //   padding-right: 0 !important;
 
-    @media (min-width: $screen-md) {
-      margin-right: -15px;
-    }
-  }
+  //   @media (min-width: $screen-md) {
+  //     padding-left: 15px !important;
+  //     padding-right: 15px !important;
+  //   }
+  // }
+
+  // &__inner {
+  //   display: flex;
+  //   // align-items: flex-start;
+  // }
+
+  // &__logo {
+  //   margin-right: auto;
+
+  //   @media (min-width: $screen-md) {
+  //     margin-right: 0;
+  //   }
+  // }
+
+  // &__nav {
+
+  //   @media (min-width: $screen-md) {
+  //     margin-right: auto;
+  //   }
+  // }
+
+  // &__settings {
+  //   display: flex;
+
+  //   @media (min-width: $screen-md) {
+  //     margin-right: -15px;
+  //   }
+  // }
 }

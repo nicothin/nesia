@@ -6,6 +6,8 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  overflow-x: hidden;
+
   .jcarousel-control-prev,
   .jcarousel-control-next {
     background: transparent;

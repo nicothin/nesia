@@ -58,7 +58,8 @@
     "b-user-data": [],
     "b-user-2": [],
     "b-modal-2": [],
-    "b-content": []
+    "b-content": [],
+    "b-footer": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

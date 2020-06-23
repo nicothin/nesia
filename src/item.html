@@ -1,10 +1,20 @@
-@@include('./html-includes/header.html')
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
 
-      <div class="b-content">
+      <div class="b-content"> <!-- Нужен класс b-content для корректной работы с новой шапкой -->
 
         <div class="container-fluid">
 
           <div class="b-location">
+
+            <div class="b-location__search  b-search-fast  row">
+              <div class="col-xs-12  col-sm-8">
+                <form class="b-search-fast__search" name="search_form">
+                  <input class="form-control  b-form-control  b-search-fast__search-input"
+                    placeholder="Введите адрес, район или город" type="text">
+                  <button class="b-search-fast__search-btn  btn  btn-success" type="button"></button>
+                </form>
+              </div>
+            </div>
 
             <div class="b-location__top-wrap row">
               <div class="b-location__top  col-xs-12  col-sm-8">
@@ -623,6 +633,7 @@
 
       </div>
 
+      <!-- Frame 7 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
@@ -644,6 +655,7 @@
         </div>
       </div>
 
+      <!-- Frame 11 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
@@ -665,6 +677,7 @@
         </div>
       </div>
 
+      <!-- Frame 10 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
@@ -687,6 +700,7 @@
         </div>
       </div>
 
+      <!-- Frame 12 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  b-info-bottom--buttons-only  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__btn">
@@ -702,6 +716,7 @@
         </div>
       </div>
 
+      <!-- Frame 8 (figma) -->
       <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="contact-owner">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -735,4 +750,40 @@
         </div>
       </div>
 
-@@include('./html-includes/footer.html')
+      <!-- Frame 9 (figma) -->
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="contact-owner-2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="b-user-data  b-user-data--modal">
+                <div class="b-user-2  b-user-data__user">
+                  <a href="/" class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar"
+                      src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                      alt="USERNAME">
+                  </a>
+                  <div class="b-user-2__avatar-info">
+                    <div class="b-user-2__name">Lara</div>
+                    <div class="b-user-2__descr">Owner</div>
+                  </div>
+                </div>
+                <div class="b-user-data__info">
+                  <div class="b-user-data__msg-wrap">
+                    <div class="b-user-data__msg  b-user-data__msg--send">Is this available?</div>
+                    <div class="b-user-data__send-label">send</div>
+                  </div>
+                  <p class="b-user-data__muted-text  b-user-data__muted-text--normal">You can contact free with Lara if user will buy acsess or you can unlock contacts</p>
+                  <div class="b-user-data__btn-wrap">
+                    <button class="b-btn-2  b-btn-2--secondary">
+                      <span class="b-btn-2__text">Unlock contacts now</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+@@include('./html-includes/footer.html', {"hasInfoBottom": true})
