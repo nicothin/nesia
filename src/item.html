@@ -1,226 +1,10 @@
 @@include('./html-includes/header.html')
 
-      <!-- nicothin: Добавил новый хедер -->
-      <header class="b-page-header">
-        <div class="container-fluid  b-page-header__inner">
-
-          <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
-            <span>Show menu 1</span>
-          </button>
-
-          <a href="" class="b-page-header__logo  b-logo">
-            <picture>
-              <source srcset="img/logo.png" media="(min-width: 769px)">
-              <!-- <img src="img/logo.png" alt="" width="127" height="29"> -->
-              <!-- width="31" height="29" -->
-              <img class="b-logo__img" src="img/logo--sm.png" alt="">
-            </picture>
-          </a>
-
-          <nav class="b-page-header__nav  b-main-nav" id="nav">
-            <ul class="b-main-nav__list">
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить<span class="b-main-nav__link-long-text"> объект бесплатно</span></a></li>
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
-            </ul>
-            <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
-          </nav>
-
-          <div class="b-page-header__settings">
-
-            <!-- Юзер не авторизован
-            <div class="b-user">
-              <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
-                <svg width="20" height="20">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
-                </svg>
-              </button>
-            </div> -->
-
-            <!-- Юзер авторизован -->
-            <div class="b-user" id="b-user-drop">
-              <button class="b-user__drop" data-toggle="dropdown" type="button">
-                <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
-                <span class="b-user__username">Yevheniy</span>
-              </button>
-              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-user-menu  b-user__menu">
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                    <svg class="b-user-menu__link-icon" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Мой кабинет</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link">
-                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-comments"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Сообщения</span>
-                    <span class="b-label  b-user-menu__link-label">99+</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Фолловинг</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link">
-                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-reviews"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Получить отзывы</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link">
-                    <svg class="b-user-menu__link-icon" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-share"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Поделиться объектом</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                    <svg class="b-user-menu__link-icon" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-add"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Добавить объект</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--no-icon">
-                    <span class="b-user-menu__link-text">Выйти</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="dropdown  b-currency">
-              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
-              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=US$">
-                      <div class="csymbol">US$</div>
-                      <div class="ctext">Доллар США</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=€">
-                      <div class="csymbol">€</div>
-                      <div class="ctext">Евро</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=RUB">
-                      <div class="csymbol">RUB</div>
-                      <div class="ctext">Рубль РФ</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=£">
-                      <div class="csymbol">£</div>
-                      <div class="ctext">Фунт стерлингов</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=CAD">
-                      <div class="csymbol">CAD</div>
-                      <div class="ctext">Канадский доллар</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=AUD">
-                      <div class="csymbol">AUD</div>
-                      <div class="ctext">Австралийский доллар</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=CNY">
-                      <div class="csymbol">CNY</div>
-                      <div class="ctext">Китайский юань</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=TL">
-                      <div class="csymbol">TL</div>
-                      <div class="ctext">Турецкая лира</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=UAH">
-                      <div class="csymbol">UAH</div>
-                      <div class="ctext">Украинская гривна</div>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="dropdown  b-language">
-              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
-              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
-                <li>
-                  <a href="#" onclick="change_language('en')">English</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('ru')">Русский</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('ua')">Українська</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('rs')">Srpski</a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-      </header>
-      <!-- /nicothin: Добавил новый хедер -->
-
-      <div class="content">
+      <div class="b-content">
 
         <div class="container-fluid">
 
           <div class="b-location">
-
-            <div class="b-location__search-wrap  b-search-fast  row">
-              <div class="col-xs-12  col-sm-8">
-                <form class="b-search-fast__search" name="search_form">
-                  <input class="form-control  b-form-control  b-search-fast__search-input" placeholder="Введите адрес, район или город" type="text">
-                  <button class="b-search-fast__search-btn  btn  btn-success" type="button"></button>
-                </form>
-              </div>
-            </div>
 
             <div class="b-location__top-wrap row">
               <div class="b-location__top  col-xs-12  col-sm-8">
@@ -249,22 +33,6 @@
                     <span class="b-save-btn__text-to"> to Favorites</span>
                   </span>
                 </button>
-
-                <script>
-                  // Работа кнопки Save
-                  $('#temp-id1').on('click', function () {
-                    var saveTextNode = $(this).find('.b-save-btn__text-save');
-                    var inactiveText = $(saveTextNode).data('inactive-text');
-                    var activeText = $(saveTextNode).data('active-text');
-                    $(this).toggleClass('b-save-btn--active');
-                    if( $(this).is('.b-save-btn--active') ) {
-                      $(saveTextNode).text(activeText);
-                    }
-                    else {
-                      $(saveTextNode).text(inactiveText);
-                    }
-                  })
-                </script>
 
                 <ul class="b-location__breadcrumbs  b-breadcrumbs">
                   <li class="b-breadcrumbs__item">
@@ -350,14 +118,6 @@
                     <a href="/">Report listing</a>
                   </li>
                 </ul>
-                <script>
-                  // переключение «вкладок» фото/карта/улицы/
-                  $('.choose_show a').on('click', function(e) {
-                    e.preventDefault();
-                    $('.sw_show').hide();
-                    $($(this).attr('href')).show();
-                  })
-                </script>
 
                 <div class="b-info">
 
@@ -860,26 +620,6 @@
             </div>
           </div>
         </div>
-
-        <script>
-          // Метод, определяющий видиомость чего-либо во вьюпорте
-          $.fn.showInViewport = function () {
-            var elementTop = $(this).offset().top;
-            var elementBottom = elementTop + $(this).outerHeight();
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-            return elementBottom > viewportTop && elementTop < viewportBottom;
-          };
-
-          // Показ/сокрытие кнопки добавления в избранное
-          $(window).on('resize scroll', function () {
-            if ($('#hide-favorite-btn').showInViewport()) {
-              $('#temp-id1').addClass('b-save-btn--hidden');
-            } else {
-              $('#temp-id1').removeClass('b-save-btn--hidden');
-            }
-          });
-        </script>
 
       </div>
 

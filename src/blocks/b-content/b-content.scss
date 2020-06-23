@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока b-content, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-content {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-bottom: 40px;
+  padding-top: 50px
+}

@@ -57,7 +57,8 @@
     "b-slider": [],
     "b-user-data": [],
     "b-user-2": [],
-    "b-modal-2": []
+    "b-modal-2": [],
+    "b-content": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
@@ -72,7 +73,8 @@
     "src/js/jquery.selectBox.js"
   ],
   "addJsAfter": [
-    "./src/js/global-script.js"
+    "./src/js/global-script.js",
+    "./src/js/global-script-new.js"
   ],
   "addImages": [
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico}"
