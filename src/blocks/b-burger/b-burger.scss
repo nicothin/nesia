@@ -59,6 +59,7 @@
 
   &__label {
     position: absolute;
+    z-index: 99;
     top: 8px;
     right: 3px;
     width: 10px;
@@ -80,6 +81,7 @@
       &:after {
         transition: top 0.3s, transform 0.3s 0.3s;
         top: 0;
+        background: #fff;
       }
 
       &:before {

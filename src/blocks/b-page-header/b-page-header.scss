@@ -48,6 +48,7 @@
 
   &__burger {
     margin-left: auto;
+    z-index: 100 !important;
   }
 
   &__search-wrap {

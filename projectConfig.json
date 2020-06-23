@@ -59,7 +59,8 @@
     "b-user-2": [],
     "b-modal-2": [],
     "b-content": [],
-    "b-footer": []
+    "b-footer": [],
+    "b-mobile-nav": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
