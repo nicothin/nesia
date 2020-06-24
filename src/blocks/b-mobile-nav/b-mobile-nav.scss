@@ -1,0 +1,127 @@
+// В этом файле должны быть стили для БЭМ-блока b-mobile-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-mobile-nav {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 264px;
+  overflow-y: auto;
+  background: #fff;
+  transform: translateX(-101%);
+  transition: transform 0.3s;
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+
+  &__user-wrap {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    margin: 0 0 10px;
+    padding: 10px 24px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    background: #A1BF4B;
+  }
+
+  &__user-msg {
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+
+    &--separator {
+      margin-bottom: 17px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid #E8E8E8;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px 24px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #535353;
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    justify-content: center;
+    vertical-align: baseline;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    margin-left: 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    background: #A1BF4B;
+    color: #fff;
+  }
+
+  &__backdrop {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &--show {
+    transform: translateX(0);
+
+    & ~ #{$block-name}__backdrop {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}

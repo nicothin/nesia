@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var burger = burgers[i];
     burger.addEventListener('click', showBurgerTarget);
     function showBurgerTarget() {
-      document.body.classList.toggle('modal-open');
+      // document.body.classList.toggle('modal-open');
       var targetId = this.getAttribute('data-target-id');
       var targetClassToggle = this.getAttribute('data-target-class-toggle');
       if (targetId && targetClassToggle) {

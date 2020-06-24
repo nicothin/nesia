@@ -17,6 +17,11 @@
   border-radius: 0;
   transition: opacity 0.3s;
 
+  &--to-top {
+    top: auto;
+    bottom: 100%;
+  }
+
   .open & {
     width: auto;
     height: auto;
@@ -28,17 +33,13 @@
   a {
     padding: 8px 15px !important; // тут и ниже: перебивать стили по умолчанию
     line-height: 1 !important;
-    color: inherit !important;
+    color: #333 !important;
     text-decoration: none !important;
 
     &:hover,
     &:focus {
-      color: inherit !important;
+      color: #333 !important;
       text-decoration: none !important;
-    }
-
-    &:hover,
-    &:focus {
       background-color: $gray-lightest-2 !important;
     }
   }

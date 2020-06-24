@@ -6,7 +6,129 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &--has-info-bottom {
-    padding-bottom: 66px;
+  color: #C4C4C4;
+  background: #000;
+
+  @media (max-width: ($screen-md - 1)) {
+
+    &--has-info-bottom {
+      padding-bottom: 66px;
+    }
+  }
+
+  &__container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+
+    @media (min-width: $screen-md) {
+      padding-top: 17px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: -12px;
+
+    @media (min-width: $screen-md) {
+      align-items: center;
+    }
+  }
+
+  &__logo-wrap {
+    padding-left: 12px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__drops-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 5px;
+    padding-right: 30px;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &__text-wrap {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__nav {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-right: 10px;
+    }
+
+    a {
+      color: #d84b2a;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: #d84b2a;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__social-item {
+    margin-right: 5px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border: 1px solid #fff;
+      width: 30px;
+      height: 30px;
+      color: #fff;
+      border-radius: 50%;
+
+      span {
+        font: 0/0 a;
+        opacity: 0;
+      }
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      fill: #fff;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 6px;
+    }
   }
 }

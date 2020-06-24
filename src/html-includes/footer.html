@@ -2,32 +2,146 @@
 
     </div>
 
-    <footer class="b-footer  @@if (context.hasInfoBottom) {b-footer--has-info-bottom}">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-2">
-            <a class="navbar-brand" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
+    <!-- Пришлось сменить тег footer на div из-за говна в мозгах первоначального верстака (каскад в стилях — ППЦ) -->
+    <div class="b-footer  @@if (context.hasInfoBottom) {b-footer--has-info-bottom}">
+      <div class="b-footer__container  container-fluid">
+        <div class="b-footer__row  row">
+
+          <div class="b-footer__logo-wrap  col-xs-6  col-sm-2">
+            <a class="b-footer__logo" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
           </div>
-          <div class="col-xs-7">
-            <div class="copyright">© 2018 Terranesia.com. Недвижимость без посредников. <nobr>Designed by Dolphin Studio.</nobr></div>
-            <ul class="nav navbar-nav">
-                <li><a href="/search/buy/">Продажа</a></li>
-                <li><a href="/search/rent/">Аренда</a></li>
-                <li><a href="/object/add/">Разместить объект бесплатно</a></li>
-                <li><a href="/pages/how-it-works/">Cоветы</a></li>
-                <li><a href="/support/">Поддержка</a></li>
+
+          <div class="b-footer__drops-wrap  col-xs-6">
+            <div class="dropdown  b-currency">
+              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-dropdown--to-top">
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=US$">
+                      <div class="csymbol">US$</div>
+                      <div class="ctext">Доллар США</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=€">
+                      <div class="csymbol">€</div>
+                      <div class="ctext">Евро</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=RUB">
+                      <div class="csymbol">RUB</div>
+                      <div class="ctext">Рубль РФ</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=£">
+                      <div class="csymbol">£</div>
+                      <div class="ctext">Фунт стерлингов</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CAD">
+                      <div class="csymbol">CAD</div>
+                      <div class="ctext">Канадский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=AUD">
+                      <div class="csymbol">AUD</div>
+                      <div class="ctext">Австралийский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CNY">
+                      <div class="csymbol">CNY</div>
+                      <div class="ctext">Китайский юань</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=TL">
+                      <div class="csymbol">TL</div>
+                      <div class="ctext">Турецкая лира</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=UAH">
+                      <div class="csymbol">UAH</div>
+                      <div class="ctext">Украинская гривна</div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown  b-language">
+              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-dropdown--to-top">
+                <li>
+                  <a href="#" onclick="change_language('en')">English</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ru')">Русский</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ua')">Українська</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('rs')">Srpski</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="b-footer__text-wrap  col-xs-12  col-sm-8">
+            <p class="b-footer__copyright">© Terranesia.com 2020. Real estate by owner. Designed by Dolphin Studio.</p>
+            <ul class="b-footer__nav">
+              <li><a href="/">Продажа</a></li>
+              <li><a href="/">Аренда</a></li>
+              <li><a href="/">Разместить объект бесплатно</a></li>
+              <li><a href="/">Cоветы</a></li>
+              <li><a href="/">Поддержка</a></li>
             </ul>
           </div>
-          <div class="col-xs-3">
-            <ul class="footer-social">
-              <li class="item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/"><span class="fb"></span></a></li>
-              <li class="item"><a target="_blank" href="https://twitter.com/pp45637809"><span class="tw"></span></a></li>
-              <li class="item"><a target="_blank" href="https://www.pinterest.com/pp45637809/"><span class="p"></span></a></li>
+
+          <div class="b-footer__social-wrap  col-xs-12  col-sm-2">
+            <ul class="b-footer__social">
+              <li class="b-footer__social-item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/">
+                <svg viewBox="0 0 24 24" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+                <span class="fb">facebook</span></a>
+              </li>
+              <li class="b-footer__social-item"><a target="_blank" href="https://twitter.com/pp45637809">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="12" height="12"><path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"/></svg>
+                <span class="tw">twitter</span></a>
+              </li>
+              <li class="b-footer__social-item"><a target="_blank" href="https://www.pinterest.com/pp45637809/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.977 511.977" width="12" height="12"><path d="M262.948 0C122.628 0 48.004 89.92 48.004 187.968c0 45.472 25.408 102.176 66.08 120.16 6.176 2.784 9.536 1.6 10.912-4.128 1.216-4.352 6.56-25.312 9.152-35.2.8-3.168.384-5.92-2.176-8.896-13.504-15.616-24.224-44.064-24.224-70.752 0-68.384 54.368-134.784 146.88-134.784 80 0 135.968 51.968 135.968 126.304 0 84-44.448 142.112-102.208 142.112-31.968 0-55.776-25.088-48.224-56.128 9.12-36.96 27.008-76.704 27.008-103.36 0-23.904-13.504-43.68-41.088-43.68-32.544 0-58.944 32.224-58.944 75.488 0 27.488 9.728 46.048 9.728 46.048S144.676 371.2 138.692 395.488c-10.112 41.12 1.376 107.712 2.368 113.44.608 3.168 4.16 4.16 6.144 1.568 3.168-4.16 42.08-59.68 52.992-99.808 3.968-14.624 20.256-73.92 20.256-73.92 10.72 19.36 41.664 35.584 74.624 35.584 98.048 0 168.896-86.176 168.896-193.12C463.62 76.704 375.876 0 262.948 0z" /></svg>
+                <span class="p">pinterest</span></a>
+              </li>
             </ul>
           </div>
+
         </div>
       </div>
-    </footer>
+    </div>
 
     <!-- <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
       <div class="modal-dialog" role="document">
