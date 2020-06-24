@@ -23,7 +23,6 @@
     "b-mobile-header": [],
     "b-progress": [],
     "b-profile": [],
-    "b-user-menu": [],
     "b-tabs": [],
     "b-card-mini": [],
     "b-card-list": [],
@@ -60,7 +59,10 @@
     "b-modal-2": [],
     "b-content": [],
     "b-footer": [],
-    "b-mobile-nav": []
+    "b-mobile-nav": [],
+    "b-nav": [],
+    "b-drop-notifications": [],
+    "b-drop-usermenu": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

@@ -1,0 +1,76 @@
+// В этом файле должны быть стили для БЭМ-блока b-drop-notifications, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-drop-notifications {
+
+  $block-name:                &; // #{$block-name}__element
+
+  flex-shrink: 0;
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    outline: 0;
+  }
+
+  &__drop {
+    margin: 0;
+    box-shadow: 0px 2px 10px rgba(216, 216, 216, 0.7);
+    border-radius: 2px;
+
+    .open > & {
+      width: 320px !important;
+      padding: 0 !important;
+      background: #FDFDFD !important;
+      border: 1px solid #E8E8E8 !important;
+    }
+  }
+
+  &__title {
+    margin: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+
+  &__item {
+    color: #31353F;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    #{$block-name}__link {
+      padding: 16px !important;
+    }
+  }
+
+  &__link {
+    display: block;
+    // padding: 16px !important;
+  }
+
+  &__item-type {
+    color: #A3BF42;
+  }
+
+  &__date {
+    margin-top: 6px;
+    color: #A1A1A1;;
+  }
+}

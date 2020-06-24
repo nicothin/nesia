@@ -1,0 +1,62 @@
+// В этом файле должны быть стили для БЭМ-блока b-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-nav {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+
+    &:not(:last-child) {
+      border-right: 1px solid #95AF38;
+    }
+
+    &--drops-wrap {
+      display: flex;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0 12px;
+    line-height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &__text-lg {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline;
+    }
+  }
+
+  &__icon-xs {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+}

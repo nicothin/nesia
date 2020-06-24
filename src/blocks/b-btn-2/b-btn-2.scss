@@ -49,6 +49,19 @@
     }
   }
 
+  &--white {
+    border: 0;
+    background: #ffffff;
+    color: #799234;
+
+    &:hover,
+    &:focus {
+      color: #799234;
+      background: #fff;
+      border: none;
+    }
+  }
+
   &--block {
     display: flex;
     width: 100%;
