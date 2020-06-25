@@ -43,234 +43,287 @@
 
 </head>
 
-<body id="body">
+<body id="body" class="">
 
   <div id="wrap">
 
-
-      <!-- nicothin: Добавил новый хедер -->
+      <!-- nicothin: новый хедер -->
       <header class="b-page-header">
-        <div class="container-fluid  b-page-header__inner">
-
-          <button class="b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-main-nav--show">
-            <span>Show menu 1</span>
-          </button>
+        <div class="b-page-header__inner">
 
           <a href="" class="b-page-header__logo  b-logo">
-            <picture>
-              <source srcset="img/logo.png" media="(min-width: 769px)">
-              <!-- <img src="img/logo.png" alt="" width="127" height="29"> -->
-              <!-- width="31" height="29" -->
-              <img class="b-logo__img" src="img/logo--sm.png" alt="">
-            </picture>
+            <img class="b-logo__img" src="img/logo.png" width="105" height="23" alt="terranesia">
           </a>
 
-          <nav class="b-page-header__nav  b-main-nav" id="nav">
-            <ul class="b-main-nav__list">
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Купить</a></li>
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Арендовать</a></li>
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Разместить<span class="b-main-nav__link-long-text"> объект бесплатно</span></a></li>
-              <li class="b-main-nav__item"><a class="b-main-nav__link" href="/">Информация</a></li>
+          <button class="b-page-header__burger  b-burger" aria-label="Show menu" data-target-id="nav" data-target-class-toggle="b-mobile-nav--show">
+            <span>Show menu</span>
+            <b class="b-burger__label"></b>
+          </button>
+
+          <nav class="b-page-header__mobile-nav  b-mobile-nav" id="nav">
+            <p class="b-mobile-nav__user-wrap">
+              <img src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light" alt="%USERNAME%" class="b-mobile-nav__avatar">
+              <span class="b-mobile-nav__user-msg">Hi, Lara Scala</span>
+            </p>
+            <ul class="b-user-menu">
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Buy</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Rent</a></li>
+              <li class="b-user-menu__item  b-user-menu__item--separator"><a class="b-user-menu__link" href="/">List your property</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">How it works</a></li>
+              <li class="b-user-menu__item  b-user-menu__item--separator"><a class="b-user-menu__link" href="/">Support</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">My listings</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Auction <span class="b-user-menu__label">2</span></a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Increase views</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Favorutes</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Messages <span class="b-user-menu__label">99+</span></a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Settings</a></li>
+              <li class="b-user-menu__item  b-user-menu__item--separator"><a class="b-user-menu__link" href="/">Edit Profile</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Log out</a></li>
             </ul>
-            <div class="b-main-nav__backdrop" id="nav-backdrop"></div>
           </nav>
+          <div class="b-mobile-nav__backdrop" id="nav-backdrop"></div>
 
-          <div class="b-page-header__settings">
+          <div class="b-page-header__main-nav">
 
-            <!-- Юзер не авторизован
-            <div class="b-user">
-              <button class="b-user__login" type="button" title="Log in" data-toggle="modal" data-target="#reg">
-                <svg width="20" height="20">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#user"></use>
-                </svg>
-              </button>
-            </div> -->
+            <ul class="b-nav">
+              <li class="b-nav__item">
+                <a href="" class="b-nav__link">Продажа</a>
+              </li>
+              <li class="b-nav__item">
+                <a href="" class="b-nav__link">Аренда</a>
+              </li>
+              <li class="b-nav__item">
+                <a href="" class="b-nav__link">
+                  <span class="b-nav__text-lg">Как это работает</span>
+                  <svg class="b-nav__icon-xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><circle cx="256" cy="378.5" r="25"/><path d="M256 0C114.516 0 0 114.497 0 256c0 141.484 114.497 256 256 256 141.484 0 256-114.497 256-256C512 114.516 397.503 0 256 0zm0 472c-119.377 0-216-96.607-216-216 0-119.377 96.607-216 216-216 119.377 0 216 96.607 216 216 0 119.377-96.607 216-216 216z"/><path d="M256 128.5c-44.112 0-80 35.888-80 80 0 11.046 8.954 20 20 20s20-8.954 20-20c0-22.056 17.944-40 40-40s40 17.944 40 40-17.944 40-40 40c-11.046 0-20 8.954-20 20v50c0 11.046 8.954 20 20 20s20-8.954 20-20v-32.531c34.466-8.903 60-40.26 60-77.469 0-44.112-35.888-80-80-80z"/></svg>
+                </a>
+              </li>
+              <li class="b-nav__item  b-nav__item--drops-wrap">
 
-            <!-- Юзер авторизован -->
-            <div class="b-user" id="b-user-drop">
-              <button class="b-user__drop" data-toggle="dropdown" type="button">
-                <img src="img/TEMP-user-avatar.png" alt="Yevheniy" class="b-user__avatar">
-                <span class="b-user__username">Yevheniy</span>
-              </button>
-              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-user-menu  b-user__menu">
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                    <svg class="b-user-menu__link-icon" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Мой кабинет</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link">
-                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-comments"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Сообщения</span>
-                    <span class="b-label  b-user-menu__link-label">99+</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Фолловинг</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link">
-                    <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-reviews"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Получить отзывы</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link">
-                    <svg class="b-user-menu__link-icon" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-share"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Поделиться объектом</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                    <svg class="b-user-menu__link-icon" width="18" height="18">
-                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-add"></use>
-                    </svg>
-                    <span class="b-user-menu__link-text">Добавить объект</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="b-user-menu__link  b-user-menu__link--no-icon">
-                    <span class="b-user-menu__link-text">Выйти</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                <div class="dropdown  b-currency">
+                  <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+                  <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=US$">
+                          <div class="csymbol">US$</div>
+                          <div class="ctext">Доллар США</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=€">
+                          <div class="csymbol">€</div>
+                          <div class="ctext">Евро</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=RUB">
+                          <div class="csymbol">RUB</div>
+                          <div class="ctext">Рубль РФ</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=£">
+                          <div class="csymbol">£</div>
+                          <div class="ctext">Фунт стерлингов</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=CAD">
+                          <div class="csymbol">CAD</div>
+                          <div class="ctext">Канадский доллар</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=AUD">
+                          <div class="csymbol">AUD</div>
+                          <div class="ctext">Австралийский доллар</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=CNY">
+                          <div class="csymbol">CNY</div>
+                          <div class="ctext">Китайский юань</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=TL">
+                          <div class="csymbol">TL</div>
+                          <div class="ctext">Турецкая лира</div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cline">
+                        <a href="?change_currency_to=UAH">
+                          <div class="csymbol">UAH</div>
+                          <div class="ctext">Украинская гривна</div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="dropdown  b-currency">
-              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
-              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=US$">
-                      <div class="csymbol">US$</div>
-                      <div class="ctext">Доллар США</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=€">
-                      <div class="csymbol">€</div>
-                      <div class="ctext">Евро</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=RUB">
-                      <div class="csymbol">RUB</div>
-                      <div class="ctext">Рубль РФ</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=£">
-                      <div class="csymbol">£</div>
-                      <div class="ctext">Фунт стерлингов</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=CAD">
-                      <div class="csymbol">CAD</div>
-                      <div class="ctext">Канадский доллар</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=AUD">
-                      <div class="csymbol">AUD</div>
-                      <div class="ctext">Австралийский доллар</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=CNY">
-                      <div class="csymbol">CNY</div>
-                      <div class="ctext">Китайский юань</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=TL">
-                      <div class="csymbol">TL</div>
-                      <div class="ctext">Турецкая лира</div>
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="cline">
-                    <a href="?change_currency_to=UAH">
-                      <div class="csymbol">UAH</div>
-                      <div class="ctext">Украинская гривна</div>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                <div class="dropdown  b-language">
+                  <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+                  <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                    <li>
+                      <a href="#" onclick="change_language('en')">English</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="change_language('ru')">Русский</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="change_language('ua')">Українська</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="#" onclick="change_language('rs')">Srpski</a>
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="dropdown  b-language">
-              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
-              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
-                <li>
-                  <a href="#" onclick="change_language('en')">English</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('ru')">Русский</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('ua')">Українська</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
-                </li>
-                <li>
-                  <a href="#" onclick="change_language('rs')">Srpski</a>
-                </li>
-              </ul>
-            </div>
+              </li>
+            </ul>
 
           </div>
 
+          <!-- Юзер не авторизован -->
+          <div class="b-page-header__anonymous-user">
+            <ul class="b-nav">
+              <li class="b-nav__item">
+                <a href="" class="b-nav__link">Вход</a>
+              </li>
+              <li class="b-nav__item">
+                <a href="" class="b-nav__link">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Юзер авторизован -->
+          <div class="b-page-header__user" style="display: none;">
+            <div class="b-page-header__user-notification  dropdown  b-drop-notifications">
+              <button class="b-drop-notifications__btn" type="button" data-toggle="dropdown">
+                <svg width="18" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M11.996 17a3 3 0 01-5.991 0h-4.67C.78 17 .332 16.553.332 16v-1c0-1.104.897-2 2.001-2V9a6.668 6.668 0 014.333-6.247v-.088a2.334 2.334 0 014.667 0v.088a6.67 6.67 0 014.333 6.246v4c1.102 0 2 .897 2 2v1.002c0 .55-.45.999-1.001.999h-4.67zm-1.337 0H7.342a1.667 1.667 0 003.317 0zm5.675-1.334V15c0-.367-.3-.667-.668-.667a1.332 1.332 0 01-1.332-1.334V9a5.335 5.335 0 00-3.852-5.124L10 3.735v-1.07a1 1 0 00-2 0v1.07l-.482.14a5.334 5.334 0 00-3.851 5.124v4c0 .736-.598 1.334-1.333 1.334-.368 0-.667.3-.667.667v.666h14.666z" fill="#fff"/></svg>
+              </button>
+              <div class="dropdown-menu  dropdown-menu-right  b-dropdown  b-drop-notifications__drop">
+                <p class="b-drop-notifications__title">Notifications</p>
+                <ul class="b-drop-notifications__list">
+                  <li class="b-drop-notifications__item">
+                    <a href="" class="b-drop-notifications__link">
+                      <span class="b-drop-notifications__item-type">New beat</span>
+                      <span class="b-drop-notifications__item-text">New apartament with jacuzzi</span>
+                      <div class="b-drop-notifications__date">Sep. 29- Oct. 23 2019</div>
+                    </a>
+                  </li>
+                  <li class="b-drop-notifications__item">
+                    <a href="" class="b-drop-notifications__link">
+                      <span class="b-drop-notifications__item-type">New Message</span>
+                      <span class="b-drop-notifications__item-text">from Jerry</span>
+                      <div class="b-drop-notifications__date">Sep. 29- Oct. 23 2019</div>
+                    </a>
+                  </li>
+                  <li class="b-drop-notifications__item">
+                    <a href="" class="b-drop-notifications__link">
+                      <span class="b-drop-notifications__item-type">New beat</span>
+                      <span class="b-drop-notifications__item-text">New apartament with jacuzzi</span>
+                      <div class="b-drop-notifications__date">Sep. 29- Oct. 23 2019</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dropdown  b-drop-usermenu">
+              <button class="b-drop-usermenu__btn" type="button" data-toggle="dropdown">
+                <img src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light" alt="%USERNAME%" class="b-drop-usermenu__avatar">
+              </button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-drop-usermenu__drop">
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">My listing</a>
+                </li>
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">Auction</a>
+                </li>
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">Increase views</a>
+                </li>
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">Favorites</a>
+                </li>
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">Messages</a>
+                </li>
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">Settings</a>
+                </li>
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">Edit profile</a>
+                </li>
+                <li class="b-drop-usermenu__item">
+                  <a href="" class="b-drop-usermenu__link">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="b-page-header__main-btn-wrap">
+            <a href="" class="b-btn-2  b-btn-2--white">
+              Разместить
+              <span class="b-page-header__main-btn-text-lg"> объект</span>
+              <span class="b-page-header__main-btn-text-xl"> бесплатно</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Увы, на странице локации (item.html) придётся продублировать разметку для не-мобильных ширин :( дезайнъ -->
+        <div class="b-page-header__search-wrap">
+          <div class="b-search-fast">
+            <form class="b-search-fast__search" name="search_form">
+              <input class="form-control  b-form-control  b-search-fast__search-input"
+                placeholder="Введите адрес, район или город" type="text">
+              <button class="b-search-fast__search-btn  btn  btn-success" type="button"></button>
+            </form>
+          </div>
         </div>
       </header>
-      <!-- /nicothin: Добавил новый хедер -->
+      <!-- /nicothin: новый хедер -->
+ <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
 
-      <div class="content">
+      <div class="b-content"> <!-- Нужен класс b-content для корректной работы с новой шапкой -->
 
         <div class="container-fluid">
 
           <div class="b-location">
 
-            <div class="b-location__search-wrap  b-search-fast  row">
+            <div class="b-location__search  b-search-fast  row">
               <div class="col-xs-12  col-sm-8">
                 <form class="b-search-fast__search" name="search_form">
-                  <input class="form-control  b-form-control  b-search-fast__search-input" placeholder="Введите адрес, район или город" type="text">
+                  <input class="form-control  b-form-control  b-search-fast__search-input"
+                    placeholder="Введите адрес, район или город" type="text">
                   <button class="b-search-fast__search-btn  btn  btn-success" type="button"></button>
                 </form>
               </div>
             </div>
 
-            <div class="row">
+            <div class="b-location__top-wrap row">
               <div class="b-location__top  col-xs-12  col-sm-8">
 
                 <a href="/" class="b-location__back  b-back-btn">
@@ -291,13 +344,12 @@
                     <path
                       d="M11.4437 0.00012207C9.5975 0.00012207 8.4125 1.28987 7.7915 2.45137C7.1705 1.28987 5.9855 0.00012207 4.13925 0.00012207C1.79675 0.00012207 0 1.91737 0 4.45937C0 7.21062 2.24675 9.09912 5.60075 11.9576C6.195 12.4641 6.82675 13.0026 7.491 13.5836C7.577 13.6589 7.684 13.6964 7.7915 13.6964C7.899 13.6964 8.006 13.6589 8.092 13.5836C8.75625 13.0026 9.388 12.4641 9.9825 11.9576C13.3365 9.09912 15.5832 7.21062 15.5832 4.45937C15.5832 1.91712 13.7862 0.00012207 11.4437 0.00012207Z" />
                   </svg>
-                  <span class="b-save-btn__text">Save</span>
-                </button>
+                  <span class="b-save-btn__text-wrap">
 
-                <script>
-                  // ВРЕМЕННЫЙ КОД для показа работы кнопки Save
-                  $('#temp-id1').on('click', function () { console.log(111); $(this).toggleClass('b-save-btn--active'); })
-                </script>
+                    <span class="b-save-btn__text-save" data-inactive-text="Save" data-active-text="Saved">Save</span>
+                    <span class="b-save-btn__text-to"> to Favorites</span>
+                  </span>
+                </button>
 
                 <ul class="b-location__breadcrumbs  b-breadcrumbs">
                   <li class="b-breadcrumbs__item">
@@ -383,14 +435,6 @@
                     <a href="/">Report listing</a>
                   </li>
                 </ul>
-                <script>
-                  // переключение «вкладок» фото/карта/улицы/
-                  $('.choose_show a').on('click', function(e) {
-                    e.preventDefault();
-                    $('.sw_show').hide();
-                    $($(this).attr('href')).show();
-                  })
-                </script>
 
                 <div class="b-info">
 
@@ -439,16 +483,18 @@
                         <button class="b-info__trigger  b-link" type="button" data-target="last-offers" data-closed-text="See last offers"
                           data-opened-text="Hide last offers">See last offers</button>
                       </div>
-                      <div class="b-info__price-change-wrap  col-xs-12  col-md-3">
+
+                      <!-- Посетитель еще не делал предложений в аукционе -->
+                      <div class="b-info__price-change-wrap" style="display: none"> <!-- Скрыто для показа других состояний -->
                         <div class="b-field-num">
                           <span class="b-field-num__input-and-btns">
-                            <input class="b-field-num__input" type="number" value="69400" name="price" max="100000" min="50000" step="100">
+                            <input class="b-field-num__input" type="number" value="234123" name="price" max="2000000" min="50000" step="100">
                             <button class="b-field-num__btn  b-field-num__btn--minus" type="button">
                               <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/></svg>
                             </button>
                             <span class="b-field-num__text-wrap">
                               <span class="b-field-num__text-currency">€</span>
-                              <span class="b-field-num__text-num">69,400</span>
+                              <span class="b-field-num__text-num">234,123</span>
                             </span>
                             <button class="b-field-num__btn  b-field-num__btn--plus" type="button">
                               <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/><rect class="b-field-num__icon-symbol" x="13.5" y="7.5" width="10" height="1" transform="rotate(90 13.5 7.5)" fill="#A1A1A1"/></svg>
@@ -456,10 +502,43 @@
                           </span>
                         </div>
                       </div>
+                      <!-- / Посетитель еще не делал предложений в аукционе -->
+
+                      <!-- Посетитель сделал предложение и ждёт ответа -->
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid">
+                        <p class="b-info__bid-text">
+                          Your offer is <strong class="b-info__bid-sum">€ 68,900</strong>
+                        </p>
+                        <div class="b-info__response-status">
+                          <div class="b-label  b-label--light-danger" style="display: none">Relected</div> <!-- Если отказали -->
+                          <div class="b-label  b-label--light-success">Accepted</div> <!-- Если приняли -->
+                        </div>
+                      </div>
+                      <!-- / Посетитель сделал предложение и ждёт ответа -->
+
+                      <!-- Аукцион завершен, выбрали другого -->
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid" style="display: none">
+                        <p class="b-info__bid-text  b-info__bid-text--danger">
+                          Sorry, auction was closed
+                        </p>
+                        <div class="b-info__response-status">
+                          Your offer € 65,333 was rejected
+                        </div>
+                      </div>
+                      <!-- / Аукцион завершен, выбрали другого -->
+
                       <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
-                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
+                        <!-- Посетитель еще не делал предложений в аукционе -->
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit" style="display: none;">
                           <span class="b-btn-2__text">Offer your price</span>
                         </button>
+                        <!-- / Посетитель еще не делал предложений в аукционе -->
+
+                        <!-- Посетитель сделал предложение и ждёт ответа -->
+                        <button class="b-btn-2" type="submit">
+                          <span class="b-btn-2__text">Contact owner</span>
+                        </button>
+                        <!-- / Посетитель сделал предложение и ждёт ответа -->
                       </div>
                       <script>
                         // Поля формы с выбором кол-ва
@@ -482,7 +561,7 @@
                                   if (num > valueMin) input.value = num - valueStep;
                                 }
                                 if (text) {
-                                  text.innerText = new Intl.NumberFormat('en-IN').format(input.value);
+                                  text.innerText = new Intl.NumberFormat('en-US').format(input.value);
                                 }
                               }
                             });
@@ -577,10 +656,12 @@
                     <div class="b-info__about-text">
                       Πωλούνται ή δίνεται αντιπαροχή.Το οικόπεδο έχει συνολική έκταση 153 τ.μ. με συντελεστή δόμησης 2,4 - στους Αμπελόκηπους Θεσσαλονίκης. Δίπλα σε κεντρικό δρόμο , αγορά και αθλητικές εγκαταστάσεις. Η διώροφη μονοκατοικία αποτελείται από 2 οροφοδιαμερίσματα, χωρίς κοινόχρηστα, με ξεχωριστή είσοδο το καθένα και ελεύθερη αυλή 53 τ.μ. Αποτελείται από ένα ανώγειο διαμέρισμα (76 τμ, καθαρά), κουζίνα, δύο δωμάτια, σαλόνι, χoλ, μπάνιο, 2 βεράντες - υπάρχει σχέδιο με κάτοψη τουανώγειου.Το διαμέρισμα του 1ου ορόφου (90 τ.μ.καθαρά), έχει τρία δωμάτια, σαλοκουζίνα, μπάνιο μεγάλο, χολ- υπάρχει σχέδιο. Μπαλκόνια με τέντες και ηλιακό.Η αυλή 53 τ.μ. μπορεί να ανοικοδομηθεί, να γίνει κήπος ή πάρκινγκ για 3 - 4 αυτοκίνητα. ’Εχει άδεια για είσοδο πάρκινγκ. Στην αυλή μία αποθήκη. Πωλούνται και χωριστά, πληροφορίες από το τηλέφωνο.
                     </div>
+
                   </div>
 
                 </div>
 
+                <hr class="b-info__hr-hide-favorite-btn" id="hide-favorite-btn">
               </div>
 
               <div class="b-location__sidebar  col-sm-4">
@@ -859,6 +940,7 @@
 
       </div>
 
+      <!-- Frame 7 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
@@ -880,6 +962,7 @@
         </div>
       </div>
 
+      <!-- Frame 11 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
@@ -901,6 +984,7 @@
         </div>
       </div>
 
+      <!-- Frame 10 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
@@ -923,6 +1007,7 @@
         </div>
       </div>
 
+      <!-- Frame 12 (figma) -->
       <div class="b-info-bottom  b-info-bottom--location  b-info-bottom--buttons-only  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__btn">
@@ -938,6 +1023,7 @@
         </div>
       </div>
 
+      <!-- Frame 8 (figma) -->
       <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="contact-owner">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -971,38 +1057,188 @@
         </div>
       </div>
 
+      <!-- Frame 9 (figma) -->
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="contact-owner-2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="b-user-data  b-user-data--modal">
+                <div class="b-user-2  b-user-data__user">
+                  <a href="/" class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar"
+                      src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                      alt="USERNAME">
+                  </a>
+                  <div class="b-user-2__avatar-info">
+                    <div class="b-user-2__name">Lara</div>
+                    <div class="b-user-2__descr">Owner</div>
+                  </div>
+                </div>
+                <div class="b-user-data__info">
+                  <div class="b-user-data__msg-wrap">
+                    <div class="b-user-data__msg  b-user-data__msg--send">Is this available?</div>
+                    <div class="b-user-data__send-label">send</div>
+                  </div>
+                  <p class="b-user-data__muted-text  b-user-data__muted-text--normal">You can contact free with Lara if user will buy acsess or you can unlock contacts</p>
+                  <div class="b-user-data__btn-wrap">
+                    <button class="b-btn-2  b-btn-2--secondary">
+                      <span class="b-btn-2__text">Unlock contacts now</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="pfooter"></div>
 
     </div>
 
-    <footer>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-2">
-            <a class="navbar-brand" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
+    <!-- Пришлось сменить тег footer на div из-за говна в мозгах первоначального верстака (каскад в стилях — ППЦ) -->
+    <div class="b-footer  b-footer--has-info-bottom">
+      <div class="b-footer__container  container-fluid">
+        <div class="b-footer__row  row">
+
+          <div class="b-footer__logo-wrap  col-xs-6  col-sm-2">
+            <a class="b-footer__logo" href="/"><img src="img/flogo.png" alt="" width="113" height="26"></a>
           </div>
-          <div class="col-xs-7">
-            <div class="copyright">© 2018 Terranesia.com. Недвижимость без посредников. <nobr>Designed by Dolphin Studio.</nobr></div>
-            <ul class="nav navbar-nav">
-                <li><a href="/search/buy/">Продажа</a></li>
-                <li><a href="/search/rent/">Аренда</a></li>
-                <li><a href="/object/add/">Разместить объект бесплатно</a></li>
-                <li><a href="/pages/how-it-works/">Cоветы</a></li>
-                <li><a href="/support/">Поддержка</a></li>
+
+          <div class="b-footer__drops-wrap  col-xs-6">
+            <div class="dropdown  b-currency">
+              <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-dropdown--to-top">
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=US$">
+                      <div class="csymbol">US$</div>
+                      <div class="ctext">Доллар США</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=€">
+                      <div class="csymbol">€</div>
+                      <div class="ctext">Евро</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=RUB">
+                      <div class="csymbol">RUB</div>
+                      <div class="ctext">Рубль РФ</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=£">
+                      <div class="csymbol">£</div>
+                      <div class="ctext">Фунт стерлингов</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CAD">
+                      <div class="csymbol">CAD</div>
+                      <div class="ctext">Канадский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=AUD">
+                      <div class="csymbol">AUD</div>
+                      <div class="ctext">Австралийский доллар</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=CNY">
+                      <div class="csymbol">CNY</div>
+                      <div class="ctext">Китайский юань</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=TL">
+                      <div class="csymbol">TL</div>
+                      <div class="ctext">Турецкая лира</div>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="cline">
+                    <a href="?change_currency_to=UAH">
+                      <div class="csymbol">UAH</div>
+                      <div class="ctext">Украинская гривна</div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown  b-language">
+              <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
+              <ul class="dropdown-menu  dropdown-menu-right  b-dropdown  b-dropdown--to-top">
+                <li>
+                  <a href="#" onclick="change_language('en')">English</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ru')">Русский</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('ua')">Українська</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('gr')">Ελληνικά</a>
+                </li>
+                <li>
+                  <a href="#" onclick="change_language('rs')">Srpski</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="b-footer__text-wrap  col-xs-12  col-sm-8">
+            <p class="b-footer__copyright">© Terranesia.com 2020. Real estate by owner. Designed by Dolphin Studio.</p>
+            <ul class="b-footer__nav">
+              <li><a href="/">Продажа</a></li>
+              <li><a href="/">Аренда</a></li>
+              <li><a href="/">Разместить объект бесплатно</a></li>
+              <li><a href="/">Cоветы</a></li>
+              <li><a href="/">Поддержка</a></li>
             </ul>
           </div>
-          <div class="col-xs-3">
-            <ul class="footer-social">
-              <li class="item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/"><span class="fb"></span></a></li>
-              <li class="item"><a target="_blank" href="https://twitter.com/pp45637809"><span class="tw"></span></a></li>
-              <li class="item"><a target="_blank" href="https://www.pinterest.com/pp45637809/"><span class="p"></span></a></li>
+
+          <div class="b-footer__social-wrap  col-xs-12  col-sm-2">
+            <ul class="b-footer__social">
+              <li class="b-footer__social-item"><a target="_blank" href="https://www.facebook.com/Terranesia-1047653208647526/">
+                <svg viewBox="0 0 24 24" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+                <span class="fb">facebook</span></a>
+              </li>
+              <li class="b-footer__social-item"><a target="_blank" href="https://twitter.com/pp45637809">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="12" height="12"><path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"/></svg>
+                <span class="tw">twitter</span></a>
+              </li>
+              <li class="b-footer__social-item"><a target="_blank" href="https://www.pinterest.com/pp45637809/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.977 511.977" width="12" height="12"><path d="M262.948 0C122.628 0 48.004 89.92 48.004 187.968c0 45.472 25.408 102.176 66.08 120.16 6.176 2.784 9.536 1.6 10.912-4.128 1.216-4.352 6.56-25.312 9.152-35.2.8-3.168.384-5.92-2.176-8.896-13.504-15.616-24.224-44.064-24.224-70.752 0-68.384 54.368-134.784 146.88-134.784 80 0 135.968 51.968 135.968 126.304 0 84-44.448 142.112-102.208 142.112-31.968 0-55.776-25.088-48.224-56.128 9.12-36.96 27.008-76.704 27.008-103.36 0-23.904-13.504-43.68-41.088-43.68-32.544 0-58.944 32.224-58.944 75.488 0 27.488 9.728 46.048 9.728 46.048S144.676 371.2 138.692 395.488c-10.112 41.12 1.376 107.712 2.368 113.44.608 3.168 4.16 4.16 6.144 1.568 3.168-4.16 42.08-59.68 52.992-99.808 3.968-14.624 20.256-73.92 20.256-73.92 10.72 19.36 41.664 35.584 74.624 35.584 98.048 0 168.896-86.176 168.896-193.12C463.62 76.704 375.876 0 262.948 0z" /></svg>
+                <span class="p">pinterest</span></a>
+              </li>
             </ul>
           </div>
+
         </div>
       </div>
-    </footer>
+    </div>
 
-    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
+    <!-- <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="reg">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -1020,7 +1256,6 @@
             </h4>
           </div>
 
-          <!-- Первый шаг -->
           <div class="b-modal__step">
 
             <form class="modal-body">
@@ -1141,9 +1376,9 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="login">
+    <!-- <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="login">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -1207,9 +1442,9 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="alert">
+    <!-- <div class="modal  b-modal  fade" tabindex="-1" role="dialog" id="alert">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
 
@@ -1231,7 +1466,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!--
     <div class="b-info-bottom" data-b-info-bottom>
