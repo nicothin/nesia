@@ -62,7 +62,11 @@
     "b-mobile-nav": [],
     "b-nav": [],
     "b-drop-notifications": [],
-    "b-drop-usermenu": []
+    "b-drop-usermenu": [],
+    "b-my-listings": [],
+    "b-user-sidebar": [],
+    "b-user-menu": [],
+    "b-card-mini-2": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

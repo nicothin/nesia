@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока b-my-listings, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-my-listings {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 24px 0;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 72px;
+  }
+
+  &__inner {
+
+    // @media (min-width: $screen-md) {
+    //   max-width: 640px;
+    // }
+  }
+}
