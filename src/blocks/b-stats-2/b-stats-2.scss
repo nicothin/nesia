@@ -1,0 +1,145 @@
+// В этом файле должны быть стили для БЭМ-блока b-stats-2, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-stats-2 {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 18px 0 0;
+
+  &__header {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+
+    strong {
+      margin-left: 0.3em;
+    }
+  }
+
+  &__dates {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: #A1A1A1;
+  }
+
+  &__table {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    tr:not(:last-child) {
+
+      td {
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  &__country {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  &__num-wrap {
+    padding-left: 12px;
+  }
+
+  &__progress {
+    display: flex;
+    height: 20px;
+    padding-right: 36px;
+    color: #A1BF4B;
+  }
+
+  &__progress-indicator {
+    flex-shrink: 0;
+    height: 20px;
+    background: #D7E6A9;
+  }
+
+  &__progress-num {
+    padding-left: 10px;
+    width: 36px;
+  }
+
+  &__btn {
+    margin-top: 6px;
+  }
+
+  &__users-list-wrap {
+
+    & + & .b-stats-2__users-list-header {
+      margin-top: 0;
+    }
+  }
+
+  &__users-list-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-top: 17px;
+    padding: 18px 0;
+    border-top: 1px solid #E8E8E8;
+
+  }
+
+  &__users-list-title {
+    margin: 0 auto 0 0;
+    padding-right: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+  }
+
+  &__users-list-table {
+    table-layout: fixed;
+    margin-bottom: 18px;
+    width: 100%;
+
+    tr:first-child td {
+      padding-top: 0;
+    }
+
+    tr:last-child td {
+      padding-bottom: 0;
+    }
+
+    td {
+      padding: 12px 0;
+      vertical-align: middle;
+    }
+  }
+
+  &__users-table-user {
+  }
+
+  &__users-table-date {
+    width: 35%;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    color: #A1A1A1;
+    text-align: right;
+  }
+
+  &__users-table-action {
+    display: none;
+  }
+}

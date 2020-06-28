@@ -66,7 +66,9 @@
     "b-my-listings": [],
     "b-user-sidebar": [],
     "b-user-menu": [],
-    "b-card-mini-2": []
+    "b-card-mini-2": [],
+    "b-stats-2": [],
+    "b-toggler": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

@@ -3,6 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .b-btn-2 {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +36,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  &__label-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #A1BF4B;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+
 
   &--secondary {
     border: 1px solid #D84B2A;

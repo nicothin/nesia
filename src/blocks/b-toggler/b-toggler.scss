@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока b-toggler, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-toggler {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  white-space: nowrap;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 6px;
+    margin-left: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.00033 0.0667481C5.23366 0.0667481 5.38921 0.146748 5.54477 0.306748L9.43366 4.30675C9.74477 4.62675 9.74477 5.10675 9.43366 5.42675C9.12255 5.74675 8.65588 5.74675 8.34477 5.42675L5.00033 1.98675L1.65588 5.42675C1.34477 5.74675 0.878103 5.74675 0.566992 5.42675C0.255881 5.10675 0.255881 4.62675 0.566992 4.30675L4.45588 0.306748C4.61144 0.146748 4.76699 0.0667481 5.00033 0.0667481Z' fill='%23A1A1A1'/%3E%3C/svg%3E");
+    transition: transform 0.3s;
+  }
+
+  &.js-open {
+
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -3,6 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .b-link {
+  padding: 0;
   color: #D84B2A;
   text-decoration: none;
   border: none;
@@ -15,5 +16,14 @@
     text-decoration: none;
     border: none;
     background: transparent;
+  }
+
+  &--inherit-color {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
   }
 }

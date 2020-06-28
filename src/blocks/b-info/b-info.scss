@@ -97,14 +97,6 @@
     font-size: 14px;
     line-height: 20px;
     white-space: nowrap;
-
-    &:after {
-      content: '';
-      width: 10px;
-      height: 6px;
-      margin-left: 12px;
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB+SURBVHgBbY3BEYIwFER3YyMeJTlYh8aDHTh2YAdqBaEDaAI6ATKcqIQPgYEJDHv6+/bNfNa35AmFsy6aFAfxNvn0PTp1Iq8KdM1D//bSzOiCMwNrcm+1xHK4A/N3k4XOdRhlQl5C/KdB8IUwv5TVeyPG8lQi6TCtNW55F2cAy0cumN3ngnkAAAAASUVORK5CYII=);
-    }
   }
 
   &__price-list {

@@ -58,6 +58,37 @@ $( document ).ready(function() {
 
 
 
+  // Показ и сокрытие блочков слайд-эффектом
+  $('[data-slide-toggler]').on('click', function(e) {
+    e.preventDefault();
+    var that = $(this);
+    that.toggleClass('js-open');
+    var thatOpenText = that.data('slide-shown');
+    var thatHiddenText = that.data('slide-hidden');
+    $(that.data('slide-toggler')).slideToggle(200, function() {
+      if( thatHiddenText && thatOpenText) {
+        if ($(this).is(':visible')) {
+          that.find('.js-text').text(thatOpenText);
+        } else {
+          that.find('.js-text').text(thatHiddenText);
+        }
+      }
+    });
+  });
+
+  // Включение popover
+  $('[data-toggle="popover"]').popover();
+  // Закрытие popover при клике вне его
+  $(document).on('click', function (e) {
+    $('[data-toggle="popover"],[data-original-title]').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        (($(this).popover('hide').data('bs.popover') || {}).inState || {}).click = false  // fix for BS 3.3.6
+      }
+    });
+  });
+
+
+
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');
