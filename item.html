@@ -448,7 +448,9 @@
                       </div>
                       <div class="b-info__price-wrap  col-xs-12  col-md-4  col-lg-3">
                         <p class="b-info__price">€ 69,000</p>
-                        <button class="b-info__trigger  b-link" type="button" data-target="price-change" data-closed-text="See price change" data-opened-text="Hide price change">See price changes</button>
+                        <button class="b-info__trigger  b-link  b-toggler" data-slide-toggler="#price-change" data-slide-hidden="See price changes" data-slide-shown="Hide price changes">
+                          <span class="js-text">See price changes</span>
+                        </button>
                       </div>
                     </div>
                     <div class="b-info__hidden-block" id="price-change" style="display: none;">
@@ -480,12 +482,13 @@
                           <h2  class="b-info__title  b-info__title--auction">Auction</h2 >
                           <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
                         </div>
-                        <button class="b-info__trigger  b-link" type="button" data-target="last-offers" data-closed-text="See last offers"
-                          data-opened-text="Hide last offers">See last offers</button>
+                        <button class="b-info__trigger  b-link  b-toggler" data-slide-toggler="#last-offers" data-slide-hidden="See last offers" data-slide-shown="Hide last offers">
+                          <span class="js-text">See last offers</span>
+                        </button>
                       </div>
 
                       <!-- Посетитель еще не делал предложений в аукционе -->
-                      <div class="b-info__price-change-wrap" style="display: none"> <!-- Скрыто для показа других состояний -->
+                      <div class="b-info__price-change-wrap">
                         <div class="b-field-num">
                           <span class="b-field-num__input-and-btns">
                             <input class="b-field-num__input" type="number" value="234123" name="price" max="2000000" min="50000" step="100">
@@ -505,7 +508,7 @@
                       <!-- / Посетитель еще не делал предложений в аукционе -->
 
                       <!-- Посетитель сделал предложение и ждёт ответа -->
-                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid">
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid" style="display: none">
                         <p class="b-info__bid-text">
                           Your offer is <strong class="b-info__bid-sum">€ 68,900</strong>
                         </p>
@@ -592,36 +595,6 @@
                     </div>
                   </div>
 
-                  <script>
-                    // показ и сокрытие аккордеон-областей
-                    $('[data-target]').on('click', function(e){
-                      e.preventDefault();
-                      var trigger = this;
-                      var target = '#' + $(this).data('target');
-                      var openText = $(this).data('opened-text');
-                      var closeText = $(this).data('closed-text');
-                      $(target).slideToggle(250, function(){
-                        console.log(111);
-                        if ($(this).is(':visible')) {
-                          $(trigger).text(openText);
-                        }
-                        else {
-                          $(trigger).text(closeText);
-                        }
-                      });
-                    });
-                    // включение popover
-                    $('[data-toggle="popover"]').popover();
-                    // закрытие popover при клике вне его
-                    $(document).on('click', function (e) {
-                      $('[data-toggle="popover"],[data-original-title]').each(function () {
-                        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                          (($(this).popover('hide').data('bs.popover') || {}).inState || {}).click = false  // fix for BS 3.3.6
-                        }
-                      });
-                    });
-                  </script>
-
                   <div class="b-info__item">
                     <h2 class="b-info__title  b-info__title--about">About property</h2>
                     <ul class="b-info__facilities  facilities">
@@ -667,16 +640,16 @@
               <div class="b-location__sidebar  col-sm-4">
                 <div class="b-location__user-data-wrap  hidden-xs">
                   <!-- До отправки первого сообщения -->
-                  <div class="b-user-data">
-                    <div class="b-user-2  b-user-data__user">
-                      <a href="/" class="b-user-2__avatar-wrap">
+                  <div class="b-user-data" style="display: none;">
+                    <a href="" class="b-user-2  b-user-data__user">
+                      <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
-                      </a>
+                      </div>
                       <div class="b-user-2__avatar-info">
-                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__name">Lara 11</div>
                         <div class="b-user-2__descr">Owner</div>
                       </div>
-                    </div>
+                    </a>
                     <div class="b-user-data__info">
                       <div class="b-user-data__msg-wrap">
                         <div class="b-user-data__msg">Is this available?</div>
@@ -714,16 +687,16 @@
                     </div>
                   </div>
                   <!-- После получения первого ответа -->
-                  <div class="b-user-data" style="display: none;">
-                    <div class="b-user-2  b-user-data__user">
-                      <a href="/" class="b-user-2__avatar-wrap">
+                  <div class="b-user-data">
+                    <a href="" class="b-user-2  b-user-data__user">
+                      <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
-                      </a>
+                      </div>
                       <div class="b-user-2__avatar-info">
-                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__name">Lara 11</div>
                         <div class="b-user-2__descr">Owner</div>
                       </div>
-                    </div>
+                    </a>
                     <div class="b-user-data__info">
                       <p class="b-user-data__msg-notification">
                         You get a new message from owner
@@ -731,22 +704,22 @@
                       <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20">
                         <button class="b-btn-2  b-btn-2--block">
                           <span class="b-btn-2__text">Open messages</span>
+                          <strong class="b-btn-2__label-counter">1</strong>
                         </button>
-                        <span class="b-user-data__btn-label">1</span>
                       </div>
                     </div>
                   </div>
                   <!-- После разблакировки контактов. Новое сообщение -->
                   <div class="b-user-data" style="display: none;">
-                    <div class="b-user-2  b-user-data__user">
-                      <a href="/" class="b-user-2__avatar-wrap">
+                    <a href="" class="b-user-2  b-user-data__user">
+                      <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
-                      </a>
+                      </div>
                       <div class="b-user-2__avatar-info">
-                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__name">Lara 11</div>
                         <div class="b-user-2__descr">Owner</div>
                       </div>
-                    </div>
+                    </a>
                     <div class="b-user-data__info">
                       <ul class="b-user-data__contacts-list">
                         <li class="b-user-data__contact-wrap">
@@ -765,22 +738,22 @@
                       <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
                         <button class="b-btn-2">
                           <span class="b-btn-2__text">Open messages</span>
+                          <strong class="b-btn-2__label-counter">1</strong>
                         </button>
-                        <span class="b-user-data__btn-label">1</span>
                       </div>
                     </div>
                   </div>
                   <!-- После разблакировки контактов -->
                   <div class="b-user-data" style="display: none;">
-                    <div class="b-user-2  b-user-data__user">
-                      <a href="/" class="b-user-2__avatar-wrap">
+                    <a href="" class="b-user-2  b-user-data__user">
+                      <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
-                      </a>
+                      </div>
                       <div class="b-user-2__avatar-info">
-                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__name">Lara 11</div>
                         <div class="b-user-2__descr">Owner</div>
                       </div>
-                    </div>
+                    </a>
                     <div class="b-user-data__info">
                       <ul class="b-user-data__contacts-list">
                         <li class="b-user-data__contact-wrap">
@@ -805,15 +778,15 @@
                   </div>
                   <!-- Если истекла подписка -->
                   <div class="b-user-data" style="display: none;">
-                    <div class="b-user-2  b-user-data__user">
-                      <a href="/" class="b-user-2__avatar-wrap">
+                    <a href="" class="b-user-2  b-user-data__user">
+                      <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
-                      </a>
+                      </div>
                       <div class="b-user-2__avatar-info">
-                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__name">Lara 11</div>
                         <div class="b-user-2__descr">Owner</div>
                       </div>
-                    </div>
+                    </a>
                     <div class="b-user-data__info">
                       <p class="b-user-data__expired">Your monthly subscription has expired</p>
                       <div class="b-user-data__btn-wrap  b-user-data__btn-wrap--mb20  b-user-data__btn-wrap--short">
@@ -825,15 +798,15 @@
                   </div>
                   <!-- Карточка на объявлении для владельца объявления -->
                   <div class="b-user-data" style="display: none;">
-                    <div class="b-user-2  b-user-data__user">
-                      <a href="/" class="b-user-2__avatar-wrap">
+                    <a href="" class="b-user-2  b-user-data__user">
+                      <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
-                      </a>
+                      </div>
                       <div class="b-user-2__avatar-info">
-                        <div class="b-user-2__name">Lara</div>
+                        <div class="b-user-2__name">Lara 11</div>
                         <div class="b-user-2__descr">Owner</div>
                       </div>
-                    </div>
+                    </a>
                     <div class="b-user-data__info">
                       <ul class="b-user-data__contacts-list">
                         <li class="b-user-data__contact-wrap">
@@ -944,15 +917,14 @@
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
-            <div class="b-user-2">
-              <a href="/" class="b-user-2__avatar-wrap">
-                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
-                  alt="USERNAME">
-              </a>
-              <div class="b-user-2__avatar-info">
-                <div class="b-user-2__name">Lara</div>
+            <a href="" class="b-user-2">
+              <div class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
               </div>
-            </div>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara 11</div>
+              </div>
+            </a>
           </div>
           <div class="b-info-bottom__btn">
             <a href="#contact-owner" class="b-btn-2" data-toggle="modal">
@@ -966,15 +938,14 @@
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
-            <div class="b-user-2">
-              <a href="/" class="b-user-2__avatar-wrap">
-                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
-                  alt="USERNAME">
-              </a>
-              <div class="b-user-2__avatar-info">
-                <div class="b-user-2__name">Lara</div>
+            <a href="" class="b-user-2">
+              <div class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
               </div>
-            </div>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara 11</div>
+              </div>
+            </a>
           </div>
           <div class="b-info-bottom__btn">
             <button class="b-btn-2  b-btn-2--secondary">
@@ -988,21 +959,20 @@
       <div class="b-info-bottom  b-info-bottom--location  visible-xs-block" style="display: none !important;">
         <div class="b-info-bottom__inner">
           <div class="b-info-bottom__text">
-            <div class="b-user-2">
-              <a href="/" class="b-user-2__avatar-wrap">
-                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
-                  alt="USERNAME">
-              </a>
-              <div class="b-user-2__avatar-info">
-                <div class="b-user-2__name">Lara</div>
+            <a href="" class="b-user-2">
+              <div class="b-user-2__avatar-wrap">
+                <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
               </div>
-            </div>
+              <div class="b-user-2__avatar-info">
+                <div class="b-user-2__name">Lara 11</div>
+              </div>
+            </a>
           </div>
           <div class="b-info-bottom__btn">
             <button class="b-btn-2">
               <span class="b-btn-2__text">Open messages</span>
+              <strong class="b-btn-2__label-counter">1</strong>
             </button>
-            <span class="b-user-data__btn-label">1</span>
           </div>
         </div>
       </div>
@@ -1030,16 +1000,15 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="b-user-data  b-user-data--modal">
-                <div class="b-user-2  b-user-data__user">
-                  <a href="/" class="b-user-2__avatar-wrap">
-                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
-                      alt="USERNAME">
-                  </a>
+                <a href="" class="b-user-2  b-user-data__user">
+                  <div class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                  </div>
                   <div class="b-user-2__avatar-info">
-                    <div class="b-user-2__name">Lara</div>
+                    <div class="b-user-2__name">Lara 11</div>
                     <div class="b-user-2__descr">Owner</div>
                   </div>
-                </div>
+                </a>
                 <div class="b-user-data__info">
                   <div class="b-user-data__msg-wrap">
                     <div class="b-user-data__msg">Is this available?</div>
@@ -1064,17 +1033,15 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="b-user-data  b-user-data--modal">
-                <div class="b-user-2  b-user-data__user">
-                  <a href="/" class="b-user-2__avatar-wrap">
-                    <img class="b-user-2__avatar"
-                      src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
-                      alt="USERNAME">
-                  </a>
+                <a href="" class="b-user-2  b-user-data__user">
+                  <div class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                  </div>
                   <div class="b-user-2__avatar-info">
-                    <div class="b-user-2__name">Lara</div>
+                    <div class="b-user-2__name">Lara 11</div>
                     <div class="b-user-2__descr">Owner</div>
                   </div>
-                </div>
+                </a>
                 <div class="b-user-data__info">
                   <div class="b-user-data__msg-wrap">
                     <div class="b-user-data__msg  b-user-data__msg--send">Is this available?</div>
@@ -1092,8 +1059,6 @@
           </div>
         </div>
       </div>
-
-      <div class="pfooter"></div>
 
     </div>
 
