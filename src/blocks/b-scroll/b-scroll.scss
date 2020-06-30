@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока b-scroll, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-scroll {
+  scrollbar-color: #D6D6D6 transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #D6D6D6;
+  }
+}

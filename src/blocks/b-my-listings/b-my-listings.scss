@@ -14,8 +14,8 @@
 
   &__inner {
 
-    // @media (min-width: $screen-md) {
-    //   max-width: 640px;
-    // }
+    @media (min-width: $screen-lg) {
+      margin-left: -20px;
+    }
   }
 }

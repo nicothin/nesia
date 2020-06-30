@@ -68,7 +68,8 @@
     "b-user-menu": [],
     "b-card-mini-2": [],
     "b-stats-2": [],
-    "b-toggler": []
+    "b-toggler": [],
+    "b-scroll": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

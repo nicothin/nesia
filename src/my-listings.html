@@ -56,7 +56,7 @@
                         <li class="b-card-list__item">
                           <article class="b-card-mini-2">
                             <div class="b-card-mini-2__img-wrap">
-                              <!-- Картинка нужна 502×384, как минимум -->
+                              <!-- Картинка нужна 448 в ширину, как минимум -->
                               <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
                             </div>
                             <div class="b-card-mini-2__text-wrap">
@@ -89,40 +89,51 @@
                             </div>
                             <div class="b-card-mini-2__stats-wrap" id="stats-01234">
                               <div class="b-stats-2">
-                                <div class="b-stats-2__header  b-card-mini-2__stats-header">
+                                <div class="b-stats-2__header">
                                   <h3 class="b-stats-2__title">Views <strong>123</strong></h3>
                                   <p class="b-stats-2__dates">from 26 Feb. untill 4 Mar</p>
                                 </div>
-                                <table class="b-stats-2__table">
-                                  <tr>
-                                    <td class="b-stats-2__country">Greece</td>
-                                    <td class="b-stats-2__num-wrap">
-                                      <div class="b-stats-2__progress">
-                                        <span class="b-stats-2__progress-indicator" style="width: 100%"></span>
-                                        <span class="b-stats-2__progress-num">50%</span>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="b-stats-2__country">Italy</td>
-                                    <td class="b-stats-2__num-wrap">
-                                      <div class="b-stats-2__progress">
-                                        <span class="b-stats-2__progress-indicator" style="width: 80%; opacity: 0.6;"></span>
-                                        <span class="b-stats-2__progress-num">40%</span>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="b-stats-2__country">Papua New Guinea</td>
-                                    <td class="b-stats-2__num-wrap">
-                                      <div class="b-stats-2__progress">
-                                        <span class="b-stats-2__progress-indicator" style="width: 20%; opacity: 0.3;"></span>
-                                        <span class="b-stats-2__progress-num">10%</span>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </table>
-                                <button class="b-stats-2__btn  b-btn-2">Increase views</button>
+                                <div class="b-stats-2__table-wrap  b-scroll">
+                                  <table class="b-stats-2__table">
+                                    <tr>
+                                      <td class="b-stats-2__country">Greece</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 100%"></span>
+                                          <span class="b-stats-2__progress-num">50%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Italy</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 80%; opacity: 0.6;"></span>
+                                          <span class="b-stats-2__progress-num">40%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Papua New Guinea</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 10%; opacity: 0.3;"></span>
+                                          <span class="b-stats-2__progress-num">5%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Uganda</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 10%; opacity: 0.3;"></span>
+                                          <span class="b-stats-2__progress-num">5%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                                <button class="b-stats-2__increase-btn  b-btn-2"><span class="b-btn-2__text">Increase views</span></button>
                                 <div class="b-stats-2__users-list-wrap">
                                   <div class="b-stats-2__users-list-header">
                                     <h4 class="b-stats-2__users-list-title">Saved listing by <strong>2</strong></h4>
@@ -162,8 +173,8 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 ноября</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2  b-btn-2--secondary">
-                                            Open message
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label">
+                                            <span class="b-btn-2__text">Open message</span>
                                             <strong class="b-btn-2__label-counter">1</strong>
                                           </button>
                                         </td>
@@ -214,8 +225,8 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 ноября</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2  b-btn-2--secondary">
-                                            Open message
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label">
+                                            <span class="b-btn-2__text">Open message</span>
                                             <strong class="b-btn-2__label-counter">1</strong>
                                           </button>
                                         </td>
@@ -230,7 +241,7 @@
                         <li class="b-card-list__item">
                           <article class="b-card-mini-2">
                             <div class="b-card-mini-2__img-wrap">
-                              <!-- Картинка нужна 502×384, как минимум -->
+                              <!-- Картинка нужна 448 в ширину, как минимум -->
                               <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
                             </div>
                             <div class="b-card-mini-2__text-wrap">
@@ -263,40 +274,51 @@
                             </div>
                             <div class="b-card-mini-2__stats-wrap" id="stats-01235" style="display: none;">
                               <div class="b-stats-2">
-                                <div class="b-stats-2__header  b-card-mini-2__stats-header">
+                                <div class="b-stats-2__header">
                                   <h3 class="b-stats-2__title">Views <strong>123</strong></h3>
                                   <p class="b-stats-2__dates">from 26 Feb. untill 4 Mar</p>
                                 </div>
-                                <table class="b-stats-2__table">
-                                  <tr>
-                                    <td class="b-stats-2__country">Greece</td>
-                                    <td class="b-stats-2__num-wrap">
-                                      <div class="b-stats-2__progress">
-                                        <span class="b-stats-2__progress-indicator" style="width: 100%"></span>
-                                        <span class="b-stats-2__progress-num">50%</span>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="b-stats-2__country">Italy</td>
-                                    <td class="b-stats-2__num-wrap">
-                                      <div class="b-stats-2__progress">
-                                        <span class="b-stats-2__progress-indicator" style="width: 80%; opacity: 0.6;"></span>
-                                        <span class="b-stats-2__progress-num">40%</span>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td class="b-stats-2__country">Papua New Guinea</td>
-                                    <td class="b-stats-2__num-wrap">
-                                      <div class="b-stats-2__progress">
-                                        <span class="b-stats-2__progress-indicator" style="width: 20%; opacity: 0.3;"></span>
-                                        <span class="b-stats-2__progress-num">10%</span>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </table>
-                                <button class="b-stats-2__btn  b-btn-2">Increase views</button>
+                                <div class="b-stats-2__table-wrap  b-scroll">
+                                  <table class="b-stats-2__table">
+                                    <tr>
+                                      <td class="b-stats-2__country">Greece</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 100%"></span>
+                                          <span class="b-stats-2__progress-num">50%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Italy</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 80%; opacity: 0.6;"></span>
+                                          <span class="b-stats-2__progress-num">40%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Papua New Guinea</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 10%; opacity: 0.3;"></span>
+                                          <span class="b-stats-2__progress-num">5%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Uganda</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 10%; opacity: 0.3;"></span>
+                                          <span class="b-stats-2__progress-num">5%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                                <button class="b-stats-2__increase-btn  b-btn-2"><span class="b-btn-2__text">Увеличить кол-во просмотров</span></button>
                                 <div class="b-stats-2__users-list-wrap">
                                   <div class="b-stats-2__users-list-header">
                                     <h4 class="b-stats-2__users-list-title">Saved listing by <strong>2</strong></h4>
@@ -336,8 +358,8 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 ноября</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2  b-btn-2--secondary">
-                                            Open message
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label">
+                                            <span class="b-btn-2__text">Сообщение</span>
                                             <strong class="b-btn-2__label-counter">1</strong>
                                           </button>
                                         </td>
@@ -388,9 +410,9 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 ноября</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2  b-btn-2--secondary">
-                                            Open message
-                                            <strong class="b-btn-2__label-counter">1</strong>
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label">
+                                            <span class="b-btn-2__text">Open message</span>
+                                            <strong class="b-btn-2__label-counter">99+</strong>
                                           </button>
                                         </td>
                                       </tr>

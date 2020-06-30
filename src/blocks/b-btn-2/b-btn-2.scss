@@ -7,6 +7,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
   padding: 6px 16px 5px;
   margin: 0;
   font-weight: 400;
@@ -41,8 +42,9 @@
     position: absolute;
     top: -10px;
     right: -10px;
-    width: 20px;
+    min-width: 20px;
     height: 20px;
+    padding: 0 3px;
     border-radius: 20px;
     background: #A1BF4B;
     color: #fff;
@@ -86,5 +88,9 @@
 
   &--lg {
     padding: 10px 37px 9px;
+  }
+
+  &--has-label {
+    margin-right: 9px;
   }
 }

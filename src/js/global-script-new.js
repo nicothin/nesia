@@ -87,6 +87,17 @@ $( document ).ready(function() {
     });
   });
 
+  // Допишем на html размеры скролла
+  const outer = document.createElement('div');
+  const inner = document.createElement('div');
+  outer.style.overflow = 'scroll';
+  outer.classList.add('b-scroll');
+  document.body.appendChild(outer);
+  outer.appendChild(inner);
+  const scrollbarSize = outer.offsetWidth - inner.offsetWidth;
+  document.body.removeChild(outer);
+  document.documentElement.style.setProperty('--css-custom-scroll-size', `${scrollbarSize}px`);
+
 
 
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save

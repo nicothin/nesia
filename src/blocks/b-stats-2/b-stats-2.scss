@@ -6,11 +6,16 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  position: relative;
   padding: 18px 0 0;
 
   &__header {
     position: relative;
     margin-bottom: 24px;
+
+    @media (min-width: $screen-sm) {
+      padding-right: 50%;
+    }
   }
 
   &__title {
@@ -33,21 +38,45 @@
     color: #A1A1A1;
   }
 
+  &__table-wrap {
+
+    @media (min-width: $screen-lg) {
+      max-height: 92px;
+      padding-right: 8px;
+      margin-right: -8px;
+      overflow-y: auto;
+    }
+
+    @-moz-document url-prefix() {
+      padding-right: 16px !important;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
   &__table {
     width: 100%;
     font-size: 14px;
     line-height: 20px;
     color: #535353;
 
-    &:not(:last-child) {
-      margin-bottom: 18px;
-    }
-
     tr:not(:last-child) {
 
       td {
         padding-bottom: 16px;
       }
+    }
+  }
+
+  &__increase-btn {
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      top: 18px;
+      right: 0;
+      max-width: 50%;
     }
   }
 
@@ -138,9 +167,23 @@
     white-space: nowrap;
     color: #A1A1A1;
     text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (min-width: $screen-sm) {
+      width: 25%;
+      padding-left: 16px !important;
+      text-align: left;
+    }
   }
 
   &__users-table-action {
     display: none;
+
+    @media (min-width: $screen-sm) {
+      display: table-cell;
+      // width: 35%;
+      padding-left: 16px !important;
+    }
   }
 }
