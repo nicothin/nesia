@@ -68,7 +68,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 20px 0 8px;
+    margin: 20px 0 0;
+    padding-bottom: 8px;
     min-height: auto;
     height: auto;
     background: transparent;
@@ -117,11 +118,26 @@
   }
 
   &__stats-wrap {
-    border-top: 1px solid #E8E8E8;;
+    position: relative;
+    padding: 0 16px;
+    border: 1px solid #E8E8E8;
+    border-top: 0;
 
-    // .js & {
-    //   display: none;
-    // }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 16px;
+      height: 5px;
+      background: #fff;
+    }
+
+    &:after {
+      left: auto;
+      right: 0;
+    }
   }
 }
 
