@@ -491,13 +491,13 @@
                       <div class="b-info__price-change-wrap">
                         <div class="b-field-num">
                           <span class="b-field-num__input-and-btns">
-                            <input class="b-field-num__input" type="number" value="234123" name="price" max="2000000" min="50000" step="100">
+                            <input class="b-field-num__input" type="number" value="24123" name="price" max="2000000" min="5000" step="100">
                             <button class="b-field-num__btn  b-field-num__btn--minus" type="button">
                               <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/></svg>
                             </button>
                             <span class="b-field-num__text-wrap">
                               <span class="b-field-num__text-currency">€</span>
-                              <span class="b-field-num__text-num">234,123</span>
+                              <span class="b-field-num__text-num">24,123</span>
                             </span>
                             <button class="b-field-num__btn  b-field-num__btn--plus" type="button">
                               <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="white" stroke="#A1A1A1" class="b-field__icon-circle"/><rect class="b-field-num__icon-symbol" x="8" y="12" width="10" height="1" fill="#A1A1A1"/><rect class="b-field-num__icon-symbol" x="13.5" y="7.5" width="10" height="1" transform="rotate(90 13.5 7.5)" fill="#A1A1A1"/></svg>
@@ -532,45 +532,17 @@
 
                       <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
                         <!-- Посетитель еще не делал предложений в аукционе -->
-                        <button class="b-btn-2  b-btn-2--secondary" type="submit" style="display: none;">
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
                           <span class="b-btn-2__text">Offer your price</span>
                         </button>
                         <!-- / Посетитель еще не делал предложений в аукционе -->
 
                         <!-- Посетитель сделал предложение и ждёт ответа -->
-                        <button class="b-btn-2" type="submit">
+                        <button class="b-btn-2" type="submit" style="display: none;">
                           <span class="b-btn-2__text">Contact owner</span>
                         </button>
                         <!-- / Посетитель сделал предложение и ждёт ответа -->
                       </div>
-                      <script>
-                        // Поля формы с выбором кол-ва
-                        var fieldsNum = document.querySelectorAll('.b-field-num');
-                        if (fieldsNum.length) {
-                          Array.prototype.forEach.call(fieldsNum, function (field) {
-                            const input = field.querySelector('.b-field-num__input');
-                            const text = field.querySelector('.b-field-num__text-num');
-                            const valueMin = input.getAttribute('min') ? +input.getAttribute('min') : -Infinity;
-                            const valueMax = input.getAttribute('max') ? +input.getAttribute('max') : Infinity;
-                            const valueStep = input.getAttribute('step') ? +input.getAttribute('step') : 1;
-                            field.addEventListener('click', function (event) {
-                              if (event.target.classList.contains('b-field-num__btn') && !input.getAttribute('disabled')) {
-                                var num = parseInt(input.value);
-                                if (isNaN(num)) num = 0;
-                                if (event.target.classList.contains('b-field-num__btn--plus')) {
-                                  if (num < valueMax) input.value = num + valueStep;
-                                }
-                                if (event.target.classList.contains('b-field-num__btn--minus')) {
-                                  if (num > valueMin) input.value = num - valueStep;
-                                }
-                                if (text) {
-                                  text.innerText = new Intl.NumberFormat('en-US').format(input.value);
-                                }
-                              }
-                            });
-                          });
-                        }
-                      </script>
                     </form>
                     <div class="b-info__hidden-block" id="last-offers" style="display: none;">
                       <ul class="b-info__price-list  b-info__price-list--avatars">
@@ -640,7 +612,7 @@
               <div class="b-location__sidebar  col-sm-4">
                 <div class="b-location__user-data-wrap  hidden-xs">
                   <!-- До отправки первого сообщения -->
-                  <div class="b-user-data" style="display: none;">
+                  <div class="b-user-data">
                     <a href="" class="b-user-2  b-user-data__user">
                       <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
@@ -687,7 +659,7 @@
                     </div>
                   </div>
                   <!-- После получения первого ответа -->
-                  <div class="b-user-data">
+                  <div class="b-user-data" style="display: none;">
                     <a href="" class="b-user-2  b-user-data__user">
                       <div class="b-user-2__avatar-wrap">
                         <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">

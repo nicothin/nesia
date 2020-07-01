@@ -1733,6 +1733,33 @@ $( document ).ready(function() {
   document.body.removeChild(outer);
   document.documentElement.style.setProperty('--css-custom-scroll-size', `${scrollbarSize}px`);
 
+  // Цена и кнопки плюс/минус (поле формы с выбором цены)
+  var fieldsNum = document.querySelectorAll('.b-field-num');
+  if (fieldsNum.length) {
+    Array.prototype.forEach.call(fieldsNum, function (field) {
+      const input = field.querySelector('.b-field-num__input');
+      const text = field.querySelector('.b-field-num__text-num');
+      const valueMin = input.getAttribute('min') ? +input.getAttribute('min') : -Infinity;
+      const valueMax = input.getAttribute('max') ? +input.getAttribute('max') : Infinity;
+      const valueStep = input.getAttribute('step') ? +input.getAttribute('step') : 1;
+      field.addEventListener('click', function (event) {
+        if (event.target.classList.contains('b-field-num__btn') && !input.getAttribute('disabled')) {
+          var num = parseInt(input.value);
+          if (isNaN(num)) num = 0;
+          if (event.target.classList.contains('b-field-num__btn--plus')) {
+            if (num < valueMax) input.value = num + valueStep;
+          }
+          if (event.target.classList.contains('b-field-num__btn--minus')) {
+            if (num > valueMin) input.value = num - valueStep;
+          }
+          if (text) {
+            text.innerText = new Intl.NumberFormat('en-US').format(input.value);
+          }
+        }
+      });
+    });
+  }
+
 
 
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
