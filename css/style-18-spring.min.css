@@ -4291,6 +4291,30 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
         -ms-flex-align: baseline;
             align-items: baseline;
     margin-bottom: 8px; }
+.b-user-data__info {
+    width: 100%; }
+.b-user-data__info--to-bottom {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+.b-user-data__send-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+.b-user-data__send-wrapper .b-user-data__msg-wrap {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      min-width: 0; }
+.b-user-data__send-wrapper .b-user-data__btn-wrap {
+      margin-left: 12px; }
 .b-user-data__msg {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -4454,12 +4478,23 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     right: 10px;
     width: 30px;
     height: 30px;
-    font-size: 26px; }
+    font-size: 26px;
+    outline: 0; }
 .b-modal-2 .modal-content {
     -webkit-box-shadow: none !important;
-            box-shadow: none !important; }
+            box-shadow: none !important;
+    border-radius: 2px; }
 .b-modal-2 .modal-body {
     padding: 40px; }
+.b-modal-2--messages.fade {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px); }
+.b-modal-2--messages.fade .modal-dialog {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0); }
+.b-modal-2--messages.fade.in {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
 .b-content {
   padding-bottom: 40px;
   padding-top: 96px; }
@@ -5042,7 +5077,8 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     table-layout: fixed;
     margin-top: 12px;
     margin-bottom: 12px;
-    width: 100%; }
+    width: 100%;
+    max-width: 450px; }
 .b-stats-2__users-list-table tr:first-child td {
       padding-top: 0; }
 .b-stats-2__users-list-table tr:last-child td {
@@ -5534,6 +5570,71 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     .b-modal-2 .modal-dialog {
       margin-top: 190px;
       width: 460px; }
+    .b-modal-2--messages {
+      top: auto;
+      left: auto;
+      bottom: 30px;
+      right: 30px;
+      min-width: 300px;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      -webkit-box-shadow: 0px 2px 10px rgba(216, 216, 216, 0.7);
+              box-shadow: 0px 2px 10px rgba(216, 216, 216, 0.7); }
+    .b-modal-2--messages .modal-dialog {
+      margin: 0;
+      width: 300px; }
+    .b-modal-2--messages .modal-body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0;
+      min-height: 248px; }
+      .b-modal-2--messages .modal-body .b-user-data--modal {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        max-width: 100%;
+        background: #FDFDFD; }
+      .b-modal-2--messages .modal-body .b-user-data__user {
+        width: 100%;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        padding: 12px 46px 12px 12px;
+        margin-bottom: 0;
+        border-bottom: 1px solid #E8E8E8;
+        border-radius: 2px;
+        background: #fff; }
+      .b-modal-2--messages .modal-body .b-user-2__descr {
+        display: none; }
+      .b-modal-2--messages .modal-body .b-user-data__info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 12px;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; }
+      .b-modal-2--messages .modal-body .b-user-data__msg-wrap {
+        margin-top: 0;
+        margin-bottom: 0; }
+      .b-modal-2--messages .modal-body .b-user-data__send-wrapper {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        margin-top: auto; }
+      .b-modal-2--messages .modal-body .b-user-data__muted-text--to-top {
+        margin-top: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 20px; }
     .b-content {
       padding-top: 50px; }
       .b-footer__container {
@@ -5836,7 +5937,6 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
           top: -48px; }
     .b-modal-2 {
       overflow: hidden !important;
-      top: 50px;
       background-color: rgba(0, 0, 0, 0.5); }
     .b-modal-2 .modal-dialog {
       position: absolute;
