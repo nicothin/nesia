@@ -48,13 +48,15 @@ $( document ).ready(function() {
 
 
   // Локация: Показ/сокрытие кнопки добавления в избранное
-  $(window).on('resize scroll', function () {
-    if ($('#hide-favorite-btn').showInViewport()) {
-      $('#temp-id1').addClass('b-save-btn--hidden');
-    } else {
-      $('#temp-id1').removeClass('b-save-btn--hidden');
-    }
-  });
+  if ($('#hide-favorite-btn').length) {
+    $(window).on('resize scroll', function () {
+      if ($('#hide-favorite-btn').showInViewport()) {
+        $('#temp-id1').addClass('b-save-btn--hidden');
+      } else {
+        $('#temp-id1').removeClass('b-save-btn--hidden');
+      }
+    });
+  }
 
 
 
@@ -76,6 +78,8 @@ $( document ).ready(function() {
     });
   });
 
+
+
   // Включение popover
   $('[data-toggle="popover"]').popover();
   // Закрытие popover при клике вне его
@@ -86,6 +90,8 @@ $( document ).ready(function() {
       }
     });
   });
+
+
 
   // Допишем на html размеры скролла
   const outer = document.createElement('div');
@@ -124,6 +130,30 @@ $( document ).ready(function() {
       });
     });
   }
+
+
+
+  // Модалки, который на мобильном вьюпорте модалки, а на большом — сообщения в нижнем правом углу (имитация бутстраповских)
+  $('[data-toggle="modal2"]').on('click', function(e){
+    e.preventDefault();
+    $('.b-modal-2--messages').hide().removeClass('in');
+    var target = $(this).attr('href') || $(this).data('target');
+    $(target).toggle();
+    setTimeout(function(){
+      $(target).toggleClass('in');
+    }, 100)
+  });
+  $('[data-dismiss="modal2"], .b-modal-2--messages').on('click', function(e){
+    e.preventDefault();
+    var target = $(this).closest('.modal');
+    $(target).toggleClass('in');
+    setTimeout(function(){
+      $(target).toggle();
+    }, 300)
+  });
+  $('.b-modal-2--messages .modal-dialog').on('click', function (e) {
+    e.stopPropagation();
+  });
 
 
 

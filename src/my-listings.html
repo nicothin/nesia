@@ -342,7 +342,7 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 марта</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2">Contact</button>
+                                          <button class="b-btn-2" data-toggle="modal2" data-target="#demo-modal-1">Модалка 1</button>
                                         </td>
                                       </tr>
                                       <tr>
@@ -358,8 +358,8 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 ноября</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label">
-                                            <span class="b-btn-2__text">Сообщение</span>
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label" data-toggle="modal2" data-target="#demo-modal-2">
+                                            <span class="b-btn-2__text">Модалка 2</span>
                                             <strong class="b-btn-2__label-counter">1</strong>
                                           </button>
                                         </td>
@@ -392,7 +392,7 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 марта</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2">Contact</button>
+                                          <button class="b-btn-2" data-toggle="modal2" data-target="#demo-modal-1">Модалка 1</button>
                                         </td>
                                       </tr>
                                       <tr>
@@ -410,8 +410,8 @@
                                         </td>
                                         <td class="b-stats-2__users-table-date">23 ноября</td>
                                         <td class="b-stats-2__users-table-action">
-                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label">
-                                            <span class="b-btn-2__text">Open message</span>
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label" data-toggle="modal2" data-target="#demo-modal-2">
+                                            <span class="b-btn-2__text">Модалка 2</span>
                                             <strong class="b-btn-2__label-counter">99+</strong>
                                           </button>
                                         </td>
@@ -433,6 +433,77 @@
 
               </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- connect_1 (figma) -->
+      <div class="modal  b-modal-2  b-modal-2--messages  fade" tabindex="-1" role="dialog" id="demo-modal-1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal2" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="b-user-data  b-user-data--modal">
+                <span class="b-user-2  b-user-data__user">
+                  <div class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                  </div>
+                  <div class="b-user-2__avatar-info">
+                    <div class="b-user-2__name">Long Long Name Name Name</div>
+                    <div class="b-user-2__descr">Possible buyer</div>
+                  </div>
+                </span>
+                <div class="b-user-data__info">
+                  <div class="b-user-data__send-wrapper">
+                    <div class="b-user-data__msg-wrap">
+                      <div class="b-user-data__msg">Are you still interesting?</div>
+                    </div>
+                    <div class="b-user-data__btn-wrap">
+                      <a href="" class="b-btn-2  b-btn-2--block">
+                        <span class="b-btn-2__text">Отправить</span>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="b-user-data__muted-text  b-user-data__muted-text--normal  b-user-data__muted-text--to-top">Send first qustion to Alex. You will be given full access to contact and messages after confirmation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- connect_2 (figma) -->
+      <div class="modal  b-modal-2  b-modal-2--messages  fade" tabindex="-1" role="dialog" id="demo-modal-2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal2" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="b-user-data  b-user-data--modal">
+                <span class="b-user-2  b-user-data__user">
+                  <div class="b-user-2__avatar-wrap">
+                    <img class="b-user-2__avatar"
+                      src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                      alt="USERNAME">
+                  </div>
+                  <div class="b-user-2__avatar-info">
+                    <div class="b-user-2__name">Lara 11</div>
+                    <div class="b-user-2__descr">Possible buyer</div>
+                  </div>
+                </span>
+                <div class="b-user-data__info  b-user-data__info--to-bottom">
+                  <div class="b-user-data__msg-wrap">
+                    <div class="b-user-data__msg  b-user-data__msg--send">Are you still interesting?</div>
+                    <div class="b-user-data__send-label">send</div>
+                  </div>
+                  <p class="b-user-data__muted-text  b-user-data__muted-text--normal">You can contact free with Alex if user will buy acsess or you can unlock contacts</p>
+                  <div class="b-user-data__btn-wrap">
+                    <button class="b-btn-2  b-btn-2--secondary">
+                      <span class="b-btn-2__text">Unlock contacts now</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

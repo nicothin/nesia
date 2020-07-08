@@ -30,6 +30,29 @@
     margin-bottom: 8px;
   }
 
+  &__info {
+    width: 100%;
+
+    &--to-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+
+  &__send-wrapper {
+    display: flex;
+
+    #{$block-name}__msg-wrap {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    #{$block-name}__btn-wrap {
+      margin-left: 12px;
+    }
+  }
+
   &__msg {
     flex-grow: 1;
     padding: 7px 12px 5px;
