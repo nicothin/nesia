@@ -69,7 +69,12 @@
     "b-card-mini-2": [],
     "b-stats-2": [],
     "b-toggler": [],
-    "b-scroll": []
+    "b-scroll": [],
+    "b-label-2": [],
+    "b-auction": [],
+    "b-auction-item": [],
+    "b-toggle-btns": [],
+    "b-close": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

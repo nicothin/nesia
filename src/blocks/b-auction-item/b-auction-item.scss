@@ -1,0 +1,76 @@
+// В этом файле должны быть стили для БЭМ-блока b-auction-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-auction-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  &__header-price {
+    display: none;
+  }
+
+  &__header-expire {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+
+  &__item-user {
+    margin-bottom: 16px;
+  }
+
+  &__item-price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+
+  &__item-expire {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+
+  &__item-actions {
+    margin-top: 24px;
+  }
+
+  &__item-descr {
+    margin-right: auto;
+    color: #A1A1A1;
+  }
+
+  &__item-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+  }
+
+  &__item-value-percent {
+    margin-left: 16px;
+    color: #A1A1A1;
+  }
+}

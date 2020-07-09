@@ -177,6 +177,10 @@
     }
   }
 
+  &__footer-stat-label {
+    margin-right: 8px;
+  }
+
   &__stats-wrap {
     position: relative;
     z-index: 1;
@@ -199,6 +203,13 @@
     &:after {
       left: auto;
       right: 0;
+    }
+
+    &--always-shown-lg {
+
+      @media (min-width: $screen-lg) {
+        display: block !important;
+      }
     }
   }
 }

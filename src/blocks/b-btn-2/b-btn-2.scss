@@ -42,15 +42,6 @@
     position: absolute;
     top: -10px;
     right: -10px;
-    min-width: 20px;
-    height: 20px;
-    padding: 0 3px;
-    border-radius: 20px;
-    background: #A1BF4B;
-    color: #fff;
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
   }
 
 
@@ -92,5 +83,28 @@
 
   &--has-label {
     margin-right: 9px;
+  }
+
+  &--toggle {
+    height: 28px;
+    padding: 3px 10px;
+    border-radius: 14px;
+    color: inherit;
+    border-color: transparent;
+    background: transparent;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      color: #799234;
+      border-color: #799234;
+      background: transparent;
+    }
+  }
+
+  &--toggle-active {
+    color: #799234;
+    border-color: #799234;
+    background: transparent;
   }
 }

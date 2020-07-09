@@ -39,4 +39,12 @@
     margin: 0 0 20px;
     font-size: 24px;
   }
+
+  &--single {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
 }
