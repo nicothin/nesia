@@ -5077,12 +5077,13 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     table-layout: fixed;
     margin-top: 12px;
     margin-bottom: 12px;
-    width: 100%;
-    max-width: 450px; }
+    width: 100%; }
 .b-stats-2__users-list-table tr:first-child td {
       padding-top: 0; }
 .b-stats-2__users-list-table tr:last-child td {
       padding-bottom: 0; }
+.b-stats-2__users-list-table tr:hover td {
+      opacity: 1; }
 .b-stats-2__users-list-table td {
       padding: 12px 0;
       vertical-align: middle; }
@@ -5096,7 +5097,9 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     overflow: hidden;
     text-overflow: ellipsis; }
 .b-stats-2__users-table-action {
-    display: none; }
+    display: none;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
 .b-toggler {
   position: relative;
   white-space: nowrap; }
@@ -5286,7 +5289,9 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
         text-align: left; }
       .b-stats-2__users-table-action {
         display: table-cell;
-        padding-left: 16px !important; } }
+        width: 35%;
+        padding-left: 16px !important;
+        opacity: 0; } }
 @media (min-width: 551px) {
     .b-postal-code__group {
       width: 330px; } }
@@ -5788,7 +5793,9 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
       max-height: 92px;
       padding-right: 8px;
       margin-right: -8px;
-      overflow-y: auto; } }
+      overflow-y: auto; }
+      .b-stats-2__users-table-action {
+        width: 50%; } }
 @media all and (min-width: 992px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       .b-mail-list__item-wrap {
         -ms-flex-preferred-size: 32% !important;
@@ -5961,6 +5968,9 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
 @media all and (-ms-high-contrast: none) {
       .b-shared-object__descr *::-ms-backdrop, .b-shared-object__descr {
         width: 300px; } }
+@media (pointer: coarse) {
+      .b-stats-2__users-table-action {
+        opacity: 1; } }
 /*!*
  * ВНИМАНИЕ! Этот файл генерируется автоматически.
  * Не пишите сюда ничего вручную, все такие правки будут потеряны при следующей компиляции.
