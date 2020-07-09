@@ -142,7 +142,7 @@
     margin-top: 12px;
     margin-bottom: 12px;
     width: 100%;
-    max-width: 450px;
+    // max-width: 450px;
 
     tr:first-child td {
       padding-top: 0;
@@ -150,6 +150,13 @@
 
     tr:last-child td {
       padding-bottom: 0;
+    }
+
+    tr:hover {
+
+      td {
+        opacity: 1;
+      }
     }
 
     td {
@@ -180,11 +187,21 @@
 
   &__users-table-action {
     display: none;
+    transition: opacity 0.3s;
 
     @media (min-width: $screen-sm) {
       display: table-cell;
-      // width: 35%;
+      width: 35%;
       padding-left: 16px !important;
+      opacity: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 50%;
+    }
+
+    @media (pointer: coarse) {
+      opacity: 1;
     }
   }
 }
