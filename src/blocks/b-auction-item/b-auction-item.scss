@@ -7,17 +7,49 @@
   $block-name:                &; // #{$block-name}__element
 
   &__header {
+    display: flex;
+    align-items: baseline;
     padding-top: 14px;
     padding-bottom: 14px;
     border-bottom: 1px solid #E8E8E8;
   }
 
+  &__header-toggler {
+    flex-grow: 1;
+  }
+
   &__header-price {
     display: none;
+
+    @media (min-width: $screen-sm) {
+      display: block;
+      flex-shrink: 0;
+      width: 50px;
+      margin-left: auto;
+      color: #A1A1A1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   &__header-expire {
     display: none;
+
+    @media (min-width: $screen-sm) {
+      display: block;
+      flex-shrink: 0;
+      width: 100px;
+      text-align: right;
+      color: #A1A1A1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-right: 180px;
+    }
   }
 
   &__list {
@@ -35,31 +67,91 @@
     &:not(:last-child) {
       border-bottom: 1px solid #E8E8E8;
     }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: nowrap;
+    }
+
+    &--inactive {
+
+      #{$block-name}__item-price {
+
+        #{$block-name}__item-value {
+          opacity: 0.4;
+        }
+      }
+    }
   }
 
   &__item-user {
+    flex-shrink: 0;
     margin-bottom: 16px;
+
+    @media (min-width: $screen-sm) {
+      width: calc(100% - 160px - 100px);
+      margin-bottom: 0;
+      padding-right: 8px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: calc(100% - 160px - 100px - 180px);
+    }
   }
 
   &__item-price {
     display: flex;
     align-items: baseline;
     margin-bottom: 12px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+      padding-right: 8px;
+      width: 160px;
+      flex-shrink: 0;
+    }
   }
 
   &__item-expire {
     display: flex;
     align-items: baseline;
     margin-bottom: 12px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+      width: 100px;
+      flex-shrink: 0;
+      justify-content: flex-end;
+    }
   }
 
   &__item-actions {
     margin-top: 24px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 12px;
+      width: 100%;
+      text-align: right;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 180px;
+      margin-top: 0;
+    }
   }
 
   &__item-descr {
     margin-right: auto;
     color: #A1A1A1;
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
   }
 
   &__item-value {
@@ -67,10 +159,98 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: #000;
+
+    &--price-wrap {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__item-value-price {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__item-value-percent {
-    margin-left: 16px;
+    width: 50px;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 8px;
     color: #A1A1A1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__item-inactive-msg {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #D84B2A;
+
+    @media (min-width: $screen-sm) {
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 12px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 0;
+      flex-grow: 1;
+      width: auto;
+      min-width: 0;
+      padding-left: 16px;
+      text-align: right;
+    }
+  }
+
+  &__item-inactive-msg-text {
+    margin: 0;
+    min-width: 0;
+  }
+
+  &__item-inactive-btn {
+    margin-left: 16px;
+  }
+
+  &__declined {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin: 0 -17px;
+    padding: 18px 16px;
+    color: #000;
+    background: #E8E8E8;
+  }
+
+  &__declined-text-wrap {
+    min-width: 0;
+    margin: 0;
+    padding-right: 16px;
+  }
+  &__declined-text {
+    margin-right: 16px;
+  }
+
+  &__declined-cancel-link {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #A1BF4B;
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: #A1BF4B;
+    }
+  }
+
+  &__declined-btn {
+    margin-left: auto;
   }
 }

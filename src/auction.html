@@ -73,19 +73,19 @@
                       <div class="b-card-mini-2__stats-wrap  b-card-mini-2__stats-wrap--always-shown-lg" id="beats-01234">
                         <div class="b-auction-item">
                           <div class="b-auction-item__header">
-                            <ul class="b-toggle-btns  b-auction-item__header-toggler">
+                            <ul class="b-toggle-btns  b-auction-item__header-toggler" data-sorter-active-class="b-btn-2--toggle-active">
                               <li class="b-toggle-btns__item">
-                                <button class="b-btn-2  b-btn-2--toggle  b-btn-2--toggle-active">Hiest-bit</button>
+                                <button class="b-btn-2  b-btn-2--toggle  b-btn-2--toggle-active" data-sorter="bit" data-sorter-list-id="list-001">Hiest-bit</button>
                               </li>
                               <li class="b-toggle-btns__item">
-                                <button class="b-btn-2  b-btn-2--toggle">Latest offer</button>
+                                <button class="b-btn-2  b-btn-2--toggle" data-sorter="date" data-sorter-list-id="list-001">Latest offer</button>
                               </li>
                             </ul>
                             <div class="b-auction-item__header-price">Price</div>
                             <div class="b-auction-item__header-expire">Offer will expire</div>
                           </div>
-                          <ul class="b-auction-item__list">
-                            <li class="b-auction-item__item" data-date="1594330448438">
+                          <ul class="b-auction-item__list" id="list-001">
+                            <li class="b-auction-item__item" data-date="5" data-bit="1">
                               <div class="b-auction-item__item-user">
                                 <a href="" class="b-user-2">
                                   <div class="b-user-2__avatar-wrap">
@@ -98,9 +98,9 @@
                               </div>
                               <div class="b-auction-item__item-price">
                                 <span class="b-auction-item__item-descr">Price</span>
-                                <span class="b-auction-item__item-value">
-                                  € 999,999,999
-                                  <span class="b-auction-item__item-value-percent">+3%</span>
+                                <span class="b-auction-item__item-value  b-auction-item__item-value--price-wrap">
+                                  <span class="b-auction-item__item-value-price">€ 999,999,999</span>
+                                  <span class="b-auction-item__item-value-percent">+999%</span>
                                 </span>
                               </div>
                               <div class="b-auction-item__item-expire">
@@ -114,7 +114,7 @@
                                 <button class="b-btn-2  b-btn-2--secondary">Decline</button>
                               </div>
                             </li>
-                            <li class="b-auction-item__item" data-date="1594330448538">
+                            <li class="b-auction-item__item" data-date="4" data-bit="2">
                               <div class="b-auction-item__item-user">
                                 <a href="" class="b-user-2">
                                   <div class="b-user-2__avatar-wrap">
@@ -127,9 +127,9 @@
                               </div>
                               <div class="b-auction-item__item-price">
                                 <span class="b-auction-item__item-descr">Price</span>
-                                <span class="b-auction-item__item-value">
-                                  € 99,999
-                                  <span class="b-auction-item__item-value-percent">+999%</span>
+                                <span class="b-auction-item__item-value  b-auction-item__item-value--price-wrap">
+                                  <span class="b-auction-item__item-value-price">€ 99,999</span>
+                                  <span class="b-auction-item__item-value-percent">+9%</span>
                                 </span>
                               </div>
                               <div class="b-auction-item__item-expire">
@@ -139,7 +139,7 @@
                                 </span>
                               </div>
                             </li>
-                            <li class="b-auction-item__item  b-auction-item__item--inactive" data-date="1594330448638">
+                            <li class="b-auction-item__item  b-auction-item__item--inactive" data-date="3" data-bit="3">
                               <div class="b-auction-item__item-user">
                                 <a href="" class="b-user-2">
                                   <div class="b-user-2__avatar-wrap">
@@ -152,21 +152,21 @@
                               </div>
                               <div class="b-auction-item__item-price">
                                 <span class="b-auction-item__item-descr">Price</span>
-                                <span class="b-auction-item__item-value">
-                                  € 99,999
+                                <span class="b-auction-item__item-value  b-auction-item__item-value--price-wrap">
+                                  <span class="b-auction-item__item-value-price">€ 99,999</span>
                                   <span class="b-auction-item__item-value-percent">+999%</span>
                                 </span>
                               </div>
                               <div class="b-auction-item__item-inactive-msg">
-                                Offer has expired
-                                <button class="b-close">
-                                  <svg class="b-user-menu__link-icon" width="18" height="18">
+                                <p class="b-auction-item__item-inactive-msg-text">Offer has expired</p>
+                                <button class="b-auction-item__item-inactive-btn  b-close">
+                                  <svg width="8" height="8">
                                     <use xlink:href="img/sprite-svg.svg#icon-close"></use>
                                   </svg>
                                 </button>
                               </div>
                             </li>
-                            <li class="b-auction-item__item  b-auction-item__item--inactive" data-date="1594330448738">
+                            <li class="b-auction-item__item  b-auction-item__item--inactive" data-date="2" data-bit="4">
                               <div class="b-auction-item__item-user">
                                 <a href="" class="b-user-2">
                                   <div class="b-user-2__avatar-wrap">
@@ -177,11 +177,23 @@
                                   </div>
                                 </a>
                               </div>
-                              <div class="b-auction-item__item-price"></div>
                               <div class="b-auction-item__item-inactive-msg">
-                                Sorry, this user has canceled thier offer
-                                <button class="b-close">
-                                  <svg class="b-user-menu__link-icon" width="18" height="18">
+                                <p class="b-auction-item__item-inactive-msg-text">Sorry, this user has canceled thier offer</p>
+                                <button class="b-auction-item__item-inactive-btn  b-close">
+                                  <svg width="8" height="8">
+                                    <use xlink:href="img/sprite-svg.svg#icon-close"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </li>
+                            <li class="b-auction-item__item  b-auction-item__item--declined" data-date="1" data-bit="5">
+                              <div class="b-auction-item__declined">
+                                <p class="b-auction-item__declined-text-wrap">
+                                  <span class="b-auction-item__declined-text">Offer was declined</span>
+                                  <button class="b-auction-item__declined-cancel-link">Cancel</button>
+                                </p>
+                                <button class="b-auction-item__declined-btn  b-close">
+                                  <svg width="8" height="8">
                                     <use xlink:href="img/sprite-svg.svg#icon-close"></use>
                                   </svg>
                                 </button>

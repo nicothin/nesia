@@ -157,6 +157,24 @@ $( document ).ready(function() {
 
 
 
+  // Аукцион: сортировка пунктов-предложений
+  $('[data-sorter]').on('click', function(e){
+    e.preventDefault();
+    var triggerParent = $(this).closest('[data-sorter-active-class]');
+    var activeClass = $(triggerParent).data('sorter-active-class');
+    var sorterAttr = $(this).data('sorter');
+    var targetList = $(this).data('sorter-list-id');
+    var list = $.makeArray($('#' + targetList + ' li'));
+    list.sort(function(a, b){
+      return a.dataset[sorterAttr] - b.dataset[sorterAttr];
+    });
+    $('#' + targetList).html(list);
+    $(triggerParent).find('.' + activeClass).removeClass(activeClass);
+    $(this).addClass(activeClass);
+  });
+
+
+
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');
