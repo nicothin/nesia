@@ -74,7 +74,8 @@
     "b-auction": [],
     "b-auction-item": [],
     "b-toggle-btns": [],
-    "b-close": []
+    "b-close": [],
+    "b-auction-msg": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
