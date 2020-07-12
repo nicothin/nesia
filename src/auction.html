@@ -64,7 +64,7 @@
                               Удалить
                             </button>
                           </div>
-                          <button class="b-card-mini-2__footer-stat-btn  hidden-md  b-toggler  js-open" data-slide-toggler="#beats-01234" data-slide-hidden="Show beats" data-slide-shown="Hide beats">
+                          <button class="b-card-mini-2__footer-stat-btn  hidden-md  hidden-lg  b-toggler  js-open" data-slide-toggler="#beats-01234" data-slide-hidden="Show beats" data-slide-shown="Hide beats">
                             <span class="b-label-2  b-card-mini-2__footer-stat-label">2</span>
                             <span class="js-text">Hide beats</span>
                           </button>
@@ -84,7 +84,7 @@
                             <div class="b-auction-item__header-price">Price</div>
                             <div class="b-auction-item__header-expire">Offer will expire</div>
                           </div>
-                          <ul class="b-auction-item__list" id="list-001">
+                          <ul class="b-auction-item__list  b-scroll" id="list-001">
                             <li class="b-auction-item__item" data-date="5" data-bit="1">
                               <div class="b-auction-item__item-user">
                                 <a href="" class="b-user-2">
@@ -161,7 +161,7 @@
                                 <p class="b-auction-item__item-inactive-msg-text">Offer has expired</p>
                                 <button class="b-auction-item__item-inactive-btn  b-close">
                                   <svg width="8" height="8">
-                                    <use xlink:href="img/sprite-svg.svg#icon-close"></use>
+                                    <path d="M4.9 3.994l2.725 2.724a.642.642 0 11-.908.909L3.992 4.902 1.267 7.627a.642.642 0 11-.908-.909l2.725-2.724L.36 1.269A.643.643 0 011.267.36l2.725 2.724L6.717.361a.643.643 0 01.908.908L4.9 3.994z"/>
                                   </svg>
                                 </button>
                               </div>
@@ -181,11 +181,83 @@
                                 <p class="b-auction-item__item-inactive-msg-text">Sorry, this user has canceled thier offer</p>
                                 <button class="b-auction-item__item-inactive-btn  b-close">
                                   <svg width="8" height="8">
-                                    <use xlink:href="img/sprite-svg.svg#icon-close"></use>
+                                    <path d="M4.9 3.994l2.725 2.724a.642.642 0 11-.908.909L3.992 4.902 1.267 7.627a.642.642 0 11-.908-.909l2.725-2.724L.36 1.269A.643.643 0 011.267.36l2.725 2.724L6.717.361a.643.643 0 01.908.908L4.9 3.994z"/>
                                   </svg>
                                 </button>
                               </div>
                             </li>
+                            <li class="b-auction-item__item  b-auction-item__item--inactive" data-date="2" data-bit="4">
+                              <div class="b-auction-item__item-user">
+                                <a href="" class="b-user-2">
+                                  <div class="b-user-2__avatar-wrap">
+                                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                                  </div>
+                                  <div class="b-user-2__avatar-info">
+                                    <div class="b-user-2__name  b-user-2__name--sm">Lara</div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="b-auction-item__item-inactive-msg">
+                                <p class="b-auction-item__item-inactive-msg-text">Sorry, this user has canceled thier offer</p>
+                                <button class="b-auction-item__item-inactive-btn  b-close">
+                                  <svg width="8" height="8">
+                                    <path d="M4.9 3.994l2.725 2.724a.642.642 0 11-.908.909L3.992 4.902 1.267 7.627a.642.642 0 11-.908-.909l2.725-2.724L.36 1.269A.643.643 0 011.267.36l2.725 2.724L6.717.361a.643.643 0 01.908.908L4.9 3.994z"/>
+                                  </svg>
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="b-card-list__item">
+                    <article class="b-card-mini-2">
+                      <div class="b-card-mini-2__img-wrap">
+                        <!-- Картинка нужна 448 в ширину, как минимум -->
+                        <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                      </div>
+                      <div class="b-card-mini-2__text-wrap">
+                        <div class="b-card-mini-2__type">SALE</div>
+                        <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                        <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                        <div class="b-card-mini-2__price">€ 224, 000</div>
+                        <footer class="b-card-mini-2__footer">
+                          <div class="b-card-mini-2__footer-btns">
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
+                              </svg>
+                              Редактировать
+                            </button>
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                              Удалить
+                            </button>
+                          </div>
+                          <button class="b-card-mini-2__footer-stat-btn  hidden-md  hidden-lg  b-toggler  js-open" data-slide-toggler="#beats-01234" data-slide-hidden="Show beats" data-slide-shown="Hide beats">
+                            <span class="b-label-2  b-card-mini-2__footer-stat-label">2</span>
+                            <span class="js-text">Hide beats</span>
+                          </button>
+                        </footer>
+                      </div>
+                      <div class="b-card-mini-2__stats-wrap  b-card-mini-2__stats-wrap--always-shown-lg" id="beats-01234">
+                        <div class="b-auction-item">
+                          <div class="b-auction-item__header">
+                            <ul class="b-toggle-btns  b-auction-item__header-toggler" data-sorter-active-class="b-btn-2--toggle-active">
+                              <li class="b-toggle-btns__item">
+                                <button class="b-btn-2  b-btn-2--toggle  b-btn-2--toggle-active" data-sorter="bit" data-sorter-list-id="list-001">Hiest-bit</button>
+                              </li>
+                              <li class="b-toggle-btns__item">
+                                <button class="b-btn-2  b-btn-2--toggle" data-sorter="date" data-sorter-list-id="list-002">Latest offer</button>
+                              </li>
+                            </ul>
+                            <div class="b-auction-item__header-price">Price</div>
+                            <div class="b-auction-item__header-expire">Offer will expire</div>
+                          </div>
+                          <ul class="b-auction-item__list  b-scroll" id="list-002">
                             <li class="b-auction-item__item  b-auction-item__item--declined" data-date="1" data-bit="5">
                               <div class="b-auction-item__declined">
                                 <p class="b-auction-item__declined-text-wrap">
@@ -194,9 +266,34 @@
                                 </p>
                                 <button class="b-auction-item__declined-btn  b-close">
                                   <svg width="8" height="8">
-                                    <use xlink:href="img/sprite-svg.svg#icon-close"></use>
+                                    <path d="M4.9 3.994l2.725 2.724a.642.642 0 11-.908.909L3.992 4.902 1.267 7.627a.642.642 0 11-.908-.909l2.725-2.724L.36 1.269A.643.643 0 011.267.36l2.725 2.724L6.717.361a.643.643 0 01.908.908L4.9 3.994z"/>
                                   </svg>
                                 </button>
+                              </div>
+                            </li>
+                            <li class="b-auction-item__item" data-date="5" data-bit="1">
+                              <div class="b-auction-item__item-user">
+                                <a href="" class="b-user-2">
+                                  <div class="b-user-2__avatar-wrap">
+                                    <img class="b-user-2__avatar" src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light' alt="USERNAME">
+                                  </div>
+                                  <div class="b-user-2__avatar-info">
+                                    <div class="b-user-2__name  b-user-2__name--sm">Lara Long Long Long Long</div>
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="b-auction-item__item-price">
+                                <span class="b-auction-item__item-descr">Price</span>
+                                <span class="b-auction-item__item-value  b-auction-item__item-value--price-wrap">
+                                  <span class="b-auction-item__item-value-price">€ 999,999,999</span>
+                                  <span class="b-auction-item__item-value-percent">+999%</span>
+                                </span>
+                              </div>
+                              <div class="b-auction-item__item-expire">
+                                <span class="b-auction-item__item-descr">Offer will expire</span>
+                                <span class="b-auction-item__item-value">
+                                  11d: 24h
+                                </span>
                               </div>
                             </li>
                           </ul>
