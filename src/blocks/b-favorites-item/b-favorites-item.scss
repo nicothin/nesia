@@ -1,0 +1,194 @@
+// В этом файле должны быть стили для БЭМ-блока b-favorites-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-favorites-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 18px;
+  }
+
+  &__header {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      padding: 18px 0 0;
+      color: #A1A1A1;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 12px;
+    }
+  }
+
+  &__header-price {
+    min-width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__header-status {
+    padding-left: 8px;
+    flex-grow: 1;
+    min-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__header-expire {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+
+    @media (min-width: $screen-lg) {
+      width: 304px;
+      max-width: 100%;
+      flex-shrink: 0;
+      padding-right: 180px;
+    }
+  }
+
+  &__item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #E8E8E8;
+    }
+
+    @media (min-width: $screen-sm) {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: nowrap;
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      &:not(:last-child) {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 12px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+      padding-right: 8px;
+      width: 160px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 12px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+      padding-left: 8px;
+      flex-grow: 1;
+      width: 140px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__expire {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 12px;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 0;
+      width: 90px;
+      flex-shrink: 0;
+      justify-content: flex-end;
+    }
+  }
+
+  &__actions {
+    margin-top: 24px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 18px;
+      width: 100%;
+      text-align: right;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 180px;
+      margin-top: 0;
+      padding-left: 8px;
+      padding-right: 10px;
+    }
+  }
+
+  &__descr {
+    flex-shrink: 0;
+    padding-right: 16px;
+    margin-right: auto;
+    color: #A1A1A1;
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+
+    &--price-wrap {
+      display: flex;
+      width: 100%;
+    }
+
+    &--danger {
+      white-space: normal;
+      color: #D84B2A;
+    }
+  }
+
+    &__value-price {
+    flex-grow: 1;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (min-width: $screen-sm) {
+      text-align: left;
+    }
+  }
+
+  &__value-percent {
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 16px;
+    color: #A1A1A1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (min-width: $screen-sm) {
+      width: 60px;
+      padding-left: 8px;
+    }
+  }
+}

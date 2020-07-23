@@ -1,0 +1,357 @@
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
+
+      <div class="b-content">
+        <div class="container-fluid">
+
+          <div class="b-favorites  row">
+            <div class="b-favorites__sidebar  col-sm-4  hidden-xs">
+              <div class="b-user-sidebar">
+                <div class="b-user-sidebar__avatar">
+                  <div class="b-user-sidebar__avatar-pict-wrap">
+                    <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-sidebar__avatar-pict">
+                    <button class="b-user-sidebar__avatar-btn">
+                      <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="12" r="10" fill="#A1BF4B"/><path d="M14 9.962a2.772 2.772 0 100 5.544 2.772 2.772 0 000-5.544zm0 4.49a1.719 1.719 0 110-3.437 1.719 1.719 0 010 3.438z" fill="#fff"/><path d="M14 0a12 12 0 1012 12A12.014 12.014 0 0014 0zm5.4 15.84a.96.96 0 01-.96.96H9.572a.96.96 0 01-.96-.96v-5.47a.96.96 0 01.96-.96h1.985l.144-.91c.091-.566.653-.832 1.111-.832H15.2c.463 0 1.022.269 1.111.833l.14.91h1.984a.96.96 0 01.96.96l.005 5.469z" fill="#fff"/></svg>
+                    </button>
+                  </div>
+                  <p class="b-user-sidebar__username">Lara Scala</p>
+                </div>
+                <div class="b-user-sidebar__menu">
+                  <ul class="b-user-menu  b-user-menu--sidebar">
+                    <li class="b-user-menu__item  b-user-menu__item--active"><a class="b-user-menu__link" href="/">My listings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Auction <span class="b-label-2  b-user-menu__label">2</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Increase views</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Favorutes</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Messages <span class="b-label-2  b-user-menu__label">99+</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Settings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Edit Profile</a></li>
+                  </ul>
+                </div>
+                <div class="b-user-sidebar__btn-wrap">
+                  <a href="" class="b-btn-2  b-btn-2--secondary  b-btn-2--block">Add listing</a>
+                </div>
+              </div>
+            </div>
+            <div class="b-favorites__content  col-xs-12  col-sm-8">
+
+              <div class="b-favorites__inner">
+
+                <h1 class="b-main-header  b-main-header--content  b-main-header--single">Favorites</h1>
+
+                <ul class="b-card-list">
+                  <li class="b-card-list__item">
+                    <article class="b-card-mini-2">
+                      <div class="b-card-mini-2__img-wrap">
+                        <!-- Картинка нужна 448 в ширину, как минимум -->
+                        <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                      </div>
+                      <div class="b-card-mini-2__text-wrap">
+                        <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                        <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                        <div class="b-card-mini-2__price  b-card-mini-2__price--favorites">
+                          <ins>€ 224, 000</ins>
+                          <del>€ 666, 000</del>
+                        </div>
+                        <footer class="b-card-mini-2__footer">
+                          <div class="b-card-mini-2__footer-btns">
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                              Удалить
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="b-card-mini-2__stats-wrap">
+                        <div class="b-favorites-item">
+                          <div class="b-favorites-item__header">
+                            <div class="b-favorites-item__header-price">Price</div>
+                            <div class="b-favorites-item__header-status">Status</div>
+                            <div class="b-favorites-item__header-expire">Offer will expire</div>
+                          </div>
+                          <div class="b-favorites-item__item">
+                            <div class="b-favorites-item__price">
+                              <span class="b-favorites-item__descr">Your asket price</span>
+                              <span class="b-favorites-item__value  b-favorites-item__value--price-wrap">
+                                <span class="b-favorites-item__value-price">€ 999,999,999</span>
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__status">
+                              <span class="b-favorites-item__descr">Status</span>
+                              <span class="b-favorites-item__value">
+                                Waiting for responce
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__expire">
+                              <span class="b-favorites-item__descr">Offer will expire</span>
+                              <span class="b-favorites-item__value">
+                                11d: 24h
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__actions">
+                              <button class="b-btn-2  b-btn-2--secondary">Contact owner</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="b-card-list__item">
+                    <article class="b-card-mini-2">
+                      <div class="b-card-mini-2__img-wrap">
+                        <!-- Картинка нужна 448 в ширину, как минимум -->
+                        <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                      </div>
+                      <div class="b-card-mini-2__text-wrap">
+                        <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                        <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                        <div class="b-card-mini-2__price  b-card-mini-2__price--favorites">
+                          € 224, 000
+                        </div>
+                        <footer class="b-card-mini-2__footer">
+                          <div class="b-card-mini-2__footer-btns">
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                              Удалить
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="b-card-mini-2__stats-wrap">
+                        <div class="b-favorites-item">
+                          <div class="b-favorites-item__header">
+                            <div class="b-favorites-item__header-price">Price</div>
+                            <div class="b-favorites-item__header-status">Status</div>
+                          </div>
+                          <div class="b-favorites-item__item">
+                            <div class="b-favorites-item__price">
+                              <span class="b-favorites-item__descr">Your asket price</span>
+                              <span class="b-favorites-item__value  b-favorites-item__value--price-wrap">
+                                <span class="b-favorites-item__value-price">€ 999,999,999</span>
+                                <span class="b-favorites-item__value-percent">+126%</span>
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__status">
+                              <span class="b-favorites-item__descr">Status</span>
+                              <span class="b-favorites-item__value">
+                                <div class="b-label  b-label--light-success">Accepted</div>
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__actions">
+                              <button class="b-btn-2">Contact owner</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="b-card-list__item">
+                    <article class="b-card-mini-2">
+                      <div class="b-card-mini-2__img-wrap">
+                        <!-- Картинка нужна 448 в ширину, как минимум -->
+                        <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                      </div>
+                      <div class="b-card-mini-2__text-wrap">
+                        <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                        <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                        <div class="b-card-mini-2__price  b-card-mini-2__price--favorites">
+                          € 224, 000
+                        </div>
+                        <footer class="b-card-mini-2__footer">
+                          <div class="b-card-mini-2__footer-btns">
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                              Удалить
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="b-card-mini-2__stats-wrap">
+                        <div class="b-favorites-item">
+                          <div class="b-favorites-item__header">
+                            <div class="b-favorites-item__header-price">Price</div>
+                            <div class="b-favorites-item__header-status">Status</div>
+                          </div>
+                          <div class="b-favorites-item__item">
+                            <div class="b-favorites-item__price">
+                              <span class="b-favorites-item__descr">Your asket price</span>
+                              <span class="b-favorites-item__value  b-favorites-item__value--price-wrap">
+                                <span class="b-favorites-item__value-price">€ 999,999,999</span>
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__status">
+                              <span class="b-favorites-item__descr">Status</span>
+                              <span class="b-favorites-item__value">
+                                <div class="b-label  b-label--light-danger">Rejected</div>
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__actions">
+                              <button class="b-btn-2  b-btn-2--secondary">Contact owner</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="b-card-list__item">
+                    <div class="b-confirm-msg">
+                      <p>If you delete an obj Lorem ipsum dolor sit.</p>
+                      <div class="b-confirm-msg__actions">
+                        <button class="b-btn-2">Confirm</button>
+                        <button class="b-btn-2  b-btn-2--secondary">Cancel</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="b-card-list__item">
+                    <article class="b-card-mini-2">
+                      <div class="b-card-mini-2__img-wrap">
+                        <!-- Картинка нужна 448 в ширину, как минимум -->
+                        <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                      </div>
+                      <div class="b-card-mini-2__text-wrap">
+                        <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                        <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                        <div class="b-card-mini-2__price  b-card-mini-2__price--favorites">
+                          € 224, 000
+                        </div>
+                        <footer class="b-card-mini-2__footer">
+                          <div class="b-card-mini-2__footer-btns">
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                              Удалить
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="b-card-mini-2__stats-wrap">
+                        <div class="b-favorites-item">
+                          <div class="b-favorites-item__header">
+                            <div class="b-favorites-item__header-price">Price</div>
+                            <div class="b-favorites-item__header-status">Status</div>
+                            <div class="b-favorites-item__header-expire">Offer will expire</div>
+                          </div>
+                          <div class="b-favorites-item__item">
+                            <div class="b-favorites-item__price">
+                              <span class="b-favorites-item__descr">Your asket price</span>
+                              <span class="b-favorites-item__value  b-favorites-item__value--price-wrap">
+                                <span class="b-favorites-item__value-price">€ 999</span>
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__status">
+                              <span class="b-favorites-item__descr">Status</span>
+                              <span class="b-favorites-item__value">
+                                Waiting for responce
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__expire">
+                              <span class="b-favorites-item__descr">Offer will expire</span>
+                              <span class="b-favorites-item__value">
+                                11d: 24h
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__actions">
+                              <button class="b-btn-2  b-btn-2--secondary">Open message</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="b-card-list__item">
+                    <article class="b-card-mini-2">
+                      <div class="b-card-mini-2__img-wrap">
+                        <!-- Картинка нужна 448 в ширину, как минимум -->
+                        <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                      </div>
+                      <div class="b-card-mini-2__text-wrap">
+                        <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                        <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                        <div class="b-card-mini-2__price  b-card-mini-2__price--favorites">
+                          € 224, 000
+                        </div>
+                        <footer class="b-card-mini-2__footer">
+                          <div class="b-card-mini-2__footer-btns">
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                              Удалить
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="b-card-mini-2__stats-wrap">
+                        <div class="b-card-mini-2-msg">
+                          <h3 class="b-card-mini-2-msg__title">Auction is running!</h3>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                          <div class="b-card-mini-2-msg__actions">
+                            <button class="b-card-mini-2-msg__btn  b-btn-2">Make offer</button>
+                            <button class="b-card-mini-2-msg__btn  b-btn-2  b-btn-2--secondary">Open message</button>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="b-card-list__item">
+                    <article class="b-card-mini-2">
+                      <div class="b-card-mini-2__img-wrap">
+                        <!-- Картинка нужна 448 в ширину, как минимум -->
+                        <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                      </div>
+                      <div class="b-card-mini-2__text-wrap">
+                        <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                        <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                        <div class="b-card-mini-2__price  b-card-mini-2__price--favorites">
+                          € 224, 000
+                        </div>
+                        <footer class="b-card-mini-2__footer">
+                          <div class="b-card-mini-2__footer-btns">
+                            <button class="b-card-mini-2__footer-icon-btn">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                              Удалить
+                            </button>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="b-card-mini-2__stats-wrap">
+                        <div class="b-favorites-item">
+                          <div class="b-favorites-item__header">
+                            <div class="b-favorites-item__header-price">Price</div>
+                            <div class="b-favorites-item__header-status">Status</div>
+                          </div>
+                          <div class="b-favorites-item__item">
+                            <div class="b-favorites-item__price">
+                              <span class="b-favorites-item__descr">Your asket price</span>
+                              <span class="b-favorites-item__value  b-favorites-item__value--price-wrap">
+                                <span class="b-favorites-item__value-price">€ 999,999</span>
+                              </span>
+                            </div>
+                            <div class="b-favorites-item__status">
+                              <span class="b-favorites-item__descr">Status</span>
+                              <span class="b-favorites-item__value  b-favorites-item__value--danger">
+                                Sorry, auction was closed. Your offer was rejected
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+@@include('./html-includes/footer.html')

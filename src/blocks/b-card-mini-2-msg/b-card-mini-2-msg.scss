@@ -1,11 +1,12 @@
-// В этом файле должны быть стили для БЭМ-блока b-auction-msg, его элементов,
+// В этом файле должны быть стили для БЭМ-блока b-card-mini-2-msg, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.b-auction-msg {
+.b-card-mini-2-msg {
 
   $block-name:                &; // #{$block-name}__element
 
+  max-width: 360px;
   padding: 18px 0 10px;
 
   p {

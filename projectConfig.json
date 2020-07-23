@@ -75,7 +75,10 @@
     "b-auction-item": [],
     "b-toggle-btns": [],
     "b-close": [],
-    "b-auction-msg": []
+    "b-card-mini-2-msg": [],
+    "b-favorites": [],
+    "b-favorites-item": [],
+    "b-confirm-msg": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

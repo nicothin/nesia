@@ -19,7 +19,7 @@
 
     @media (min-width: $screen-sm) {
       width: 140px;
-      min-height: 148px;
+      min-height: 144px;
       padding: 16px 0 32px 16px;
       border: 1px solid #E8E8E8;
       border-right: 0;
@@ -109,6 +109,24 @@
 
     @media (min-width: $screen-lg) {
       padding-right: 70px;
+    }
+
+    &--favorites {
+      display: flex;
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    ins {
+      margin-right: 12px;
+      text-decoration: none;
+    }
+
+    del {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #D84B2A;
     }
   }
 

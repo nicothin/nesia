@@ -1,0 +1,36 @@
+// В этом файле должны быть стили для БЭМ-блока b-confirm-msg, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-confirm-msg {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 20px 16px;
+  background: rgba(232, 232, 232, 0.3);
+  border: 1px solid #E8E8E8;
+
+  @media (min-width: $screen-sm) {
+    text-align: center;
+  }
+
+  p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  &__actions {
+    display: flex;
+
+    @media (min-width: $screen-sm) {
+      justify-content: center;
+      padding-left: 8px;
+    }
+
+    .b-btn-2:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
