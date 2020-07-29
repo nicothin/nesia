@@ -1,0 +1,92 @@
+// В этом файле должны быть стили для БЭМ-блока b-chat-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-chat-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  padding: 12px 8px 12px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background: #F6F6F6;
+
+    @media (pointer: coarse) {
+      background: transparent;
+    }
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+
+  &__text-wrap {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  &__info {
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 4px;
+  }
+
+  &__msg-info {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+  }
+
+  &__username {
+    min-width: 0;
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__time {
+    margin-left: auto;
+    font-size: 12px;
+    color: #A1A1A1;
+  }
+
+  &__msg-wrap {
+    margin: 0 8px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #A1A1A1;
+  }
+
+  &__you {
+    color: #000;
+  }
+
+  &__label-wrap {
+    margin-left: auto;
+  }
+
+
+
+  &--active {
+
+    @media (min-width: $screen-lg) {
+      background: #F6F6F6;
+
+      @media (pointer: coarse) {
+        background: transparent;
+      }
+    }
+  }
+}

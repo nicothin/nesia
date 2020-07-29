@@ -1,0 +1,215 @@
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
+
+      <div class="b-content  b-content--full  b-page__content">
+        <div class="container-fluid  b-page__inner">
+
+          <div class="b-messages  row">
+            <div class="b-messages__sidebar  col-sm-4  hidden-xs">
+              <div class="b-user-sidebar">
+                <div class="b-user-sidebar__avatar">
+                  <div class="b-user-sidebar__avatar-pict-wrap">
+                    <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-sidebar__avatar-pict">
+                    <button class="b-user-sidebar__avatar-btn">
+                      <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="12" r="10" fill="#A1BF4B"/><path d="M14 9.962a2.772 2.772 0 100 5.544 2.772 2.772 0 000-5.544zm0 4.49a1.719 1.719 0 110-3.437 1.719 1.719 0 010 3.438z" fill="#fff"/><path d="M14 0a12 12 0 1012 12A12.014 12.014 0 0014 0zm5.4 15.84a.96.96 0 01-.96.96H9.572a.96.96 0 01-.96-.96v-5.47a.96.96 0 01.96-.96h1.985l.144-.91c.091-.566.653-.832 1.111-.832H15.2c.463 0 1.022.269 1.111.833l.14.91h1.984a.96.96 0 01.96.96l.005 5.469z" fill="#fff"/></svg>
+                    </button>
+                  </div>
+                  <p class="b-user-sidebar__username">Lara Scala</p>
+                </div>
+                <div class="b-user-sidebar__menu">
+                  <ul class="b-user-menu  b-user-menu--sidebar">
+                    <li class="b-user-menu__item  b-user-menu__item--active"><a class="b-user-menu__link" href="/">My listings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Auction <span class="b-label-2  b-user-menu__label">2</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Increase views</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Favorutes</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Messages <span class="b-label-2  b-user-menu__label">99+</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Settings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Edit Profile</a></li>
+                  </ul>
+                </div>
+                <div class="b-user-sidebar__btn-wrap">
+                  <a href="" class="b-btn-2  b-btn-2--secondary  b-btn-2--block">Add listing</a>
+                </div>
+              </div>
+            </div>
+            <div class="b-messages__content  col-xs-12  col-sm-8">
+
+              <div class="b-messages__inner">
+
+                <h1 class="b-main-header  b-main-header--content  b-main-header--single">Messages</h1>
+
+                <div class="b-messages__wrap">
+                  <div class="b-messages__users">
+                    <ul class="b-chat-list">
+                      <li class="b-chat-list__item">
+                        <a href="" class="b-chat-item  b-chat-item--active" data-chat-id="chat-001">
+                          <div class="b-chat-item__avatar">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--lg">
+                          </div>
+                          <div class="b-chat-item__text-wrap">
+                            <p class="b-chat-item__info">
+                              <strong class="b-chat-item__username">James</strong>
+                              <time class="b-chat-item__time" datetime="2019-10-23T19:00">23/10/19</time>
+                            </p>
+                            <div class="b-chat-item__msg-info">
+                              <p class="b-chat-item__msg-wrap">
+                                <span class="b-chat-item__msg">Welcome to my house! Would you...</span>
+                              </p>
+                              <div class="b-chat-item__label-wrap"></div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="b-chat-list__item">
+                        <a href="" class="b-chat-item" data-chat-id="chat-002">
+                          <div class="b-chat-item__avatar">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--lg">
+                          </div>
+                          <div class="b-chat-item__text-wrap">
+                            <p class="b-chat-item__info">
+                              <strong class="b-chat-item__username">JamesJa mesJ amesJa mesJa mesJ ames</strong>
+                              <time class="b-chat-item__time" datetime="2019-10-23T19:00">23/10/19</time>
+                            </p>
+                            <div class="b-chat-item__msg-info">
+                              <p class="b-chat-item__msg-wrap">
+                                <span class="b-chat-item__you">You: </span>
+                                <span class="b-chat-item__msg">Welcome to my house! Would you...</span>
+                              </p>
+                              <div class="b-chat-item__label-wrap">
+                                <svg  class="b-chat-item__check-icon" width="12" height="9" xmlns="http://www.w3.org/2000/svg"><path d="M3.74139 7.83624c.33686.41473.96349.44344 1.33743.06128 0 0 5.99128-6.04086 6.33528-6.39237.3439-.35151.3356-.913158-.0187-1.254472-.3542-.341313-.9202-.333046-1.2641.018465L4.48249 5.96262 1.59007 3.22367C1.28023 2.8422.71742 2.78221.333004 3.08968s-.444869.86596-.135026 1.24743L3.74139 7.83624z" fill="#A1BF4B"/></svg>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="b-chat-list__item">
+                        <a href="" class="b-chat-item" data-chat-id="chat-003">
+                          <div class="b-chat-item__avatar">
+                            <div class="b-user-avatar-2  b-user-avatar-2--no-pict  b-user-avatar-2--lg">J</div>
+                          </div>
+                          <div class="b-chat-item__text-wrap">
+                            <p class="b-chat-item__info">
+                              <strong class="b-chat-item__username">James</strong>
+                              <time class="b-chat-item__time" datetime="2019-10-23T19:00">23/10/19</time>
+                            </p>
+                            <div class="b-chat-item__msg-info">
+                              <p class="b-chat-item__msg-wrap">
+                                <span class="b-chat-item__msg">Welcome to my house! Would you...</span>
+                              </p>
+                              <div class="b-chat-item__label-wrap">
+                                <span class="b-label-2">2</span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="b-chat-list__item">
+                        <a href="" class="b-chat-item" data-chat-id="chat-004">
+                          <div class="b-chat-item__avatar">
+                            <div class="b-user-avatar-2  b-user-avatar-2--no-pict  b-user-avatar-2--lg">M</div>
+                          </div>
+                          <div class="b-chat-item__text-wrap">
+                            <p class="b-chat-item__info">
+                              <strong class="b-chat-item__username">Maria</strong>
+                              <time class="b-chat-item__time" datetime="2019-10-23T19:00">23/10/19</time>
+                            </p>
+                            <div class="b-chat-item__msg-info">
+                              <p class="b-chat-item__msg-wrap">
+                                <span class="b-chat-item__you">You: </span>
+                                <span class="b-chat-item__msg">Welcome to my house! Would you...</span>
+                              </p>
+                              <div class="b-chat-item__label-wrap">
+                                <div class="b-user-avatar-2  b-user-avatar-2--xs">J</div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="b-chat-list__item">
+                        <a href="" class="b-chat-item" data-chat-id="chat-005">
+                          <div class="b-chat-item__avatar">
+                            <div class="b-user-avatar-2  b-user-avatar-2--no-pict  b-user-avatar-2--lg">M</div>
+                          </div>
+                          <div class="b-chat-item__text-wrap">
+                            <p class="b-chat-item__info">
+                              <strong class="b-chat-item__username">Maria</strong>
+                              <time class="b-chat-item__time" datetime="2019-10-23T19:00">23/10/19</time>
+                            </p>
+                            <div class="b-chat-item__msg-info">
+                              <p class="b-chat-item__msg-wrap">
+                                <span class="b-chat-item__you">You: </span>
+                                <span class="b-chat-item__msg">Welcome to my house! Would you...</span>
+                              </p>
+                              <div class="b-chat-item__label-wrap">
+                                <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--xs">
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="b-chat-list__item">
+                        <a href="" class="b-chat-item" data-chat-id="chat-006">
+                          <div class="b-chat-item__avatar">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--lg">
+                          </div>
+                          <div class="b-chat-item__text-wrap">
+                            <p class="b-chat-item__info">
+                              <strong class="b-chat-item__username">James</strong>
+                              <time class="b-chat-item__time" datetime="2019-10-23T19:00">23/10/19</time>
+                            </p>
+                            <div class="b-chat-item__msg-info">
+                              <p class="b-chat-item__msg-wrap">
+                                <span class="b-chat-item__you">You: </span>
+                                <span class="b-chat-item__msg">Welcome to my house! Would you...</span>
+                              </p>
+                              <div class="b-chat-item__label-wrap">
+                                <span class="b-label-2  b-label-2--text">new</span>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <ul class="b-messages__chats">
+                    <li class="b-messages__chats-item" id="chat-001">
+                      <div class="b-chat">
+                        <div class="b-chat__mobile-header">b-chat__mobile-header</div>
+                        <div class="b-chat__desktop-header">b-chat__desktop-header</div>
+                        <div class="b-chat__wrap">
+                          <div class="b-chat__content">
+                            <p class="b-chat__item-date">30 April</p>
+                            <p class="b-chat__item-msg">
+                              <span class="b-chat__item-msg-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                            </p>
+                            <p class="b-chat__item-msg">
+                              <span class="b-chat__item-msg-text">OK</span>
+                            </p>
+                            <p class="b-chat__item-msg  b-chat__item-msg--not-me">
+                              <a href="" class="b-chat__item-avatar-wrap">
+                                <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2">
+                              </a>
+                              <span class="b-chat__item-msg-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                            </p>
+                            <p class="b-chat__item-msg  b-chat__item-msg--not-me">
+                              <span class="b-chat__item-avatar-wrap">
+                                <a href="" class="b-user-avatar-2  b-user-avatar-2--no-pict">M1</a>
+                              </span>
+                              <span class="b-chat__item-msg-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                            </p>
+                          </div>
+                          <form class="b-chat__my-msg-wrap"></form>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+@@include('./html-includes/footer.html')

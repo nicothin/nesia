@@ -78,7 +78,11 @@
     "b-card-mini-2-msg": [],
     "b-favorites": [],
     "b-favorites-item": [],
-    "b-confirm-msg": []
+    "b-confirm-msg": [],
+    "b-messages": [],
+    "b-user-avatar-2": [],
+    "b-chat-list": [],
+    "b-chat-item": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

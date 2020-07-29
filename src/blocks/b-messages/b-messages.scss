@@ -1,0 +1,53 @@
+// В этом файле должны быть стили для БЭМ-блока b-messages, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-messages {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: flex;
+  // flex-direction: column;
+  flex-grow: 1;
+  padding: 24px 0 0;
+
+  @media (min-width: $screen-md) {
+    // flex-direction: row;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 72px;
+  }
+
+  &__content {
+
+    @media (min-width: $screen-lg) {
+      padding-left: 0;
+    }
+  }
+
+  &__users {
+    border: 1px solid #E8E8E8;
+  }
+
+  &__chats {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__chats-item {
+    display: none;
+
+    &--active {
+      display: block;
+      position: absolute;
+      top: -24px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+    }
+  }
+}

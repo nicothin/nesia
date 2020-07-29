@@ -175,6 +175,17 @@ $( document ).ready(function() {
 
 
 
+  // Сообщения: переключение видимости чатов
+  $('a[data-chat-id]').on('click', function(e){
+    e.preventDefault();
+    $('.b-chat-item').removeClass('b-chat-item--active');
+    $(this).addClass('b-chat-item--active');
+    $('.b-messages__chats-item').removeClass('b-messages__chats-item--active');
+    $('.b-messages__chats-item#' + $(this).data('chat-id')).addClass('b-messages__chats-item--active');
+  });
+
+
+
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');

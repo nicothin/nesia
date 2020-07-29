@@ -16,4 +16,8 @@
   @media (min-width: $screen-md) {
     padding-top: 50px;
   }
+
+  &--full {
+    padding-bottom: 0;
+  }
 }

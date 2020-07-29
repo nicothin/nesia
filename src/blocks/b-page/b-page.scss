@@ -1,5 +1,6 @@
 // В этом файле должны быть стили для БЭМ-блока b-page, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// И некоторые стили для борьбы с легаси-кодом. :(
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 body {
@@ -10,4 +11,29 @@ body {
   border-radius: 2px;
   color: #fff !important;
   background-color: #000 !important;
+}
+
+.b-page {
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+  }
 }
