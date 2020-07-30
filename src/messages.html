@@ -174,8 +174,25 @@
 
                   <ul class="b-messages__chats">
                     <li class="b-messages__chats-item" id="chat-001">
-                      <div class="b-chat">
-                        <div class="b-chat__mobile-header">b-chat__mobile-header</div>
+                      <div class="b-chat" style="--chat-mobile-header-height:59px;--chat-mobile-footer-height:56px;">
+                        <div class="b-chat__mobile-header">
+                          <button class="b-chat__back-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.200293 4.86686C0.200293 4.63353 0.280293 4.47797 0.440293 4.32242L4.44029 0.433529C4.76029 0.122418 5.24029 0.122418 5.56029 0.433529C5.88029 0.74464 5.88029 1.21131 5.56029 1.52242L2.12029 4.86686L5.56029 8.21131C5.88029 8.52242 5.88029 8.98908 5.56029 9.30019C5.24029 9.61131 4.76029 9.61131 4.44029 9.30019L0.440293 5.41131C0.280293 5.25575 0.200293 5.10019 0.200293 4.86686Z" fill="#A1A1A1"/>
+                            </svg>
+                            Back
+                          </button>
+                          <div class="b-chat__mobile-header-user">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-chat__mobile-header-avatar  b-user-avatar-2  b-user-avatar-2--sm">
+                            <span class="b-chat__mobile-header-user-name">Ali AliALI BABABABABABABABABABA</span>
+                          </div>
+                          <div class="b-chat__mobile-header-action-wrap">
+                            <button class="b-link" data-toggle="modal" data-target="#user-info-1">Show details</button>
+                            <!-- <button class="b-btn-2  b-btn-2--secondary">
+                              <span class="b-btn-2__text">Unlock contacts</span>
+                            </button> -->
+                          </div>
+                        </div>
                         <div class="b-chat__desktop-header">b-chat__desktop-header</div>
                         <div class="b-chat__wrap">
                           <div class="b-chat__content">
@@ -194,12 +211,36 @@
                             </p>
                             <p class="b-chat__item-msg  b-chat__item-msg--not-me">
                               <span class="b-chat__item-avatar-wrap">
-                                <a href="" class="b-user-avatar-2  b-user-avatar-2--no-pict">M1</a>
+                                <a href="" class="b-user-avatar-2  b-user-avatar-2--no-pict">M</a>
                               </span>
                               <span class="b-chat__item-msg-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
                             </p>
+                            <p class="b-chat__item-msg">
+                              <span class="b-chat__item-msg-text">OK</span>
+                            </p>
+                            <p class="b-chat__item-msg  b-chat__item-msg--not-me">
+                              <span class="b-chat__item-avatar-wrap">
+                                <a href="" class="b-user-avatar-2  b-user-avatar-2--no-pict">M</a>
+                              </span>
+                              <span class="b-chat__item-msg-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                            </p>
+                            <p class="b-chat__item-msg">
+                              <span class="b-chat__item-msg-text">OK</span>
+                            </p>
+                            <p class="b-chat__item-msg  b-chat__item-msg--not-me">
+                              <span class="b-chat__item-avatar-wrap">
+                                <a href="" class="b-user-avatar-2  b-user-avatar-2--no-pict">M</a>
+                              </span>
+                              <span class="b-chat__item-msg-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                            </p>
+                            <p class="b-chat__item-msg">
+                              <span class="b-chat__item-msg-text">OK</span>
+                            </p>
                           </div>
-                          <form class="b-chat__my-msg-wrap"></form>
+                          <form class="b-chat__my-msg-wrap">
+                            <textarea class="b-chat__textarea" name="" cols="30" rows="2" placeholder="Type message here"></textarea>
+                            <button class="b-chat__send-btn">Send</button>
+                          </form>
                         </div>
                       </div>
                     </li>
@@ -208,6 +249,17 @@
 
               </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="user-info-1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              111
             </div>
           </div>
         </div>

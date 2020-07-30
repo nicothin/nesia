@@ -183,6 +183,11 @@ $( document ).ready(function() {
     $('.b-messages__chats-item').removeClass('b-messages__chats-item--active');
     $('.b-messages__chats-item#' + $(this).data('chat-id')).addClass('b-messages__chats-item--active');
   });
+  // Сокрытие чата кликом по кнопке «назад»
+  $('.b-chat__back-btn').on('click', function (e) {
+    e.preventDefault();
+    $('.b-messages__chats-item').removeClass('b-messages__chats-item--active');
+  });
 
 
 
