@@ -24,15 +24,7 @@
     margin-right: 12px;
   }
 
-  &__avatar {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    overflow: hidden;
-    background: #A1BF4B;
-  }
+  &__avatar {}
 
   &__label-online {
     position: absolute;
