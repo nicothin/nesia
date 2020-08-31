@@ -35,5 +35,9 @@ body {
     flex-direction: column;
     width: 100%;
     flex-grow: 1;
+
+    &--wide {
+      max-width: 1137px;
+    }
   }
 }

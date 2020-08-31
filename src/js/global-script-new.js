@@ -178,15 +178,26 @@ $( document ).ready(function() {
   // Сообщения: переключение видимости чатов
   $('a[data-chat-id]').on('click', function(e){
     e.preventDefault();
+    var targetTab = $('.b-messages__chats-item#' + $(this).data('chat-id'));
+    $('body').addClass('b-chat-visible');
     $('.b-chat-item').removeClass('b-chat-item--active');
     $(this).addClass('b-chat-item--active');
-    $('.b-messages__chats-item').removeClass('b-messages__chats-item--active');
-    $('.b-messages__chats-item#' + $(this).data('chat-id')).addClass('b-messages__chats-item--active');
+    $('.b-messages__chats-item').removeClass('b-messages__chats-item--mobile-active b-messages__chats-item--desktop-active');
+    targetTab.addClass('b-messages__chats-item--mobile-active b-messages__chats-item--desktop-active');
+    var content = targetTab.find('.b-chat__content')[0];
+    var inner = targetTab.find('.b-chat__inner')[0];
+    // крутанем скролл вниз
+    content.scrollTop = content.scrollHeight;
+    // если у внетренней обертки высота меньше внешней, добавим отступ, чтоб сообщения были ниже
+    if (inner.offsetHeight < content.offsetHeight) {
+      $(inner).css({marginTop: content.offsetHeight - inner.offsetHeight + 'px'});
+    }
   });
-  // Сокрытие чата кликом по кнопке «назад»
+  // Сокрытие чата кликом по кнопке «назад» для мобилок
   $('.b-chat__back-btn').on('click', function (e) {
     e.preventDefault();
-    $('.b-messages__chats-item').removeClass('b-messages__chats-item--active');
+    $('body').removeClass('b-chat-visible');
+    $('.b-messages__chats-item').removeClass('b-messages__chats-item--mobile-active');
   });
 
 

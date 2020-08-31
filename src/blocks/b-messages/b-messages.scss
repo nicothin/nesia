@@ -8,9 +8,8 @@
 
   position: relative;
   display: flex;
-  // flex-direction: column;
   flex-grow: 1;
-  padding: 24px 0 0;
+  padding: 24px 0;
 
   @media (min-width: $screen-md) {
     // flex-direction: row;
@@ -20,35 +19,74 @@
     padding-top: 72px;
   }
 
+  &__sidebar {
+
+    @media (min-width: $screen-lg) {
+      width: 308px;
+      flex-shrink: 0;
+    }
+  }
+
   &__content {
 
     @media (min-width: $screen-lg) {
-      padding-left: 0;
+      // padding-left: 0;
+    }
+  }
+
+  &__wrap {
+
+    @media (min-width: $screen-lg) {
+      display: flex;
     }
   }
 
   &__users {
     border: 1px solid #E8E8E8;
+
+    @media (min-width: $screen-lg) {
+      width: 39.4%;
+      flex-shrink: 0;
+    }
   }
 
   &__chats {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen-lg) {
+      width: 60.6%;
+    }
   }
 
   &__chats-item {
     display: none;
     margin: 0;
 
-    &--active {
-      position: absolute;
-      top: -24px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      background: #fff;
+    &--mobile-active {
+
+      @media (max-width: ($screen-lg + 1)) {
+        position: fixed;
+        z-index: 1;
+        top: 96px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        background: #fff;
+
+        .hide-header-search-xs & {
+          top: 40px;
+        }
+      }
+    }
+
+    &--desktop-active {
+
+      @media (min-width: $screen-lg) {
+        display: flex;
+      }
     }
   }
 }
