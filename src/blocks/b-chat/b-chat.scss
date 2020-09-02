@@ -99,14 +99,6 @@
     justify-content: flex-end;
   }
 
-  &__my-msg-wrap {
-    height: 56px; // временно
-    overflow: hidden; // временно
-    padding: 12px 16px;
-    border-top: 1px solid #E8E8E8;
-    flex-shrink: 0;
-  }
-
   &__item-date {
     margin: 16px 0;
     font-size: 12px;
@@ -145,6 +137,81 @@
     line-height: 20px;
     color: #fff;
     background: #878787;
+  }
+
+  &__my-msg-wrap {
+    display: flex;
+    align-items: center;
+    // height: 56px;
+    padding: 12px 16px;
+    border-top: 1px solid #E8E8E8;
+    flex-shrink: 0;
+  }
+
+  &__textarea {
+    flex-grow: 1;
+    margin-right: 16px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    resize: none;
+
+    &::placeholder {
+      opacity: 1;
+      color: #A1A1A1;
+    }
+  }
+
+  &__send-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background: none;
+    font-size: 0;
+    color: transparent;
+  }
+
+  &__qustion-wrap {
+    max-width: 400px;
+    margin: auto;
+    padding: 26px 0;
+    text-align: center;
+  }
+
+  &__qustion-avatar {
+    display: none;
+  }
+
+  &__qustion {
+    margin: 0 0 32px;
+    color: #000;
+
+    a {
+      color: #D84B2A;
+    }
+  }
+
+  &__qustion-actions {
+    padding: 0 24px;
+  }
+
+  &__qustion-btn {
+    margin-bottom: 12px;
+  }
+
+  &__qustion-descr {
+    margin: 16px 0;
+    color: #A1A1A1;
   }
 }
 

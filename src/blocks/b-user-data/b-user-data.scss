@@ -131,41 +131,9 @@
   }
 
   &__contacts-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 14px;
-    line-height: 20px;
-    color: #535353;
 
     &:not(:last-child) {
       margin-bottom: 22px;
-    }
-  }
-
-  &__contact-wrap {
-    display: flex;
-    margin: 0;
-
-    &:not(:last-child) {
-      margin-bottom: 4px;
-    }
-  }
-
-  &__link {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    line-height: 20px;
-    color: #535353 !important;
-    text-decoration: none !important;
-
-    svg {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 8px;
     }
   }
 

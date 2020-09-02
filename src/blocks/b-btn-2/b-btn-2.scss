@@ -81,6 +81,13 @@
     padding: 10px 37px 9px;
   }
 
+  &--big-round-block {
+    width: 100%;
+    padding: 9px 16px 8px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
   &--has-label {
     margin-right: 9px;
   }

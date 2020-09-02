@@ -83,7 +83,8 @@
     "b-user-avatar-2": [],
     "b-chat-list": [],
     "b-chat-item": [],
-    "b-chat": []
+    "b-chat": [],
+    "b-fast-contacts": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

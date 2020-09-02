@@ -74,6 +74,7 @@
         bottom: 0;
         left: 0;
         display: flex;
+        min-width: 320px;
         background: #fff;
 
         .hide-header-search-xs & {
@@ -87,6 +88,14 @@
       @media (min-width: $screen-lg) {
         display: flex;
       }
+    }
+  }
+
+  &__modal-user {
+    margin-bottom: 16px;
+
+    a {
+      color: #D84B2A;
     }
   }
 }
