@@ -58,6 +58,10 @@
       padding-top: 5px;
       font-size: 14px;
     }
+
+    &--fw500 {
+      font-weight: 500;
+    }
   }
 
   &__descr {
@@ -67,5 +71,15 @@
     font-size: 12px;
     line-height: 167%;
     color: #A1A1A1;
+
+    &--lg {
+      font-size: 14px;
+      line-height: 20px;
+      color: #000;
+
+      a {
+        color: #D84B2A;
+      }
+    }
   }
 }

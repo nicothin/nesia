@@ -21,23 +21,33 @@
 
   &__sidebar {
 
-    @media (min-width: $screen-lg) {
-      width: 308px;
+    @media (min-width: $screen-md) {
+      width: 260px;
       flex-shrink: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 308px;
     }
   }
 
   &__content {
 
-    @media (min-width: $screen-lg) {
-      // padding-left: 0;
+    @media (min-width: $screen-md) {
+      width: calc(100% - 260px);
+    }
+
+    @media (min-width: $screen-xl) {
+      width: calc(100% - 308px);
     }
   }
 
   &__wrap {
+    position: relative;
 
     @media (min-width: $screen-lg) {
       display: flex;
+      height: 501px;
     }
   }
 
@@ -47,13 +57,17 @@
     @media (min-width: $screen-lg) {
       width: 39.4%;
       flex-shrink: 0;
+      overflow-y: auto;
     }
   }
 
   &__chats {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
+    border: 1px solid #E8E8E8;
+    border-left: 0;
 
     @media (min-width: $screen-lg) {
       width: 60.6%;
@@ -66,7 +80,7 @@
 
     &--mobile-active {
 
-      @media (max-width: ($screen-lg + 1)) {
+      @media (max-width: ($screen-lg - 1)) {
         position: fixed;
         z-index: 1;
         top: 96px;
@@ -80,12 +94,31 @@
         .hide-header-search-xs & {
           top: 40px;
         }
+
+        @media (min-width: $screen-md) {
+          top: 50px !important;
+        }
       }
+
+      // @media (min-width: $screen-md) {
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   bottom: 0;
+      //   left: 0;
+      //   display: flex;
+      //   background: #fff;
+      // }
     }
 
     &--desktop-active {
 
       @media (min-width: $screen-lg) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         display: flex;
       }
     }
@@ -97,5 +130,34 @@
     a {
       color: #D84B2A;
     }
+  }
+
+  &__modal-title {
+    margin: 0 0 16px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__modal-text {
+    color: #000;
+
+    a {
+      color: #D84B2A;
+    }
+  }
+
+  &__modal-confirm-btn {
+    margin-top: 14px;
+  }
+}
+
+.b-chat-visible {
+
+  @media (max-width: ($screen-lg - 1)) {
+    height: 100vh;
+    overflow: hidden;
   }
 }

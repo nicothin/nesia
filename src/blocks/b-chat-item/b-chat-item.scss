@@ -63,10 +63,18 @@
   }
 
   &__msg-wrap {
+    min-width: 0;
     margin: 0 8px 0 0;
     font-size: 14px;
     line-height: 20px;
     color: #A1A1A1;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   &__you {

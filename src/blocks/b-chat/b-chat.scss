@@ -6,18 +6,9 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  // position: absolute;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  // @media (min-width: $screen-lg) {
-  //   position: relative;
-  // }
 
   &__mobile-header {
     display: flex;
@@ -25,6 +16,10 @@
     flex-shrink: 0;
     padding: 13px 16px 13px 8px;
     border-bottom: 1px solid #E8E8E8;
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
 
   &__back-btn {
@@ -76,6 +71,31 @@
 
   &__desktop-header {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: flex;
+      padding: 14px 16px 18px;
+      border-bottom: 1px solid #E8E8E8;
+    }
+  }
+
+  &__desktop-header-user {
+    flex-shrink: 1;
+    min-width: 0;
+    margin-right: auto;
+    padding-right: 8px;
+  }
+
+  &__desktop-header-contact {
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: 200px;
+    margin-left: auto;
+    transform: translateY(4px);
+
+    .b-fast-contacts__contact-wrap {
+      justify-content: flex-end;
+    }
   }
 
   &__wrap {
@@ -91,6 +111,16 @@
     flex-grow: 1;
     overflow-y: auto;
     padding: 0 15px;
+
+    &--question-wrap {
+
+      @media (min-width: $screen-lg) {
+
+        .b-chat__inner {
+          margin-top: 31px !important;
+        }
+      }
+    }
   }
 
   &__inner {
@@ -127,6 +157,11 @@
 
   &__item-avatar-wrap {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      margin-right: 16px;
+    }
   }
 
   &__item-msg-text {
@@ -142,10 +177,13 @@
   &__my-msg-wrap {
     display: flex;
     align-items: center;
-    // height: 56px;
     padding: 12px 16px;
     border-top: 1px solid #E8E8E8;
     flex-shrink: 0;
+
+    @media (min-width: $screen-lg) {
+      min-height: 59px;
+    }
   }
 
   &__textarea {
@@ -153,11 +191,13 @@
     margin-right: 16px;
     padding: 0;
     border: 0;
+    max-height: 100px;
     outline: 0;
     height: 20px;
     font-size: 14px;
     line-height: 20px;
     resize: none;
+    // overflow: hidden;
 
     &::placeholder {
       opacity: 1;
@@ -179,20 +219,33 @@
     background: none;
     font-size: 0;
     color: transparent;
+
+    svg {
+
+      @media (min-width: $screen-lg) {
+        width: 26px;
+        height: 24px;
+      }
+    }
   }
 
-  &__qustion-wrap {
-    max-width: 400px;
+  &__question-wrap {
+    max-width: 294px;
     margin: auto;
     padding: 26px 0;
     text-align: center;
   }
 
-  &__qustion-avatar {
+  &__question-avatar {
     display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
   }
 
-  &__qustion {
+  &__question {
     margin: 0 0 32px;
     color: #000;
 
@@ -201,21 +254,30 @@
     }
   }
 
-  &__qustion-actions {
+  &__question-actions {
     padding: 0 24px;
   }
 
-  &__qustion-btn {
+  &__question-btn {
     margin-bottom: 12px;
   }
 
-  &__qustion-descr {
+  &__question-descr {
     margin: 16px 0;
     color: #A1A1A1;
   }
-}
 
-.b-chat-visible {
-  height: 100vh;
-  overflow: hidden;
+  &__my-msg-unlock-text {
+    margin: 0 auto 0 0;
+    padding-right: 16px;
+    color: #A1A1A1;
+  }
+
+  &__my-msg-unlock-text-desktop {
+    display: none;
+
+    @media (min-width: $screen-lg) {
+      display: inline;
+    }
+  }
 }
