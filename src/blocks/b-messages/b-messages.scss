@@ -147,10 +147,57 @@
     a {
       color: #D84B2A;
     }
+
+    &--max-w-360 {
+      max-width: 360px;
+    }
+
+    &--mute {
+      color: #535353;
+    }
   }
 
   &__modal-confirm-btn {
     margin-top: 14px;
+  }
+
+  &__modal-tariffs {
+    margin: 16px 0 -8px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 32px;
+    }
+  }
+
+  &__modal-alert {
+    margin-bottom: 24px;
+    padding: 12px;
+    background: #F8F8F8;
+    color: #000;
+
+    p {
+      margin: 0 0 8px;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__modal-form-title {
+    margin: 0 0 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  &__cards-img-wrap {
+    margin: 0 0 32px 0;
+
+    svg {
+      display: block;
+    }
   }
 
   &__alert-wrap {

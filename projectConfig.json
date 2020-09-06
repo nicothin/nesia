@@ -85,7 +85,10 @@
     "b-chat-item": [],
     "b-chat": [],
     "b-fast-contacts": [],
-    "b-alert": []
+    "b-alert": [],
+    "b-tariffs": [],
+    "b-form-group": [],
+    "b-form-2": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

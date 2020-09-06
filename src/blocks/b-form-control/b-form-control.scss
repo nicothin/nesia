@@ -16,4 +16,9 @@
     background-repeat: no-repeat;
     background-position: right 13px center;
   }
+
+  &--error {
+    color: #D84B2A !important;
+    border-color: #D84B2A !important;
+  }
 }

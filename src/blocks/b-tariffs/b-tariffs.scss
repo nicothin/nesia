@@ -1,0 +1,49 @@
+// В этом файле должны быть стили для БЭМ-блока b-tariffs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-tariffs {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    max-width: 256px;
+    margin: 0 8px 8px 8px;
+    padding: 12px;
+    border: 1px solid #E8E8E8;
+    background: #F8F8F8;
+
+    &:last-child {
+      // margin-bottom: 0;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__price {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  &__msg {
+    margin: 12px 0;
+  }
+}

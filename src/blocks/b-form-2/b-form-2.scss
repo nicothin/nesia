@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока b-form-2, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-form-2 {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {}
+
+  &__actions {
+    margin-top: 32px;
+  }
+
+  &__btn-wide {
+    min-width: 240px;
+  }
+
+  &__row {
+    margin-left: -8px;
+    margin-right: -8px;
+
+    [class*="col-"] {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
