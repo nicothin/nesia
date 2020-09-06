@@ -1,0 +1,373 @@
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
+
+      <div class="b-content">
+        <div class="container-fluid">
+
+          <div class="b-settings  row">
+            <div class="b-settings__sidebar  col-sm-4  hidden-xs">
+              <div class="b-user-sidebar">
+                <div class="b-user-sidebar__avatar">
+                  <div class="b-user-sidebar__avatar-pict-wrap">
+                    <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-sidebar__avatar-pict  b-user-avatar-2  b-user-avatar-2--xxl">
+                    <!-- Если картинки-аватара нет — <div class="b-user-avatar-2  b-user-avatar-2--xxl">LS</div> -->
+                    <button class="b-user-sidebar__avatar-btn">
+                      <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="12" r="10" fill="#A1BF4B"/><path d="M14 9.962a2.772 2.772 0 100 5.544 2.772 2.772 0 000-5.544zm0 4.49a1.719 1.719 0 110-3.437 1.719 1.719 0 010 3.438z" fill="#fff"/><path d="M14 0a12 12 0 1012 12A12.014 12.014 0 0014 0zm5.4 15.84a.96.96 0 01-.96.96H9.572a.96.96 0 01-.96-.96v-5.47a.96.96 0 01.96-.96h1.985l.144-.91c.091-.566.653-.832 1.111-.832H15.2c.463 0 1.022.269 1.111.833l.14.91h1.984a.96.96 0 01.96.96l.005 5.469z" fill="#fff"/></svg>
+                    </button>
+                  </div>
+                  <p class="b-user-sidebar__username">Lara Scala</p>
+                </div>
+                <div class="b-user-sidebar__menu">
+                  <ul class="b-user-menu  b-user-menu--sidebar">
+                    <li class="b-user-menu__item  b-user-menu__item--active"><a class="b-user-menu__link" href="/">My listings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Auction <span class="b-label-2  b-user-menu__label">2</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Increase views</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Favorutes</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Messages <span class="b-label-2  b-user-menu__label">99+</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Settings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Edit Profile</a></li>
+                  </ul>
+                </div>
+                <div class="b-user-sidebar__btn-wrap">
+                  <a href="" class="b-btn-2  b-btn-2--secondary  b-btn-2--block">Add listing</a>
+                </div>
+              </div>
+            </div>
+            <div class="b-settings__content  col-xs-12  col-sm-8">
+
+              <div class="b-settings__inner">
+
+                <div class="b-page__alert-wrap">
+                  <div class="b-alert">
+                    <div class="b-alert__text-wrap">
+                      <p>Your plan <strong>Boots</strong> has run out</p>
+                    </div>
+                    <a href="#renew-form-1" class="b-btn-2" data-toggle="modal">Renew</a>
+                    <button type="button" class="close" data-dismiss="b-alert" aria-label="Close"><span>×</span></button>
+                  </div>
+                </div>
+
+                <h1 class="b-main-header  b-main-header--content">Settings</h1>
+
+                <div class="b-tabs">
+                  <ul class="b-tabs__list  b-tabs__list--xs-full-width  b-tabs__list--mb32-40" role="tablist">
+                    <li role="presentation" class="active">
+                      <a href="#tab-01" role="tab" data-toggle="tab" aria-expanded="true">My tariff plan</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#tab-02" role="tab" data-toggle="tab" aria-expanded="false">Payment</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#tab-03" role="tab" data-toggle="tab" aria-expanded="false">Password</a>
+                    </li>
+                  </ul>
+                  <div class="b-tabs__content-wrap">
+                    <div class="b-tabs__item  active" id="tab-01">
+                      <div class="b-settings__tariffs-wrap">
+                        <ul class="b-tariffs  b-tariffs--w100">
+                          <li class="b-tariffs__item  b-tariffs__item--transparent">
+                            <div class="b-tariffs__header">
+                              <h5 class="b-tariffs__title">You use plan “One shot”</h5>
+                              <p class="b-tariffs__price">1 €1 per contact</p>
+                            </div>
+                            <p class="b-tariffs__msg">Limits: you can write a message and see contatcs only for certain people: <a href="">Sonia Jones</a>, <a href="">Alex Stom</a></p>
+                          </li>
+                          <!-- Plan Boots -->
+                          <li class="b-tariffs__item  b-tariffs__item--transparent" style="display:none">
+                            <div class="b-tariffs__header">
+                              <h5 class="b-tariffs__title">You use plan “Boots”</h5>
+                              <p class="b-tariffs__price">€7/ all contacts</p>
+                            </div>
+                            <p class="b-tariffs__msg">Paln running until 20 May 2020</p>
+                          </li>
+                          <li class="b-tariffs__item">
+                            <div class="b-tariffs__header">
+                              <h5 class="b-tariffs__title">Plan “Boost”</h5>
+                              <p class="b-tariffs__price">7 €/ all contacts</p>
+                            </div>
+                            <p class="b-tariffs__msg">Unlock all contacts on Terranesia for one month</p>
+                            <button class="b-btn-2  b-btn-2--block" type="button">Change on unlimited plan</button>
+                          </li>
+                        </ul>
+                        <!-- After pnal run out -->
+                        <ul class="b-tariffs  b-tariffs--w100" style="display:none">
+                          <li class="b-tariffs__item">
+                            <div class="b-tariffs__header">
+                              <h5 class="b-tariffs__title">One shot</h5>
+                              <p class="b-tariffs__price">1 €/ one contact</p>
+                            </div>
+                            <p class="b-tariffs__msg">Unlock contacts and messages of one person</p>
+                            <button class="b-btn-2  b-btn-2--block" type="button">Pay €1</button>
+                          </li>
+                          <li class="b-tariffs__item">
+                            <div class="b-tariffs__header">
+                              <h5 class="b-tariffs__title">Boost</h5>
+                              <p class="b-tariffs__price">7 €/ all contacts</p>
+                            </div>
+                            <p class="b-tariffs__msg">Unlock all contacts on Terranesia for one month</p>
+                            <button class="b-btn-2  b-btn-2--block" type="button">Pay €7</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="b-tabs__item" id="tab-02">
+                      <h2 class="b-tabs__title">Payment methods</h2>
+                      <ul class="b-settings__cards-list">
+                        <li class="b-settings__card">
+                          <div class="b-pay-card">
+                            <img class="b-pay-card__icon" src="img/icon-pay-mastercard.svg" alt="MasterCard">
+                            <!--
+                            <img class="b-pay-card__icon" src="img/icon-pay-visa.svg" alt="Visa">
+                            <img class="b-pay-card__icon" src="img/icon-pay-americanexpress.svg" alt="AmericanExpress">
+                            <img class="b-pay-card__icon" src="img/icon-pay-discover.svg" alt="Discover">
+                            -->
+                            <div class="b-pay-card__text-wrap">
+                              <p class="b-pay-card__name">MasterCard •••• 6666</p>
+                              <p class="b-pay-card__exp">Expiration: 01/2022</p>
+                            </div>
+                            <button class="b-pay-card__delete-btn" type="button" data-toggle="modal" data-target="#delete-payment-method">
+                              <svg width="20" height="20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </li>
+                      </ul>
+                      <p class="b-settings__payments-btns">
+                        <a href="#change-payment" class="b-btn-2  b-btn-2--lg-narrow" data-toggle="modal">Change payment</a>
+                        <a href="#payment-history" class="b-btn-2  b-btn-2--lg-narrow  b-btn-2--secondary" data-toggle="modal">History</a>
+                      </p>
+                    </div>
+                    <div class="b-tabs__item" id="tab-03">
+                      <form action="" class="b-form-2  b-settings__change-password-form">
+                        <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
+                        <div class="form-group  b-form-group  b-form-group--error  b-form-2__item">
+                          <label for="currentPassword" class="b-form-group__label">Current password</label>
+                          <input type="text" class="form-control  b-form-control  b-form-group__input" id="currentPassword" aria-describedby="currentPasswordHelpBlock">
+                          <div id="currentPasswordHelpBlock" class="b-form-group__help-text">Password is incorrect</div>
+                        </div>
+                        <!-- Добавить класс b-form-group--error для состояния «ошибка» -->
+                        <div class="form-group  b-form-group  b-form-2__item">
+                          <label for="newPassword" class="b-form-group__label">New password</label>
+                          <input type="text" class="form-control  b-form-control  b-form-group__input" id="newPassword" aria-describedby="newPasswordHelpBlock">
+                          <!-- <div id="newPasswordHelpBlock" class="b-form-group__help-text">Password is too short (minimum is 6 characters)</div> -->
+                        </div>
+                        <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
+                        <div class="form-group  b-form-group  b-form-group--error  b-form-2__item">
+                          <label for="repeatNewPassword" class="b-form-group__label">Repeat new password</label>
+                          <input type="text" class="form-control  b-form-control  b-form-group__input" id="repeatNewPassword" aria-describedby="repeatNewPasswordHelpBlock">
+                          <div id="repeatNewPasswordHelpBlock" class="b-form-group__help-text">New password is incorrect</div>
+                        </div>
+                        <div class="b-form-2__actions">
+                          <button class="b-btn-2  b-btn-2--lg-narrow">Changes</button>
+                          <a href="" class="b-btn-2  b-btn-2--lg-narrow  b-btn-2--secondary">Forgot my password</a>
+                        </div>
+                      </form>
+                      <div class="b-settings__change-password-success" style="display:none">
+                        <h2 class="b-tabs__title">
+                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.17674 14.7953C7.59782 15.3137 8.3811 15.3496 8.84853 14.8719C8.84853 14.8719 16.3376 7.32082 16.7676 6.88144C17.1975 6.44205 17.1871 5.73999 16.7443 5.31335C16.3015 4.88671 15.594 4.89704 15.1641 5.33643L8.10312 12.4533L4.48759 9.02959C4.10028 8.55275 3.39677 8.47777 2.91625 8.8621C2.43573 9.24644 2.36017 9.94455 2.74747 10.4214L7.17674 14.7953Z" fill="#A1BF4B"/></svg>
+                          Password change successfuly
+                        </h2>
+                        <p class="b-settings__change-password-success-text">You can now use your new password to log in into your account</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="payment-history">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <h4 class="b-modal-2__title">Payment history</h4>
+
+              <div class="b-settings__modal-history">
+                <ul class="b-payment-history">
+                  <li class="b-payment-history__item">
+                    <p class="b-payment-history__item-info">
+                      Date: <strong>2019.08.27</strong> <br>
+                      Tariff: One shoot <br>
+                      Total amount: €1 <br>
+                      Payed: Mastercard
+                    </p>
+                    <a href="" class="b-payment-history__item-link">Dowload receipt</a>
+                  </li>
+                  <li class="b-payment-history__item">
+                    <p class="b-payment-history__item-info">
+                      Date: <strong>2019.08.27</strong> <br>
+                      Tariff: One shoot <br>
+                      Total amount: €1 <br>
+                      Payed: Mastercard
+                    </p>
+                    <a href="" class="b-payment-history__item-link">Dowload receipt</a>
+                  </li>
+                  <li class="b-payment-history__item">
+                    <p class="b-payment-history__item-info">
+                      Date: <strong>2019.08.27</strong> <br>
+                      Tariff: One shoot <br>
+                      Total amount: €1 <br>
+                      Payed: Mastercard
+                    </p>
+                    <a href="" class="b-payment-history__item-link">Dowload receipt</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="change-payment">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <h4 class="b-modal-2__title">Change payment method</h4>
+              <p class="b-modal-2__form-title">Pay with credit or debit card</p>
+              <p class="b-settings__cards-img-wrap">
+                <img src="img/icon-pay-mastercard.svg" alt="MasterCard">
+                <img src="img/icon-pay-visa.svg" alt="Visa">
+                <img src="img/icon-pay-americanexpress.svg" alt="AmericanExpress">
+                <img src="img/icon-pay-discover.svg" alt="Discover">
+              </p>
+              <form action="" class="b-form-2">
+                <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
+                <div class="form-group  b-form-group  b-form-group--error  b-form-2__item">
+                  <label for="name" class="b-form-group__label">Name on card</label>
+                  <input type="text" class="form-control  b-form-control  b-form-group__input" id="name" placeholder="NAME" aria-describedby="nameHelpBlock">
+                  <div id="nameHelpBlock" class="b-form-group__help-text">Helper text goes here</div>
+                </div>
+                <div class="form-group  b-form-group  b-form-2__item">
+                  <label for="card" class="b-form-group__label">Card</label>
+                  <input type="text" class="form-control  b-form-control  b-form-group__input" id="card" placeholder="Number">
+                  <div class="row  b-form-2__row">
+                    <div class="col-sm-6">
+                      <!-- Убрать b-form-control--error для состояния «нет ошибки» -->
+                      <input type="text" class="form-control  b-form-control  b-form-control--error  b-form-group__input" placeholder="MM/YY">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="CVV">
+                    </div>
+                  </div>
+                  <div id="nameHelpBlock" class="b-form-group__help-text  b-form-group__help-text--error">Helper text goes here</div>
+                </div>
+                <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
+                <div class="form-group  b-form-group  b-form-2__item">
+                  <label for="countrySelect" class="b-form-group__label">Country</label>
+                  <select class="form-control  b-form-control  b-form-group__input" id="countrySelect" aria-describedby="countryHelpBlock">
+                    <option>Russia</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <!-- <div id="countryHelpBlock" class="b-form-group__help-text">Helper text goes here</div> -->
+                </div>
+                <div class="b-form-2__actions  b-form-2__actions--mt0">
+                  <button class="b-btn-2  b-btn-2--lg-narrow">Save changes</button>
+                  <button class="b-btn-2  b-btn-2--lg-narrow  b-btn-2--secondary" type="button" data-dismiss="modal">Cancel</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="delete-payment-method">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <h4 class="b-modal-2__title">Delete payment method</h4>
+              <p class="b-modal-2__text">
+                Are you sure you want to delete the card MasterCard •••• 6666?
+              </p>
+              <p class="b-modal-2__actions">
+                <button class="b-btn-2" type="button">Confirm and delete</button>
+                <button class="b-btn-2  b-btn-2--secondary" type="button" data-dismiss="modal">Cancel</button>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="renew-form-1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <h4 class="b-modal-2__title">Renew my Boots plan</h4>
+              <div class="b-modal-2__alert">
+                <p>After payment messanger and telephone number will be automatically available</p>
+              </div>
+              <p class="b-modal-2__form-title">Pay with credit or debit card</p>
+              <p class="b-settings__cards-img-wrap">
+                <img src="img/icon-pay-mastercard.svg" alt="MasterCard">
+                <img src="img/icon-pay-visa.svg" alt="Visa">
+                <img src="img/icon-pay-americanexpress.svg" alt="AmericanExpress">
+                <img src="img/icon-pay-discover.svg" alt="Discover">
+              </p>
+              <form action="" class="b-form-2">
+                <div class="form-group  b-form-group  b-form-2__item  b-form-2__item--w240">
+                  <select class="form-control  b-form-control  b-form-group__input" id="cardSelector">
+                    <option selected>MasterCard •••• 6666</option>
+                    <option>MasterCard •••• 9999</option>
+                    <option class="b-form-group__option-gray" value="addNewCard">Add new card</option>
+                  </select>
+                </div>
+                <div id="cardSelectorNewCard" style="display:none">
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="nameNewCard" class="b-form-group__label">NameNewCard on card</label>
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" id="nameNewCard" placeholder="NAME" aria-describedby="nameNewCardHelpBlock">
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="cardNew" class="b-form-group__label">Card</label>
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" id="cardNew" placeholder="Number">
+                    <div class="row  b-form-2__row">
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="MM/YY">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="CVV">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="countrySelect" class="b-form-group__label">Country</label>
+                    <select class="form-control  b-form-control  b-form-group__input" id="countrySelect" aria-describedby="countryHelpBlock">
+                      <option>Russia</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="b-form-2__actions  b-form-2__actions--mt0" id="cardSelectorFooterDefault">
+                  <button class="b-btn-2  b-btn-2--lg  b-form-2__btn-wide">Pay €7 and renew</button>
+                </div>
+                <div class="b-form-2__actions  b-form-2__actions--mt0" id="cardSelectorFooterNewCard" style="display:none">
+                  <button class="b-btn-2  b-btn-2--lg  b-form-2__btn-wide">Add card and pay</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+@@include('./html-includes/footer.html')

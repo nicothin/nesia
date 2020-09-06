@@ -88,7 +88,10 @@
     "b-alert": [],
     "b-tariffs": [],
     "b-form-group": [],
-    "b-form-2": []
+    "b-form-2": [],
+    "b-settings": [],
+    "b-pay-card": [],
+    "b-payment-history": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

@@ -19,6 +19,11 @@
     background-repeat: no-repeat;
   }
 
+  a.selectBox-dropdown {
+    color: inherit;
+    text-decoration: none;
+  }
+
   &__label {
     margin: 0 0 8px 0 !important;  // перебиваем Bootstrap
     font-weight: 500 !important; // перебиваем Bootstrap
@@ -32,7 +37,7 @@
   }
 
   &__help-text {
-    margin: 0 0 -24px 0;
+    margin: 0 0 -20px 0;
     font-size: 12px;
     line-height: 20px;
 
@@ -42,6 +47,32 @@
 
     &--error {
       color: #D84B2A;
+    }
+  }
+
+  &__option-gray {
+    background: #F8F8F8;
+
+    &.selectBox-label {
+      background: transparent;
+    }
+  }
+
+  &__input-selectBox-dropdown-menu {
+
+    a {
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    .selectBox-selected:not(.b-form-group__option-gray) a {
+      padding-right: 30px;
+      background-repeat: no-repeat;
+      background-position: center right 8px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.25308 11.0987C6.5199 11.4298 7.01623 11.4527 7.31242 11.1477L12.8975 5.3596C13.17 5.07902 13.1634 4.63072 12.8828 4.35829C12.6022 4.08586 12.1539 4.09245 11.8815 4.37303L6.84009 9.60324L4.1027 7.44449C3.85728 7.14001 3.4115 7.09212 3.10701 7.33754C2.80253 7.58296 2.75464 8.02875 3.00006 8.33323L6.25308 11.0987Z' fill='%23A1BF4B'/%3E%3C/svg%3E");
     }
   }
 

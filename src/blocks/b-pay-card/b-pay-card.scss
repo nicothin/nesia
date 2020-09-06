@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока b-pay-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-pay-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 15px 13px;
+  max-width: 364px;
+  border: 1px solid #CFCECE;
+
+  &__icon {
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+
+  &__text-wrap {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    margin: 2px 0 8px;
+    padding-right: 32px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  &__exp {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #A1A1A1
+  }
+
+  &__delete-btn {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: none;
+    cursor: pointer;
+  }
+}

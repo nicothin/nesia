@@ -1,0 +1,75 @@
+// В этом файле должны быть стили для БЭМ-блока b-settings, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-settings {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 24px 0;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 72px;
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-lg) {
+      margin-left: -20px;
+    }
+  }
+
+  &__cards-list {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__payments-btns {
+    display: flex;
+    flex-wrap: wrap;
+
+    .b-btn-2 {
+      margin-right: 12px;
+    }
+  }
+
+  &__change-password-form {
+
+    .b-form-group__input {
+      max-width: 300px;
+    }
+  }
+
+  &__change-password-success-text {
+    margin: 0;
+    max-width: 260px;
+  }
+
+  &__tariffs-wrap {
+    max-width: 364px;
+  }
+
+  &__modal-history {
+    margin-bottom: -8px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: -16px;
+    }
+  }
+
+  &__cards-img-wrap {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 0 32px 0;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+}

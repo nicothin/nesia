@@ -169,34 +169,14 @@
     }
   }
 
-  &__modal-alert {
-    margin-bottom: 24px;
-    padding: 12px;
-    background: #F8F8F8;
-    color: #000;
-
-    p {
-      margin: 0 0 8px;
-    }
-
-    & > *:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__modal-form-title {
-    margin: 0 0 16px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    color: #000;
-  }
-
   &__cards-img-wrap {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
     margin: 0 0 32px 0;
 
-    svg {
-      display: block;
+    img {
+      margin-right: 8px;
     }
   }
 }
