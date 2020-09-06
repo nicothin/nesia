@@ -1845,6 +1845,22 @@ $( document ).ready(function() {
 
 
 
+  // Настройки: переключение между картой оплаты и новой картой в модальном окне
+  $('#cardSelector').selectBox().change(function () {
+    if ($(this).val() == 'addNewCard') {
+      $('#cardSelectorFooterDefault').hide();
+      $('#cardSelectorFooterNewCard').show();
+      $('#cardSelectorNewCard').slideDown();
+    }
+    else {
+      $('#cardSelectorFooterDefault').show();
+      $('#cardSelectorFooterNewCard').hide();
+      $('#cardSelectorNewCard').slideUp();
+    }
+  });
+
+
+
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');
