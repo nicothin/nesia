@@ -68,11 +68,12 @@
   }
 
   .modal-body {
-    max-height: 100vh;
+    // max-height: 100vh;
     padding: 40px;
     overflow-y: auto;
 
     @media (min-width: $screen-md) {
+      // max-height: calc(100vh - 100px - 30px);
       padding: 32px;
     }
   }
