@@ -202,6 +202,14 @@ $( document ).ready(function() {
 
 
 
+  // Сообщения: закрытие сообщения, выводимого вверху страницы
+  $('[data-dismiss="b-alert"]').on('click', function(e){
+    e.preventDefault();
+    $(this).closest('.b-alert').slideUp();
+  });
+
+
+
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');

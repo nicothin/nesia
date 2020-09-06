@@ -84,7 +84,8 @@
     "b-chat-list": [],
     "b-chat-item": [],
     "b-chat": [],
-    "b-fast-contacts": []
+    "b-fast-contacts": [],
+    "b-alert": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

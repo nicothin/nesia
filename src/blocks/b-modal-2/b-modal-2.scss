@@ -161,4 +161,14 @@
       // }
     }
   }
+
+  &--lg {
+
+    .modal-dialog {
+
+      @media (min-width: $screen-md) {
+        width: 600px;
+      }
+    }
+  }
 }

@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока b-alert, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-alert {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  padding: 8px 40px;
+  border: 1px solid #A1BF4B;
+  color: #000;
+  background: #F6F9ED;
+
+  p {
+    margin: 0;
+  }
+
+  .close {
+    position: absolute;
+    z-index: 1;
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 36px;
+    font-size: 26px;
+    outline: 0;
+    color: #799234;
+  }
+
+  &__text-wrap {
+    margin: 0 16px;
+  }
+}

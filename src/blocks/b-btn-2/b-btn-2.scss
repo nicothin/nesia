@@ -81,11 +81,20 @@
     padding: 10px 37px 9px;
   }
 
-  &--big-round-block {
+  &--big-round-block-secondary {
     width: 100%;
     padding: 9px 16px 8px;
     border-radius: 8px;
-    font-size: 16px;
+    border: 1px solid #D84B2A;
+    background: #ffffff;
+    color: #D84B2A;
+
+    &:hover,
+    &:focus {
+      color: #C24629;
+      background: #fff;
+      border: 1px solid #C24629;
+    }
   }
 
   &--has-label {

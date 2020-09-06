@@ -152,6 +152,24 @@
   &__modal-confirm-btn {
     margin-top: 14px;
   }
+
+  &__alert-wrap {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-lg) {
+      position: fixed;
+      top: 59px;
+      left: 0;
+      right: 0;
+      padding: 0 15px;
+      margin: 0;
+    }
+
+    .b-alert {
+      max-width: 1107px;
+      margin: auto;
+    }
+  }
 }
 
 .b-chat-visible {
