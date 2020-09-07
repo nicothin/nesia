@@ -309,274 +309,143 @@
 
       <div class="b-content">
         <div class="container-fluid">
-          <h1 class="b-main-header">
-            <a href="" class="b-main-header__hide-xs">Мой кабинет</a>
-            <span class="b-main-header__separator">></span>
-            Редактирование
-          </h1>
-          <div class="b-profile  row">
-            <div class="b-profile__sidebar  b-profile__sidebar--hide-xs  col-sm-4">
-              <div class="b-profile__top">
-                <div class="b-user-avatar  b-user-avatar--profile">
-                  <div class="b-user-avatar__img-wrap">
-                    <img src="img/TEMP-user-avatar--lg.png" alt="" class="b-user-avatar__img">
-                    <!-- <button class="b-user-avatar__new-img">
-                      <svg width="18" height="18">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-camera"></use>
-                      </svg>
-                    </button> -->
+
+          <div class="b-edit-profile  row">
+            <div class="b-edit-profile__sidebar  col-sm-4  hidden-xs">
+              <div class="b-user-sidebar">
+                <div class="b-user-sidebar__avatar">
+                  <div class="b-user-sidebar__avatar-pict-wrap">
+                    <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-sidebar__avatar-pict  b-user-avatar-2  b-user-avatar-2--xxl">
+                    <!-- Если картинки-аватара нет — <div class="b-user-avatar-2  b-user-avatar-2--xxl">LS</div> -->
+                    <button class="b-user-sidebar__avatar-btn">
+                      <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="12" r="10" fill="#A1BF4B"/><path d="M14 9.962a2.772 2.772 0 100 5.544 2.772 2.772 0 000-5.544zm0 4.49a1.719 1.719 0 110-3.437 1.719 1.719 0 010 3.438z" fill="#fff"/><path d="M14 0a12 12 0 1012 12A12.014 12.014 0 0014 0zm5.4 15.84a.96.96 0 01-.96.96H9.572a.96.96 0 01-.96-.96v-5.47a.96.96 0 01.96-.96h1.985l.144-.91c.091-.566.653-.832 1.111-.832H15.2c.463 0 1.022.269 1.111.833l.14.91h1.984a.96.96 0 01.96.96l.005 5.469z" fill="#fff"/></svg>
+                    </button>
                   </div>
-                  <div class="b-user-avatar__descr">
-                    <div class="b-user-avatar__name"><strong>Исаак Ньютон</strong></div>
-                    <span class="b-user-avatar__name-descr">Дизайнер физики</span>
-                  </div>
+                  <p class="b-user-sidebar__username">Lara Scala</p>
                 </div>
-                <div class="b-progress  b-profile__progress">
-                  <div class="b-progress__text">Заполнение профиля</div>
-                  <div class="b-progress__line">
-                    <div class="b-progress__num" style="width:68%">68%</div>
-                  </div>
-                  <div class="b-progress__action">Укажите номер телефона (+12%)</div>
+                <div class="b-user-sidebar__menu">
+                  <ul class="b-user-menu  b-user-menu--sidebar">
+                    <li class="b-user-menu__item  b-user-menu__item--active"><a class="b-user-menu__link" href="/">My listings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Auction <span class="b-label-2  b-user-menu__label">2</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Increase views</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Favorutes</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Messages <span class="b-label-2  b-user-menu__label">99+</span></a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Settings</a></li>
+                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Edit Profile</a></li>
+                  </ul>
                 </div>
-              </div>
-              <div class="b-profile__user-menu">
-                <ul class="b-user-menu">
-                  <li>
-                    <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                      <svg class="b-user-menu__link-icon" width="18" height="18">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home"></use>
-                      </svg>
-                      <span class="b-user-menu__link-text">Мой кабинет</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="b-user-menu__link">
-                      <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-comments"></use>
-                      </svg>
-                      <span class="b-user-menu__link-text">Сообщения</span>
-                      <span class="b-label  b-user-menu__link-label">99+</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="b-user-menu__link  b-user-menu__link--divider">
-                      <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
-                      </svg>
-                      <span class="b-user-menu__link-text">Фолловинг</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="b-user-menu__link">
-                      <svg class="b-user-menu__link-icon  b-user-menu__link-icon--to-down" width="18" height="18">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-reviews"></use>
-                      </svg>
-                      <span class="b-user-menu__link-text">Получить отзывы</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="b-user-menu__link">
-                      <svg class="b-user-menu__link-icon" width="18" height="18">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-share"></use>
-                      </svg>
-                      <span class="b-user-menu__link-text">Поделиться объектом</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="" class="b-user-menu__link">
-                      <svg class="b-user-menu__link-icon" width="18" height="18">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-add"></use>
-                      </svg>
-                      <span class="b-user-menu__link-text">Добавить объект</span>
-                    </a>
-                  </li>
-                </ul>
+                <div class="b-user-sidebar__btn-wrap">
+                  <a href="" class="b-btn-2  b-btn-2--secondary  b-btn-2--block">Add listing</a>
+                </div>
               </div>
             </div>
-            <div class="b-profile__content  col-xs-12  col-sm-8">
+            <div class="b-edit-profile__content  col-xs-12  col-sm-8">
 
-              <div class="b-tabs">
-                <ul class="b-tabs__list" role="tablist">
-                  <li role="presentation" class="active">
-                    <a href="#tab-01" role="tab" data-toggle="tab" aria-expanded="true">
-                      <span class="b-tabs__text-show-xs">Основное</span>
-                      <span class="b-tabs__text-hide-xs">Основная информация</span>
-                    </a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#tab-02" role="tab" data-toggle="tab" aria-expanded="false">
-                      <span class="b-tabs__text-show-xs">Безопасность</span>
-                      <span class="b-tabs__text-hide-xs">Настройки безопасности</span>
-                    </a>
-                  </li>
-                  <li role="presentation">
-                    <a href="#tab-03" role="tab" data-toggle="tab" aria-expanded="false">Соц. сети</a>
-                  </li>
-                </ul>
-                <div class="b-tabs__content-wrap">
-                  <div class="b-tabs__item  active" id="tab-01">
-                    <form action="" class="b-form">
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="first-name">Имя *</label>
+              <div class="b-edit-profile__inner">
+
+                <h1 class="b-main-header  b-main-header--content">Edit profile</h1>
+
+                <div class="b-tabs">
+                  <ul class="b-tabs__list  b-tabs__list--xs-full-width  b-tabs__list--mb32-40" role="tablist">
+                    <li role="presentation" class="active">
+                      <a href="#tab-01" role="tab" data-toggle="tab" aria-expanded="true">General</a>
+                    </li>
+                    <li role="presentation">
+                      <a href="#tab-02" role="tab" data-toggle="tab" aria-expanded="false">Contacts</a>
+                    </li>
+                  </ul>
+                  <div class="b-tabs__content-wrap">
+                    <div class="b-tabs__item" id="tab-01">
+                      <form action="" class="b-form-2  b-edit-profile__form">
+                        <div class="form-group  b-form-group  b-form-2__item">
+                          <label for="firstName" class="b-form-group__label">First name</label>
+                          <input type="text" class="form-control  b-form-control  b-form-group__input" id="firstName">
                         </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="first-name" placeholder="" required>
+                        <div class="form-group  b-form-group  b-form-2__item">
+                          <label for="surname" class="b-form-group__label">Surname</label>
+                          <input type="text" class="form-control  b-form-control  b-form-group__input" id="surname">
                         </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="last-name">Фамилия *</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="last-name" placeholder="" required>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="email">Email</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="email" class="form-control" id="email" placeholder="" value="newton@phisics.science">
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-country-select">
-                        <div class="b-form__label">
-                          <label for="country">Страна</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="country" placeholder="">
-                          <input type="hidden" id="country_code" />
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-phone-select" id="b-phone-select">
-                        <div class="b-form__label">
-                          <label for="b-phone">Телефон *</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="tel" class="form-control" id="b-phone" placeholder="" required>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-tags">
-                        <div class="b-form__label">
-                          <label for="b-langs">Языки</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="text" class="form-control" id="b-langs" placeholder="Выберите язык" value="Монгольский">
-                          <select class="form-control" id="b-lang-select">
-                            <option value="Английский">English</option>
-                            <option value="Русский">Русский</option>
-                            <option value="Украинский">Украинска</option>
+                        <div class="form-group  b-form-group  b-form-2__item">
+                          <label for="countrySelect" class="b-form-group__label">Country</label>
+                          <select class="form-control  b-form-control  b-form-group__input" id="countrySelect">
+                            <option>Russia</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                           </select>
                         </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-select">
-                        <div class="b-form__label">
-                          <label for="agents">Агентам</label>
+                        <div class="form-group  b-form-group  b-form-2__item">
+                          <label class="b-form-group__label-checkbox">
+                            <input type="checkbox" class="b-form-group__checkbox" checked>
+                            <span class="b-form-group__checkbox-text">Agents not accepted</span>
+                          </label>
                         </div>
-                        <div class="b-form__field">
-                          <select class="form-control" id="agents">
-                            <option selected disabled>Не выбрано</option>
-                            <option>Беспокоиться</option>
-                            <option>Не беспокоиться</option>
+                        <div class="b-form-2__actions">
+                          <button class="b-btn-2  b-btn-2--lg-narrow">Save changes</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="b-tabs__item  active" id="tab-02">
+                      <form action="" class="b-form-2  b-edit-profile__form">
+                        <div class="form-group  b-form-group  b-form-2__item">
+                          <label for="email" class="b-form-group__label">E-mail for contacts</label>
+                          <input type="email" class="form-control  b-form-control  b-form-group__input" id="email">
+                        </div>
+                        <div class="form-group  b-form-group  b-form-2__item">
+                          <label for="countryCode" class="b-form-group__label">Cellphone</label>
+                          <select class="form-control  b-form-control  b-form-group__input" id="countryCodeSelect">
+                            <option value="+7">Russia</option>
+                            <option value="+72">Russia2</option>
+                            <option value="+73">Russia3</option>
+                            <option value="+74">Russia4</option>
                           </select>
+                          <label class="b-form-group__phone-wrap" id="countryPhoneCodeWrap">
+                            <span class="b-form-group__phone-code" id="countryPhoneCode">+7</span>
+                            <input type="text" class="b-form-group__phone-input" id="phoneNumber" value="987564234">
+                          </label>
+                          <div class="b-form-group__help-text  b-form-group__help-text--success">Verified</div>
                         </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-select">
-                        <div class="b-form__label">
-                          <label for="profession">Род занятий</label>
+                        <div class="b-form-2__actions">
+                          <a href="#verify-cellphone" class="b-btn-2  b-btn-2--lg-narrow" data-toggle="modal">Save changes</a>
                         </div>
-                        <div class="b-form__field">
-                          <select class="form-control" id="profession">
-                            <option selected disabled>Не выбрано</option>
-                            <option>Дизайнер</option>
-                            <option>Программист</option>
-                          </select>
+
+                        <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="verify-cellphone">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <div class="modal-body">
+                                <h4 class="b-modal-2__title">Verify Cellphone</h4>
+                                <p class="b-modal-2__text  b-modal-2__text--max-w-360  b-modal-2__text--mb24">
+                                  We texted your code to +7 900 022-81-44. It may take a minute to arrive.
+                                </p>
+                                <div class="form-group  b-form-group  b-form-group--mb-20  b-form-2__item">
+                                  <input type="number" class="form-control  b-form-control  b-form-group__input" placeholder="Enter code" autocomplete="off" >
+                                  <div class="b-form-group__help-text  b-form-group__help-text--lg">Didn’t get it? <a href="">Try again</a></div>
+                                </div>
+                                <p class="b-modal-2__actions">
+                                  <button class="b-btn-2">Verify</button>
+                                  <button class="b-btn-2  b-btn-2--secondary" type="button" data-dismiss="modal">Cancel</button>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="form-group  b-form__group  b-select">
-                        <div class="b-form__label">
-                          <label for="contact">Связь через</label>
-                        </div>
-                        <div class="b-form__field">
-                          <select class="form-control" id="contact">
-                            <option selected disabled>Не выбрано</option>
-                            <option>email</option>
-                            <option>SMS</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="b-form__btns">
-                        <button class="btn  btn-success  b-btn">Сохранить изменения</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="b-tabs__item" id="tab-02">
-                    <form action="" class="b-form">
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="old-password">Старый пароль</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="password" class="form-control" id="old-password" required>
-                          <div class="b-form__field-descr  text-right"><a href="">Я забыл пароль</a></div>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="new-password">Новый пароль</label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="password" class="form-control" id="new-password" required>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">
-                          <label for="new-password-2">Новый пароль <span class="b-form__label-descr">(повторите)</span></label>
-                        </div>
-                        <div class="b-form__field">
-                          <input type="password" class="form-control" id="new-password-2" required>
-                        </div>
-                      </div>
-                      <div class="b-form__btns">
-                        <button class="btn  btn-black  b-btn" type="reset">Отмена</button>
-                        <button class="btn  btn-success  b-btn">Изменить пароль</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="b-tabs__item" id="tab-03">
-                    <div class="b-form">
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">Вконтакте</div>
-                        <div class="b-form__field">
-                          <button class="b-social-btn  b-social-btn--vk">
-                            <svg width="20" height="18" class="b-social-btn__icon">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-vk"></use>
-                            </svg>
-                            <span class="b-social-btn__text">Подключить</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="form-group  b-form__group">
-                        <div class="b-form__label">Facebook</div>
-                        <div class="b-form__field">
-                          <!-- b-social-btn--accept даст состояние «готово к отключению» -->
-                          <button class="b-social-btn  b-social-btn--accept  b-social-btn--fb">
-                            <svg width="20" height="16" class="b-social-btn__icon">
-                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#logo-fb"></use>
-                            </svg>
-                            <span class="b-social-btn__text">Отключить</span>
-                          </button>
-                        </div>
-                      </div>
+
+                      </form>
+
                     </div>
                   </div>
                 </div>
+
               </div>
+
             </div>
           </div>
         </div>
       </div>
+
+
 
     </div>
 
