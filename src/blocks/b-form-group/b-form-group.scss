@@ -34,6 +34,15 @@
 
   &__input {
     margin-bottom: 8px;
+
+    &:hover {
+      border-color: #A1A1A1;
+    }
+
+    &:focus {
+      border-color: #A1BF4B;
+      box-shadow: none;
+    }
   }
 
   &__help-text {
@@ -45,8 +54,20 @@
       display: none;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     &--error {
       color: #D84B2A;
+    }
+
+    &--success {
+      color: #799234;
+    }
+
+    &--lg {
+      font-size: inherit;
     }
   }
 
@@ -76,6 +97,106 @@
     }
   }
 
+  &__label-checkbox {
+    margin: 0 !important;
+    min-height: 20px;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__checkbox-text {
+
+        &:before {
+          border-color: #A1A1A1;
+        }
+      }
+
+      input:checked ~ #{$block-name}__checkbox-text:before {
+        background-color: #C24629;
+        border-color: #C24629;
+      }
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  &__checkbox-text {
+    position: relative;
+    display: inline-block;
+    padding-left: 28px;
+    line-height: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #CFCECE;
+      border-radius: 2px;
+
+      input:checked ~ & {
+        background-color: #D84B2A;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6L5 9L10 3' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-color: #D84B2A;
+      }
+    }
+  }
+
+  &__phone-wrap {
+    display: flex;
+    align-items: baseline;
+    margin: 8px 0 !important;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    padding: 10px 12px;
+    height: 40px;
+    font-size: 14px !important;
+
+    &--focus {
+      border-color: #A1BF4B;
+    }
+  }
+
+  &__phone-code {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    padding-right: 5px;
+    margin-right: 4px;
+    color: #CFCECE;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 45%;
+      right: 0;
+      width: 2px;
+      height: 12px;
+      background: #E7E6E6;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__phone-input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    flex-grow: 1;
+    outline: none;
+  }
+
+
+
   &--error {
 
     .b-form-group__input {
@@ -86,5 +207,9 @@
     .b-form-group__help-text {
       color: #D84B2A;
     }
+  }
+
+  &--mb-20 {
+    margin-bottom: 20px;
   }
 }

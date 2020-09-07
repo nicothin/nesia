@@ -10,6 +10,16 @@
   height: 40px;
   font-size: 14px !important;
 
+  &[type="number"] {
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
   &--password {
     padding-right: 35px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='16' viewBox='0 0 13 16'%3E%3Cpath d='M10 6.5a.5.5 0 0 1-.5-.5V4.092a3 3 0 1 0-6 0V6a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5V4.092a4 4 0 1 1 8 0V6a.5.5 0 0 1-.5.5zm1 9.5H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2zM2 7a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2zm4.5 2a1 1 0 1 1-1 1 1 1 0 0 1 1-1zm0 1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5z' fill='%23aaa'/%3E%3C/svg%3E");

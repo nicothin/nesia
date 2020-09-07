@@ -58,11 +58,11 @@
   }
 
   .modal-content {
-    box-shadow: none !important;
+    border: none;
     border-radius: 2px;
+    box-shadow: none !important;
 
     @media (max-width: ($screen-md - 1)) {
-      border: none;
       border-radius: 0;
     }
   }
@@ -92,6 +92,14 @@
 
      P:last-child {
        margin-bottom: 0;
+     }
+
+     &--max-w-360 {
+       max-width: 360px;
+     }
+
+     &--mb24 {
+       margin-bottom: 24px;
      }
   }
 

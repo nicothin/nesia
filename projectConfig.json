@@ -91,7 +91,8 @@
     "b-form-2": [],
     "b-settings": [],
     "b-pay-card": [],
-    "b-payment-history": []
+    "b-payment-history": [],
+    "b-edit-profile": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

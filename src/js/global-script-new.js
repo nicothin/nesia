@@ -226,6 +226,19 @@ $( document ).ready(function() {
 
 
 
+  // Редактирование профиля: работа псевдоинпута с телефоном
+  const phoneNumberInputWrap = document.querySelector('#countryPhoneCodeWrap');
+  if(phoneNumberInputWrap) {
+    const phoneNumberInput = document.querySelector('#phoneNumber');
+    phoneNumberInput.addEventListener('focus', (e) => {phoneNumberInputWrap.classList.add('b-form-group__phone-wrap--focus');});
+    phoneNumberInput.addEventListener('blur', (e) => { phoneNumberInputWrap.classList.remove('b-form-group__phone-wrap--focus');});
+    document.querySelector('#countryCodeSelect').addEventListener('change', (event) => {
+      document.querySelector('#countryPhoneCode').innerHTML = event.target.value;
+    });
+  }
+
+
+
   // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');
