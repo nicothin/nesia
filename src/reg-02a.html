@@ -1,0 +1,60 @@
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
+
+      <div class="b-content">
+        <div class="container-fluid">
+
+          <div class="b-auth">
+
+              <div class="b-auth__inner">
+
+                <h1 class="b-main-header  b-main-header--content  b-auth__title">Registration</h1>
+
+                <form action="" class="b-form-2  b-auth__form">
+                  <div class="b-user-photo  b-user-photo--error  b-auth__add-photo">
+                    <img src="img/photo_empty.svg" alt="%USERNAME%" class="b-user-photo__img" width="80" height="80">
+                    <div class="b-user-photo__info">
+                      <label class="b-btn-2  b-btn-2--block  b-btn-2--secondary">
+                        <input type="file">
+                        Add photo
+                      </label>
+                      <p class="b-user-photo__descr">Photo is mandatory, it increase confidence of other users</p>
+                    </div>
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="fullName" class="b-form-group__label">Full Name *</label>
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" id="fullName" aria-describedby="fullNameHelpBlock" required>
+                    <div id="fullNameHelpBlock" class="b-form-group__help-text  b-form-group__help-text--error">Enter name, it is required</div>
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="countryCode" class="b-form-group__label">Add cellphone *</label>
+                    <select class="form-control  b-form-control  b-form-group__input" id="countryCodeSelect">
+                      <option value="+7">Russia (+7)</option>
+                      <option value="+72">Russia2 (+72)</option>
+                      <option value="+73">Russia3 (+73)</option>
+                      <option value="+74">Russia4 (+74)</option>
+                    </select>
+                    <label class="b-form-group__phone-wrap" id="countryPhoneCodeWrap">
+                      <span class="b-form-group__phone-code" id="countryPhoneCode">+7</span>
+                      <input type="text" class="b-form-group__phone-input" id="phoneNumber" value="" required>
+                    </label>
+                    <div class="b-form-group__help-text  b-form-group__help-text--error">Enter cellphone, it is required</div>
+                  </div>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Register</button>
+                  </div>
+
+                </form>
+
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+@@include('./html-includes/footer.html')

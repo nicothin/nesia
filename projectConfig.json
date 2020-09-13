@@ -96,7 +96,9 @@
     "b-increase-views": [],
     "b-subheader": [],
     "b-shared-object-2": [],
-    "b-object-list-2": []
+    "b-object-list-2": [],
+    "b-auth": [],
+    "b-user-photo": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

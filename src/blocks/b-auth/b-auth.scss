@@ -1,0 +1,80 @@
+// В этом файле должны быть стили для БЭМ-блока b-auth, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-auth {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 48px 0 24px 0;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 72px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__inner {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__actions {
+    margin-top: 16px;
+  }
+
+  &__or {
+    margin: 2px 0;
+    text-align: center;
+  }
+
+  &__cond {
+    width: 263px;
+    margin: 16px auto;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #535353;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__registration-link-wrap {
+    margin: 0;
+    text-align: center;
+
+    a {
+      color: #D84B2A;
+      text-decoration: none;
+    }
+  }
+
+  &__add-photo {
+    margin-bottom: 32px;
+  }
+
+  &__code-msg {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+  }
+
+  &__send-code-again {
+    margin: 0 0 24px;
+    text-align: center;
+
+    a {
+      color: #D84B2A;
+      text-decoration: none;
+    }
+  }
+}

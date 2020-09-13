@@ -1,0 +1,46 @@
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
+
+      <div class="b-content">
+        <div class="container-fluid">
+
+          <div class="b-auth">
+
+            <div class="b-page__alert-wrap">
+              <div class="b-alert">
+                <div class="b-alert__text-wrap">
+                  <p>Your cellphone is verified and registration is complete!</p>
+                </div>
+                <button type="button" class="close" data-dismiss="b-alert" aria-label="Close"><span>×</span></button>
+              </div>
+            </div>
+
+              <div class="b-auth__inner">
+
+                <h1 class="b-main-header  b-main-header--content  b-auth__title">Verify Cellphone</h1>
+
+                <p class="b-auth__code-msg">We texted your code to +7 900 022-81-44. It may take a minute to arrive.</p>
+
+                <form action="" class="b-form-2  b-auth__form">
+                  <div class="form-group  b-form-group  b-form-group--pb8  b-form-2__item">
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="Enter code" required>
+                  </div>
+                  <p class="b-auth__send-code-again">Didn’t get it? <a href="">Try again</a></p>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Verify</button>
+                  </div>
+
+                </form>
+
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+@@include('./html-includes/footer.html')

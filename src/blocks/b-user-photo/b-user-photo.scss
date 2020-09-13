@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока b-user-photo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-user-photo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  [type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+
+  &__descr {
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 20px;
+    color: #535353;
+  }
+
+  &--error {
+
+    #{$block-name}__descr {
+      color: #D84B2A;
+    }
+  }
+}

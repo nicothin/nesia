@@ -1,0 +1,51 @@
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
+
+      <div class="b-content">
+        <div class="container-fluid">
+
+          <div class="b-auth">
+
+              <div class="b-auth__inner">
+
+                <h1 class="b-main-header  b-main-header--content  b-auth__title">Login</h1>
+
+                <form action="" class="b-form-2  b-auth__form">
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="email" class="b-form-group__label">E-mail</label>
+                    <input type="email" class="form-control  b-form-control  b-form-group__input" id="email" placeholder="Enter your email">
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="password" class="b-form-group__label">Password</label>
+                    <input type="password" class="form-control  b-form-control  b-form-group__input" id="password" aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="b-form-group__help-text  b-form-group__help-text--right">
+                      <a href="" class="b-form-group__link-gray">Forget password?</a>
+                    </div>
+                  </div>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Login</button>
+                    <p class="b-auth__or">or</p>
+                    <a href="" class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow  b-btn-2--facebook-border">
+                      <svg class="b-btn-2__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#3B5998"/><path d="M10.011 8.31311H8.5835V13.5428H6.42072V8.31311H5.39209V6.47519H6.42072V5.28584C6.42072 4.43533 6.82472 3.10352 8.60275 3.10352L10.2048 3.11022V4.89424H9.04241C8.85175 4.89424 8.58365 4.9895 8.58365 5.39522V6.4769H10.2L10.011 8.31311Z" fill="white"/></svg>
+                      Use Facebook
+                    </a>
+                  </div>
+
+                </form>
+
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
+
+                <p class="b-auth__registration-link-wrap">
+                  <a href="">Register</a>
+                </p>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+@@include('./html-includes/footer.html')

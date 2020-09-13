@@ -49,6 +49,7 @@
     margin: 0 0 -20px 0;
     font-size: 12px;
     line-height: 20px;
+    color: #A1A1A1;
 
     &:empty {
       display: none;
@@ -69,6 +70,14 @@
     &--lg {
       font-size: inherit;
     }
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__link-gray {
+    color: #A1A1A1 !important;
   }
 
   &__option-gray {
@@ -211,5 +220,9 @@
 
   &--mb-20 {
     margin-bottom: 20px;
+  }
+
+  &--pb8 {
+    padding-bottom: 8px;
   }
 }

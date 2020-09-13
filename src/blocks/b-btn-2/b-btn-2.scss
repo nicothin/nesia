@@ -148,6 +148,19 @@
     }
   }
 
+  &--facebook-border {
+    background: transparent;
+    border-color: #3B5998;
+    color: #3B5998;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      border-color: #3B5998;
+      color: #3B5998;
+    }
+  }
+
   &--messanger {
     background: transparent;
     border-color: #007FFF;
