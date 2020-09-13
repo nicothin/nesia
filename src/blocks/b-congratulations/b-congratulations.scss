@@ -1,0 +1,52 @@
+// В этом файле должны быть стили для БЭМ-блока b-congratulations, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-congratulations {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 24px 0;
+  text-align: center;
+
+  @media (min-width: $screen-lg) {
+    padding-top: 72px;
+  }
+
+  .share_socials li {
+    margin-top: 24px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__see-link-wrap {
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 20px;
+
+    a {
+      color: #D84B2A;
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto 40px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__share-text {
+    // margin: 0 0 24px;
+    color: #000;
+  }
+}

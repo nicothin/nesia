@@ -98,7 +98,8 @@
     "b-shared-object-2": [],
     "b-object-list-2": [],
     "b-auth": [],
-    "b-user-photo": []
+    "b-user-photo": [],
+    "b-congratulations": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

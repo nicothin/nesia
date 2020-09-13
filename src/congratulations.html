@@ -1,0 +1,59 @@
+@@include('./html-includes/header.html', {}) <!-- { "isMainPage": "true" } для модификатора, не фиксирующего поиск, на body (нужно для глагне) -->
+
+      <div class="b-content">
+        <div class="container-fluid">
+
+          <!-- share_page — класс с работающего проекта -->
+          <div class="b-congratulations  share_page">
+
+              <div class="b-congratulations__inner">
+
+                <h1 class="b-main-header  b-main-header--content  b-congratulations__title">Congratulations!</h1>
+
+                <p class="b-congratulations__descr">Your property has just been listed on Terranesia!</p>
+
+                <p class="b-congratulations__see-link-wrap">
+                  <a href="">See my listing</a>
+                </p>
+
+                <img src="https://terranesia.com/static/pics/share.jpg" alt="Congratulations!" class="b-congratulations__img" width="400" height="225">
+
+                <p class="b-congratulations__share-text">Share your listing with friends and close the deal faster!</p>
+
+                <!-- стилевая правка, КОТОРАЯ НЕ ДОЛЖНА ПОПАСТЬ В ПРОД, нужна только для корректного пути к растровому спрайту при разработке -->
+                <style>
+                  /* Не должно попасть в прод */
+                  .share_socials li a:before {background-image: url(../img/sprite.png)}
+                  .share_page .facebook a .fb {background-image: url(../img/sprite.png) !important}
+                  /* / Не должно попасть в прод */
+                </style>
+                <!-- точная копипаста с работающего проекта -->
+                <div class="facebook"><a href="#" onclick="share_fb('https://terranesia.com/i/75612956/o/ru/');return false;"><span
+                      class="fb"
+                      style='left: 28px;top: 48%;width: 21px;height: 42px;background: url("/static/images/sprite.png") -217px -158px no-repeat;'></span>Поделиться</a>
+                </div>
+                <script>function share_fb(url) { window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'facebook-share-dialog', "width=626,height=436") }</script>
+                <ul class="share_socials">
+                  <li class="vk">
+                    <script type="text/javascript" src="https://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+                    <script>document.write(VK.Share.button({ url: 'https://terranesia.com/i/75612956/o/ru/' }, { type: 'custom', text: '&nbsp;' })); </script>
+                  </li>
+                  <li class="tw"><a href="#" onclick="share_tw('https://terranesia.com/i/75612956/o/ru/');return false;"> </a></li>
+                  <script>function share_tw(url) { window.open('https://twitter.com/share?url=' + url + '&text=Московский проспект, Санкт-Петербург. Промышленное здание аренда, Р 3 000 000 в месяц. ТЕРРАНЕЗИЯ. НЕДВИЖИМОСТЬ БЕЗ ПОСРЕДНИКОВ. ПРИСОЕДИНЯЙТЕСЬ БЕСПЛАТНО!', 'twitter-share-dialog', "width=626,height=436") }</script>
+                  <li class="gl"><a href="#" onclick="share_gp('https://terranesia.com/i/75612956/o/ru/');return false;"> </a></li>
+                  <script>function share_gp(url) { window.open('https://plus.google.com/share?url=' + url, 'google-share-dialog', "width=626,height=436") }</script>
+                  <li class="ml"><a
+                      href="mailto:?subject=Московский проспект, Санкт-Петербург. Промышленное здание аренда, Р 3 000 000 в месяц.&body=Московский проспект, Санкт-Петербург. Промышленное здание аренда, Р 3 000 000 в месяц.. Перейдите по ссылке: https://terranesia.com/i/75612956/o/ru/">
+                    </a></li>
+                </ul>
+                <!-- / точная копипаста с работающего проекта -->
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+@@include('./html-includes/footer.html')
