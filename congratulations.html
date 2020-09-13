@@ -310,42 +310,50 @@
       <div class="b-content">
         <div class="container-fluid">
 
-          <div class="b-auth">
+          <!-- share_page — класс с работающего проекта -->
+          <div class="b-congratulations  share_page">
 
-              <div class="b-auth__inner">
+              <div class="b-congratulations__inner">
 
-                <h1 class="b-main-header  b-main-header--content  b-auth__title">Login</h1>
+                <h1 class="b-main-header  b-main-header--content  b-congratulations__title">Congratulations!</h1>
 
-                <form action="" class="b-form-2  b-auth__form">
-                  <div class="form-group  b-form-group  b-form-2__item">
-                    <label for="email" class="b-form-group__label">E-mail</label>
-                    <input type="email" class="form-control  b-form-control  b-form-group__input" id="email" placeholder="Enter your email">
-                  </div>
-                  <div class="form-group  b-form-group  b-form-2__item">
-                    <label for="password" class="b-form-group__label">Password</label>
-                    <input type="password" class="form-control  b-form-control  b-form-group__input" id="password" aria-describedby="passwordHelpBlock">
-                    <div id="passwordHelpBlock" class="b-form-group__help-text  b-form-group__help-text--right">
-                      <a href="" class="b-form-group__link-gray">Forget password?</a>
-                    </div>
-                  </div>
-                  <div class="b-auth__actions">
-                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Login</button>
-                    <p class="b-auth__or">or</p>
-                    <a href="" class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow  b-btn-2--facebook-border">
-                      <svg class="b-btn-2__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#3B5998"/><path d="M10.011 8.31311H8.5835V13.5428H6.42072V8.31311H5.39209V6.47519H6.42072V5.28584C6.42072 4.43533 6.82472 3.10352 8.60275 3.10352L10.2048 3.11022V4.89424H9.04241C8.85175 4.89424 8.58365 4.9895 8.58365 5.39522V6.4769H10.2L10.011 8.31311Z" fill="white"/></svg>
-                      Use Facebook
-                    </a>
-                  </div>
+                <p class="b-congratulations__descr">Your property has just been listed on Terranesia!</p>
 
-                </form>
-
-                <p class="b-auth__cond">
-                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                <p class="b-congratulations__see-link-wrap">
+                  <a href="">See my listing</a>
                 </p>
 
-                <p class="b-auth__registration-link-wrap">
-                  <a href="">Register</a>
-                </p>
+                <img src="https://terranesia.com/static/pics/share.jpg" alt="Congratulations!" class="b-congratulations__img" width="400" height="225">
+
+                <p class="b-congratulations__share-text">Share your listing with friends and close the deal faster!</p>
+
+                <!-- стилевая правка, КОТОРАЯ НЕ ДОЛЖНА ПОПАСТЬ В ПРОД, нужна только для корректного пути к растровому спрайту при разработке -->
+                <style>
+                  /* Не должно попасть в прод */
+                  .share_socials li a:before {background-image: url(../img/sprite.png)}
+                  .share_page .facebook a .fb {background-image: url(../img/sprite.png) !important}
+                  /* / Не должно попасть в прод */
+                </style>
+                <!-- точная копипаста с работающего проекта -->
+                <div class="facebook"><a href="#" onclick="share_fb('https://terranesia.com/i/75612956/o/ru/');return false;"><span
+                      class="fb"
+                      style='left: 28px;top: 48%;width: 21px;height: 42px;background: url("/static/images/sprite.png") -217px -158px no-repeat;'></span>Поделиться</a>
+                </div>
+                <script>function share_fb(url) { window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'facebook-share-dialog', "width=626,height=436") }</script>
+                <ul class="share_socials">
+                  <li class="vk">
+                    <script type="text/javascript" src="https://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+                    <script>document.write(VK.Share.button({ url: 'https://terranesia.com/i/75612956/o/ru/' }, { type: 'custom', text: '&nbsp;' })); </script>
+                  </li>
+                  <li class="tw"><a href="#" onclick="share_tw('https://terranesia.com/i/75612956/o/ru/');return false;"> </a></li>
+                  <script>function share_tw(url) { window.open('https://twitter.com/share?url=' + url + '&text=Московский проспект, Санкт-Петербург. Промышленное здание аренда, Р 3 000 000 в месяц. ТЕРРАНЕЗИЯ. НЕДВИЖИМОСТЬ БЕЗ ПОСРЕДНИКОВ. ПРИСОЕДИНЯЙТЕСЬ БЕСПЛАТНО!', 'twitter-share-dialog', "width=626,height=436") }</script>
+                  <li class="gl"><a href="#" onclick="share_gp('https://terranesia.com/i/75612956/o/ru/');return false;"> </a></li>
+                  <script>function share_gp(url) { window.open('https://plus.google.com/share?url=' + url, 'google-share-dialog', "width=626,height=436") }</script>
+                  <li class="ml"><a
+                      href="mailto:?subject=Московский проспект, Санкт-Петербург. Промышленное здание аренда, Р 3 000 000 в месяц.&body=Московский проспект, Санкт-Петербург. Промышленное здание аренда, Р 3 000 000 в месяц.. Перейдите по ссылке: https://terranesia.com/i/75612956/o/ru/">
+                    </a></li>
+                </ul>
+                <!-- / точная копипаста с работающего проекта -->
 
               </div>
 

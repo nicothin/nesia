@@ -6539,6 +6539,31 @@ input:checked ~ .b-form-group__checkbox-text:before {
     color: #535353; }
 .b-user-photo--error .b-user-photo__descr {
     color: #D84B2A; }
+.b-congratulations {
+  padding: 24px 0;
+  text-align: center; }
+.b-congratulations .share_socials li {
+    margin-top: 24px; }
+.b-congratulations__title {
+    margin-bottom: 16px; }
+.b-congratulations__descr {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 20px; }
+.b-congratulations__see-link-wrap {
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 20px; }
+.b-congratulations__see-link-wrap a {
+      color: #D84B2A;
+      text-decoration: none; }
+.b-congratulations__img {
+    display: block;
+    margin: 0 auto 40px;
+    max-width: 100%;
+    height: auto; }
+.b-congratulations__share-text {
+    color: #000; }
 @media (min-width: 421px) {
         .b-location__main-block .big_img_slider .jcarousel-control-next,
         .b-location__main-block .big_img_slider .jcarousel-control-prev {
@@ -7503,6 +7528,8 @@ input:checked ~ .b-form-group__checkbox-text:before {
     .b-increase-views__inner {
       margin-left: -20px; }
     .b-auth {
+      padding-top: 72px; }
+    .b-congratulations {
       padding-top: 72px; } }
 @media all and (min-width: 992px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       .b-mail-list__item-wrap {
