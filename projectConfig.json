@@ -92,7 +92,11 @@
     "b-settings": [],
     "b-pay-card": [],
     "b-payment-history": [],
-    "b-edit-profile": []
+    "b-edit-profile": [],
+    "b-increase-views": [],
+    "b-subheader": [],
+    "b-shared-object-2": [],
+    "b-object-list-2": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

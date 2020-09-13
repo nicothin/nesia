@@ -1,0 +1,34 @@
+// В этом файле должны быть стили для БЭМ-блока b-object-list-2, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-object-list-2 {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0 0 48px;
+  padding: 0;
+  list-style: none;
+
+  .form-group {
+    width: auto;
+    margin: 0;
+  }
+
+  .b-form-group__checkbox-text {
+    padding-left: 36px;
+  }
+
+  @media (min-width: $screen-md) {
+
+    .b-form-group__checkbox-text:before {
+      top: 18px;
+    }
+  }
+
+
+
+  &__item-wrap {
+    margin: 0 0 24px;
+  }
+}

@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока b-subheader, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-subheader {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  margin: 16px 0 24px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-align: left;
+
+  &::before {
+    display: none;
+  }
+}

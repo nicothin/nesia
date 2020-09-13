@@ -51,4 +51,17 @@
       padding-right: 8px;
     }
   }
+
+  &--line {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .b-form-group {
+      width: auto;
+      min-width: 197px;
+      margin-right: 8px;
+      padding: 0;
+    }
+  }
 }

@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока b-shared-object-2, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-shared-object-2 {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__img {
+    display: none;
+    width: 88px;
+    height: 56px;
+    margin-right: 16px;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__text-wrap {}
+
+  &__name {
+    margin: 0 0 8px;
+    padding: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  &__descr {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+  }
+}

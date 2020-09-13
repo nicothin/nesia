@@ -44,6 +44,15 @@
     right: -10px;
   }
 
+  &__icon {
+    margin-right: 8px;
+    align-self: center;
+  }
+
+  &__icon {
+    transform: translateY(-1px);
+  }
+
 
 
   &--secondary {
@@ -78,11 +87,11 @@
   }
 
   &--lg {
-    padding: 10px 37px 9px;
+    padding: 9px 37px 8px;
   }
 
   &--lg-narrow {
-    padding: 10px 16px 9px;
+    padding: 9px 16px 8px;
   }
 
   &--big-round-block-secondary {
@@ -126,5 +135,29 @@
     color: #799234;
     border-color: #799234;
     background: transparent;
+  }
+
+  &--facebook {
+    background: #3B5998;
+    border-color: #3B5998;
+
+    &:hover,
+    &:focus {
+      background: #3B5998;
+      border-color: #3B5998;
+    }
+  }
+
+  &--messanger {
+    background: transparent;
+    border-color: #007FFF;
+    color: #007FFF;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      border-color: #007FFF;
+      color: #007FFF;
+    }
   }
 }
