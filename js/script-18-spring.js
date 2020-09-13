@@ -1840,7 +1840,7 @@ $( document ).ready(function() {
   // Сообщения: закрытие сообщения, выводимого вверху страницы
   $('[data-dismiss="b-alert"]').on('click', function(e){
     e.preventDefault();
-    $(this).closest('.b-alert').slideUp();
+    $(this).closest('.b-alert').fadeOut();
   });
 
 

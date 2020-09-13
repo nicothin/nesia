@@ -310,111 +310,40 @@
       <div class="b-content">
         <div class="container-fluid">
 
-          <div class="b-increase-views  row">
-            <div class="b-increase-views__sidebar  col-sm-4  hidden-xs">
-              <div class="b-user-sidebar">
-                <div class="b-user-sidebar__avatar">
-                  <div class="b-user-sidebar__avatar-pict-wrap">
-                    <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-sidebar__avatar-pict  b-user-avatar-2  b-user-avatar-2--xxl">
-                    <!-- Если картинки-аватара нет — <div class="b-user-avatar-2  b-user-avatar-2--xxl">LS</div> -->
-                    <button class="b-user-sidebar__avatar-btn">
-                      <svg width="28" height="28" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="12" r="10" fill="#A1BF4B"/><path d="M14 9.962a2.772 2.772 0 100 5.544 2.772 2.772 0 000-5.544zm0 4.49a1.719 1.719 0 110-3.437 1.719 1.719 0 010 3.438z" fill="#fff"/><path d="M14 0a12 12 0 1012 12A12.014 12.014 0 0014 0zm5.4 15.84a.96.96 0 01-.96.96H9.572a.96.96 0 01-.96-.96v-5.47a.96.96 0 01.96-.96h1.985l.144-.91c.091-.566.653-.832 1.111-.832H15.2c.463 0 1.022.269 1.111.833l.14.91h1.984a.96.96 0 01.96.96l.005 5.469z" fill="#fff"/></svg>
-                    </button>
-                  </div>
-                  <p class="b-user-sidebar__username">Lara Scala</p>
+          <div class="b-auth">
+
+            <div class="b-page__alert-wrap">
+              <div class="b-alert">
+                <div class="b-alert__text-wrap">
+                  <p>Your cellphone is verified and registration is complete!</p>
                 </div>
-                <div class="b-user-sidebar__menu">
-                  <ul class="b-user-menu  b-user-menu--sidebar">
-                    <li class="b-user-menu__item  b-user-menu__item--active"><a class="b-user-menu__link" href="/">My listings</a></li>
-                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Auction <span class="b-label-2  b-user-menu__label">2</span></a></li>
-                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Increase views</a></li>
-                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Favorutes</a></li>
-                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Messages <span class="b-label-2  b-user-menu__label">99+</span></a></li>
-                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Settings</a></li>
-                    <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Edit Profile</a></li>
-                  </ul>
-                </div>
-                <div class="b-user-sidebar__btn-wrap">
-                  <a href="" class="b-btn-2  b-btn-2--secondary  b-btn-2--block">Add listing</a>
-                </div>
+                <button type="button" class="close" data-dismiss="b-alert" aria-label="Close"><span>×</span></button>
               </div>
             </div>
-            <div class="b-increase-views__content  col-xs-12  col-sm-8">
 
-              <div class="b-increase-views__inner">
+              <div class="b-auth__inner">
 
-                <h1 class="b-main-header  b-main-header--content">Increase views</h1>
+                <h1 class="b-main-header  b-main-header--content  b-auth__title">Verify Cellphone</h1>
 
-                <p>To make your listing visible to more people use the free promotion tool</p>
+                <p class="b-auth__code-msg">We texted your code to +7 900 022-81-44. It may take a minute to arrive.</p>
 
-                <h2 class="b-subheader">Choose listing</h2>
-
-                <ul class="b-object-list-2">
-                  <li class="b-object-list-2__item-wrap">
-                    <div class="form-group">
-                      <label class="b-form-group__label-checkbox">
-                        <input type="checkbox" class="b-form-group__checkbox" checked>
-                        <div class="b-form-group__checkbox-text">
-                          <div class="b-shared-object-2">
-                            <img src="img/1114055462980_112_94.jpg" alt="Apartment near metro station" class="b-shared-object-2__img" width="88" height="56">
-                            <div class="b-shared-object-2__text-wrap">
-                              <p class="b-shared-object-2__name">Apartment near metro station</p>
-                              <p class="b-shared-object-2__descr">Views 132</p>
-                            </div>
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                  </li>
-                  <li class="b-object-list-2__item-wrap">
-                    <div class="form-group">
-                      <label class="b-form-group__label-checkbox">
-                        <input type="checkbox" class="b-form-group__checkbox">
-                        <div class="b-form-group__checkbox-text">
-                          <div class="b-shared-object-2">
-                            <img src="img/1114055462980_112_94.jpg" alt="Apartment near metro station" class="b-shared-object-2__img" width="88" height="56">
-                            <div class="b-shared-object-2__text-wrap">
-                              <p class="b-shared-object-2__name">Apartment near metro station</p>
-                              <p class="b-shared-object-2__descr">Views 132</p>
-                            </div>
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-
-                <h2 class="b-subheader">Share your listing with friends</h2>
-
-                <p class="b-increase-views__step">1. Share listing via email</p>
-
-                <form class="b-form-2  b-form-2--line  b-increase-views__share-form">
-                  <div class="form-group  b-form-group">
-                    <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="Type friend email">
+                <form action="" class="b-form-2  b-auth__form">
+                  <div class="form-group  b-form-group  b-form-group--pb8  b-form-2__item">
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="Enter code" required>
                   </div>
-                  <button class="b-btn-2  b-btn-2--lg-narrow">
-                    <svg class="b-btn-2__icon" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.00451089 0.904395C0.0015264 0.935861 0 0.967752 0 1V11C0 11.5523 0.447716 12 1 12H17C17.5523 12 18 11.5523 18 11V1C18 0.967752 17.9985 0.935861 17.9955 0.904395L9.41603 6.62404C9.1641 6.79199 8.8359 6.79199 8.58397 6.62404L0.00451089 0.904395ZM16.6479 0H1.35208L9 5.09861L16.6479 0Z" fill="white"/></svg>
-                    Share
-                  </button>
+                  <p class="b-auth__send-code-again">Didn’t get it? <a href="">Try again</a></p>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Verify</button>
+                  </div>
+
                 </form>
 
-                <p class="b-increase-views__step">2. Make publication on Facebook feed</p>
-
-                <a href="" class="b-btn-2  b-btn-2--lg-narrow  b-btn-2--facebook  b-increase-views__btn-share">
-                  <svg  class="b-btn-2__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="white"/><path d="M10.011 8.31311H8.5835V13.5428H6.42072V8.31311H5.39209V6.47519H6.42072V5.28584C6.42072 4.43533 6.82472 3.10352 8.60275 3.10352L10.2048 3.11022V4.89424H9.04241C8.85175 4.89424 8.58365 4.9895 8.58365 5.39522V6.4769H10.2L10.011 8.31311Z" fill="#3B5998"/></svg>
-                  Publish on Facebook
-                </a>
-
-                <p class="b-increase-views__step">3. Send directly to Messanger</p>
-
-                <a href="" class="b-btn-2  b-btn-2--lg-narrow  b-btn-2   b-increase-views__btn-share">
-                  <svg class="b-btn-2__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.624 0 0 106.112 0 237.024c0 74.592 37.216 141.12 95.392 184.576V512l87.168-47.84c23.264 6.432 47.904 9.92 73.44 9.92 141.376 0 256-106.112 256-237.024C512 106.112 397.376 0 256 0z" fill="#1e88e5"/><path fill="#fafafa" d="M281.44 319.2l-65.184-69.536-127.2 69.536L228.96 170.656l66.784 69.536 125.632-69.536z"/></svg>
-                  Share via Messanger
-                </a>
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
 
               </div>
 
-            </div>
           </div>
         </div>
       </div>
