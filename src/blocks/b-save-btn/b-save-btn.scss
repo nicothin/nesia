@@ -73,7 +73,7 @@
     #{$block-name}__icon {
       opacity: 0;
       transform: scale(1.6);
-      transition: opacity 0.2s 0.2s ease, transform 0.3s ease;
+      transition: opacity 0.3s 0.2s ease, transform 0.4s ease;
     }
 
     #{$block-name}__icon-active {
@@ -85,6 +85,45 @@
 
     @media (min-width: $screen-md) {
       display: none;
+    }
+  }
+
+  &--animate:not(.b-save-btn--active) {
+
+    #{$block-name}__icon {
+      animation: save-btn-icon-default 0.8s 2 ease;
+    }
+
+    #{$block-name}__icon-active {
+      animation: save-btn-icon-active 2s 1 ease;
+    }
+  }
+
+  @keyframes save-btn-icon-default {
+
+    20% {
+      opacity: 1;
+    }
+
+    80%,
+    100% {
+      opacity: 0;
+      transform: scale(1.6);
+    }
+  }
+
+  @keyframes save-btn-icon-active {
+
+    20% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
     }
   }
 }

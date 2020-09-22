@@ -6,7 +6,10 @@ $( document ).ready(function() {
     var st = window.pageYOffset || document.documentElement.scrollTop;
     // Посетитель скроллит вниз
     if (st > lastScrollTop) {
-      // $('body').addClass('scroll-to-down').removeClass('scroll-to-up');
+      $('.b-save-btn').addClass('b-save-btn--animate');
+      setTimeout(function(){
+        $('.b-save-btn').removeClass('b-save-btn--animate');
+      }, 2000);
       // Если скролл уже больше высоты шапки на мобилке, добавим класс сокрытия поиска шапки
       if(st > 96) {
         $('body').addClass('hide-header-search-xs');
