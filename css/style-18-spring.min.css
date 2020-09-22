@@ -4501,6 +4501,10 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     font-size: 14px;
     line-height: 20px;
     color: #535353; }
+.b-user-data__send-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0; }
 .b-user-data--modal {
     min-height: 0;
     border: 0;
