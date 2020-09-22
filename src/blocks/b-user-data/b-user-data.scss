@@ -145,6 +145,12 @@
     color: #535353;
   }
 
+  &__send-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+
   &--modal {
     min-height: 0;
     border: 0;
