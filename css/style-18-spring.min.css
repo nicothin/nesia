@@ -3863,12 +3863,48 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     opacity: 0;
     -webkit-transform: scale(1.6);
             transform: scale(1.6);
-    -webkit-transition: opacity 0.2s 0.2s ease, -webkit-transform 0.3s ease;
-    transition: opacity 0.2s 0.2s ease, -webkit-transform 0.3s ease;
-    transition: opacity 0.2s 0.2s ease, transform 0.3s ease;
-    transition: opacity 0.2s 0.2s ease, transform 0.3s ease, -webkit-transform 0.3s ease; }
+    -webkit-transition: opacity 0.3s 0.2s ease, -webkit-transform 0.4s ease;
+    transition: opacity 0.3s 0.2s ease, -webkit-transform 0.4s ease;
+    transition: opacity 0.3s 0.2s ease, transform 0.4s ease;
+    transition: opacity 0.3s 0.2s ease, transform 0.4s ease, -webkit-transform 0.4s ease; }
 .b-save-btn--active .b-save-btn__icon-active {
     opacity: 1; }
+.b-save-btn--animate:not(.b-save-btn--active) .b-save-btn__icon {
+    -webkit-animation: save-btn-icon-default 0.8s 2 ease;
+            animation: save-btn-icon-default 0.8s 2 ease; }
+.b-save-btn--animate:not(.b-save-btn--active) .b-save-btn__icon-active {
+    -webkit-animation: save-btn-icon-active 2s 1 ease;
+            animation: save-btn-icon-active 2s 1 ease; }
+@-webkit-keyframes save-btn-icon-default {
+  20% {
+    opacity: 1; }
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6); } }
+@keyframes save-btn-icon-default {
+  20% {
+    opacity: 1; }
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6); } }
+@-webkit-keyframes save-btn-icon-active {
+  20% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes save-btn-icon-active {
+  20% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 .b-back-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
