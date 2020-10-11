@@ -6148,6 +6148,8 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
 .b-tariffs__msg a {
       color: #D84B2A;
       text-decoration: none; }
+.b-tariffs__pay-form {
+    display: none; }
 .b-tariffs--w100 {
     margin: 0; }
 .b-tariffs--w100 .b-tariffs__item {

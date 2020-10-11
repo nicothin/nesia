@@ -1768,6 +1768,15 @@ $( document ).ready(function() {
       });
     });
   }
+  // Клик по кнопкам +/- выбоар цены: убираем с кнопки offer класс вторичности
+  var itemAuction = document.querySelector('.b-info__item--auction');
+  if (itemAuction) {
+    itemAuction.addEventListener('click', function(e){
+      if(e.target.classList.contains('b-field-num__btn')) {
+        itemAuction.querySelector('.b-info__btn-offer-wrap .b-btn-2').classList.remove('b-btn-2--secondary');
+      }
+    });
+  }
 
 
 
@@ -1877,7 +1886,25 @@ $( document ).ready(function() {
 
 
 
-  // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
+  // Модальное окно покупки контакта: клик по кнопке покупки меняет содержимое окна
+  var payButtonsParent = document.getElementById('unlock-1');
+  if (payButtonsParent) {
+    payButtonsParent.addEventListener('click', function(e){
+      if (e.target.dataset.payFormSum) {
+        document.getElementById('tariffs-pay').style.display = 'none';
+        document.getElementById('tariffs-pay-form').style.display = 'block';
+        var sum = e.target.dataset.payFormSum;
+        document.getElementById('tariffs-pay-form-sum-input').value = sum;
+        document.querySelectorAll('[data-tariff-sum]').forEach(function(item){
+          item.innerHTML = sum;
+        });
+      }
+    });
+  }
+
+
+
+  // ВРЕМЕННОЕ ДЕМО! ТОЛЬКО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');
     var inactiveText = $(saveTextNode).data('inactive-text');
