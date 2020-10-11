@@ -1886,7 +1886,7 @@ $( document ).ready(function() {
 
 
 
-  // Модальное окно покупки контакта: клик по кнопке покупки меняет содержимое окна
+  // Сообщения, модальное окно покупки контакта: клик по кнопке покупки меняет содержимое окна
   var payButtonsParent = document.getElementById('unlock-1');
   if (payButtonsParent) {
     payButtonsParent.addEventListener('click', function(e){
