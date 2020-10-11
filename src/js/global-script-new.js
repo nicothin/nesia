@@ -133,6 +133,15 @@ $( document ).ready(function() {
       });
     });
   }
+  // Клик по кнопкам +/- выбоар цены: убираем с кнопки offer класс вторичности
+  var itemAuction = document.querySelector('.b-info__item--auction');
+  if (itemAuction) {
+    itemAuction.addEventListener('click', function(e){
+      if(e.target.classList.contains('b-field-num__btn')) {
+        itemAuction.querySelector('.b-info__btn-offer-wrap .b-btn-2').classList.remove('b-btn-2--secondary');
+      }
+    });
+  }
 
 
 
