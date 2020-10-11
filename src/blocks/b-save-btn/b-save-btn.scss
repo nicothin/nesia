@@ -10,11 +10,11 @@
   display: inline-flex;
   align-items: center;
   padding: 11px 16px;
-  padding: 8px 12px 8px 38px;
+  padding: 16px 24px 17px 64px;
   // font-size: 14px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 19px;
   color: #535353;
   text-align: center;
   text-decoration: none;
@@ -25,7 +25,7 @@
   user-select: none;
   background: transparent;
   // border: 1px solid #E8E8E8;
-  border: none;
+  border: 1px solid #E8E8E8;
   border-radius: 2px;
   // box-shadow: 2px 2px 8px rgba(151, 151, 151, 0.15);
   outline: none;
@@ -43,16 +43,16 @@
 
   &__icon {
     position: absolute;
-    top: 8px;
-    left: 12px;
+    top: 14px;
+    left: 27px;
     fill: #CFCECE;
     transition: none;
   }
 
   &__icon-active {
     position: absolute;
-    top: 8px;
-    left: 12px;
+    top: 14px;
+    left: 27px;
     opacity: 0;
     fill: #D84B2A;
     transition: all 0.2s ease;
