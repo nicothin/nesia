@@ -728,91 +728,85 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
 
-              <h4 class="b-modal-2__title">Unlock messages and contacts</h4>
-              <p class="b-messages__modal-text  b-messages__modal-text--max-w-360  b-messages__modal-text--mute">
-                Choose plan! After payment messanger and telephone number will be automatically available.
-              </p>
-              <div class="b-messages__modal-tariffs">
-                <ul class="b-tariffs">
-                  <li class="b-tariffs__item">
-                    <div class="b-tariffs__header">
-                      <h5 class="b-tariffs__title">One shot</h5>
-                      <p class="b-tariffs__price">1 € per contact</p>
-                    </div>
-                    <p class="b-tariffs__msg">Unlock just Sonia's contacts and messages</p>
-                    <button class="b-btn-2  b-btn-2--block" type="button" data-toggle="modal" data-target="#pay-form-1">Pay €1</button>
-                  </li>
-                  <li class="b-tariffs__item">
-                    <div class="b-tariffs__header">
-                      <h5 class="b-tariffs__title">Boost</h5>
-                      <p class="b-tariffs__price">7 € per contact</p>
-                    </div>
-                    <p class="b-tariffs__msg">Unlock all contacts on Terranesia for one month</p>
-                    <button class="b-btn-2  b-btn-2--block" type="button" data-toggle="modal" data-target="#pay-form-1">Pay €7</button>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="pay-form-1">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <div class="modal-body">
-
-              <h4 class="b-modal-2__title">Unlock messages and Sonia's contacts</h4>
-              <div class="b-modal-2__alert">
-                <p>After payment messanger and telephone number will be automatically available</p>
-                <p>Total payment: 1€/ billed once</p>
-              </div>
-              <p class="b-modal-2__form-title">Pay with credit or debit card</p>
-              <p class="b-messages__cards-img-wrap">
-                <img src="img/icon-pay-mastercard.svg" alt="MasterCard">
-                <img src="img/icon-pay-visa.svg" alt="Visa">
-                <img src="img/icon-pay-americanexpress.svg" alt="AmericanExpress">
-                <img src="img/icon-pay-discover.svg" alt="Discover">
-              </p>
-              <form action="" class="b-form-2">
-                <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
-                <div class="form-group  b-form-group  b-form-group--error  b-form-2__item">
-                  <label for="name" class="b-form-group__label">Name on card</label>
-                  <input type="text" class="form-control  b-form-control  b-form-group__input" id="name" placeholder="NAME" autocomplete="off" aria-describedby="nameHelpBlock">
-                  <div id="nameHelpBlock" class="b-form-group__help-text">Helper text goes here</div>
+              <div id="tariffs-pay" class="b-tariffs__pay">
+                <h4 class="b-modal-2__title">Unlock messages and contacts</h4>
+                <p class="b-messages__modal-text  b-messages__modal-text--max-w-360  b-messages__modal-text--mute">
+                  Choose plan! After payment messanger and telephone number will be automatically available.
+                </p>
+                <div class="b-messages__modal-tariffs">
+                  <ul class="b-tariffs">
+                    <li class="b-tariffs__item">
+                      <div class="b-tariffs__header">
+                        <h5 class="b-tariffs__title">One shot</h5>
+                        <p class="b-tariffs__price">1 € per contact</p>
+                      </div>
+                      <p class="b-tariffs__msg">Unlock just Sonia's contacts and messages</p>
+                      <button class="b-btn-2  b-btn-2--block" type="button" data-pay-form-sum="1">Pay €1</button>
+                    </li>
+                    <li class="b-tariffs__item">
+                      <div class="b-tariffs__header">
+                        <h5 class="b-tariffs__title">Boost</h5>
+                        <p class="b-tariffs__price">7 € per contact</p>
+                      </div>
+                      <p class="b-tariffs__msg">Unlock all contacts on Terranesia for one month</p>
+                      <button class="b-btn-2  b-btn-2--block" type="button" data-pay-form-sum="7">Pay €7</button>
+                    </li>
+                  </ul>
                 </div>
-                <div class="form-group  b-form-group  b-form-2__item">
-                  <label for="card" class="b-form-group__label">Card</label>
-                  <input type="text" class="form-control  b-form-control  b-form-group__input" id="card" placeholder="Number" autocomplete="off">
-                  <div class="row  b-form-2__row">
-                    <div class="col-sm-6">
-                      <!-- Убрать b-form-control--error для состояния «нет ошибки» -->
-                      <input type="text" class="form-control  b-form-control  b-form-control--error  b-form-group__input" placeholder="MM/YY" autocomplete="off">
-                    </div>
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="CVV" autocomplete="off">
-                    </div>
+              </div>
+
+              <div id="tariffs-pay-form" class="b-tariffs__pay-form">
+                <h4 class="b-modal-2__title">Unlock messages and Sonia's contacts</h4>
+                <div class="b-modal-2__alert">
+                  <p>After payment messanger and telephone number will be automatically available</p>
+                  <p>Total payment: <span data-tariff-sum>1</span>€/ billed once</p>
+                </div>
+                <p class="b-modal-2__form-title">Pay with credit or debit card</p>
+                <p class="b-messages__cards-img-wrap">
+                  <img src="img/icon-pay-mastercard.svg" alt="MasterCard">
+                  <img src="img/icon-pay-visa.svg" alt="Visa">
+                  <img src="img/icon-pay-americanexpress.svg" alt="AmericanExpress">
+                  <img src="img/icon-pay-discover.svg" alt="Discover">
+                </p>
+                <form action="" class="b-form-2">
+                  <input type="hidden" id="tariffs-pay-form-sum-input" value="1">
+                  <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
+                  <div class="form-group  b-form-group  b-form-group--error  b-form-2__item">
+                    <label for="name" class="b-form-group__label">Name on card</label>
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" id="name" placeholder="NAME" autocomplete="off" aria-describedby="nameHelpBlock">
+                    <div id="nameHelpBlock" class="b-form-group__help-text">Helper text goes here</div>
                   </div>
-                  <div id="nameHelpBlock" class="b-form-group__help-text  b-form-group__help-text--error">Helper text goes here</div>
-                </div>
-                <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
-                <div class="form-group  b-form-group  b-form-group--error  b-form-2__item">
-                  <label for="countrySelect" class="b-form-group__label">Country</label>
-                  <select class="form-control  b-form-control  b-form-group__input" id="countrySelect" aria-describedby="countryHelpBlock">
-                    <option>Russia</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                  <div id="countryHelpBlock" class="b-form-group__help-text">Helper text goes here</div>
-                </div>
-                <div class="b-form-2__actions">
-                  <button class="b-btn-2  b-btn-2--lg  b-form-2__btn-wide">Add card and pay €1</button>
-                </div>
-              </form>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="card" class="b-form-group__label">Card</label>
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" id="card" placeholder="Number" autocomplete="off">
+                    <div class="row  b-form-2__row">
+                      <div class="col-sm-6">
+                        <!-- Убрать b-form-control--error для состояния «нет ошибки» -->
+                        <input type="text" class="form-control  b-form-control  b-form-control--error  b-form-group__input" placeholder="MM/YY" autocomplete="off">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="CVV" autocomplete="off">
+                      </div>
+                    </div>
+                    <div id="nameHelpBlock" class="b-form-group__help-text  b-form-group__help-text--error">Helper text goes here</div>
+                  </div>
+                  <!-- Убрать класс b-form-group--error для состояния «нет ошибки» -->
+                  <div class="form-group  b-form-group  b-form-group--error  b-form-2__item">
+                    <label for="countrySelect" class="b-form-group__label">Country</label>
+                    <select class="form-control  b-form-control  b-form-group__input" id="countrySelect" aria-describedby="countryHelpBlock">
+                      <option>Russia</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                    <div id="countryHelpBlock" class="b-form-group__help-text">Helper text goes here</div>
+                  </div>
+                  <div class="b-form-2__actions">
+                    <button class="b-btn-2  b-btn-2--lg  b-form-2__btn-wide">Add card and pay €<span data-tariff-sum>1</span></button>
+                  </div>
+                </form>
+              </div>
 
             </div>
           </div>

@@ -251,7 +251,25 @@ $( document ).ready(function() {
 
 
 
-  // ВРЕМЕННОЕ ДЕМО! ТОЛКЬО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
+  // Сообщения, модальное окно покупки контакта: клик по кнопке покупки меняет содержимое окна
+  var payButtonsParent = document.getElementById('unlock-1');
+  if (payButtonsParent) {
+    payButtonsParent.addEventListener('click', function(e){
+      if (e.target.dataset.payFormSum) {
+        document.getElementById('tariffs-pay').style.display = 'none';
+        document.getElementById('tariffs-pay-form').style.display = 'block';
+        var sum = e.target.dataset.payFormSum;
+        document.getElementById('tariffs-pay-form-sum-input').value = sum;
+        document.querySelectorAll('[data-tariff-sum]').forEach(function(item){
+          item.innerHTML = sum;
+        });
+      }
+    });
+  }
+
+
+
+  // ВРЕМЕННОЕ ДЕМО! ТОЛЬКО НЕ В ПРОД! Локация: Визуализация работы кнопки Save
   $('#temp-id1').on('click', function () {
     var saveTextNode = $(this).find('.b-save-btn__text-save');
     var inactiveText = $(saveTextNode).data('inactive-text');
