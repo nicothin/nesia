@@ -36,6 +36,12 @@
         padding-bottom: 22px;
       }
     }
+
+    &--about {
+      margin-bottom: 32px;
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__flex-line {
@@ -210,6 +216,10 @@
 
     &--about {
       margin-bottom: 47px;
+    }
+
+    &--location {
+      margin-bottom: 22px;
     }
   }
 
