@@ -57,6 +57,14 @@
     }
   }
 
+  .modal-header {
+
+    @media (min-width: $screen-md) {
+      padding: 32px 32px 0;
+      border: 0;
+    }
+  }
+
   .modal-content {
     border: none;
     border-radius: 2px;
@@ -110,6 +118,15 @@
 
     .b-btn-2 {
       margin-right: 8px;
+    }
+
+    &--self-padding {
+      padding: 15px;
+
+      @media (min-width: $screen-md) {
+        padding: 0;
+        padding-top: 32px;
+      }
     }
   }
 
@@ -235,6 +252,16 @@
 
       @media (min-width: $screen-md) {
         width: 600px;
+      }
+    }
+  }
+
+  &--full-body {
+
+    @media (max-width: ($screen-md - 1)) {
+
+      .modal-body {
+        padding: 0;
       }
     }
   }

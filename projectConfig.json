@@ -104,13 +104,15 @@
   "addCssBefore": [
     "./src/scss/functions.scss",
     "./src/scss/variables.scss",
-    "./src/scss/mixins.scss"
+    "./src/scss/mixins.scss",
+    "../../node_modules/cropperjs/dist/cropper.min.css"
   ],
   "addCssAfter": [],
   "singleCompiled": [],
   "addJsBefore": [
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/object-fit-images/dist/ofi.js",
+    "./node_modules/cropperjs/dist/cropper.min.js",
     "src/js/jquery.selectBox.js"
   ],
   "addJsAfter": [

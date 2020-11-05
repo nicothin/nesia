@@ -17,6 +17,7 @@
   }
 
   &__img {
+    flex-shrink: 0;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -34,6 +35,42 @@
 
     #{$block-name}__descr {
       color: #D84B2A;
+    }
+  }
+
+  &__new-avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__new-avatar-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 60vh;
+    overflow: hidden;
+  }
+
+  &__modal-new-avatar {
+
+    .cropper-view-box,
+    .cropper-face {
+      border-radius: 50%;
+    }
+
+    .cropper-face {
+      opacity: 0;
+    }
+
+    .cropper-view-box {
+      outline: none;
+    }
+
+    .cropper-dashed,
+    .cropper-center,
+    .cropper-line {
+      display: none;
     }
   }
 }
