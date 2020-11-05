@@ -318,10 +318,10 @@
 
                 <form action="" class="b-form-2  b-auth__form">
                   <div class="b-user-photo  b-user-photo--error  b-auth__add-photo">
-                    <img src="img/photo_empty.svg" alt="%USERNAME%" class="b-user-photo__img" width="80" height="80">
+                    <img id="userpic-image" src="img/photo_empty.svg" alt="%USERNAME%" class="b-user-photo__img" width="80" height="80">
                     <div class="b-user-photo__info">
                       <label class="b-btn-2  b-btn-2--block  b-btn-2--secondary">
-                        <input type="file">
+                        <input type="file" accept="image/*" onchange="loadFile(event)">
                         Add photo
                       </label>
                       <p class="b-user-photo__descr">Photo is mandatory, it increase confidence of other users</p>
@@ -367,7 +367,65 @@
         </div>
       </div>
 
+      <div class="modal  b-modal-2  b-modal-2--lg  b-modal-2--full-body  b-user-photo__modal-new-avatar  fade" tabindex="-1" role="dialog" id="crop-avatar">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title">Add photo</h4>
+            </div>
+            <div class="modal-body">
+              <div class="b-user-photo__new-avatar-wrap">
+                <img id="new-avatar" class="b-user-photo__new-avatar" alt="" />
+              </div>
+              <p class="b-modal-2__actions  b-modal-2__actions--self-padding">
+                <button class="b-btn-2" type="button" data-dismiss="modal" id="new-avatar-save">Save photo</button>
+                <button class="b-btn-2  b-btn-2--secondary" data-dismiss="modal" id="new-avatar-cancel">Cancel</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <script>
+        // Функцональность выбора аватара
+        var output = document.getElementById('new-avatar');
+        var cropper;
+        var loadFile = function (event) {
+          $('#crop-avatar').modal('show');
+          setTimeout(function () {
+            output.src = URL.createObjectURL(event.target.files[0]);
+            cropper = new Cropper(output, {
+              aspectRatio: 1,
+              viewMode: 1,
+              zoomable: false,
+            });
+          }, 200);
+        };
+
+        var cropperDestroy = function() {
+          cropper.destroy();
+        };
+
+        document.getElementById('new-avatar-save').addEventListener('click', function(e){
+          setTimeout(function() {
+            croppedCanvas = cropper.getCroppedCanvas();
+            document.getElementById('userpic-image').src = croppedCanvas.toDataURL();
+            cropperDestroy();
+          }, 300);
+        });
+        document.getElementById('new-avatar-cancel').addEventListener('click', function(e){
+          setTimeout(function() {
+            cropperDestroy();
+          }, 300);
+        });
+        $('#crop-avatar').on('hidden.bs.modal', function (e) {
+          setTimeout(function() {
+            cropperDestroy();
+          }, 300);
+        });
+      </script>
 
     </div>
 
