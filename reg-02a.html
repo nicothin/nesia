@@ -317,10 +317,12 @@
                 <h1 class="b-main-header  b-main-header--content  b-auth__title">Registration</h1>
 
                 <form action="" class="b-form-2  b-auth__form">
-                  <div class="b-user-photo  b-user-photo--error  b-auth__add-photo">
+                  <!-- b-user-photo--error — добавить для того, чтобы сделать текст красным -->
+                  <div class="b-user-photo  b-auth__add-photo">
                     <img id="userpic-image" src="img/photo_empty.svg" alt="%USERNAME%" class="b-user-photo__img" width="80" height="80">
                     <div class="b-user-photo__info">
-                      <label class="b-btn-2  b-btn-2--block  b-btn-2--secondary">
+                      <!-- b-btn-2--secondary -->
+                      <label class="b-btn-2  b-btn-2--block  b-btn-2--gray">
                         <input type="file" accept="image/*" onchange="loadFile(event)">
                         Add photo
                       </label>

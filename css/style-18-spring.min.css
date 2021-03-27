@@ -4374,7 +4374,9 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
   color: #fff;
   border: 1px solid #D84B2A;
   border-radius: 2px;
-  outline: none; }
+  outline: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
 .b-btn-2:hover, .b-btn-2:focus {
     color: #fff;
     text-decoration: none;
@@ -4403,6 +4405,14 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
       color: #C24629;
       background: #fff;
       border: 1px solid #C24629; }
+.b-btn-2--gray {
+    border: 1px solid #c4c4c4;
+    background: #ffffff;
+    color: #535353; }
+.b-btn-2--gray:hover, .b-btn-2--gray:focus {
+      border: 1px solid #A1A1A1;
+      background: #ffffff;
+      color: #535353; }
 .b-btn-2--white {
     border: 0;
     background: #ffffff;
