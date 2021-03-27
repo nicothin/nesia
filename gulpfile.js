@@ -341,8 +341,8 @@ gulp.task('serve', gulp.series('build', function() {
   browserSync.init({
     server: dirs.buildPath,
     port: 8080,
-    startPath: 'index.html',
-    open: false,
+    startPath: '_list.html',
+    // open: false,
     notify: false,
   });
 

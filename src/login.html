@@ -9,6 +9,21 @@
 
                 <h1 class="b-main-header  b-main-header--content  b-auth__title">Login</h1>
 
+                <ul>
+                  <li>
+                    <a href="#login-modal" data-toggle="modal">show modal login</a>
+                  </li>
+                  <li>
+                    <a href="#verify-cellphone-modal" data-toggle="modal">show modal verify cellphone</a>
+                  </li>
+                  <li>
+                    <a href="#registration-modal" data-toggle="modal">show modal reg-01</a>
+                  </li>
+                  <li>
+                    <a href="#registration-modal-2" data-toggle="modal">show modal reg-02</a>
+                  </li>
+                </ul>
+
                 <form action="" class="b-form-2  b-auth__form">
                   <div class="form-group  b-form-group  b-form-2__item">
                     <label for="email" class="b-form-group__label">E-mail</label>
@@ -46,6 +61,202 @@
         </div>
       </div>
 
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="login-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
 
+              <div class="b-auth__inner">
+
+                <h3 class="b-main-header  b-main-header--content  b-auth__title">Login</h3>
+
+                <form action="" class="b-form-2  b-auth__form">
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="email" class="b-form-group__label">E-mail</label>
+                    <input type="email" class="form-control  b-form-control  b-form-group__input" id="email" placeholder="Enter your email">
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="password" class="b-form-group__label">Password</label>
+                    <input type="password" class="form-control  b-form-control  b-form-group__input" id="password" aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="b-form-group__help-text  b-form-group__help-text--right">
+                      <a href="" class="b-form-group__link-gray">Forget password?</a>
+                    </div>
+                  </div>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Login</button>
+                    <p class="b-auth__or">or</p>
+                    <a href="" class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow  b-btn-2--facebook-border">
+                      <svg class="b-btn-2__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#3B5998"/><path d="M10.011 8.31311H8.5835V13.5428H6.42072V8.31311H5.39209V6.47519H6.42072V5.28584C6.42072 4.43533 6.82472 3.10352 8.60275 3.10352L10.2048 3.11022V4.89424H9.04241C8.85175 4.89424 8.58365 4.9895 8.58365 5.39522V6.4769H10.2L10.011 8.31311Z" fill="white"/></svg>
+                      Use Facebook
+                    </a>
+                  </div>
+
+                </form>
+
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
+
+                <p class="b-auth__registration-link-wrap">
+                  <a href="">Register</a>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="verify-cellphone-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <div class="b-auth__inner">
+
+                <h3 class="b-main-header  b-main-header--content  b-auth__title">Verify Cellphone</h3>
+
+                <p class="b-auth__code-msg">We texted your code to +7 900 022-81-44. It may take a minute to arrive.</p>
+
+                <form action="" class="b-form-2  b-auth__form">
+                  <div class="form-group  b-form-group  b-form-group--pb8  b-form-2__item">
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" placeholder="Enter code" required>
+                  </div>
+                  <p class="b-auth__send-code-again">Didn’t get it? <a href="">Try again</a></p>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Verify</button>
+                  </div>
+
+                </form>
+
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="registration-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <div class="b-auth__inner">
+
+                <h3 class="b-main-header  b-main-header--content  b-auth__title">Registration</h3>
+
+                <form action="" class="b-form-2  b-auth__form">
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="email" class="b-form-group__label">E-mail</label>
+                    <input type="email" class="form-control  b-form-control  b-form-group__input" id="email" placeholder="Enter your email">
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="password" class="b-form-group__label">Password</label>
+                    <input type="password" class="form-control  b-form-control  b-form-group__input" id="password" aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="b-form-group__help-text">
+                      Use at least 6 characters, including number and letters
+                    </div>
+                  </div>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Continue</button>
+                    <p class="b-auth__or">or</p>
+                    <a href="" class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow  b-btn-2--facebook-border">
+                      <svg class="b-btn-2__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#3B5998"/><path d="M10.011 8.31311H8.5835V13.5428H6.42072V8.31311H5.39209V6.47519H6.42072V5.28584C6.42072 4.43533 6.82472 3.10352 8.60275 3.10352L10.2048 3.11022V4.89424H9.04241C8.85175 4.89424 8.58365 4.9895 8.58365 5.39522V6.4769H10.2L10.011 8.31311Z" fill="white"/></svg>
+                      Use Facebook
+                    </a>
+                  </div>
+
+                </form>
+
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
+
+                <p class="b-auth__registration-link-wrap">
+                  <a href="">Sign In istead</a>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="registration-modal-2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <div class="b-auth__inner">
+
+                <h3 class="b-main-header  b-main-header--content  b-auth__title">Registration</h3>
+
+                <form action="" class="b-form-2  b-auth__form">
+                  <!-- b-user-photo--error — добавить для того, чтобы сделать текст красным -->
+                  <div class="b-user-photo  b-auth__add-photo">
+                    <img id="userpic-image" src="img/photo_empty.svg" alt="%USERNAME%" class="b-user-photo__img" width="80" height="80">
+                    <div class="b-user-photo__info">
+                      <!-- b-btn-2--secondary -->
+                      <label class="b-btn-2  b-btn-2--block  b-btn-2--gray">
+                        <input type="file" accept="image/*" onchange="loadFile(event)">
+                        Add photo
+                      </label>
+                      <p class="b-user-photo__descr">Photo is mandatory, it increase confidence of other users</p>
+                    </div>
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="firstName" class="b-form-group__label">First Name *</label>
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" id="firstName" aria-describedby="firstNameHelpBlock" required>
+                    <div id="firstNameHelpBlock" class="b-form-group__help-text  b-form-group__help-text--error">Enter name, it is required</div>
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="lastName" class="b-form-group__label">Last Name *</label>
+                    <input type="text" class="form-control  b-form-control  b-form-group__input" id="lastName" aria-describedby="lastNameHelpBlock" required>
+                    <div id="lastNameHelpBlock" class="b-form-group__help-text  b-form-group__help-text--error">Enter name, it is required</div>
+                  </div>
+                  <div class="form-group  b-form-group  b-form-2__item">
+                    <label for="countryCode" class="b-form-group__label">Add cellphone *</label>
+                    <select class="form-control  b-form-control  b-form-group__input" id="countryCodeSelect">
+                      <option value="+7">Russia (+7)</option>
+                      <option value="+72">Russia2 (+72)</option>
+                      <option value="+73">Russia3 (+73)</option>
+                      <option value="+74">Russia4 (+74)</option>
+                    </select>
+                    <label class="b-form-group__phone-wrap" id="countryPhoneCodeWrap">
+                      <span class="b-form-group__phone-code" id="countryPhoneCode">+7</span>
+                      <input type="text" class="b-form-group__phone-input" id="phoneNumber" value="" required>
+                    </label>
+                    <div class="b-form-group__help-text  b-form-group__help-text--error">Enter cellphone, it is required</div>
+                  </div>
+                  <div class="b-auth__actions">
+                    <button class="b-btn-2  b-btn-2--block  b-btn-2--lg-narrow">Register</button>
+                  </div>
+
+                </form>
+
+                <p class="b-auth__cond">
+                  By entering to Terranesia, you agree to our <a href="">Conditions of Use</a> and <a href="">Privacy Notice</a>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
 
 @@include('./html-includes/footer.html')
