@@ -23,6 +23,7 @@
   border: 1px solid #D84B2A;
   border-radius: 2px;
   outline: none;
+  transition: all 0.3s;
 
   &:hover,
   &:focus {
@@ -65,6 +66,19 @@
       color: #C24629;
       background: #fff;
       border: 1px solid #C24629;
+    }
+  }
+
+  &--gray {
+    border: 1px solid #c4c4c4;
+    background: #ffffff;
+    color: #535353;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #A1A1A1;
+      background: #ffffff;
+      color: #535353;
     }
   }
 
