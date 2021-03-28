@@ -150,7 +150,6 @@
                         </button>
                       </div>
 
-                      <!-- Посетитель еще не делал предложений в аукционе -->
                       <div class="b-info__price-change-wrap">
                         <div class="b-field-num">
                           <span class="b-field-num__input-and-btns">
@@ -168,22 +167,203 @@
                           </span>
                         </div>
                       </div>
-                      <!-- / Посетитель еще не делал предложений в аукционе -->
 
-                      <!-- Посетитель сделал предложение и ждёт ответа -->
-                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid" style="display: none">
+                      <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
+                          <span class="b-btn-2__text">Offer your price</span>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="b-info__hidden-block" id="last-offers" style="display: none;">
+                      <ul class="b-info__price-list  b-info__price-list--avatars">
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <!-- <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm"> -->
+                            <span class="b-user-avatar-2  b-user-avatar-2--sm">H</span>
+                          </a>
+                          <span class="b-info__price-item-text">highest bid</span>
+                          <span class="b-info__price-item-sum">€ 70, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm">
+                          </a>
+                          <span class="b-info__price-item-text">lowest ask</span>
+                          <span class="b-info__price-item-sum">€ 68, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                      </ul>
+                      <span class="b-info__total">Total offers <b>12</b></span>
+                    </div>
+                  </div>
+
+                  <div class="b-info__item  b-info__item--auction">
+                    <form class="row  b-info__flex-line">
+                      <div class="col-xs-12  col-md-3">
+                        <div class="b-info__auction-wrap">
+                          <h2  class="b-info__title  b-info__title--auction">Auction</h2 >
+                          <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
+                        </div>
+                        <button class="b-info__trigger  b-link  b-toggler" data-slide-toggler="#last-offers-2" data-slide-hidden="See last offers" data-slide-shown="Hide last offers">
+                          <span class="js-text">See last offers</span>
+                        </button>
+                      </div>
+
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid">
                         <p class="b-info__bid-text">
                           Your offer is <strong class="b-info__bid-sum">€ 68,900</strong>
                         </p>
                         <div class="b-info__response-status">
-                          <div class="b-label  b-label--light-danger" style="display: none">Relected</div> <!-- Если отказали -->
-                          <div class="b-label  b-label--light-success">Accepted</div> <!-- Если приняли -->
+                          Waiting for responce
                         </div>
                       </div>
-                      <!-- / Посетитель сделал предложение и ждёт ответа -->
 
-                      <!-- Аукцион завершен, выбрали другого -->
-                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid" style="display: none">
+                      <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
+                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
+                          <span class="b-btn-2__text">Contact owner</span>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="b-info__hidden-block" id="last-offers-2" style="display: none;">
+                      <ul class="b-info__price-list  b-info__price-list--avatars">
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <!-- <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm"> -->
+                            <span class="b-user-avatar-2  b-user-avatar-2--sm">H</span>
+                          </a>
+                          <span class="b-info__price-item-text">highest bid</span>
+                          <span class="b-info__price-item-sum">€ 70, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm">
+                          </a>
+                          <span class="b-info__price-item-text">lowest ask</span>
+                          <span class="b-info__price-item-sum">€ 68, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                      </ul>
+                      <span class="b-info__total">Total offers <b>12</b></span>
+                    </div>
+                  </div>
+
+                  <div class="b-info__item  b-info__item--auction">
+                    <form class="row  b-info__flex-line">
+                      <div class="col-xs-12  col-md-3">
+                        <div class="b-info__auction-wrap">
+                          <h2  class="b-info__title  b-info__title--auction">Auction</h2 >
+                          <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
+                        </div>
+                        <button class="b-info__trigger  b-link  b-toggler" data-slide-toggler="#last-offers-3" data-slide-hidden="See last offers" data-slide-shown="Hide last offers">
+                          <span class="js-text">See last offers</span>
+                        </button>
+                      </div>
+
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid">
+                        <p class="b-info__bid-text">
+                          Your offer is <strong class="b-info__bid-sum">€ 68,900</strong>
+                        </p>
+                        <div class="b-info__response-status">
+                          <div class="b-label  b-label--light-danger">Relected</div>
+                        </div>
+                      </div>
+
+                      <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
+                        <button class="b-btn-2" type="submit">
+                          <span class="b-btn-2__text">Contact owner</span>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="b-info__hidden-block" id="last-offers-3" style="display: none;">
+                      <ul class="b-info__price-list  b-info__price-list--avatars">
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <!-- <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm"> -->
+                            <span class="b-user-avatar-2  b-user-avatar-2--sm">H</span>
+                          </a>
+                          <span class="b-info__price-item-text">highest bid</span>
+                          <span class="b-info__price-item-sum">€ 70, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm">
+                          </a>
+                          <span class="b-info__price-item-text">lowest ask</span>
+                          <span class="b-info__price-item-sum">€ 68, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                      </ul>
+                      <span class="b-info__total">Total offers <b>12</b></span>
+                    </div>
+                  </div>
+
+                  <div class="b-info__item  b-info__item--auction">
+                    <form class="row  b-info__flex-line">
+                      <div class="col-xs-12  col-md-3">
+                        <div class="b-info__auction-wrap">
+                          <h2  class="b-info__title  b-info__title--auction">Auction</h2 >
+                          <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
+                        </div>
+                        <button class="b-info__trigger  b-link  b-toggler" data-slide-toggler="#last-offers-4" data-slide-hidden="See last offers" data-slide-shown="Hide last offers">
+                          <span class="js-text">See last offers</span>
+                        </button>
+                      </div>
+
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid">
+                        <p class="b-info__bid-text">
+                          Your offer is <strong class="b-info__bid-sum">€ 68,900</strong>
+                        </p>
+                        <div class="b-info__response-status">
+                          <div class="b-label  b-label--light-success">Accepted</div>
+                        </div>
+                      </div>
+
+                      <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
+                        <button class="b-btn-2" type="submit">
+                          <span class="b-btn-2__text">Contact owner</span>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="b-info__hidden-block" id="last-offers-4" style="display: none;">
+                      <ul class="b-info__price-list  b-info__price-list--avatars">
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <!-- <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm"> -->
+                            <span class="b-user-avatar-2  b-user-avatar-2--sm">H</span>
+                          </a>
+                          <span class="b-info__price-item-text">highest bid</span>
+                          <span class="b-info__price-item-sum">€ 70, 000</span>
+                          <span class="b-info__price-item-change  b-info__price-item-change--up">+20%</span>
+                        </li>
+                        <li class="b-info__price-item">
+                          <a href="/" class="b-info__price-item-avatar">
+                            <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-avatar-2  b-user-avatar-2--sm">
+                          </a>
+                          <span class="b-info__price-item-text">lowest ask</span>
+                          <span class="b-info__price-item-sum">€ 68, 000</span>
+                          <span class="b-info__price-item-change">-10%</span>
+                        </li>
+                      </ul>
+                      <span class="b-info__total">Total offers <b>12</b></span>
+                    </div>
+                  </div>
+
+                  <div class="b-info__item  b-info__item--auction">
+                    <form class="row  b-info__flex-line">
+                      <div class="col-xs-12  col-md-3">
+                        <div class="b-info__auction-wrap">
+                          <h2  class="b-info__title  b-info__title--auction">Auction</h2 >
+                          <button type="button" class="b-info-btn" data-toggle="popover" data-placement="top" data-content="Text info demo">Info</button>
+                        </div>
+                        <button class="b-info__trigger  b-link  b-toggler" data-slide-toggler="#last-offers-5" data-slide-hidden="See last offers" data-slide-shown="Hide last offers">
+                          <span class="js-text">See last offers</span>
+                        </button>
+                      </div>
+
+                      <div class="b-info__price-change-wrap  b-info__price-change-wrap--bid">
                         <p class="b-info__bid-text  b-info__bid-text--danger">
                           Sorry, auction was closed
                         </p>
@@ -191,23 +371,9 @@
                           Your offer € 65,333 was rejected
                         </div>
                       </div>
-                      <!-- / Аукцион завершен, выбрали другого -->
 
-                      <div class="b-info__btn-offer-wrap  col-xs-12  col-md-3">
-                        <!-- Посетитель еще не делал предложений в аукционе -->
-                        <button class="b-btn-2  b-btn-2--secondary" type="submit">
-                          <span class="b-btn-2__text">Offer your price</span>
-                        </button>
-                        <!-- / Посетитель еще не делал предложений в аукционе -->
-
-                        <!-- Посетитель сделал предложение и ждёт ответа -->
-                        <button class="b-btn-2" type="submit" style="display: none;">
-                          <span class="b-btn-2__text">Contact owner</span>
-                        </button>
-                        <!-- / Посетитель сделал предложение и ждёт ответа -->
-                      </div>
                     </form>
-                    <div class="b-info__hidden-block" id="last-offers" style="display: none;">
+                    <div class="b-info__hidden-block" id="last-offers-5" style="display: none;">
                       <ul class="b-info__price-list  b-info__price-list--avatars">
                         <li class="b-info__price-item">
                           <a href="/" class="b-info__price-item-avatar">
