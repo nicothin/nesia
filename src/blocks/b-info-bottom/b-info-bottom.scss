@@ -59,6 +59,11 @@
   &__btn {
     position: relative;
     flex-shrink: 0;
+
+    &--single-btn-right {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &--location {
@@ -79,6 +84,53 @@
     .b-info-bottom__btn {
       width: 50%;
       padding: 0 8px;
+    }
+  }
+
+  &--cookies {
+
+    @media (min-width: $screen-md) {
+      width: 350px;
+      right: auto;
+    }
+
+    #{$block-name}__btn {
+      margin-top: 1em;
+    }
+
+    #{$block-name}__inner {
+      display: block;
+
+      @media (min-width: $screen-md) {
+        padding: 2em;
+      }
+    }
+
+    #{$block-name}__text {
+      margin-right: 0;
+    }
+  }
+
+  &--invert {
+    background: #000;
+    color: $gray-lightest-2;
+
+    a {
+      color: #6fa8d9;
+    }
+
+    #{$block-name}__close {
+      background: #000 !important;
+      color: $gray-lightest-2 !important;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+
+        span {
+          color: $gray-lightest-2;
+        }
+      }
     }
   }
 }
