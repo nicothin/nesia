@@ -48,6 +48,14 @@
         color: #000;
       }
     }
+
+    &--lg {
+      top: -18px;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+    }
   }
 
   &__text {
