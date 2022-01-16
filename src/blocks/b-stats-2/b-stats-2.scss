@@ -163,9 +163,22 @@
       padding: 12px 0;
       vertical-align: middle;
     }
+
+    @media (max-width: ($screen-sm - 1)) {
+
+      tr {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+    }
   }
 
   &__users-table-user {
+
+    @media (max-width: ($screen-sm - 1)) {
+      min-width: 0;
+    }
   }
 
   &__users-table-date {
@@ -178,6 +191,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
+    @media (max-width: ($screen-sm - 1)) {
+      flex-shrink: 0;
+      margin-left: auto;
+      padding-top: 0 !important;
+    }
+
     @media (min-width: $screen-sm) {
       width: 25%;
       padding-left: 16px !important;
@@ -186,8 +205,11 @@
   }
 
   &__users-table-action {
-    display: none;
     transition: opacity 0.3s;
+
+    @media (max-width: ($screen-sm - 1)) {
+      width: 100%;
+    }
 
     @media (min-width: $screen-sm) {
       display: table-cell;
