@@ -1170,6 +1170,12 @@ body {
       opacity: 1; }
 .b-info-bottom__close:hover span, .b-info-bottom__close:focus span {
         color: #000; }
+.b-info-bottom__close--lg {
+      top: -18px;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      line-height: 36px; }
 .b-info-bottom__text {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
