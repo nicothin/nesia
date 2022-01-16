@@ -163,7 +163,7 @@
 
   &__phone-wrap {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     margin: 8px 0 !important;
     border: 1px solid #c4c4c4;
     border-radius: 2px;
@@ -180,6 +180,7 @@
     position: relative;
     display: inline-block;
     flex-shrink: 0;
+    height: 22px;
     padding-right: 5px;
     margin-right: 4px;
     color: #CFCECE;
@@ -201,6 +202,7 @@
     padding: 0;
     border: 0;
     flex-grow: 1;
+    height: 22px;
     outline: none;
   }
 
