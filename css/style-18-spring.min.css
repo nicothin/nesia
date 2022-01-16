@@ -5378,7 +5378,6 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     overflow: hidden;
     text-overflow: ellipsis; }
 .b-stats-2__users-table-action {
-    display: none;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
 .b-toggler {
@@ -7889,6 +7888,25 @@ input:checked ~ .b-form-group__checkbox-text:before {
 @media all and (-ms-high-contrast: none) {
       .b-shared-object__descr *::-ms-backdrop, .b-shared-object__descr {
         width: 300px; } }
+@media (max-width: 479px) {
+      .b-stats-2__users-list-table tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline; }
+    .b-stats-2__users-table-user {
+      min-width: 0; }
+      .b-stats-2__users-table-date {
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        margin-left: auto;
+        padding-top: 0 !important; }
+      .b-stats-2__users-table-action {
+        width: 100%; } }
 @media (pointer: coarse) {
       .b-stats-2__users-table-action {
         opacity: 1; }
