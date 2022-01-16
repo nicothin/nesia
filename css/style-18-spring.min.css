@@ -596,6 +596,17 @@ body {
 .b-btn--ph24 {
     padding-left: 24px !important;
     padding-right: 24px !important; }
+.b-btn--fb-block {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #3b5998 !important;
+    color: #fff !important; }
+.b-btn--fb-block .b-btn__icon {
+      margin-right: 8px;
+      -webkit-transform: translateY(-2px);
+              transform: translateY(-2px); }
 .btn-gray {
   color: #333;
   background-color: #f0f0f0;
