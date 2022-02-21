@@ -5780,6 +5780,8 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
       color: #535353; }
 .b-messages__modal-confirm-btn {
     margin-top: 14px; }
+.b-messages__modal-confirm-btn--mr {
+      margin-right: 16px; }
 .b-messages__modal-tariffs {
     margin: 16px 0 -8px; }
 .b-messages__cards-img-wrap {
@@ -5793,6 +5795,11 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
         flex-wrap: wrap;
     margin: 0 0 32px 0; }
 .b-messages__cards-img-wrap img {
+      margin-right: 8px; }
+.b-messages__modal-footer-center {
+    text-align: center; }
+.b-messages__modal-footer-center .b-messages__modal-confirm-btn {
+      margin-left: 8px;
       margin-right: 8px; }
 .b-user-avatar-2 {
   display: -webkit-inline-box;
@@ -6750,6 +6757,40 @@ input:checked ~ .b-form-group__checkbox-text:before {
     height: auto; }
 .b-congratulations__share-text {
     color: #000; }
+.b-datepicker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px; }
+.b-datepicker * {
+    color: #535353 !important;
+    background: transparent; }
+.b-datepicker .ui-datepicker th {
+    font-size: 80%; }
+.b-datepicker .ui-datepicker td a,
+  .b-datepicker .ui-datepicker td span {
+    text-align: center; }
+.b-datepicker .ui-state-highlight,
+  .b-datepicker .ui-widget-content .ui-state-highlight,
+  .b-datepicker .ui-widget-header .ui-state-highlight {
+    background: #CDEC70; }
+.b-datepicker .ui-state-default.ui-state-active {
+    color: #fff !important;
+    background: #98c12f; }
+.b-datepicker .ui-datepicker .ui-datepicker-next span,
+  .b-datepicker .ui-datepicker .ui-datepicker-prev span {
+    background: url("../img/ui-icons.png"); }
+.b-datepicker .ui-icon-circle-triangle-w {
+    background-position: -357px -2px !important; }
+.b-datepicker .ui-icon-circle-triangle-e {
+    background-position: -293px -2px !important; }
 @media (min-width: 421px) {
         .b-location__main-block .big_img_slider .jcarousel-control-next,
         .b-location__main-block .big_img_slider .jcarousel-control-prev {
