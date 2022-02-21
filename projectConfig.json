@@ -99,7 +99,8 @@
     "b-object-list-2": [],
     "b-auth": [],
     "b-user-photo": [],
-    "b-congratulations": []
+    "b-congratulations": [],
+    "b-datepicker": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
@@ -144,6 +145,9 @@
     "src/js/jquery.cookie.js",
     "src/js/jquery.Jcrop.min.js",
     "src/js/jquery.touchSwipe.min.js",
+    "src/js/jquery.ui.datepicker-en.js",
+    "src/js/jquery.ui.datepicker-ru.js",
+    "src/js/jquery.ui.datepicker-sr.js",
     "src/js/intlTelInput.js",
     "src/js/countrySelect.js",
     "src/js/jquery.tagsinput.min.js",

@@ -241,7 +241,7 @@
                   </script>
 
                   <ul class="b-messages__chats">
-                    <li class="b-messages__chats-item  b-messages__chats-item--desktop-active" id="chat-001">
+                    <li class="b-messages__chats-item" id="chat-001">
                       <div class="b-chat">
                         <div class="b-chat__mobile-header">
                           <button class="b-chat__back-btn">
@@ -471,7 +471,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="b-messages__chats-item" id="chat-005">
+                    <li class="b-messages__chats-item  b-messages__chats-item--desktop-active" id="chat-005">
                       <div class="b-chat">
                         <div class="b-chat__mobile-header">
                           <button class="b-chat__back-btn">
@@ -501,7 +501,7 @@
                                   <div class="b-chat__question-text">Is this available?</div>
                                   <p class="b-chat__question-descr">Please answer with one of two options</p>
                                   <button class="b-btn-2  b-btn-2--big-round-block-secondary  b-chat__question-btn">Yes, it does. Please contact me</button>
-                                  <button class="b-btn-2  b-btn-2--big-round-block-secondary  b-chat__question-btn">Sorry, it does not anymore</button>
+                                  <button class="b-btn-2  b-btn-2--big-round-block-secondary  b-chat__question-btn" data-toggle="modal" data-target="#user-info-3">Sorry, it does not anymore</button>
                                 </div>
                               </div>
                             </div>
@@ -716,6 +716,63 @@
                 Sending message what you property is not available anymore, listing <a href="">Land plot in Αμπελόκηποι</a> will be delete automatically
               </p>
               <button class="b-btn-2  b-messages__modal-confirm-btn">Confirm and delete listing</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="user-info-3">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <h4 class="b-modal-2__title">Confirmation</h4>
+              <p class="b-messages__modal-text">
+                Is your listing <a href="">Land plot in Αμπελόκηποι</a> is not available anymore?
+              </p>
+              <button class="b-btn-2  b-messages__modal-confirm-btn  b-messages__modal-confirm-btn--mr" data-toggle="modal" data-target="#user-info-4" data-dismiss="modal" aria-label="Close">It already rented</button>
+              <button class="b-btn-2  b-btn-2--secondary  b-messages__modal-confirm-btn" data-dismiss="modal" aria-label="Close">Archive it</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  b-modal-2--lg  fade" tabindex="-1" role="dialog" id="user-info-4">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <h4 class="b-modal-2__title">Confirmation</h4>
+              <p class="b-messages__modal-text">
+                Until which date <a href="">Land plot in Αμπελόκηποι</a> is rented?
+              </p>
+
+              <div class="b-datepicker" id="datepicker-rented"></div>
+
+              <script>
+                $(function () {
+                  // тут или в другом месте, где будет инициация календаря
+                  // указать локализацию en | ru | sr (греческого и украинского переводов нет)
+                  $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+                  $("#datepicker-rented").datepicker({
+                    onSelect: function (dateText,) {
+                      console.log(dateText);
+                      console.log($(this).datepicker('getDate'));
+                    }
+                    // Или: https://api.jqueryui.com/datepicker/#method-getDate
+                  });
+                });
+              </script>
+
+              <div class="b-messages__modal-footer-center">
+                <button class="b-btn-2  b-messages__modal-confirm-btn">Save date and Archive</button>
+                <button class="b-btn-2  b-btn-2--secondary  b-messages__modal-confirm-btn">Archive it without date</button>
+              </div>
 
             </div>
           </div>

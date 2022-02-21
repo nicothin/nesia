@@ -159,6 +159,10 @@
 
   &__modal-confirm-btn {
     margin-top: 14px;
+
+    &--mr {
+      margin-right: 16px;
+    }
   }
 
   &__modal-tariffs {
@@ -176,6 +180,15 @@
     margin: 0 0 32px 0;
 
     img {
+      margin-right: 8px;
+    }
+  }
+
+  &__modal-footer-center {
+    text-align: center;
+
+    #{$block-name}__modal-confirm-btn {
+      margin-left: 8px;
       margin-right: 8px;
     }
   }
