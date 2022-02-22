@@ -100,7 +100,9 @@
     "b-auth": [],
     "b-user-photo": [],
     "b-congratulations": [],
-    "b-datepicker": []
+    "b-datepicker": [],
+    "b-input-calendar": [],
+    "b-description": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

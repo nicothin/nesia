@@ -89,10 +89,10 @@
         </div>
 
 
-        <div style="padding: 0 50px;">
+        <!-- <div style="padding: 0 50px;">
           <div id="map" style="height:400px">
           </div>
-        </div>
+        </div> -->
 
 
         <form action="" id="locate_form" method="post" name="locate_form" role="form">
@@ -116,6 +116,60 @@
               <label>Страна</label>
               <input class="form-control" id="country" name="country" placeholder="" type="text" value="">
 
+              <label>Property is available</label>
+              <input class="form-control  b-input-calendar" id="available" name="available" placeholder="Select date" type="text" value="">
+              <script>
+                // Тут или в любом другом месте, когда DOM готов:
+                $(function () {
+                  $("#available").datepicker( $.datepicker.regional["en"] );
+                });
+              </script>
+
+              <div class="b-description">
+                <label class="b-description__label">
+                  Add Description on
+                  <div class="dropdown">
+                    <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="b-description__selected-lang-text">English</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
+                      <li><a href="#" data-value="en">English</a></li>
+                      <li><a href="#" data-value="ru">Русский</a></li>
+                      <li><a href="#" data-value="ua">Українська</a></li>
+                      <li><a href="#" data-value="gr">Ελληνικά</a></li>
+                      <li><a href="#" data-value="es">Srpski</a></li>
+                    </ul>
+                  </div>
+                </label>
+                <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will have to delete your listing.</p>
+                <input id="selectLangCode" type="hidden" value="">
+                <textarea class="form-control" id="description" name="description"></textarea>
+                <p class="b-description__subtextarea" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
+              </div>
+              <script>
+                // Тут или в любом другом месте, когда DOM готов:
+                $(function () {
+                  $("#selectLangDrop a").on('click', function(e){
+                    e.preventDefault();
+                    $('.b-description__selected-lang-text').text(e.target.innerHTML);
+                    $('#selectLangCode').attr('value', e.target.dataset.value);
+                  });
+
+                  $('#description').on('keyup change', function(){
+                    var counter = this.value.length;
+                    var textBlock = $('.b-description__subtextarea');
+                    var maxCounter = +textBlock.data('max')
+                    if (counter === 0) {
+                      textBlock.text( textBlock.data('default') );
+                    }
+                    else {
+                      textBlock.text(maxCounter - counter + ' ' + textBlock.data('left'));
+                    }
+                  });
+                });
+              </script>
+
               <!-- Новая разметка для индекса -->
               <div class="b-postal-code">
                 <label>Почтовый индекс</label>
@@ -132,7 +186,7 @@
         </form>
       </div>
 
-      <div class="b-info-bottom  b-info-bottom--cookies  b-info-bottom--invert">
+      <!-- <div class="b-info-bottom  b-info-bottom--cookies  b-info-bottom--invert">
         <div class="b-info-bottom__inner">
           <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <div class="b-info-bottom__text">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. За заманивший лучше которое переписывается от всех выйти большого рекламных, подзаголовок она, риторический <a href="#">меня семь живет жизни не</a>. Lorem, ему продолжил.</div>
@@ -140,6 +194,6 @@
             <button class="b-btn-2  b-btn-2--secondary  b-btn-2--block-md">Кнопка</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
 @@include('./html-includes/footer.html')

@@ -28,12 +28,12 @@ $( document ).ready(function() {
 
 
   // Работы выбора страны проживания
-  if($('#country').length) {
-    $('#country').countrySelect({
-      defaultCountry: 'ru',
-      preferredCountries: ['ru', 'ua'],
-    });
-  }
+  // if($('#country').length) {
+  //   $('#country').countrySelect({
+  //     defaultCountry: 'ru',
+  //     preferredCountries: ['ru', 'ua'],
+  //   });
+  // }
 
   // Включение селектора телефонного кода
   if($('#b-phone').length) {

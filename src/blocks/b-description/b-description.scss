@@ -1,0 +1,34 @@
+// В этом файле должны быть стили для БЭМ-блока b-description, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-description {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .dropdown {
+    display: inline-block;
+    vertical-align: baseline;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__selected-lang {
+    display: inline-block;
+    vertical-align: baseline;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: #828282;
+  }
+
+  &__descr {
+    color: #535353;
+  }
+
+  &__subtextarea {
+    margin-top: 6px;
+  }
+}
