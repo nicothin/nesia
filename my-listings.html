@@ -351,8 +351,8 @@
 
                 <div class="b-tabs">
                   <ul class="b-tabs__list  b-tabs__list--xs-full-width  b-tabs__list--mb24-32" role="tablist">
-                    <li role="presentation" class="active">
-                      <a href="#tab-01" role="tab" data-toggle="tab" aria-expanded="true">Published</a>
+                    <li role="presentation">
+                      <a href="#tab-01" role="tab" data-toggle="tab" aria-expanded="false">Published</a>
                     </li>
                     <li role="presentation">
                       <a href="#tab-02" role="tab" data-toggle="tab" aria-expanded="false">Moderation</a>
@@ -360,9 +360,13 @@
                     <li role="presentation">
                       <a href="#tab-03" role="tab" data-toggle="tab" aria-expanded="false">In progress</a>
                     </li>
+                    <li role="presentation" class="active">
+                      <a href="#tab-04" role="tab" data-toggle="tab" aria-expanded="true">Archive</a>
+                    </li>
                   </ul>
+
                   <div class="b-tabs__content-wrap">
-                    <div class="b-tabs__item  active" id="tab-01">
+                    <div class="b-tabs__item" id="tab-01">
 
                       <ul class="b-card-list">
                         <li class="b-card-list__item">
@@ -383,6 +387,13 @@
                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
                                     </svg>
                                     Редактировать
+                                  </button>
+                                  <!-- NOTE[@nicothin] 22 02 2022 добавлена кнопка: -->
+                                  <button class="b-card-mini-2__footer-icon-btn"  data-toggle="modal" data-target="#confirm">
+                                    <svg width="20" height="20">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-archive"></use>
+                                    </svg>
+                                    В архив
                                   </button>
                                   <button class="b-card-mini-2__footer-icon-btn">
                                     <svg width="20" height="20">
@@ -565,6 +576,13 @@
                                     </svg>
                                     Редактировать
                                   </button>
+                                  <!-- NOTE[@nicothin] 22 02 2022 добавлена кнопка: -->
+                                  <button class="b-card-mini-2__footer-icon-btn" data-toggle="modal" data-target="#confirm">
+                                    <svg width="20" height="20">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-archive"></use>
+                                    </svg>
+                                    В архив
+                                  </button>
                                   <button class="b-card-mini-2__footer-icon-btn">
                                     <svg width="20" height="20">
                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
@@ -732,6 +750,251 @@
                     </div>
                     <div class="b-tabs__item" id="tab-02">Контент не прорисован в дизайне</div>
                     <div class="b-tabs__item" id="tab-03">Контент не прорисован в дизайне</div>
+                    <div class="b-tabs__item  active" id="tab-04">
+
+                      <ul class="b-card-list">
+                        <li class="b-card-list__item">
+                          <article class="b-card-mini-2">
+                            <div class="b-card-mini-2__img-wrap">
+                              <!-- NOTE[@nicothin] 22 02 2022 Картинка нужна 448 в ширину, как минимум -->
+                              <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                            </div>
+                            <div class="b-card-mini-2__text-wrap">
+                              <!-- NOTE[@nicothin] 22 02 2022 добавлен модификатор b-card-mini-2__type--success -->
+                              <div class="b-card-mini-2__type  b-card-mini-2__type--success">RENTED</div>
+                              <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                              <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                              <!-- NOTE[@nicothin] 22 02 2022 добавлен параграф: -->
+                              <p class="b-card-mini-2__rented-until">
+                                <a href="#calendar" class="b-card-mini-2__rented-until-link" data-toggle="modal">
+                                  <svg width="20" height="20">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-calendar"></use>
+                                  </svg>
+                                  Rented until 24.10.25
+                                </a>
+                              </p>
+                              <div class="b-card-mini-2__price">€ 224, 000</div>
+                              <!-- NOTE[@nicothin] 22 02 2022 добавлен класс b-card-mini-2__footer--has-republish -->
+                              <footer class="b-card-mini-2__footer  b-card-mini-2__footer--has-republish">
+                                <div class="b-card-mini-2__footer-btns">
+                                  <button class="b-card-mini-2__footer-icon-btn">
+                                    <svg width="20" height="20">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
+                                    </svg>
+                                    Редактировать
+                                  </button>
+                                  <button class="b-card-mini-2__footer-icon-btn">
+                                    <svg width="20" height="20">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                                    </svg>
+                                    Удалить
+                                  </button>
+                                </div>
+                                <!-- NOTE[@nicothin] 22 02 2022 добавлен div с кнопкой: -->
+                                <div class="b-card-mini-2__footer-republish-wrap">
+                                  <button class="b-btn-2  b-btn-2--secondary  b-card-mini-2__footer-republish">Republish</button>
+                                </div>
+                                <button class="b-card-mini-2__footer-stat-btn" data-slide-toggler="#stats-01235666" data-slide-hidden="Показать статистику" data-slide-shown="Скрыть статистику">
+                                  <svg width="20" height="20">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-stats-2"></use>
+                                  </svg>
+                                  <span class="js-text">Показать статистику</span>
+                                </button>
+                              </footer>
+                            </div>
+                            <div class="b-card-mini-2__stats-wrap" id="stats-01235666" style="display: none;">
+                              <div class="b-stats-2">
+                                <div class="b-stats-2__header">
+                                  <h3 class="b-stats-2__title">Views <strong>123</strong></h3>
+                                  <p class="b-stats-2__dates">from 26 Feb. untill 4 Mar</p>
+                                </div>
+                                <div class="b-stats-2__table-wrap  b-scroll">
+                                  <table class="b-stats-2__table">
+                                    <tr>
+                                      <td class="b-stats-2__country">Greece</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 100%"></span>
+                                          <span class="b-stats-2__progress-num">50%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Italy</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 80%; opacity: 0.6;"></span>
+                                          <span class="b-stats-2__progress-num">40%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Papua New Guinea</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 10%; opacity: 0.3;"></span>
+                                          <span class="b-stats-2__progress-num">5%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="b-stats-2__country">Uganda</td>
+                                      <td class="b-stats-2__num-wrap">
+                                        <div class="b-stats-2__progress">
+                                          <span class="b-stats-2__progress-indicator" style="width: 10%; opacity: 0.3;"></span>
+                                          <span class="b-stats-2__progress-num">5%</span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </div>
+                                <!-- NOTE[@nicothin] 22 02 2022 скрыта кнопка: -->
+                                <!-- <button class="b-stats-2__increase-btn  b-btn-2"><span class="b-btn-2__text">Увеличить кол-во просмотров</span></button> -->
+                                <div class="b-stats-2__users-list-wrap">
+                                  <div class="b-stats-2__users-list-header">
+                                    <h4 class="b-stats-2__users-list-title">Saved listing by <strong>2</strong></h4>
+                                    <button class="b-stats-2__users-list-header-btn  b-link  b-link--inherit-color  b-toggler" data-slide-toggler="#list-03" data-slide-hidden="Show list" data-slide-shown="Hide list">
+                                      <span class="js-text">Show list</span>
+                                    </button>
+                                  </div>
+                                  <div class="b-stats-2__users-list" id="list-03" style="display: none;">
+                                    <table class="b-stats-2__users-list-table">
+                                      <tr>
+                                        <td class="b-stats-2__users-table-user">
+                                          <a href="" class="b-user-2">
+                                            <div class="b-user-2__avatar-wrap">
+                                              <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-2__avatar  b-user-avatar-2">
+                                              <span class="b-user-2__label-online">online</span>
+                                            </div>
+                                            <div class="b-user-2__avatar-info">
+                                              <div class="b-user-2__name  b-user-2__name--sm">Lara</div>
+                                            </div>
+                                          </a>
+                                        </td>
+                                        <td class="b-stats-2__users-table-date">23 марта</td>
+                                        <td class="b-stats-2__users-table-action">
+                                          <button class="b-btn-2" data-toggle="modal2" data-target="#demo-modal-1">Модалка 1</button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="b-stats-2__users-table-user">
+                                          <a href="" class="b-user-2">
+                                            <div class="b-user-2__avatar-wrap">
+                                              <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-2__avatar  b-user-avatar-2">
+                                            </div>
+                                            <div class="b-user-2__avatar-info">
+                                              <div class="b-user-2__name  b-user-2__name--sm">Vladimir Vladimirovi4</div>
+                                            </div>
+                                          </a>
+                                        </td>
+                                        <td class="b-stats-2__users-table-date">23 ноября</td>
+                                        <td class="b-stats-2__users-table-action">
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label" data-toggle="modal2" data-target="#demo-modal-2">
+                                            <span class="b-btn-2__text">Модалка 2</span>
+                                            <strong class="b-label-2  b-btn-2__label-counter">1</strong>
+                                          </button>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div class="b-stats-2__users-list-wrap">
+                                  <div class="b-stats-2__users-list-header">
+                                    <h4 class="b-stats-2__users-list-title">Follow price change <strong>99+</strong></h4>
+                                    <button class="b-stats-2__users-list-header-btn  b-link  b-link--inherit-color  b-toggler" data-slide-toggler="#list-04" data-slide-hidden="Show list" data-slide-shown="Hide list">
+                                      <span class="js-text">Show list</span>
+                                    </button>
+                                  </div>
+                                  <div class="b-stats-2__users-list" id="list-04" style="display: none;">
+                                    <table class="b-stats-2__users-list-table">
+                                      <tr>
+                                        <td class="b-stats-2__users-table-user">
+                                          <a href="" class="b-user-2">
+                                            <div class="b-user-2__avatar-wrap">
+                                              <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-2__avatar  b-user-avatar-2">
+                                              <span class="b-user-2__label-online">online</span>
+                                            </div>
+                                            <div class="b-user-2__avatar-info">
+                                              <div class="b-user-2__name  b-user-2__name--sm">Lara</div>
+                                            </div>
+                                          </a>
+                                        </td>
+                                        <td class="b-stats-2__users-table-date">23 марта</td>
+                                        <td class="b-stats-2__users-table-action">
+                                          <button class="b-btn-2" data-toggle="modal2" data-target="#demo-modal-1">Модалка 1</button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="b-stats-2__users-table-user">
+                                          <a href="" class="b-user-2">
+                                            <div class="b-user-2__avatar-wrap">
+                                              <img src="img/TEMP-user-avatar--lg.png" alt="%USERNAME%" class="b-user-2__avatar  b-user-avatar-2">
+                                            </div>
+                                            <div class="b-user-2__avatar-info">
+                                              <div class="b-user-2__name  b-user-2__name--sm">Vladimir Vladimirovi4</div>
+                                            </div>
+                                          </a>
+                                        </td>
+                                        <td class="b-stats-2__users-table-date">23 ноября</td>
+                                        <td class="b-stats-2__users-table-action">
+                                          <button class="b-btn-2  b-btn-2--secondary  b-btn-2--has-label" data-toggle="modal2" data-target="#demo-modal-2">
+                                            <span class="b-btn-2__text">Модалка 2</span>
+                                            <strong class="b-label-2  b-btn-2__label-counter">99+</strong>
+                                          </button>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                        </li>
+
+                        <li class="b-card-list__item">
+                          <article class="b-card-mini-2">
+                            <div class="b-card-mini-2__img-wrap">
+                              <!-- Картинка нужна 448 в ширину, как минимум -->
+                              <img src="img/TEMP-object-img.jpg" alt="%LOCATION_NAME%" class="b-card-mini-2__img">
+                            </div>
+                            <div class="b-card-mini-2__text-wrap">
+                              <div class="b-card-mini-2__type  b-card-mini-2__type--success">SOLD</div>
+                              <h2 class="b-card-mini-2__name">Apartment near metro station</h2>
+                              <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
+                              <div class="b-card-mini-2__price">€ 224, 000</div>
+                              <!-- NOTE[@nicothin] 22 02 2022 добавлен класс b-card-mini-2__footer--has-republish -->
+                              <footer class="b-card-mini-2__footer  b-card-mini-2__footer--has-republish">
+                                <div class="b-card-mini-2__footer-btns">
+                                  <button class="b-card-mini-2__footer-icon-btn">
+                                    <svg width="20" height="20">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
+                                    </svg>
+                                    Редактировать
+                                  </button>
+                                  <button class="b-card-mini-2__footer-icon-btn">
+                                    <svg width="20" height="20">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
+                                    </svg>
+                                    Удалить
+                                  </button>
+                                </div>
+                                <!-- NOTE[@nicothin] 22 02 2022 добавлен div с кнопкой: -->
+                                <div class="b-card-mini-2__footer-republish-wrap">
+                                  <button class="b-btn-2  b-btn-2--secondary  b-card-mini-2__footer-republish">Republish</button>
+                                </div>
+                                <button class="b-card-mini-2__footer-stat-btn" data-slide-toggler="#stats-01235" data-slide-hidden="Показать статистику" data-slide-shown="Скрыть статистику">
+                                  <svg width="20" height="20">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-stats-2"></use>
+                                  </svg>
+                                  <span class="js-text">Показать статистику</span>
+                                </button>
+                              </footer>
+                            </div>
+                          </article>
+                        </li>
+                      </ul>
+
+                    </div>
                   </div>
                 </div>
 
@@ -806,6 +1069,62 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTE[@nicothin] 22 02 2022 добавлена модалка: -->
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="calendar">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <!-- NOTE[@nicothin] 22 02 2022 добавлен модификатор b-modal-2__title--center для центровки -->
+              <h4 class="b-modal-2__title  b-modal-2__title--center">Change the end date of the rental</h4>
+
+              <div class="b-datepicker" id="datepicker-rented"></div>
+
+              <script>
+                $(function () {
+                  // тут или в другом месте, где будет инициация календаря
+                  // указать локализацию en | ru | sr (греческого и украинского переводов нет)
+                  $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+                  $("#datepicker-rented").datepicker({
+                    onSelect: function (dateText,) {
+                      console.log(dateText);
+                      console.log($(this).datepicker('getDate'));
+                    }
+                    // Или: https://api.jqueryui.com/datepicker/#method-getDate
+                  });
+                });
+              </script>
+
+              <div class="b-messages__modal-footer-center">
+                <button class="b-btn-2  b-messages__modal-confirm-btn">Save date</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTE[@nicothin] 22 02 2022 добавлена модалка: -->
+      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="confirm">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+
+              <h4 class="b-modal-2__title">Confirmation</h4>
+              <p class="b-messages__modal-text">
+                Do you want move it to archive?
+              </p>
+              <button class="b-btn-2  b-messages__modal-confirm-btn">Yes</button>
+              <button class="b-btn-2 b-btn-2--secondary  b-messages__modal-confirm-btn">No</button>
+
             </div>
           </div>
         </div>
