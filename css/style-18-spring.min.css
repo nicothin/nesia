@@ -6852,6 +6852,24 @@ input:checked ~ .b-form-group__checkbox-text:before {
     background-position: -357px -2px !important; }
 .b-datepicker .ui-icon-circle-triangle-e {
     background-position: -293px -2px !important; }
+.b-input-calendar {
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.167 3.833C3.522 3.833 3 4.356 3 5v11.667c0 .644.522 1.166 1.167 1.166h11.666c.645 0 1.167-.522 1.167-1.166V5c0-.644-.522-1.167-1.167-1.167H4.167ZM2 5c0-1.197.97-2.167 2.167-2.167h11.666C17.03 2.833 18 3.803 18 5v11.667c0 1.196-.97 2.166-2.167 2.166H4.167A2.167 2.167 0 0 1 2 16.667V5Z' fill='%23828282'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.333 1.167a.5.5 0 0 1 .5.5V5a.5.5 0 1 1-1 0V1.667a.5.5 0 0 1 .5-.5ZM6.667 1.167a.5.5 0 0 1 .5.5V5a.5.5 0 0 1-1 0V1.667a.5.5 0 0 1 .5-.5ZM2 8.333a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1-.5-.5Z' fill='%23828282'/%3E%3C/svg%3E") top 6px right 6px no-repeat; }
+.b-description .dropdown {
+  display: inline-block;
+  vertical-align: baseline; }
+.b-description .dropdown a {
+    text-decoration: none; }
+.b-description__selected-lang {
+  display: inline-block;
+  vertical-align: baseline;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #828282; }
+.b-description__descr {
+  color: #535353; }
+.b-description__subtextarea {
+  margin-top: 6px; }
 @media (min-width: 421px) {
         .b-location__main-block .big_img_slider .jcarousel-control-next,
         .b-location__main-block .big_img_slider .jcarousel-control-prev {
