@@ -93,6 +93,10 @@
     line-height: 28px;
     font-weight: 500;
     color: #000;
+
+    &--center {
+      text-align: center;
+    }
   }
 
   &__text {
