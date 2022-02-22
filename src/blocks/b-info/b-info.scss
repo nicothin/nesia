@@ -228,6 +228,10 @@
     &--location {
       margin-bottom: 22px;
     }
+
+    &--availability {
+      margin-bottom: 8px;
+    }
   }
 
   &__total {
@@ -355,6 +359,17 @@
       color: #828282;
       font-weight: 700;
       background: transparent;
+    }
+  }
+
+  &__availability {
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+      fill: #828282;
+      transform: translateY(-2px);
     }
   }
 }
