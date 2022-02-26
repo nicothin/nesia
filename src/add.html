@@ -129,6 +129,56 @@
                 <label class="b-description__label">
                   Add Description on
                   <div class="dropdown">
+                    <button class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="b-description__selected-lang-text">English</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="selectLang">
+                      <li><a href="#" data-value="en">English</a></li>
+                      <li><a href="#" data-value="ru">Русский</a></li>
+                      <li><a href="#" data-value="ua">Українська</a></li>
+                      <li><a href="#" data-value="gr">Ελληνικά</a></li>
+                      <li><a href="#" data-value="es">Srpski</a></li>
+                    </ul>
+                  </div>
+                </label>
+                <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will have to delete your listing.</p>
+                <input class="b-description__input" type="hidden" value="">
+                <textarea class="b-description__textarea  form-control" name="description"></textarea>
+                <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
+              </div>
+
+              <script>
+                // ДЛЯ НЕСКОЛЬКИХ БЛОКОВ достаточно иметь один такой фрагмент,
+                // он активирует работу любого кол-ва описаний,
+                // независимо от того, были ли они на странице в момент срабатывания этого кода
+                $(function () {
+                  $(document).on('click', '.b-description .dropdown-menu a', function (e) {
+                    e.preventDefault();
+                    var parent = e.target.closest('.b-description');
+                    $(parent).find('.b-description__selected-lang-text').text(e.target.innerHTML);
+                    $(parent).find('b-description__input').attr('value', e.target.dataset.value);
+                  });
+
+                  $(document).on('keyup change', '.b-description__textarea', function (e) {
+                    var parent = e.target.closest('.b-description');
+                    var counter = this.value.length;
+                    var textBlock = $(parent).find('.b-description__subtextarea');
+                    var maxCounter = +textBlock.data('max')
+                    if (counter === 0) {
+                      textBlock.text(textBlock.data('default'));
+                    }
+                    else {
+                      textBlock.text(maxCounter - counter + ' ' + textBlock.data('left'));
+                    }
+                  });
+                });
+              </script>
+
+              <div class="b-description">
+                <label class="b-description__label">
+                  Add Description on
+                  <div class="dropdown">
                     <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="b-description__selected-lang-text">English</span>
                       <span class="caret"></span>
@@ -143,32 +193,10 @@
                   </div>
                 </label>
                 <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will have to delete your listing.</p>
-                <input id="selectLangCode" type="hidden" value="">
-                <textarea class="form-control" id="description" name="description"></textarea>
-                <p class="b-description__subtextarea" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
+                <input class="b-description__input" type="hidden" value="">
+                <textarea class="b-description__textarea  form-control" name="description"></textarea>
+                <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
               </div>
-              <script>
-                // Тут или в любом другом месте, когда DOM готов:
-                $(function () {
-                  $("#selectLangDrop a").on('click', function(e){
-                    e.preventDefault();
-                    $('.b-description__selected-lang-text').text(e.target.innerHTML);
-                    $('#selectLangCode').attr('value', e.target.dataset.value);
-                  });
-
-                  $('#description').on('keyup change', function(){
-                    var counter = this.value.length;
-                    var textBlock = $('.b-description__subtextarea');
-                    var maxCounter = +textBlock.data('max')
-                    if (counter === 0) {
-                      textBlock.text( textBlock.data('default') );
-                    }
-                    else {
-                      textBlock.text(maxCounter - counter + ' ' + textBlock.data('left'));
-                    }
-                  });
-                });
-              </script>
 
               <!-- Новая разметка для индекса -->
               <div class="b-postal-code">
