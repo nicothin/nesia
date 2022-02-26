@@ -173,42 +173,51 @@
                     }
                   });
                 });
+
+                function addDescription() {
+                  var MAX_DESCR_COUNT = 5;
+                  var descrCounter = document.querySelectorAll('.b-description').length;
+
+                  if ('content' in document.createElement('template') && descrCounter <= MAX_DESCR_COUNT) {
+                    var template = document.querySelector('#object-description');
+                    var clone = template.content.cloneNode(true);
+                    $('.b-description:last').after(clone);
+                  }
+                }
               </script>
 
-              <div class="b-description">
-                <label class="b-description__label">
-                  Add Description on
-                  <div class="dropdown">
-                    <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="b-description__selected-lang-text">English</span>
-                      <span class="caret"></span>
-                    </button>
-                    <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
-                      <li><a href="#" data-value="en">English</a></li>
-                      <li><a href="#" data-value="ru">Русский</a></li>
-                      <li><a href="#" data-value="ua">Українська</a></li>
-                      <li><a href="#" data-value="gr">Ελληνικά</a></li>
-                      <li><a href="#" data-value="es">Srpski</a></li>
-                    </ul>
-                  </div>
-                </label>
-                <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will have to delete your listing.</p>
-                <input class="b-description__input" type="hidden" value="">
-                <textarea class="b-description__textarea  form-control" name="description"></textarea>
-                <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
-              </div>
-
-              <!-- Новая разметка для индекса -->
-              <div class="b-postal-code">
-                <label>Почтовый индекс</label>
-                <div class="b-postal-code__group">
-                  <input class="form-control" type="text" id="postal_code" placeholder="">
-                  <button class="btn  btn-info" type="button">Обновить</button>
+              <template id="object-description">
+                <div class="b-description">
+                  <label class="b-description__label">
+                    Add Description on
+                    <div class="dropdown">
+                      <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="b-description__selected-lang-text">English</span>
+                        <span class="caret"></span>
+                      </button>
+                      <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
+                        <li><a href="#" data-value="en">English</a></li>
+                        <li><a href="#" data-value="ru">Русский</a></li>
+                        <li><a href="#" data-value="ua">Українська</a></li>
+                        <li><a href="#" data-value="gr">Ελληνικά</a></li>
+                        <li><a href="#" data-value="es">Srpski</a></li>
+                      </ul>
+                    </div>
+                  </label>
+                  <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will
+                    have to delete your listing.</p>
+                  <input class="b-description__input" type="hidden" value="">
+                  <textarea class="b-description__textarea  form-control" name="description"></textarea>
+                  <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left"
+                    data-max="120">Minimum 30 characters</p>
                 </div>
-              </div>
-              <!-- /Новая разметка для индекса -->
+              </template>
 
-              <button class="btn btn-success gonext" onclick="onSubmit();" style="float:left;" type="button">Продолжить<span></span></button>
+              <div class="b-add-object-buttons">
+                <button class="b-btn-2  b-btn-2--secondary" type="button" onclick="addDescription();">Add text in other language</button>
+                <button class="b-btn-2  gonext" type="button"onclick="onSubmit();">Save and review</button>
+              </div>
             </div>
           </div>
         </form>

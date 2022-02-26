@@ -6,6 +6,8 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  max-width: 620px;
+
   .dropdown {
     display: inline-block;
     vertical-align: baseline;
@@ -26,6 +28,11 @@
 
   &__descr {
     color: #535353;
+  }
+
+  &__textarea {
+    width: 100% !important;
+    max-width: 100%;
   }
 
   &__subtextarea {

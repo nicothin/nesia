@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока b-add-object-buttons, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-add-object-buttons {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 12px;
+  max-width: 620px;
+  padding-top: 8px;
+}
