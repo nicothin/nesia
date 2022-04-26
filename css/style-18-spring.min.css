@@ -5492,11 +5492,11 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
   font-size: 12px;
   line-height: 20px;
   text-align: center; }
+.b-label-2--danger {
+    background: #D84B2A; }
 .b-label-2--text {
     padding-left: 8px;
     padding-right: 8px; }
-.b-label-2--danger {
-    background: #D84B2A; }
 .b-auction {
   padding: 24px 0; }
 .b-auction-item__header {
