@@ -5485,7 +5485,7 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
   display: inline-block;
   min-width: 20px;
   height: 20px;
-  padding: 0 3px;
+  padding: 0 6px;
   border-radius: 20px;
   background: #A1BF4B;
   color: #fff;
@@ -5495,6 +5495,8 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
 .b-label-2--text {
     padding-left: 8px;
     padding-right: 8px; }
+.b-label-2--danger {
+    background: #D84B2A; }
 .b-auction {
   padding: 24px 0; }
 .b-auction-item__header {
@@ -5998,23 +6000,22 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    width: 32px;
+    min-width: 32px;
     height: 32px;
     margin-right: 8px;
-    padding: 0;
+    padding: 0 0 0 14px;
     border: 0;
     background: none;
     font: 0/0 a;
     color: transparent;
     outline: none; }
+.b-chat__back-btn--has-label {
+      margin-right: 16px; }
 .b-chat__mobile-header-user {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6096,7 +6097,7 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
             justify-content: flex-end; }
 .b-chat__system-msg {
     max-width: 264px;
-    margin: 16px auto;
+    margin: 16px auto 4px;
     font-size: 12px;
     line-height: 20px;
     text-align: center;
@@ -6107,6 +6108,14 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     line-height: 20px;
     text-align: center;
     color: #A1A1A1; }
+.b-chat__item-owner {
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 12px; }
+.b-chat__item-date + .b-chat__item-owner {
+      margin-top: -8px; }
+.b-chat__item-owner a {
+      color: #D84B2A; }
 .b-chat__item-msg {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6233,6 +6242,19 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     color: #A1A1A1; }
 .b-chat__my-msg-unlock-text-desktop {
     display: none; }
+.b-chat__msg-btns-wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px; }
+.b-chat__back-btn-label {
+    margin-left: 6px; }
 .b-fast-contacts {
   margin: 0;
   padding: 0;
