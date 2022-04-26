@@ -5490,6 +5490,7 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
   background: #A1BF4B;
   color: #fff;
   font-size: 12px;
+  font-family: Roboto, sans-serif;
   line-height: 20px;
   text-align: center; }
 .b-label-2--danger {
