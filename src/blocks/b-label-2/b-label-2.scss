@@ -9,7 +9,7 @@
   display: inline-block;
   min-width: 20px;
   height: 20px;
-  padding: 0 3px;
+  padding: 0 6px;
   border-radius: 20px;
   background: #A1BF4B;
   color: #fff;
@@ -20,5 +20,9 @@
   &--text {
     padding-left: 8px;
     padding-right: 8px;
+  }
+
+  &--danger {
+    background: #D84B2A;
   }
 }

@@ -24,18 +24,22 @@
 
   &__back-btn {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    width: 32px;
+    min-width: 32px;
     height: 32px;
     margin-right: 8px;
-    padding: 0;
+    padding: 0 0 0 14px;
     border: 0;
     background: none;
     font: 0/0 a;
     color: transparent;
     outline: none;
+
+    &--has-label {
+      margin-right: 16px;
+    }
   }
 
   &__mobile-header-user {
@@ -136,7 +140,7 @@
 
   &__system-msg {
     max-width: 264px;
-    margin: 16px auto;
+    margin: 16px auto 4px;
     font-size: 12px;
     line-height: 20px;
     text-align: center;
@@ -149,6 +153,20 @@
     line-height: 20px;
     text-align: center;
     color: #A1A1A1;
+  }
+
+  &__item-owner {
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: $font-size--small;
+
+    #{$block-name}__item-date + & {
+      margin-top: -8px;
+    }
+
+    a {
+      color: #D84B2A;
+    }
   }
 
   &__item-msg {
@@ -319,5 +337,16 @@
     @media (min-width: $screen-lg) {
       display: inline;
     }
+  }
+
+  &__msg-btns-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 16px;
+  }
+
+  &__back-btn-label {
+    margin-left: 6px;
   }
 }

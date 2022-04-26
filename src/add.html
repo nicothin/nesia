@@ -116,14 +116,16 @@
               <label>Страна</label>
               <input class="form-control" id="country" name="country" placeholder="" type="text" value="">
 
-              <label>Property is available</label>
-              <input class="form-control  b-input-calendar" id="available" name="available" placeholder="Select date" type="text" value="">
-              <script>
-                // Тут или в любом другом месте, когда DOM готов:
-                $(function () {
-                  $("#available").datepicker( $.datepicker.regional["en"] );
-                });
-              </script>
+              <div class="b-form-item-wrapper">
+                <label>Property is available</label>
+                <input class="form-control  b-input-calendar" id="available" name="available" placeholder="Select date" type="text" value="">
+                <script>
+                  // Тут или в любом другом месте, когда DOM готов:
+                  $(function () {
+                    $("#available").datepicker( $.datepicker.regional["en"] );
+                  });
+                </script>
+              </div>
 
               <div class="b-description">
                 <label class="b-description__label">
