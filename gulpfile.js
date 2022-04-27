@@ -342,7 +342,7 @@ gulp.task('serve', gulp.series('build', function() {
     server: dirs.buildPath,
     port: 8080,
     startPath: '_list.html',
-    // open: false,
+    open: false,
     notify: false,
   });
 

@@ -13,16 +13,17 @@
   border-radius: 20px;
   background: #A1BF4B;
   color: #fff;
-  font-size: 12px;
+  font-size: $font-size--small;
+  font-family: $font-family;
   line-height: 20px;
   text-align: center;
+
+  &--danger {
+    background: #D84B2A;
+  }
 
   &--text {
     padding-left: 8px;
     padding-right: 8px;
-  }
-
-  &--danger {
-    background: #D84B2A;
   }
 }
