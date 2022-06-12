@@ -15,9 +15,15 @@ body {
 
 .btn-group a {cursor: pointer!important;}
 
-.container, .container-fluid {
+/* NOTE[@nicothin]: facepalm, но таки было написано */
+.container,
+.container-fluid {
     min-width: 303px;
     max-width: 980px;
+}
+
+.container--p0-25 {
+  padding: 0 25px;
 }
 
 /*header*/
@@ -3550,7 +3556,7 @@ p.stepname {
     width: 28px;
     height: 20px;
     margin-left: -7px;
-} 
+}
 
 .social_login.edit .social.facebook a span {
     width: 14px;
@@ -3558,7 +3564,7 @@ p.stepname {
     background-position: -44px -11px;
     background-size: 329px;
     margin-left: 2px;
-} 
+}
 
 .social_login .social.connected {
     width: 70px;
@@ -7973,7 +7979,7 @@ a:focus {
     margin-top: 78px;
     border-radius: 2px;
     background: #d84b2a;
-} 
+}
 
 .alx-btn:hover {
     background-color: #d9534f;
@@ -7984,12 +7990,12 @@ a:focus {
 @media (min-width: 1200px) {
     .ig-row-mob {
         display: none;
-    }    
+    }
 
     .ig-row {
-        margin-left: -60px; 
-        margin-top: 50px; 
-    }    
+        margin-left: -60px;
+        margin-top: 50px;
+    }
 
     .ig-left-arrow {
         margin-left: 75px;
@@ -8034,12 +8040,12 @@ a:focus {
 @media (min-width: 769px) and (max-width: 1199px) {
     .ig-row-mob {
         display: none;
-    }    
+    }
 
     .ig-row {
-        margin-left: 0; 
-        margin-top: 50px; 
-    }    
+        margin-left: 0;
+        margin-top: 50px;
+    }
 
     .ig-left-arrow {
         margin-left: -10px;
@@ -8080,7 +8086,7 @@ a:focus {
 @media (max-width: 768px) {
     .ig-row {
         display: none;
-    }    
+    }
 
     .ig-left-arrow {
         display: none;
