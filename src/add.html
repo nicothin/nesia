@@ -100,121 +100,11 @@
 
           <div class="container-fluid step_first">
             <div class="form-group">
-              <div class="checkbox">
-                <label class="change_checkbox"><input id="my_property" type="checkbox">Я являюсь собственником данного объекта недвижимости.*</label>
-              </div>
-              <input class="form-control" id="lat" name="lat" placeholder="" type="hidden" value="">
-              <input class="form-control" id="lng" name="lng" placeholder="" type="hidden" value="">
-              <label>Номер дома</label>
-              <input class="form-control" id="street_number" name="street_number" placeholder="" type="text" value="">
-              <label>Маршрут</label>
-              <input class="form-control" id="route" name="route" placeholder="" type="text" value="">
-              <label>Область/Район</label>
-              <input class="form-control" id="administrative_area_level_1" name="locality" placeholder="" type="text" value="">
-              <label>Город</label>
-              <input class="form-control" id="locality" name="city" placeholder="" type="text" value="">
-              <label>Страна</label>
-              <input class="form-control" id="country" name="country" placeholder="" type="text" value="">
+              <label class="change_checkbox" style="margin: 0 0 1em">
+                <input id="my_property" type="checkbox">Я являюсь собственником данного объекта недвижимости.*
+              </label>
 
-              <div class="b-form-item-wrapper">
-                <label>Property is available</label>
-                <input class="form-control  b-input-calendar" id="available" name="available" placeholder="Select date" type="text" value="">
-                <script>
-                  // Тут или в любом другом месте, когда DOM готов:
-                  $(function () {
-                    $("#available").datepicker( $.datepicker.regional["en"] );
-                  });
-                </script>
-              </div>
-
-              <div class="b-description">
-                <label class="b-description__label">
-                  Add Description on
-                  <div class="dropdown">
-                    <button class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="b-description__selected-lang-text">English</span>
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="selectLang">
-                      <li><a href="#" data-value="en">English</a></li>
-                      <li><a href="#" data-value="ru">Русский</a></li>
-                      <li><a href="#" data-value="ua">Українська</a></li>
-                      <li><a href="#" data-value="gr">Ελληνικά</a></li>
-                      <li><a href="#" data-value="es">Srpski</a></li>
-                    </ul>
-                  </div>
-                </label>
-                <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will have to delete your listing.</p>
-                <input class="b-description__input" type="hidden" value="">
-                <textarea class="b-description__textarea  form-control" name="description"></textarea>
-                <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
-              </div>
-
-              <script>
-                // ДЛЯ НЕСКОЛЬКИХ БЛОКОВ достаточно иметь один такой фрагмент,
-                // он активирует работу любого кол-ва описаний,
-                // независимо от того, были ли они на странице в момент срабатывания этого кода
-                $(function () {
-                  $(document).on('click', '.b-description .dropdown-menu a', function (e) {
-                    e.preventDefault();
-                    var parent = e.target.closest('.b-description');
-                    $(parent).find('.b-description__selected-lang-text').text(e.target.innerHTML);
-                    $(parent).find('b-description__input').attr('value', e.target.dataset.value);
-                  });
-
-                  $(document).on('keyup change', '.b-description__textarea', function (e) {
-                    var parent = e.target.closest('.b-description');
-                    var counter = this.value.length;
-                    var textBlock = $(parent).find('.b-description__subtextarea');
-                    var maxCounter = +textBlock.data('max')
-                    if (counter === 0) {
-                      textBlock.text(textBlock.data('default'));
-                    }
-                    else {
-                      textBlock.text(maxCounter - counter + ' ' + textBlock.data('left'));
-                    }
-                  });
-                });
-
-                function addDescription() {
-                  var MAX_DESCR_COUNT = 5;
-                  var descrCounter = document.querySelectorAll('.b-description').length;
-
-                  if ('content' in document.createElement('template') && descrCounter <= MAX_DESCR_COUNT) {
-                    var template = document.querySelector('#object-description');
-                    var clone = template.content.cloneNode(true);
-                    $('.b-description:last').after(clone);
-                  }
-                }
-              </script>
-
-              <template id="object-description">
-                <div class="b-description">
-                  <label class="b-description__label">
-                    Add Description on
-                    <div class="dropdown">
-                      <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <span class="b-description__selected-lang-text">English</span>
-                        <span class="caret"></span>
-                      </button>
-                      <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
-                        <li><a href="#" data-value="en">English</a></li>
-                        <li><a href="#" data-value="ru">Русский</a></li>
-                        <li><a href="#" data-value="ua">Українська</a></li>
-                        <li><a href="#" data-value="gr">Ελληνικά</a></li>
-                        <li><a href="#" data-value="es">Srpski</a></li>
-                      </ul>
-                    </div>
-                  </label>
-                  <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will
-                    have to delete your listing.</p>
-                  <input class="b-description__input" type="hidden" value="">
-                  <textarea class="b-description__textarea  form-control" name="description"></textarea>
-                  <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left"
-                    data-max="120">Minimum 30 characters</p>
-                </div>
-              </template>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur sunt a labore voluptas aliquam alias minima provident rerum omnis, illum asperiores veritatis temporibus cumque fugiat natus excepturi consectetur at!</p>
 
               <div class="b-add-object-buttons">
                 <button class="b-btn-2  b-btn-2--secondary" type="button" onclick="addDescription();">Add text in other language</button>
@@ -224,15 +114,5 @@
           </div>
         </form>
       </div>
-
-      <!-- <div class="b-info-bottom  b-info-bottom--cookies  b-info-bottom--invert">
-        <div class="b-info-bottom__inner">
-          <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <div class="b-info-bottom__text">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. За заманивший лучше которое переписывается от всех выйти большого рекламных, подзаголовок она, риторический <a href="#">меня семь живет жизни не</a>. Lorem, ему продолжил.</div>
-          <div class="b-info-bottom__btn  b-info-bottom__btn--single-btn-right">
-            <button class="b-btn-2  b-btn-2--secondary  b-btn-2--block-md">Кнопка</button>
-          </div>
-        </div>
-      </div> -->
 
 @@include('./html-includes/footer.html')
