@@ -6454,6 +6454,14 @@ p.stepname {
         font-size: 26px;
     }
 
+    .simple_page h2.title-551-simple {
+      text-align: left;
+    }
+
+    .simple_page h2.title-551-simple:before {
+      display: none;
+    }
+
     footer .col-xs-2, footer .col-xs-7, footer .col-xs-3 {
         width: 100%;
         padding: 0;

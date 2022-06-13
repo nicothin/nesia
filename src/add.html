@@ -2,63 +2,35 @@
 
       <div class="b-content">
         <div class="container-fluid simple_page">
-          <h2>Размещение объекта</h2>
+          <!-- Добавлен класс title-551-simple -->
+          <h2 class="title-551-simple">Размещение объекта</h2>
 
 
-          <div class="overflow">
+          <!-- Разметка та же, но добавился класс b-steps. Функциональность (добавление классов active и done) на шагах сохранена -->
+          <div class="overflow  b-steps">
             <ul class="steps four_steps step_one">
+              <li class="done">
+                <div class="a">
+                  <div class="number">1</div>
+                  <div class="name">Нанести на карту</div>
+                </div>
+              </li>
               <li class="active">
                 <div class="a">
-                  <div class="number">
-                    1
-                  </div>
-
-
-                  <div class="name">
-                    Нанести на карту
-                  </div>
+                  <div class="number">2</div>
+                  <div class="name">Добавить фотографии</div>
                 </div>
               </li>
-
-
               <li>
                 <div class="a">
-                  <div class="number">
-                    2
-                  </div>
-
-
-                  <div class="name">
-                    Добавить фотографии
-                  </div>
+                  <div class="number">3</div>
+                  <div class="name">Добавить описание</div>
                 </div>
               </li>
-
-
               <li>
                 <div class="a">
-                  <div class="number">
-                    3
-                  </div>
-
-
-                  <div class="name">
-                    Добавить описание
-                  </div>
-                </div>
-              </li>
-
-
-              <li>
-                <div class="a">
-                  <div class="number">
-                    4
-                  </div>
-
-
-                  <div class="name">
-                    Опубликовать
-                  </div>
+                  <div class="number">4</div>
+                  <div class="name">Опубликовать</div>
                 </div>
               </li>
             </ul>
@@ -95,7 +67,7 @@
         </div>
 
 
-        <form action="" id="locate_form" method="post" name="locate_form" role="form">
+        <form action="" id="locate_form" method="post" name="locate_form" role="form" style="padding-top: 1em">
           <input name="full_address" type="hidden"> <input name='csrfmiddlewaretoken' type='hidden' value='1U4ED1yqj0qAS48xiTznxlsEi4rZTESD'>
 
           <div class="container-fluid step_first">
@@ -106,13 +78,9 @@
 
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur sunt a labore voluptas aliquam alias minima provident rerum omnis, illum asperiores veritatis temporibus cumque fugiat natus excepturi consectetur at!</p>
 
-              <div class="b-add-object-buttons">
-                <button class="b-btn-2  b-btn-2--secondary" type="button" onclick="addDescription();">Add text in other language</button>
-                <button class="b-btn-2  gonext" type="button"onclick="onSubmit();">Save and review</button>
-              </div>
             </div>
           </div>
         </form>
       </div>
 
-@@include('./html-includes/footer.html')
+@@include('./html-includes/footer.html', { "needStickyFooter": "true" })

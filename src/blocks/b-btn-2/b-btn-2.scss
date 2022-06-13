@@ -195,4 +195,21 @@
       color: #007FFF;
     }
   }
+
+  &--text {
+    padding: 0;
+    background: transparent;
+    border-color: transparent;
+    color: #D84B2A;
+    text-decoration: underline;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background: transparent;
+      border-color: transparent;
+      color: #D84B2A;
+    }
+  }
 }
