@@ -9,9 +9,9 @@
   padding-bottom: 40px;
   padding-top: 96px;
 
-  .no-search-xs & {
-    padding-top: 40px;
-  }
+  // .no-search-xs & {
+  //   padding-top: 40px;
+  // }
 
   @media (min-width: $screen-md) {
     padding-top: 50px;
@@ -20,4 +20,16 @@
   &--full {
     padding-bottom: 0;
   }
+
+  &--grow {
+    flex-grow: 1;
+  }
+
+  // &--search {
+  //   padding-top: 32px;
+
+  //   @media (min-width: $screen-md) {
+  //     padding-top: 32px;
+  //   }
+  // }
 }

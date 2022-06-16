@@ -1,0 +1,50 @@
+// В этом файле должны быть стили для БЭМ-блока b-search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-search {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 195px;
+  padding-right: calc(100% - 730px);
+
+  &__search-and-desktop-filters {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    left: 0;
+    padding-bottom: 32px; // NOTE[@nicothin]: 40 - 7
+    background-color: #fff;
+  }
+
+  &__search-form-wrapper {
+    padding: 62px 25px 24px;
+  }
+
+  &__search-form {
+    padding: 0 15px;
+  }
+
+  &__desktop-filters {
+    padding: 0 40px;
+
+    .drops {
+      margin: 0;
+      padding: 0;
+
+      & > .box:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__map-wrapper {
+    position: fixed;
+    top: 245px;
+    right: 0;
+    bottom: var(--footer-pixels-shown, 0px);
+    width: calc(100% - 730px);
+    background-color: cornflowerblue;
+  }
+}
