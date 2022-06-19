@@ -283,5 +283,19 @@ $( document ).ready(function() {
     }
   });
 
+
+
+  // Добавление css custom properties для хранения кол-ва пикселей подавла, видимых при нынешнем положении скролла
+  var getShowingHeight = (elem) => {
+    var bounding = elem.getBoundingClientRect();
+    return (window.innerHeight || document.documentElement.clientHeight) - bounding.top
+  };
+  var footer = document.querySelector('.b-footer');
+  window.addEventListener('scroll', function (e) {
+    var shownPixels = getShowingHeight(footer);
+    if (shownPixels < 0) shownPixels = 0;
+    document.documentElement.style.setProperty("--footer-pixels-shown", shownPixels + 'px');
+  });
+
 });
 

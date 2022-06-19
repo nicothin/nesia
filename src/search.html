@@ -245,20 +245,4 @@
         </div>
       </div>
 
-      <script>
-        $(document).ready(function(){
-          var getShowingHeight = (elem) => {
-            var bounding = elem.getBoundingClientRect();
-            return (window.innerHeight || document.documentElement.clientHeight) - bounding.top
-          };
-          var footer = document.querySelector('.b-footer');
-          var mapWrapper  = document.querySelector('.b-search__map-wrapper');
-          window.addEventListener('scroll', function (e) {
-            var shownPixels = getShowingHeight(footer);
-            if (shownPixels < 0) shownPixels = 0;
-            document.documentElement.style.setProperty("--footer-pixels-shown", shownPixels + 'px');
-          });
-        });
-      </script>
-
 @@include('./html-includes/footer.html')
