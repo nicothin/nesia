@@ -6,17 +6,23 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  padding-top: 195px;
-  padding-right: calc(100% - 730px);
+  .b-dropdown a {
+    color: #535353 !important;
+  }
+  .b-dropdown li.selected > * {
+    color: #000 !important;
+  }
 
   &__search-and-desktop-filters {
-    position: fixed;
+    position: sticky;
+    z-index: 3;
     top: 50px;
     right: 0;
     left: 0;
     padding-bottom: 32px; // NOTE[@nicothin]: 40 - 7
     background-color: #fff;
   }
+
 
   &__search-form-wrapper {
     padding: 62px 25px 24px;
@@ -47,4 +53,47 @@
     width: calc(100% - 730px);
     background-color: cornflowerblue;
   }
+
+  &__header {
+    padding: 0 20px 24px 40px;
+    position: sticky;
+    z-index: 2;
+    top: 245px;
+    left: 0;
+    width: 730px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #535353;
+    background-color: #fff;
+  }
+
+  &__header-title {
+    margin: 0 0 12px;
+    font-size: 18px;
+    line-height: 1.333;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  &__header-descr {
+    margin-right: auto;
+    padding-right: 16px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    width: 730px;
+    margin: 0;
+    padding: 0 20px 0 40px;
+    list-style: none;
+  }
+
 }

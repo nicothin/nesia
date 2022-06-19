@@ -297,5 +297,19 @@ $( document ).ready(function() {
     document.documentElement.style.setProperty("--footer-pixels-shown", shownPixels + 'px');
   });
 
+
+
+  // Карусель для карточек 3го типа
+  $('.b-carousel__prev').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).closest('.carousel').carousel('prev');
+  })
+  $('.b-carousel__next').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).closest('.carousel').carousel('next');
+  })
+
 });
 

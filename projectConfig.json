@@ -106,7 +106,10 @@
     "b-add-object-buttons": [],
     "b-sticky-footer": [],
     "b-steps": [],
-    "b-search": []
+    "b-search": [],
+    "b-card-mini-3": [],
+    "b-carousel": [],
+    "b-like": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

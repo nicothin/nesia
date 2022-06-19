@@ -1,0 +1,32 @@
+<article class="b-card-mini-3   @@if (context.isOnMap) {b-card-mini-3--on-map}">
+  <span class="b-like  b-card-mini-3__like  @@if (context.liked) {b-like--active}">
+    <button type="button" class="b-like__btn">Like!</button>
+    <span class="b-like__counter">238k</span>
+  </span>
+  <a href="" class="b-card-mini-3__inner">
+    <div class="b-card-mini-3__image-wrap">
+      @@if (context.hasSlider) {
+        <div class="b-carousel  carousel  slide" data-ride="carousel" data-interval="0">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="img/image-b-card-mini-3.jpg" alt="Apartment, Χανιά" class="b-card-mini-3__img">
+            </div>
+            <div class="item">
+              <img src="img/image-b-card-mini-3.jpg" alt="Apartment, Χανιά" class="b-card-mini-3__img">
+            </div>
+          </div>
+          <button type="button" class="b-carousel__prev">prev</button>
+          <button type="button" class="b-carousel__next">next</button>
+        </div>
+      }
+      @@if (!context.hasSlider) {
+        <img src="img/image-b-card-mini-3.jpg" alt="Apartment, Χανιά" class="b-card-mini-3__img">
+      }
+    </div>
+    <div class="b-card-mini-3__text-wrap">
+      <h2 class="b-card-mini-3__title">Apartment, Χανιά</h2>
+      <p class="b-card-mini-3__descr">126 m2 · 3 Bd ·2 Ba · 3 Floor</p>
+      <p class="b-card-mini-3__price">$ 261 866</p>
+    </div>
+  </a>
+</article>
