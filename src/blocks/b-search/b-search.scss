@@ -6,6 +6,8 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  padding-top: 41px;
+
   .b-dropdown a {
     color: #535353 !important;
   }
@@ -13,7 +15,8 @@
     color: #000 !important;
   }
 
-  &__search-and-desktop-filters {
+  &__search-and-filters-desktop {
+    display: none;
     position: sticky;
     z-index: 3;
     top: 50px;
@@ -21,11 +24,83 @@
     left: 0;
     padding-bottom: 32px; // NOTE[@nicothin]: 40 - 7
     background-color: #fff;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
   }
 
+  &__search-and-filters-mobile {
+    display: flex;
+    position: sticky;
+    z-index: 2;
+    top: 41px;
+    padding: 12px 16px;
+    background: #fff;
+
+    @media (min-width: $screen-md) {
+      top: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &__search-form-mobile {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 23px;
+  }
+
+  &__search-input {
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 12px;
+    border: 1px solid #A1A1A1;
+    border-right: 0;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 2px 0 0 2px;
+  }
+
+  &__search-btn {
+    flex-shrink: 0;
+    border-radius: 0 2px 2px 0;
+    padding: 9px;
+    font-size: 0;
+    color: transparent;
+  }
+
+  &__mobile-filters-btn {
+    padding-left: 6px;
+    padding-right: 10px;
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  &__mobile-filters-btn-counter {
+    display: inline-block;
+    vertical-align: baseline;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 2px;
+    padding: 0 4px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    background: #D84B2A;
+  }
 
   &__search-form-wrapper {
-    padding: 62px 25px 24px;
+    padding: 25px 25px 24px;
+
+    @media (min-width: $screen-xl) {
+      padding: 62px 25px 24px; // 37
+    }
   }
 
   &__search-form {
@@ -36,35 +111,74 @@
     padding: 0 40px;
 
     .drops {
+      display: flex;
       margin: 0;
       padding: 0;
 
-      & > .box:first-child {
-        margin-left: 0;
+      @media (min-width: $screen-xl) {
+        display: block;
       }
+
+      .box {
+        max-width: 20%;
+        margin: 0 8px 0 0;
+
+        @media (min-width: $screen-xl) {
+          max-width: none;
+        }
+      }
+    }
+
+    .boxdrop .name {
+      width: 100%;
     }
   }
 
   &__map-wrapper {
+    display: none;
     position: fixed;
-    top: 245px;
+    top: 208px;
     right: 0;
     bottom: var(--footer-pixels-shown, 0px);
-    width: calc(100% - 730px);
+    width: calc(100% - 502px);
+    overflow: hidden;
     background-color: cornflowerblue;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: calc(100% - 730px);
+      top: 245px;
+    }
   }
 
   &__header {
-    padding: 0 20px 24px 40px;
     position: sticky;
     z-index: 2;
-    top: 245px;
-    left: 0;
-    width: 730px;
+    top: 106px;
+    padding: 0 16px 12px 16px;
     font-size: 16px;
     line-height: 1.25;
     color: #535353;
     background-color: #fff;
+
+    @media (min-width: $screen-md) {
+      top: 115px;
+    }
+
+    @media (min-width: $screen-lg) {
+      top: 208px;
+      left: 0;
+      width: 502px;
+      padding: 0 20px 24px 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 730px;
+      top: 245px;
+    }
   }
 
   &__header-title {
@@ -88,12 +202,38 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 20px;
-    width: 730px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
     margin: 0;
-    padding: 0 20px 0 40px;
+    padding: 0 16px;
     list-style: none;
+
+    @media (min-width: $screen-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 20px;
+      width: 502px;
+      padding: 0 20px 0 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-template-columns: repeat(3, 1fr);
+      width: 730px;
+    }
   }
 
+  &__mobile-viewmode-btns {
+    position: sticky;
+    z-index: 2;
+    bottom: 0;
+    padding: 16px;
+    background: #fff;
+  }
 }
