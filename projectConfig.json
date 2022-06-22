@@ -109,7 +109,8 @@
     "b-search": [],
     "b-card-mini-3": [],
     "b-carousel": [],
-    "b-like": []
+    "b-like": [],
+    "b-radio-buttons": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

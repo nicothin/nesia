@@ -231,7 +231,7 @@
 
         <div class="b-search__search-and-filters-mobile">
           <form class="b-search__search-form-mobile">
-            <input placeholder="Athines, Greece" type="text" class="b-search__search-input">
+            <input placeholder="Athines, Greece" type="text" class="b-search__input  b-search__input--grow    b-search__input--before-btn">
             <button class="b-search__search-btn  b-btn-2  b-btn-2--lg">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -240,7 +240,7 @@
               Search
             </button>
           </form>
-          <button class="b-search__mobile-filters-btn  b-btn-2  b-btn-2--secondary  b-btn-2--lg" type="button">
+          <button class="b-search__mobile-filters-btn  b-btn-2  b-btn-2--secondary  b-btn-2--lg" type="button" data-target="#mobile-filters" data-toggle="modal">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18.3334 2.5H1.66675L8.33342 10.3833V15.8333L11.6667 17.5V10.3833L18.3334 2.5Z" stroke="#D84B2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -315,6 +315,172 @@
           </button>
         </div>
 
+      </div>
+
+      <div class="modal  b-modal  b-modal--top  b-search__modal" tabindex="-1" role="dialog" id="mobile-filters">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <form action="" class="b-search__modal-form">
+
+              <div class="b-search__modal-form-item  b-search__modal-form-select-type">
+                <div class="b-radio-buttons">
+                  <input type="radio" name="type" value="0" id="type-0" checked>
+                  <label for="type-0" class="b-radio-buttons__label">Buy</label>
+                  <input type="radio" name="type" value="1" id="type-1">
+                  <label for="type-1" class="b-radio-buttons__label">Rent</label>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Price</label>
+                <div class="b-search__two-wrap">
+                  <select>
+                    <option>No Min 1111</option>
+                    <option>some option 1</option>
+                    <option>some option 2</option>
+                    <option>some option 3</option>
+                    <option>some long long long option 4</option>
+                  </select>
+                  <span class="b-search__selects-divider">-</span>
+                  <select>
+                    <option>No Max</option>
+                    <option>some option 1</option>
+                    <option>some option 2</option>
+                    <option>some option 3</option>
+                    <option>some long long long option 4</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-select-type">
+                <label class="b-form-group__label">Bedrooms</label>
+                <div class="b-radio-buttons">
+                  <!-- Если вдруг окажется, что надпись вначале - неактивный текст -->
+                  <!-- <span class="b-radio-buttons__text">Rent</span> -->
+                  <input type="radio" name="bedroms" value="0" id="bedroms-0" checked>
+                  <label for="bedroms-0" class="b-radio-buttons__label">Rent</label>
+                  <input type="radio" name="bedroms" value="1" id="bedroms-1">
+                  <label for="bedroms-1" class="b-radio-buttons__label">1+</label>
+                  <input type="radio" name="bedroms" value="2" id="bedroms-2">
+                  <label for="bedroms-2" class="b-radio-buttons__label">2+</label>
+                  <input type="radio" name="bedroms" value="3" id="bedroms-3">
+                  <label for="bedroms-3" class="b-radio-buttons__label">3+</label>
+                  <input type="radio" name="bedroms" value="4" id="bedroms-4">
+                  <label for="bedroms-4" class="b-radio-buttons__label">4+</label>
+                  <input type="radio" name="bedroms" value="5" id="bedroms-5">
+                  <label for="bedroms-5" class="b-radio-buttons__label">5+</label>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-checkboxes">
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox" checked>
+                  <span class="b-form-group__checkbox-text">Apartament</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Townhouse</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">House</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Villa</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Land plot</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Apartament</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Townhouse</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">House</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Villa</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Land plot</span>
+                </label>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-select-type">
+                <label class="b-form-group__label">Bathrooms</label>
+                <div class="b-radio-buttons">
+                  <!-- Если вдруг окажется, что надпись вначале - неактивный текст -->
+                  <!-- <span class="b-radio-buttons__text">Rent</span> -->
+                  <input type="radio" name="bathroms" value="0" id="bathroms-0" checked>
+                  <label for="bathroms-0" class="b-radio-buttons__label">Rent</label>
+                  <input type="radio" name="bathroms" value="1" id="bathroms-1">
+                  <label for="bathroms-1" class="b-radio-buttons__label">1+</label>
+                  <input type="radio" name="bathroms" value="2" id="bathroms-2">
+                  <label for="bathroms-2" class="b-radio-buttons__label">2+</label>
+                  <input type="radio" name="bathroms" value="3" id="bathroms-3">
+                  <label for="bathroms-3" class="b-radio-buttons__label">3+</label>
+                  <input type="radio" name="bathroms" value="4" id="bathroms-4">
+                  <label for="bathroms-4" class="b-radio-buttons__label">4+</label>
+                  <input type="radio" name="bathroms" value="5" id="bathroms-5">
+                  <label for="bathroms-5" class="b-radio-buttons__label">5+</label>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Square meters</label>
+                <div class="b-search__two-wrap">
+                  <input type="number" placeholder="Min" class="form-control  b-form-control  b-form-group__input">
+                  <span class="b-search__selects-divider">-</span>
+                  <input type="number" placeholder="Max" class="form-control  b-form-control  b-form-group__input">
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Plot size</label>
+                <div class="b-search__two-wrap">
+                  <input type="number" placeholder="Min" class="form-control  b-form-control  b-form-group__input">
+                  <span class="b-search__selects-divider">-</span>
+                  <input type="number" placeholder="Max" class="form-control  b-form-control  b-form-group__input">
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Year building</label>
+                <div class="b-search__two-wrap">
+                  <input type="number" placeholder="Min" class="form-control  b-form-control  b-form-group__input">
+                  <span class="b-search__selects-divider">-</span>
+                  <input type="number" placeholder="Max" class="form-control  b-form-control  b-form-group__input">
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item">
+                <label for="key-words" class="b-form-group__label">Key words</label>
+                <input type="text" class="form-control  b-form-control  b-form-group__input" id="key-words" placeholder="e.g. Pool, Firepalce, Parking...">
+              </div>
+
+              <div class="b-search__modal-form-action">
+                <button class="b-btn-2  b-btn-2--block  b-btn-2--lg" type="submit" data-dismiss="modal">
+                  View homes
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
       </div>
 
 @@include('./html-includes/footer.html')
