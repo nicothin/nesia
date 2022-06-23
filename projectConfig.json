@@ -110,7 +110,13 @@
     "b-card-mini-3": [],
     "b-carousel": [],
     "b-like": [],
-    "b-radio-buttons": []
+    "b-radio-buttons": [],
+    "b-promo": [],
+    "b-promo-why": [],
+    "b-promo-form": [],
+    "b-promo-get-acquainted": [],
+    "b-promo-list": [],
+    "b-promo-check": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

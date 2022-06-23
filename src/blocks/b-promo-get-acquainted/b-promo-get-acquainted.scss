@@ -1,0 +1,8 @@
+// В этом файле должны быть стили для БЭМ-блока b-promo-get-acquainted, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-promo-get-acquainted {
+
+  $block-name:                &; // #{$block-name}__element
+}
