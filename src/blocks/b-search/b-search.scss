@@ -7,6 +7,11 @@
   $block-name:                &; // #{$block-name}__element
 
   padding-top: 41px;
+  padding-bottom: 0;
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 40px;
+  }
 
   .b-dropdown a {
     color: #535353 !important;
@@ -144,21 +149,34 @@
 
   &__map-wrapper {
     display: none;
-    position: fixed;
-    top: 208px;
-    right: 0;
-    bottom: var(--footer-pixels-shown, 0px);
-    width: calc(100% - 502px);
     overflow: hidden;
     background-color: cornflowerblue;
 
+    .is-shown-map & {
+      display: block;
+    }
+
+    @media (max-width: ($screen-lg - 1)) {
+      position: fixed;
+      z-index: 3;
+      top: 40px;
+      left: 0;
+      right: 0;
+      bottom: 72px;
+    }
+
     @media (min-width: $screen-lg) {
       display: block;
+      position: fixed;
+      top: 208px !important;
+      right: 0;
+      bottom: var(--footer-pixels-shown, 0px);
+      width: calc(100% - 502px);
     }
 
     @media (min-width: $screen-xl) {
       width: calc(100% - 730px);
-      top: 245px;
+      top: 245px !important;
     }
   }
 
@@ -238,12 +256,18 @@
   }
 
   &__mobile-viewmode-btns {
-    position: sticky;
+    position: fixed;
     z-index: 2;
+    right: 0;
     bottom: 0;
+    left: 0;
     padding: 16px;
     background: #fff;
     box-shadow: 4px 0px 16px 4px rgba(0, 0, 0, 0.05);
+
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
   }
 
   &__modal {}

@@ -249,15 +249,6 @@
           </button>
         </div>
 
-        <div class="b-search__map-wrapper">
-          <p style="padding: 1em; background-color: cornflowerblue;">Вместо этого параграфа - карта</p>
-          <div style="padding: 1em">
-            @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { hasSlider: true, liked: true, isOnMap: true })
-            <hr>
-            @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { isOnMap: true })
-          </div>
-        </div>
-
         <div class="b-search__header">
           <h1 class="b-search__header-title">Αποκόρωνος, Greece</h1>
           <div class="b-search__header-inner">
@@ -282,7 +273,7 @@
           </div>
         </div>
 
-        <ul class="b-search__list">
+        <ul id="items-list" class="b-search__list">
           <li class="b-search__item">
             @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { hasSlider: true, liked: true })
           </li>
@@ -306,13 +297,22 @@
           </li>
         </ul>
 
+        <div id="map-wrapper" class="b-search__map-wrapper">
+          <p style="padding: 1em; background-color: cornflowerblue;">Вместо этого параграфа - карта</p>
+          <div style="padding: 1em">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { hasSlider: true, liked: true, isOnMap: true })
+            <hr>
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { isOnMap: true })
+          </div>
+        </div>
+
         <div class="b-search__mobile-viewmode-btns">
-          <button class="b-search__mobile-viewmode-map  b-btn-2  b-btn-2--block  b-btn-2--lg" type="button">
+          <a href="#map-wrapper" class="b-search__mobile-viewmode-map  b-btn-2  b-btn-2--block  b-btn-2--lg">
             Map
-          </button>
-          <button class="b-search__mobile-viewmode-list  b-btn-2  b-btn-2--block  b-btn-2--lg  hidden" type="button">
+          </a>
+          <a href="#items-list" class="b-search__mobile-viewmode-list  b-btn-2  b-btn-2--block  b-btn-2--lg  hidden">
             List
-          </button>
+          </a>
         </div>
 
       </div>
@@ -483,4 +483,4 @@
         </div>
       </div>
 
-@@include('./html-includes/footer.html')
+@@include('./html-includes/footer.html', { isSearchPage: true, })

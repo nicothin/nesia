@@ -285,6 +285,8 @@ $( document ).ready(function() {
 
 
 
+  // summer 2022
+
   // Добавление css custom properties для хранения кол-ва пикселей подавла, видимых при нынешнем положении скролла
   var getShowingHeight = (elem) => {
     var bounding = elem.getBoundingClientRect();
@@ -310,6 +312,23 @@ $( document ).ready(function() {
     e.stopPropagation();
     $(this).closest('.carousel').carousel('next');
   })
+
+
+  // Переключение карта/список для мобильного представления стр. поиска
+  $('.b-search__mobile-viewmode-btns a').on('click', function(e) {
+    e.preventDefault();
+    $(this).siblings().removeClass('hidden');
+    $(this).addClass('hidden');
+    var href = $(this).attr('href');
+    if (href === '#map-wrapper') {
+      document.documentElement.classList.add('is-shown-map');
+      var header = document.querySelector('.b-search__header');
+      $('.b-search__map-wrapper').css({ top: header.getBoundingClientRect().top + header.getBoundingClientRect().height });
+    }
+    else {
+      document.documentElement.classList.remove('is-shown-map');
+    }
+  });
 
 });
 
