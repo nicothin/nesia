@@ -116,7 +116,9 @@
     "b-promo-form": [],
     "b-promo-get-acquainted": [],
     "b-promo-list": [],
-    "b-promo-check": []
+    "b-promo-check": [],
+    "b-landing": [],
+    "b-tns-slider": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
@@ -167,6 +169,7 @@
     "src/js/intlTelInput.js",
     "src/js/countrySelect.js",
     "src/js/jquery.tagsinput.min.js",
+    "src/js/tiny-slider.js",
     "src/js/script.js"
   ],
   "dirs": {

@@ -1,8 +1,61 @@
-// В этом файле должны быть стили для БЭМ-блока b-promo-check, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока b-promo-check, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .b-promo-check {
 
   $block-name:                &; // #{$block-name}__element
+
+  padding: 80px 16px 40px;
+
+  .b-search__input {
+    height: 41px;
+    background: #E8E8E8;
+    border-color: #E8E8E8;
+  }
+
+  .b-search__search-form-mobile {
+    max-width: 670px;
+    margin: 0 auto 80px;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+  }
+
+  &__list {
+    margin: 0 0 40px;
+    padding: 0;
+    list-style: none;
+    color: #535353;
+
+    a:not(.b-promo-check__item-more-link) {
+      color: inherit;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item-more-link {
+    color: #D84B2A;
+  }
 }

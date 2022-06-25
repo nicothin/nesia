@@ -330,5 +330,29 @@ $( document ).ready(function() {
     }
   });
 
+  // Карусель New property for buy
+  var slider = tns({
+    container: '#new-property-for-buy',
+    fixedWidth: 230,
+    mouseDrag: true,
+    nav: false,
+  });
+
+  // Карусель New property for rent
+  var slider = tns({
+    container: '#new-property-for-rent',
+    fixedWidth: 230,
+    mouseDrag: true,
+    nav: false,
+  });
+
+  // Лендинг: обработка кликов по More в списке Check out a neighborhood
+  $(document).on('click', '[data-check-show-more]', function(e) {
+    e.preventDefault();
+    var parentList = $(this).closest('ul');
+    $(parentList).find('.hidden').removeClass('hidden');
+    $(this).closest('li').addClass('hidden');
+  });
+
 });
 

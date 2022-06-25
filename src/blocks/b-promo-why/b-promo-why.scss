@@ -1,8 +1,78 @@
-// В этом файле должны быть стили для БЭМ-блока b-promo-why, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока b-promo-why, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .b-promo-why {
 
   $block-name:                &; // #{$block-name}__element
+
+  padding: 80px 10px 10px;
+
+  &__title {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 40px;
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 42px 16px 42px 88px;
+    background: #F4F4F4;
+    border-radius: 10px;
+  }
+
+  &__item-title {
+    margin: 0 0 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+  }
+
+  &__item-descr {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+  }
+
+  &__svg-wrap {
+    position: absolute;
+    top: 54px;
+    left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
 }

@@ -1,0 +1,11 @@
+// В этом файле должны быть стили для БЭМ-блока b-landing, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-landing {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: 41px;
+  padding-top: 0;
+}

@@ -1,8 +1,38 @@
-// В этом файле должны быть стили для БЭМ-блока b-promo, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока b-promo, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .b-promo {
 
   $block-name:                &; // #{$block-name}__element
+
+  min-height: 400px;
+  background-color: #E3E9EA;
+  background-image: url(../img/bg-landing-promo.jpg);
+  background-size: cover;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+
+  &__inner {
+    padding: 76px 24px 40px;
+  }
+
+  &__text-wrap {
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #000;
+  }
+
+  &__descr {
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+  }
 }
