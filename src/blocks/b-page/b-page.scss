@@ -13,6 +13,40 @@ body {
   background-color: #000 !important;
 }
 
+.col-xs2-1,
+.col-xs2-2,
+.col-xs2-3,
+.col-xs2-4,
+.col-xs2-5,
+.col-xs2-6,
+.col-xs2-7,
+.col-xs2-8,
+.col-xs2-9,
+.col-xs2-10,
+.col-xs2-11,
+.col-xs2-12
+{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px
+}
+
+@media (min-width: $screen-sm) {
+  .col-xs2-12 {width: 100%;}
+  .col-xs2-11 {width: 91.66666667%;}
+  .col-xs2-10 {width: 83.33333333%;}
+  .col-xs2-9 {width: 75%;}
+  .col-xs2-8 {width: 66.66666667%;}
+  .col-xs2-7 {width: 58.33333333%;}
+  .col-xs2-6 {width: 50%;}
+  .col-xs2-5 {width: 41.66666667%;}
+  .col-xs2-4 {width: 33.33333333%;}
+  .col-xs2-3 {width: 25%;}
+  .col-xs2-2 {width: 16.66666667%;}
+  .col-xs2-1 {width: 8.33333333%;}
+}
+
 .b-page {
 
   &.is-shown-map {

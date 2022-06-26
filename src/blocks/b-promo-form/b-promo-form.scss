@@ -24,6 +24,15 @@
     &:before {
       display: none;
     }
+
+    @media (min-width: $screen-lg) {
+      max-width: 500px;
+      margin-bottom: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 32px;
+      line-height: 1.6;
+    }
   }
 
   &__action-descr {

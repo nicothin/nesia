@@ -12,13 +12,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-  }
 
-  .tns-item {
-    padding-right: 16px;
-  }
-
-  .tns-controls {
-    display: none;
+    &.tns-horizontal {
+      display: flex; // NOTE[@nicothin]: исправление кривой вёрстки горизонтального слайдера
+    }
   }
 }

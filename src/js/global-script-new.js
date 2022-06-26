@@ -331,19 +331,31 @@ $( document ).ready(function() {
   });
 
   // Карусель New property for buy
-  var slider = tns({
+  var slider1 = tns({
     container: '#new-property-for-buy',
-    fixedWidth: 230,
+    fixedWidth: 225,
     mouseDrag: true,
     nav: false,
+    loop: false,
+    // responsive: {
+    //   1360: {
+    //     fixedWidth: 225,
+    //   },
+    // },
   });
 
   // Карусель New property for rent
-  var slider = tns({
+  var slider2 = tns({
     container: '#new-property-for-rent',
-    fixedWidth: 230,
+    fixedWidth: 225,
     mouseDrag: true,
     nav: false,
+    loop: false,
+    // responsive: {
+    //   1360: {
+    //     fixedWidth: 225,
+    //   },
+    // },
   });
 
   // Лендинг: обработка кликов по More в списке Check out a neighborhood
