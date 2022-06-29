@@ -30,6 +30,8 @@
     text-align: center;
     color: #000;
     cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     input[type='radio']:checked + & {
       border-color: #D84B2A;
@@ -68,5 +70,29 @@
     color: #fff;
     background-color: #D84B2A;
     cursor: default;
+  }
+
+
+
+  &--white {
+
+    #{$block-name}__label {
+      // width: 115px;
+      color: #fff;
+      border-color: #CFCECE;
+      background: rgba(255, 255, 255, 0.1);
+
+      &:hover,
+      &:focus {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+    }
+
+    input[type='radio']:checked + #{$block-name}__label {
+      background: #fff;
+      border-color: #fff;
+      color: #D84B2A;
+    }
   }
 }

@@ -118,7 +118,8 @@
     "b-promo-list": [],
     "b-promo-check": [],
     "b-landing": [],
-    "b-tns-slider": []
+    "b-tns-slider": [],
+    "b-index-search": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
