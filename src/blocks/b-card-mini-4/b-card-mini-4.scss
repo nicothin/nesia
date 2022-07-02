@@ -1,0 +1,64 @@
+// В этом файле должны быть стили для БЭМ-блока b-card-mini-4, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-card-mini-4 {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #296191;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__wrap-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 32px 32px 76px;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: 24px;
+
+    -webkit-line-clamp: 3;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  &__view-btn {
+    position: absolute;
+    z-index: 2;
+    left: 32px;
+    bottom: 32px;
+  }
+}

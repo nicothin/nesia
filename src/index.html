@@ -16,9 +16,9 @@
           <input type="radio" name="type" value="1" id="type-3">
           <label for="type-3" class="b-radio-buttons__label  b-index-search__radio-no-mobile">Rented</label>
         </div>
-        <div class="b-search__search-form-mobile  b-index-search__input-wrap">
-          <input placeholder="Athines, Greece" type="text" class="b-search__input  b-search__input--grow  b-search__input--before-btn">
-          <button class="b-search__search-btn  b-btn-2  b-btn-2--lg">
+        <div class="b-index-search__search-input  b-search-input  b-search-input--no-border">
+          <input placeholder="Athines, Greece" type="text" class="b-search-input__input">
+          <button class="b-search-input__btn  b-btn-2  b-btn-2--lg">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M17.5 17.5L13.875 13.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -85,10 +85,39 @@
     </ul>
   </section>
 
-  <section class="b-promo-action">
+  <section class="b-promo-action  b-promo-action--mt70">
     <div class="b-promo-action__inner">
-      <h1 class="b-promo-action__title">Are you property owner?</h1>
+      <h2 class="b-promo-action__title">Are you property owner?</h2>
       <a href="" class="b-btn-2  b-btn-2--xl  b-promo-action__btn">List your property for free</a>
+    </div>
+  </section>
+
+  <section class="b-promo-list  b-promo-list--explore">
+    <h2 class="b-promo-list__title">Explore homes on Terranesia</h2>
+    <div class="b-promo-list__slider-wrapper  b-tns-slider">
+      <ul id="explore-homes" class="b-tns-slider__slider" data-slide-width="345" data-edge-padding="-10" data-no-check-length>
+        <li class="b-tns-slider__item-single">
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+        </li>
+        <li class="b-tns-slider__item-double">
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+        </li>
+        <li class="b-tns-slider__item-single">
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+        </li>
+        <li class="b-tns-slider__item-double">
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+        </li>
+        <li class="b-tns-slider__item-single">
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+        </li>
+        <li class="b-tns-slider__item-double">
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+          @@include('./blocks/b-card-mini-4/b-card-mini-4.html')
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -192,16 +221,16 @@
         <li>@@include('./blocks/b-card-mini-3/b-card-mini-3.html')</li>
         <li>@@include('./blocks/b-card-mini-3/b-card-mini-3.html')</li>
         <li>@@include('./blocks/b-card-mini-3/b-card-mini-3.html')</li>
+        <li>@@include('./blocks/b-card-mini-3/b-card-mini-3.html')</li>
       </ul>
     </div>
   </section>
 
   <section class="b-promo-check">
     <h2 class="b-promo-check__title">Check out a neighborhood</h2>
-    <form class="b-search__search-form-mobile">
-      <input placeholder="Athines, Greece" type="text"
-        class="b-search__input  b-search__input--grow  b-search__input--before-btn">
-      <button class="b-search__search-btn  b-btn-2  b-btn-2--lg">
+    <form class="b-promo-check__search-input  b-search-input  b-search-input--no-border  b-search-input--input-gray-bg">
+      <input placeholder="Athines, Greece" type="text" class="b-search-input__input">
+      <button class="b-search-input__btn  b-btn-2  b-btn-2--lg">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"

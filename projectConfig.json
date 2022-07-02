@@ -119,7 +119,10 @@
     "b-promo-check": [],
     "b-landing": [],
     "b-tns-slider": [],
-    "b-index-search": []
+    "b-index-search": [],
+    "b-search-input": [],
+    "b-promo-action": [],
+    "b-card-mini-4": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

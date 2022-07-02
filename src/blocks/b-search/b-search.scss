@@ -52,37 +52,10 @@
     }
   }
 
-  &__search-form-mobile {
-    display: flex;
+  &__search-input {
+    display: flex !important;
     flex-grow: 1;
     margin-right: 23px;
-  }
-
-  &__input {
-    min-height: 40px;
-    height: 100%;
-    padding: 4px 12px;
-    border: 1px solid #A1A1A1;
-    outline: 0;
-    box-shadow: none;
-    border-radius: 2px;
-
-    &--grow {
-      flex-grow: 1;
-    }
-
-    &--before-btn {
-      border-right: 0;
-      border-radius: 2px 0 0 2px;
-    }
-  }
-
-  &__search-btn {
-    flex-shrink: 0;
-    border-radius: 0 2px 2px 0;
-    padding: 9px;
-    font-size: 0;
-    color: transparent;
   }
 
   &__mobile-filters-btn {

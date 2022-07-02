@@ -13,8 +13,44 @@
     padding: 0;
     list-style: none;
 
+    & > li {
+      margin: 0;
+    }
+
     &.tns-horizontal {
       display: flex; // NOTE[@nicothin]: исправление кривой вёрстки горизонтального слайдера
+    }
+  }
+
+  &__item-single {
+    display: flex;
+    row-gap: 20px;
+    height: 400px;
+
+    .b-card-mini-4 {
+      height: 100%;
+    }
+  }
+
+  &__item-double {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+
+    .b-card-mini-4 {
+      height: 190px;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &--only-6 {
+
+    .tns-controls [data-controls="prev"],
+    .tns-controls [data-controls="next"] {
+      display: none !important;
     }
   }
 }

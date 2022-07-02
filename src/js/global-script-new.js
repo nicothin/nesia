@@ -330,32 +330,32 @@ $( document ).ready(function() {
     }
   });
 
-  // Карусель New property for buy
-  var slider1 = tns({
-    container: '#new-property-for-buy',
-    fixedWidth: 225,
-    mouseDrag: true,
-    nav: false,
-    loop: false,
-    // responsive: {
-    //   1360: {
-    //     fixedWidth: 225,
-    //   },
-    // },
-  });
-
-  // Карусель New property for rent
-  var slider2 = tns({
-    container: '#new-property-for-rent',
-    fixedWidth: 225,
-    mouseDrag: true,
-    nav: false,
-    loop: false,
-    // responsive: {
-    //   1360: {
-    //     fixedWidth: 225,
-    //   },
-    // },
+  // Карусели
+  var standartSliders = [
+    '#explore-homes',
+    '#new-property-for-buy',
+    '#new-property-for-rent',
+  ];
+  standartSliders.forEach((slider) => {
+    var element = document.querySelector(slider);
+    var slideWidth = +element.dataset.slideWidth || 225;
+    var needCheckLength = element.dataset.noCheckLength;
+    var edgePadding = +element.dataset.edgePadding || 0;
+    if (!!element) {
+      const sliderCounter = Array.from(element.childNodes)?.filter((child) => child.nodeType === 1).length;
+      tns({
+        container: slider,
+        fixedWidth: slideWidth,
+        edgePadding: edgePadding,
+        mouseDrag: true,
+        nav: false,
+        loop: false,
+      });
+      if (needCheckLength === undefined && sliderCounter <= 6) {
+        var parent = element.closest('.b-tns-slider');
+        parent.classList.add('b-tns-slider--only-6');
+      }
+    }
   });
 
   // Лендинг: обработка кликов по More в списке Check out a neighborhood
