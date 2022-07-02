@@ -124,7 +124,8 @@
     "b-promo-action": [],
     "b-card-mini-4": [],
     "b-city": [],
-    "b-city-info-list": []
+    "b-city-info-list": [],
+    "b-city-about": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

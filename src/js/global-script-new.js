@@ -319,10 +319,10 @@ $( document ).ready(function() {
     e.preventDefault();
     $(this).siblings().removeClass('hidden');
     $(this).addClass('hidden');
-    var href = $(this).attr('href');
+    const href = $(this).attr('href');
     if (href === '#map-wrapper') {
       document.documentElement.classList.add('is-shown-map');
-      var header = document.querySelector('.b-search__header');
+      const header = document.querySelector('.b-search__header');
       $('.b-search__map-wrapper').css({ top: header.getBoundingClientRect().top + header.getBoundingClientRect().height });
     }
     else {
@@ -338,10 +338,10 @@ $( document ).ready(function() {
     '#neighbouring',
   ];
   standartSliders.forEach((slider) => {
-    var element = document.querySelector(slider);
-    var slideWidth = +element.dataset.slideWidth || 225;
-    var needCheckLength = element.dataset.noCheckLength;
-    var edgePadding = +element.dataset.edgePadding || 0;
+    const element = document.querySelector(slider);
+    const slideWidth = +element?.dataset?.slideWidth || 225;
+    const needCheckLength = element?.dataset?.noCheckLength;
+    const edgePadding = +element?.dataset?.edgePadding || 0;
     if (!!element) {
       const sliderCounter = Array.from(element.childNodes)?.filter((child) => child.nodeType === 1).length;
       tns({
@@ -353,7 +353,7 @@ $( document ).ready(function() {
         loop: false,
       });
       if (needCheckLength === undefined && sliderCounter <= 6) {
-        var parent = element.closest('.b-tns-slider');
+        const parent = element.closest('.b-tns-slider');
         parent.classList.add('b-tns-slider--only-6');
       }
     }
@@ -362,9 +362,17 @@ $( document ).ready(function() {
   // Лендинг: обработка кликов по More в списке Check out a neighborhood
   $(document).on('click', '[data-check-show-more]', function(e) {
     e.preventDefault();
-    var parentList = $(this).closest('ul');
+    const parentList = $(this).closest('ul');
     $(parentList).find('.hidden').removeClass('hidden');
     $(this).closest('li').addClass('hidden');
+  });
+
+  // Лендинг: обработка кликов по More в ABOUT
+  $(document).on('click', '[data-city-about-show-more]', function(e) {
+    e.preventDefault();
+    const parent = $(this).closest('.b-city-about');
+    $(parent).find('.hidden').removeClass('hidden');
+    $(this).addClass('hidden');
   });
 
 });

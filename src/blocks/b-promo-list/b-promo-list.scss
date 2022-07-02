@@ -6,7 +6,7 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  max-width: 1360px;
+  max-width: 1354px;
   margin: auto;
   padding: 80px 16px 10px;
 
@@ -39,7 +39,8 @@
     }
 
     .tns-item {
-      padding-left: 16px;
+      padding-right: 8px;
+      padding-left: 8px;
     }
 
     .tns-controls {
@@ -47,37 +48,6 @@
 
       @media (min-width: 1360px) {
         display: block !important; // NOTE[@nicothin]: странно: для лендинга у 2й карусели добавляется инлайновый display: none
-
-        [data-controls="prev"],
-        [data-controls="next"] {
-          position: absolute;
-          z-index: 2;
-          top: 44px;
-          width: 52px;
-          height: 52px;
-          border: 1px solid #D9E0E9;
-          border-radius: 50%;
-          padding: 0;
-          font-size: 0;
-          color: transparent;
-          background-color: #FFFFFF;
-          background-position: center;
-          background-repeat: no-repeat;
-
-          &[disabled] {
-            display: none;
-          }
-        }
-
-        [data-controls="prev"] {
-          left: 0;
-          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 6L9 12L15 18' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-        }
-
-        [data-controls="next"] {
-          right: 0;
-          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 18L15 12L9 6' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-        }
       }
 
       @media (min-width: 1440px) {
@@ -89,6 +59,37 @@
         [data-controls="next"] {
           right: -10px;
         }
+      }
+
+      [data-controls="prev"],
+      [data-controls="next"] {
+        position: absolute;
+        z-index: 2;
+        top: 44px;
+        width: 52px;
+        height: 52px;
+        border: 1px solid #D9E0E9;
+        border-radius: 50%;
+        padding: 0;
+        font-size: 0;
+        color: transparent;
+        background-color: #FFFFFF;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &[disabled] {
+          display: none;
+        }
+      }
+
+      [data-controls="prev"] {
+        left: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 6L9 12L15 18' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+
+      [data-controls="next"] {
+        right: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 18L15 12L9 6' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
       }
     }
   }
@@ -117,6 +118,30 @@
 
     .tns-item {
       padding: 0 10px;
+    }
+  }
+
+  &--max-900 {
+    max-width: 900px;
+
+    @media (min-width: $screen-lg) {
+
+      .tns-controls {
+        display: block !important;
+      }
+
+      .b-tns-slider--only-6 .tns-controls [data-controls="prev"]:not([disabled]),
+      .b-tns-slider--only-6 .tns-controls [data-controls="next"]:not([disabled]) {
+        display: block !important;
+      }
+
+      [data-controls="prev"] {
+        left: -20px !important;
+      }
+
+      [data-controls="next"] {
+        right: -20px !important;
+      }
     }
   }
 }

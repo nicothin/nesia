@@ -61,4 +61,12 @@
   &--mt70 {
     margin-top: 70px;
   }
+
+  &--max-900 {
+
+    @media (min-width: $screen-lg) {
+      max-width: 900px;
+      border-radius: 10px;
+    }
+  }
 }
