@@ -122,7 +122,9 @@
     "b-index-search": [],
     "b-search-input": [],
     "b-promo-action": [],
-    "b-card-mini-4": []
+    "b-card-mini-4": [],
+    "b-city": [],
+    "b-city-info-list": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

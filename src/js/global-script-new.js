@@ -335,6 +335,7 @@ $( document ).ready(function() {
     '#explore-homes',
     '#new-property-for-buy',
     '#new-property-for-rent',
+    '#neighbouring',
   ];
   standartSliders.forEach((slider) => {
     var element = document.querySelector(slider);
