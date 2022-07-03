@@ -340,8 +340,9 @@ $( document ).ready(function() {
   standartSliders.forEach((slider) => {
     const element = document.querySelector(slider);
     const slideWidth = +element?.dataset?.slideWidth || 225;
-    const needCheckLength = element?.dataset?.noCheckLength;
+    const noCheckLength = element?.dataset?.noCheckLength;
     const edgePadding = +element?.dataset?.edgePadding || 0;
+    const btnsTop = +element?.dataset?.btnsTop;
     if (!!element) {
       const sliderCounter = Array.from(element.childNodes)?.filter((child) => child.nodeType === 1).length;
       tns({
@@ -352,9 +353,13 @@ $( document ).ready(function() {
         nav: false,
         loop: false,
       });
-      if (needCheckLength === undefined && sliderCounter <= 6) {
-        const parent = element.closest('.b-tns-slider');
+      const parent = element.closest('.b-tns-slider');
+      if (noCheckLength === undefined && sliderCounter <= 6) {
         parent.classList.add('b-tns-slider--only-6');
+      }
+      if (btnsTop) {
+        parent.querySelector('[data-controls="prev"]').style.top = `${btnsTop}px`;
+        parent.querySelector('[data-controls="next"]').style.top = `${btnsTop}px`;
       }
     }
   });

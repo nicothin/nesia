@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  color: #000;
 
   &__item {
     position: relative;
@@ -42,6 +43,22 @@
     &:hover,
     &:focus {
       color: #D84B2A;
+    }
+  }
+
+
+
+  &--sm-icons {
+
+    #{$block-name}__item {
+      min-height: 20px;
+      padding-left: 32px;
+      margin-bottom: 12px;
+    }
+
+    #{$block-name}__icon {
+      width: 20px;
+      height: 20px;
     }
   }
 }

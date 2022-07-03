@@ -10,7 +10,7 @@
     </div>
     <h1 class="b-city__title">Apokorona</h1>
     <div class="b-city__text-wrap">
-      <ul class="b-city-info-list  b-city-info-list--lg-icons">
+      <ul class="b-city-info-list">
         <li class="b-city-info-list__item">
           <svg class="b-city-info-list__icon" width="32" height="32">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-home2"></use>
@@ -25,7 +25,7 @@
           <svg class="b-city-info-list__icon" width="32" height="32">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-rent"></use>
           </svg>
-          Sale:
+          Rent:
           <span class="b-city-info-list__price">€ 1k–€ 2k</span>
           <div class="b-city-info-list__descr-wrap">
             <a href="" class="b-city-info-list__descr">70 homes</a>
@@ -118,11 +118,18 @@
     </div>
   </section>
 
-  <section class="b-promo-list">
+  <section class="b-promo-list  b-promo-list--max-900">
     <h2 class="b-promo-list__title">Neighbouring cities</h2>
     <div class="b-promo-list__slider-wrapper  b-tns-slider">
-      <ul id="neighbouring" class="b-tns-slider__slider">
-        <li>1</li>
+      <ul id="neighbouring" class="b-tns-slider__slider" data-btns-top="50">
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
+        <li>@@include('./blocks/b-card-city/b-card-city.html')</li>
       </ul>
     </div>
   </section>
@@ -172,4 +179,4 @@
 
 </div>
 
-@@include('./html-includes/footer.html', { isSearchPage: true, })
+@@include('./html-includes/footer.html')
