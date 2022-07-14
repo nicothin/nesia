@@ -7798,7 +7798,7 @@ input[type='radio']:checked + .b-radio-buttons__label {
 .b-index-search {
   min-height: 304px;
   padding: 40px 16px;
-  background-image: url(../../img/index-search-bg.jpg);
+  background-image: url(../img/index-search-bg.jpg);
   background-position: center;
   background-size: cover;
   background-color: #696460;
