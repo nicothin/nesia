@@ -1928,5 +1928,115 @@ $( document ).ready(function() {
     }
   });
 
+
+
+  // summer 2022
+
+  // Добавление css custom properties для хранения кол-ва пикселей подавла, видимых при нынешнем положении скролла
+  var getShowingHeight = (elem) => {
+    var bounding = elem.getBoundingClientRect();
+    return (window.innerHeight || document.documentElement.clientHeight) - bounding.top
+  };
+  var footer = document.querySelector('.b-footer');
+  window.addEventListener('scroll', function (e) {
+    var shownPixels = getShowingHeight(footer);
+    if (shownPixels < 0) shownPixels = 0;
+    document.documentElement.style.setProperty("--footer-pixels-shown", shownPixels + 'px');
+  });
+
+
+
+  // Карусель для карточек 3го типа
+  $('.b-carousel__prev').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).closest('.carousel').carousel('prev');
+  })
+  $('.b-carousel__next').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).closest('.carousel').carousel('next');
+  })
+
+
+  // Переключение карта/список для мобильного представления стр. поиска
+  $('.b-search__mobile-viewmode-btns a').on('click', function(e) {
+    e.preventDefault();
+    $(this).siblings().removeClass('hidden');
+    $(this).addClass('hidden');
+    const href = $(this).attr('href');
+    if (href === '#map-wrapper') {
+      document.documentElement.classList.add('is-shown-map');
+      const header = document.querySelector('.b-search__header');
+      $('.b-search__map-wrapper').css({ top: header.getBoundingClientRect().top + header.getBoundingClientRect().height });
+    }
+    else {
+      document.documentElement.classList.remove('is-shown-map');
+    }
+  });
+
+  // Карусели
+  var standartSliders = [
+    '#explore-homes',
+    '#new-property-for-buy',
+    '#new-property-for-rent',
+    '#neighbouring',
+  ];
+  standartSliders.forEach((slider) => {
+    const element = document.querySelector(slider);
+    const slideWidth = +element?.dataset?.slideWidth || 225;
+    const noCheckLength = element?.dataset?.noCheckLength;
+    const edgePadding = +element?.dataset?.edgePadding || 0;
+    const btnsTop = +element?.dataset?.btnsTop;
+    if (!!element) {
+      const sliderCounter = Array.from(element.childNodes)?.filter((child) => child.nodeType === 1).length;
+      tns({
+        container: slider,
+        fixedWidth: slideWidth,
+        edgePadding: edgePadding,
+        mouseDrag: true,
+        nav: false,
+        loop: false,
+      });
+      const parent = element.closest('.b-tns-slider');
+      if (noCheckLength === undefined && sliderCounter <= 6) {
+        parent.classList.add('b-tns-slider--only-6');
+      }
+      if (btnsTop) {
+        parent.querySelector('[data-controls="prev"]').style.top = `${btnsTop}px`;
+        parent.querySelector('[data-controls="next"]').style.top = `${btnsTop}px`;
+      }
+    }
+  });
+
+  // Лендинг: обработка кликов по More в списке Check out a neighborhood
+  $(document).on('click', '[data-check-show-more]', function(e) {
+    e.preventDefault();
+    const parentList = $(this).closest('ul');
+    $(parentList).find('.hidden').removeClass('hidden');
+    $(this).closest('li').addClass('hidden');
+  });
+
+  // Лендинг: обработка кликов по More в ABOUT
+  $(document).on('click', '[data-city-about-show-more]', function(e) {
+    e.preventDefault();
+    const parent = $(this).closest('.b-city-about');
+    $(parent).find('.hidden').removeClass('hidden');
+    $(this).addClass('hidden');
+  });
+
+  // Главное меню, мобильный вид
+  $('[data-b-user-menu-has-drop-item]').find('.b-user-menu__submenu').hide();
+  $(document).on('click', '[data-b-user-menu-has-drop-item] > a', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('b-user-menu__link--show-drop');
+    $(this).closest('[data-b-user-menu-has-drop-item]').find('ul.b-user-menu__submenu').slideToggle();
+  });
+
+  const priceInput = $('#price-inpit');
+  if (priceInput.length) {
+    priceInput.mask(`000, 000, 000`, { reverse: true });
+  }
+
 });
 

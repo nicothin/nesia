@@ -41,6 +41,8 @@
   <script src="js/jquery.ui.datepicker-ru.js"></script>
   <script src="js/jquery.ui.datepicker-sr.js"></script>
 
+  <script src="js/tiny-slider.js"></script>
+
   <script src="js/picturefill.min.js" async></script>
   <script src="js/script-18-spring.js"></script>
   <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
@@ -65,6 +67,9 @@
           </button>
 
           <nav class="b-page-header__mobile-nav  b-mobile-nav" id="nav">
+            <p class="b-page-header__mobile-nav-logo-wrap">
+              <img src="img/logo-mobile-nav.png" width="142" height="32" alt="terranesia">
+            </p>
             <p class="b-mobile-nav__user-wrap">
               <img src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Red&facialHairType=Blank&clotheType=BlazerShirt&eyeType=EyeRoll&eyebrowType=Default&mouthType=Default&skinColor=Light" alt="%USERNAME%" class="b-mobile-nav__avatar">
               <span class="b-mobile-nav__user-msg">Hi, Lara Scala</span>
@@ -74,7 +79,18 @@
               <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Rent</a></li>
               <li class="b-user-menu__item  b-user-menu__item--separator"><a class="b-user-menu__link" href="/">List your property</a></li>
               <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">How it works</a></li>
-              <li class="b-user-menu__item  b-user-menu__item--separator"><a class="b-user-menu__link" href="/">Support</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Countries</a></li>
+              <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Support</a></li>
+              <li class="b-user-menu__item  b-user-menu__item--separator" data-b-user-menu-has-drop-item>
+                <a class="b-user-menu__link  b-user-menu__link--has-drop" href="#">EN</a>
+                <ul class="b-user-menu__submenu">
+                  <li class="b-user-menu__item"><a class="b-user-menu__link" href="#">English</a></li>
+                  <li class="b-user-menu__item"><a class="b-user-menu__link" href="#">Русский</a></li>
+                  <li class="b-user-menu__item"><a class="b-user-menu__link" href="#">Українська</a></li>
+                  <li class="b-user-menu__item"><a class="b-user-menu__link" href="#">Ελληνικά</a></li>
+                  <li class="b-user-menu__item"><a class="b-user-menu__link" href="#">Srpski</a></li>
+                </ul>
+              </li>
               <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">My listings</a></li>
               <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Auction <span class="b-label-2  b-user-menu__label">2</span></a></li>
               <li class="b-user-menu__item"><a class="b-user-menu__link" href="/">Increase views</a></li>
@@ -102,85 +118,10 @@
                   <svg class="b-nav__icon-xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><circle cx="256" cy="378.5" r="25"/><path d="M256 0C114.516 0 0 114.497 0 256c0 141.484 114.497 256 256 256 141.484 0 256-114.497 256-256C512 114.516 397.503 0 256 0zm0 472c-119.377 0-216-96.607-216-216 0-119.377 96.607-216 216-216 119.377 0 216 96.607 216 216 0 119.377-96.607 216-216 216z"/><path d="M256 128.5c-44.112 0-80 35.888-80 80 0 11.046 8.954 20 20 20s20-8.954 20-20c0-22.056 17.944-40 40-40s40 17.944 40 40-17.944 40-40 40c-11.046 0-20 8.954-20 20v50c0 11.046 8.954 20 20 20s20-8.954 20-20v-32.531c34.466-8.903 60-40.26 60-77.469 0-44.112-35.888-80-80-80z"/></svg>
                 </a>
               </li>
+              <li class="b-nav__item">
+                <a href="" class="b-nav__link">Countries</a>
+              </li>
               <li class="b-nav__item  b-nav__item--drops-wrap">
-
-                <div class="dropdown  b-currency">
-                  <button class="b-currency__btn" type="button" data-toggle="dropdown">RUB</button>
-                  <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=US$">
-                          <div class="csymbol">US$</div>
-                          <div class="ctext">Доллар США</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=€">
-                          <div class="csymbol">€</div>
-                          <div class="ctext">Евро</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=RUB">
-                          <div class="csymbol">RUB</div>
-                          <div class="ctext">Рубль РФ</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=£">
-                          <div class="csymbol">£</div>
-                          <div class="ctext">Фунт стерлингов</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=CAD">
-                          <div class="csymbol">CAD</div>
-                          <div class="ctext">Канадский доллар</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=AUD">
-                          <div class="csymbol">AUD</div>
-                          <div class="ctext">Австралийский доллар</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=CNY">
-                          <div class="csymbol">CNY</div>
-                          <div class="ctext">Китайский юань</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=TL">
-                          <div class="csymbol">TL</div>
-                          <div class="ctext">Турецкая лира</div>
-                        </a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="cline">
-                        <a href="?change_currency_to=UAH">
-                          <div class="csymbol">UAH</div>
-                          <div class="ctext">Украинская гривна</div>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
 
                 <div class="dropdown  b-language">
                   <button class="b-language__btn" type="button" data-toggle="dropdown">RU</button>
@@ -212,10 +153,7 @@
           <div class="b-page-header__anonymous-user">
             <ul class="b-nav">
               <li class="b-nav__item">
-                <a href="" class="b-nav__link">Вход</a>
-              </li>
-              <li class="b-nav__item">
-                <a href="" class="b-nav__link">Регистрация</a>
+                <a href="" class="b-nav__link">Log in</a>
               </li>
             </ul>
           </div>
@@ -313,63 +251,35 @@
 
       <div class="b-content">
         <div class="container-fluid simple_page">
-          <h2>Размещение объекта</h2>
+          <!-- Добавлен класс title-551-simple -->
+          <h2 class="title-551-simple">Размещение объекта</h2>
 
 
-          <div class="overflow">
+          <!-- Разметка та же, но добавился класс b-steps. Функциональность (добавление классов active и done) на шагах сохранена -->
+          <div class="overflow  b-steps">
             <ul class="steps four_steps step_one">
+              <li class="done">
+                <div class="a">
+                  <div class="number">1</div>
+                  <div class="name">Нанести на карту</div>
+                </div>
+              </li>
               <li class="active">
                 <div class="a">
-                  <div class="number">
-                    1
-                  </div>
-
-
-                  <div class="name">
-                    Нанести на карту
-                  </div>
+                  <div class="number">2</div>
+                  <div class="name">Добавить фотографии</div>
                 </div>
               </li>
-
-
               <li>
                 <div class="a">
-                  <div class="number">
-                    2
-                  </div>
-
-
-                  <div class="name">
-                    Добавить фотографии
-                  </div>
+                  <div class="number">3</div>
+                  <div class="name">Добавить описание</div>
                 </div>
               </li>
-
-
               <li>
                 <div class="a">
-                  <div class="number">
-                    3
-                  </div>
-
-
-                  <div class="name">
-                    Добавить описание
-                  </div>
-                </div>
-              </li>
-
-
-              <li>
-                <div class="a">
-                  <div class="number">
-                    4
-                  </div>
-
-
-                  <div class="name">
-                    Опубликовать
-                  </div>
+                  <div class="number">4</div>
+                  <div class="name">Опубликовать</div>
                 </div>
               </li>
             </ul>
@@ -390,7 +300,7 @@
                 <button class="btn btn-success" id="autocomplete_btn" type="button"></button>
 
                 <div class="col-xs-6">
-                  <div class="finded" style="font-size: 18px; color: #000; padding: 5px 0 0 0; }">
+                  <div class="finded" style="font-size: 18px; color: #000; padding: 5px 0 0 0;">
                     <span id="count_objects"></span>
                   </div>
                 </div>
@@ -399,157 +309,61 @@
           </div>
         </div>
 
-
-        <!-- <div style="padding: 0 50px;">
+        <div class="container  container--p0-25">
           <div id="map" style="height:400px">
+            место карты
           </div>
-        </div> -->
+        </div>
 
 
-        <form action="" id="locate_form" method="post" name="locate_form" role="form">
+        <form action="" id="locate_form" method="post" name="locate_form" role="form" style="padding-top: 1em">
           <input name="full_address" type="hidden"> <input name='csrfmiddlewaretoken' type='hidden' value='1U4ED1yqj0qAS48xiTznxlsEi4rZTESD'>
 
           <div class="container-fluid step_first">
             <div class="form-group">
-              <div class="checkbox">
-                <label class="change_checkbox"><input id="my_property" type="checkbox">Я являюсь собственником данного объекта недвижимости.*</label>
-              </div>
-              <input class="form-control" id="lat" name="lat" placeholder="" type="hidden" value="">
-              <input class="form-control" id="lng" name="lng" placeholder="" type="hidden" value="">
-              <label>Номер дома</label>
-              <input class="form-control" id="street_number" name="street_number" placeholder="" type="text" value="">
-              <label>Маршрут</label>
-              <input class="form-control" id="route" name="route" placeholder="" type="text" value="">
-              <label>Область/Район</label>
-              <input class="form-control" id="administrative_area_level_1" name="locality" placeholder="" type="text" value="">
-              <label>Город</label>
-              <input class="form-control" id="locality" name="city" placeholder="" type="text" value="">
-              <label>Страна</label>
-              <input class="form-control" id="country" name="country" placeholder="" type="text" value="">
+              <label class="change_checkbox" style="margin: 1em 0">
+                <input id="my_property" type="checkbox">Я являюсь собственником данного объекта недвижимости.*
+              </label>
 
-              <div class="b-form-item-wrapper">
-                <label>Property is available</label>
-                <input class="form-control  b-input-calendar" id="available" name="available" placeholder="Select date" type="text" value="">
-                <script>
-                  // Тут или в любом другом месте, когда DOM готов:
-                  $(function () {
-                    $("#available").datepicker( $.datepicker.regional["en"] );
-                  });
-                </script>
-              </div>
+              <p>ДЕМО чекбокса для последнего шага:</p>
 
-              <div class="b-description">
-                <label class="b-description__label">
-                  Add Description on
-                  <div class="dropdown">
-                    <button class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="b-description__selected-lang-text">English</span>
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="selectLang">
-                      <li><a href="#" data-value="en">English</a></li>
-                      <li><a href="#" data-value="ru">Русский</a></li>
-                      <li><a href="#" data-value="ua">Українська</a></li>
-                      <li><a href="#" data-value="gr">Ελληνικά</a></li>
-                      <li><a href="#" data-value="es">Srpski</a></li>
-                    </ul>
+              <div style="margin: 1em 0">
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <div class="b-form-group__checkbox-text  b-form-group__checkbox-text--pl32">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
+                    document or a typeface without relying on meaningful content.
                   </div>
                 </label>
-                <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will have to delete your listing.</p>
-                <input class="b-description__input" type="hidden" value="">
-                <textarea class="b-description__textarea  form-control" name="description"></textarea>
-                <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
               </div>
 
-              <script>
-                // ДЛЯ НЕСКОЛЬКИХ БЛОКОВ достаточно иметь один такой фрагмент,
-                // он активирует работу любого кол-ва описаний,
-                // независимо от того, были ли они на странице в момент срабатывания этого кода
-                $(function () {
-                  $(document).on('click', '.b-description .dropdown-menu a', function (e) {
-                    e.preventDefault();
-                    var parent = e.target.closest('.b-description');
-                    $(parent).find('.b-description__selected-lang-text').text(e.target.innerHTML);
-                    $(parent).find('b-description__input').attr('value', e.target.dataset.value);
-                  });
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur sunt a labore voluptas aliquam alias minima provident rerum omnis, illum asperiores veritatis temporibus cumque fugiat natus excepturi consectetur at!</p>
 
-                  $(document).on('keyup change', '.b-description__textarea', function (e) {
-                    var parent = e.target.closest('.b-description');
-                    var counter = this.value.length;
-                    var textBlock = $(parent).find('.b-description__subtextarea');
-                    var maxCounter = +textBlock.data('max')
-                    if (counter === 0) {
-                      textBlock.text(textBlock.data('default'));
-                    }
-                    else {
-                      textBlock.text(maxCounter - counter + ' ' + textBlock.data('left'));
-                    }
-                  });
-                });
-
-                function addDescription() {
-                  var MAX_DESCR_COUNT = 5;
-                  var descrCounter = document.querySelectorAll('.b-description').length;
-
-                  if ('content' in document.createElement('template') && descrCounter <= MAX_DESCR_COUNT) {
-                    var template = document.querySelector('#object-description');
-                    var clone = template.content.cloneNode(true);
-                    $('.b-description:last').after(clone);
-                  }
-                }
-              </script>
-
-              <template id="object-description">
-                <div class="b-description">
-                  <label class="b-description__label">
-                    Add Description on
-                    <div class="dropdown">
-                      <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <span class="b-description__selected-lang-text">English</span>
-                        <span class="caret"></span>
-                      </button>
-                      <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
-                        <li><a href="#" data-value="en">English</a></li>
-                        <li><a href="#" data-value="ru">Русский</a></li>
-                        <li><a href="#" data-value="ua">Українська</a></li>
-                        <li><a href="#" data-value="gr">Ελληνικά</a></li>
-                        <li><a href="#" data-value="es">Srpski</a></li>
-                      </ul>
-                    </div>
-                  </label>
-                  <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will
-                    have to delete your listing.</p>
-                  <input class="b-description__input" type="hidden" value="">
-                  <textarea class="b-description__textarea  form-control" name="description"></textarea>
-                  <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left"
-                    data-max="120">Minimum 30 characters</p>
-                </div>
-              </template>
-
-              <div class="b-add-object-buttons">
-                <button class="b-btn-2  b-btn-2--secondary" type="button" onclick="addDescription();">Add text in other language</button>
-                <button class="b-btn-2  gonext" type="button"onclick="onSubmit();">Save and review</button>
-              </div>
             </div>
           </div>
         </form>
       </div>
 
-      <!-- <div class="b-info-bottom  b-info-bottom--cookies  b-info-bottom--invert">
-        <div class="b-info-bottom__inner">
-          <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <div class="b-info-bottom__text">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. За заманивший лучше которое переписывается от всех выйти большого рекламных, подзаголовок она, риторический <a href="#">меня семь живет жизни не</a>. Lorem, ему продолжил.</div>
-          <div class="b-info-bottom__btn  b-info-bottom__btn--single-btn-right">
-            <button class="b-btn-2  b-btn-2--secondary  b-btn-2--block-md">Кнопка</button>
-          </div>
-        </div>
-      </div> -->
-
     </div>
 
-    <!-- Пришлось сменить тег footer на div из-за говна в мозгах первоначального верстака (каскад в стилях — ППЦ) -->
-    <div class="b-footer  ">
+    
+      <div class="b-sticky-footer">
+        <div class="container-fluid">
+          <div class="b-sticky-footer__row">
+            <div class="b-sticky-footer__first">
+              <button class="b-btn-2  b-btn-2--text" type="button">Back</button>
+            </div>
+            <div class="b-sticky-footer__second">
+              <!-- <button class="b-btn-2  b-btn-2--secondary" type="button">Skip for now</button> -->
+              <button class="b-btn-2" type="button">Save & Continue</button>
+              <!-- <button class="b-btn-2" type="button">Publish</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="b-footer    ">
       <div class="b-footer__container  container-fluid">
         <div class="b-footer__row  row">
 
@@ -1061,6 +875,8 @@
       <a href="#reg" data-toggle="modal">reg</a>
       <a href="#login" data-toggle="modal">login</a>
     </div>
+
+
 
   </body>
 </html>
