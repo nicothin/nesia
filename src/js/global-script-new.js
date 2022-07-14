@@ -380,5 +380,12 @@ $( document ).ready(function() {
     $(this).addClass('hidden');
   });
 
+  $('[data-b-user-menu-has-drop-item]').find('.b-user-menu__submenu').hide();
+  $(document).on('click', '[data-b-user-menu-has-drop-item] > a', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('b-user-menu__link--show-drop');
+    $(this).closest('[data-b-user-menu-has-drop-item]').find('ul.b-user-menu__submenu').slideToggle();
+  });
+
 });
 
