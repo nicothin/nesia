@@ -380,6 +380,7 @@ $( document ).ready(function() {
     $(this).addClass('hidden');
   });
 
+  // Главное меню, мобильный вид
   $('[data-b-user-menu-has-drop-item]').find('.b-user-menu__submenu').hide();
   $(document).on('click', '[data-b-user-menu-has-drop-item] > a', function (e) {
     e.preventDefault();

@@ -126,7 +126,10 @@
     "b-city": [],
     "b-city-info-list": [],
     "b-city-about": [],
-    "b-card-city": []
+    "b-card-city": [],
+    "b-сountries": [],
+    "b-breadcrumbs-invert": [],
+    "b-list": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
