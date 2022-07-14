@@ -70,26 +70,24 @@
                               <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
                               <div class="b-card-mini-2__price">€ 224, 000</div>
                               <footer class="b-card-mini-2__footer">
-                                <div class="b-card-mini-2__footer-btns">
-                                  <button class="b-card-mini-2__footer-icon-btn">
+                                <div class="b-card-mini-2__footer-btns  dropdown">
+                                  <button class="b-card-mini-2__footer-icon-btn" type="button" data-toggle="dropdown">
                                     <svg width="20" height="20">
                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
                                     </svg>
                                     Редактировать
                                   </button>
-                                  <!-- NOTE[@nicothin] 22 02 2022 добавлена кнопка: -->
-                                  <button class="b-card-mini-2__footer-icon-btn"  data-toggle="modal" data-target="#confirm">
-                                    <svg width="20" height="20">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-archive"></use>
-                                    </svg>
-                                    В архив
-                                  </button>
-                                  <button class="b-card-mini-2__footer-icon-btn">
-                                    <svg width="20" height="20">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
-                                    </svg>
-                                    Удалить
-                                  </button>
+                                  <ul class="dropdown-menu  b-card-mini-2__edit-drop  b-dropdown">
+                                    <li>
+                                      <a href="#">Edit Listing</a>
+                                    </li>
+                                    <li>
+                                      <a href="#edit-price" data-toggle="modal">Edit Price</a>
+                                    </li>
+                                    <li>
+                                      <a href="#confirm" data-toggle="modal">Delete</a>
+                                    </li>
+                                  </ul>
                                 </div>
                                 <button class="b-card-mini-2__footer-stat-btn  js-open" data-slide-toggler="#stats-01234" data-slide-hidden="Показать статистику" data-slide-shown="Скрыть статистику">
                                   <svg width="20" height="20">
@@ -258,26 +256,25 @@
                               <p class="b-card-mini-2__address">Стефана Немање 31, Аранђеловац</p>
                               <div class="b-card-mini-2__price">€ 224, 000</div>
                               <footer class="b-card-mini-2__footer">
-                                <div class="b-card-mini-2__footer-btns">
-                                  <button class="b-card-mini-2__footer-icon-btn">
+                                <div class="b-card-mini-2__footer-btns  dropdown">
+                                  <button class="b-card-mini-2__footer-icon-btn" type="button" data-toggle="dropdown">
                                     <svg width="20" height="20">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2">
+                                      </use>
                                     </svg>
                                     Редактировать
                                   </button>
-                                  <!-- NOTE[@nicothin] 22 02 2022 добавлена кнопка: -->
-                                  <button class="b-card-mini-2__footer-icon-btn" data-toggle="modal" data-target="#confirm">
-                                    <svg width="20" height="20">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-archive"></use>
-                                    </svg>
-                                    В архив
-                                  </button>
-                                  <button class="b-card-mini-2__footer-icon-btn">
-                                    <svg width="20" height="20">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
-                                    </svg>
-                                    Удалить
-                                  </button>
+                                  <ul class="dropdown-menu  b-card-mini-2__edit-drop  b-dropdown">
+                                    <li>
+                                      <a href="#">Edit Listing</a>
+                                    </li>
+                                    <li>
+                                      <a href="#edit-price" data-toggle="modal">Edit Price</a>
+                                    </li>
+                                    <li>
+                                      <a href="#confirm" data-toggle="modal">Delete</a>
+                                    </li>
+                                  </ul>
                                 </div>
                                 <button class="b-card-mini-2__footer-stat-btn" data-slide-toggler="#stats-01235" data-slide-hidden="Показать статистику" data-slide-shown="Скрыть статистику">
                                   <svg width="20" height="20">
@@ -465,19 +462,24 @@
                               <div class="b-card-mini-2__price">€ 224, 000</div>
                               <!-- NOTE[@nicothin] 22 02 2022 добавлен класс b-card-mini-2__footer--has-republish -->
                               <footer class="b-card-mini-2__footer  b-card-mini-2__footer--has-republish">
-                                <div class="b-card-mini-2__footer-btns">
-                                  <button class="b-card-mini-2__footer-icon-btn">
+                                <div class="b-card-mini-2__footer-btns  dropdown">
+                                  <button class="b-card-mini-2__footer-icon-btn" type="button" data-toggle="dropdown">
                                     <svg width="20" height="20">
                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
                                     </svg>
                                     Редактировать
                                   </button>
-                                  <button class="b-card-mini-2__footer-icon-btn">
-                                    <svg width="20" height="20">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
-                                    </svg>
-                                    Удалить
-                                  </button>
+                                  <ul class="dropdown-menu  b-card-mini-2__edit-drop  b-dropdown">
+                                    <li>
+                                      <a href="#">Edit Listing</a>
+                                    </li>
+                                    <li>
+                                      <a href="#edit-price" data-toggle="modal">Edit Price</a>
+                                    </li>
+                                    <li>
+                                      <a href="#confirm" data-toggle="modal">Delete</a>
+                                    </li>
+                                  </ul>
                                 </div>
                                 <!-- NOTE[@nicothin] 22 02 2022 добавлен div с кнопкой: -->
                                 <div class="b-card-mini-2__footer-republish-wrap">
@@ -653,19 +655,24 @@
                               <div class="b-card-mini-2__price">€ 224, 000</div>
                               <!-- NOTE[@nicothin] 22 02 2022 добавлен класс b-card-mini-2__footer--has-republish -->
                               <footer class="b-card-mini-2__footer  b-card-mini-2__footer--has-republish">
-                                <div class="b-card-mini-2__footer-btns">
-                                  <button class="b-card-mini-2__footer-icon-btn">
+                                <div class="b-card-mini-2__footer-btns  dropdown">
+                                  <button class="b-card-mini-2__footer-icon-btn" type="button" data-toggle="dropdown">
                                     <svg width="20" height="20">
                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-edit-2"></use>
                                     </svg>
                                     Редактировать
                                   </button>
-                                  <button class="b-card-mini-2__footer-icon-btn">
-                                    <svg width="20" height="20">
-                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-trash"></use>
-                                    </svg>
-                                    Удалить
-                                  </button>
+                                  <ul class="dropdown-menu  b-card-mini-2__edit-drop  b-dropdown">
+                                    <li>
+                                      <a href="#">Edit Listing</a>
+                                    </li>
+                                    <li>
+                                      <a href="#edit-price" data-toggle="modal">Edit Price</a>
+                                    </li>
+                                    <li>
+                                      <a href="#confirm" data-toggle="modal">Delete</a>
+                                    </li>
+                                  </ul>
                                 </div>
                                 <!-- NOTE[@nicothin] 22 02 2022 добавлен div с кнопкой: -->
                                 <div class="b-card-mini-2__footer-republish-wrap">
@@ -801,7 +808,7 @@
       </div>
 
       <!-- NOTE[@nicothin] 22 02 2022 добавлена модалка: -->
-      <div class="modal  b-modal-2  fade" tabindex="-1" role="dialog" id="confirm">
+      <div class="modal  b-modal-2  b-modal-2--sm  fade" tabindex="-1" role="dialog" id="confirm">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -811,10 +818,33 @@
               <p class="b-messages__modal-text">
                 Do you want move it to archive?
               </p>
-              <button class="b-btn-2  b-messages__modal-confirm-btn">Yes</button>
-              <button class="b-btn-2 b-btn-2--secondary  b-messages__modal-confirm-btn">No</button>
+              <button class="b-btn-2  b-btn-2--lg  b-messages__modal-confirm-btn">Yes</button>
+              <button class="b-btn-2  b-btn-2--lg  b-btn-2--secondary  b-messages__modal-confirm-btn">No</button>
 
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal  b-modal-2  b-modal-2--sm  fade" tabindex="-1" role="dialog" id="edit-price">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <form class="modal-body">
+
+              <h4 class="b-modal-2__title">Edit price</h4>
+
+
+
+              <div class="input-group">
+                <span class="input-group-addon  b-form-control__addon">€</span>
+                <input id="price-inpit" value="30000" type="text" class="form-control  b-form-control  b-form-group__input" placeholder="Enter price">
+              </div>
+
+              <button class="b-btn-2  b-btn-2--lg  b-messages__modal-confirm-btn">Save</button>
+              <button class="b-btn-2  b-btn-2--lg  b-btn-2--secondary  b-messages__modal-confirm-btn">Cancel</button>
+
+            </form>
           </div>
         </div>
       </div>

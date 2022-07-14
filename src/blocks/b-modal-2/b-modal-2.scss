@@ -250,6 +250,16 @@
     }
   }
 
+  &--sm {
+
+    .modal-dialog {
+
+      @media (min-width: $screen-md) {
+        width: 364px;
+      }
+    }
+  }
+
   &--lg {
 
     .modal-dialog {

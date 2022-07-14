@@ -388,5 +388,10 @@ $( document ).ready(function() {
     $(this).closest('[data-b-user-menu-has-drop-item]').find('ul.b-user-menu__submenu').slideToggle();
   });
 
+  const priceInput = $('#price-inpit');
+  if (priceInput.length) {
+    priceInput.mask(`000, 000, 000`, { reverse: true });
+  }
+
 });
 
