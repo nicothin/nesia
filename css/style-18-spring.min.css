@@ -7060,9 +7060,11 @@ input:checked ~ .b-form-group__checkbox-text:before {
             align-items: baseline; }
 .b-sticky-footer__first {
     margin-right: auto;
-    padding-right: 16px; }
+    padding-right: 16px;
+    padding-bottom: 16px; }
 .b-sticky-footer__second {
-    margin-left: auto; }
+    margin-left: auto;
+    padding-bottom: 16px; }
 .b-sticky-footer__second .b-btn-2 {
       margin-left: 10px; }
 .b-search {
@@ -9600,7 +9602,7 @@ input[type='radio']:checked + .b-radio-buttons__label {
     .b-footer--has-info-bottom {
       padding-bottom: 66px; }
     .b-sticky-footer {
-      padding: 16px; }
+      padding: 16px 16px 0; }
       .b-sticky-footer .container-fluid {
         padding: 0; } }
 @media all and (-ms-high-contrast: none) {
