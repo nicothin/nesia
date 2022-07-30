@@ -5307,10 +5307,17 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
   color: #A1A1A1; }
 .b-card-mini-2__type--success {
     color: #799234; }
+.b-card-mini-2__title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+.b-card-mini-2__edit-action {
+  margin-top: -6px;
+  margin-left: auto; }
 .b-card-mini-2__name {
   display: block;
   margin: 0 0 4px;
-  padding: 0;
+  padding: 0 8px 0 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -5361,6 +5368,26 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
 .b-card-mini-2__footer-btns {
   margin-left: -7px; }
 .b-card-mini-2__footer-icon-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  font: 0/0 a;
+  color: transparent;
+  outline: 0; }
+.b-card-mini-2__icon-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -9020,8 +9047,6 @@ input[type='radio']:checked + .b-radio-buttons__label {
       width: calc(100% - 156px);
       padding-left: 24px; }
     .b-card-mini-2__type {
-      padding-right: 70px; }
-    .b-card-mini-2__name {
       padding-right: 70px; }
     .b-card-mini-2__address {
       padding-right: 70px; }
