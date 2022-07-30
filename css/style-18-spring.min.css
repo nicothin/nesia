@@ -7642,6 +7642,15 @@ input[type='radio']:checked + .b-radio-buttons__label {
 .b-promo-list__slider-wrapper .tns-controls [data-controls="next"] {
         right: 0;
         background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 18L15 12L9 6' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"); }
+.b-promo-list__see-all-wrap {
+    margin: 24px 0 0;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center; }
+.b-promo-list__see-all-wrap a:not([class]) {
+      color: #D84B2A; }
+.b-promo-list__see-all-wrap a:not([class]):hover, .b-promo-list__see-all-wrap a:not([class]):focus {
+        color: #D84B2A; }
 .b-promo-list--explore {
     padding-right: 20px;
     padding-left: 20px; }
