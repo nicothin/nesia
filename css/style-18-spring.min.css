@@ -6625,10 +6625,32 @@ input:checked ~ .b-form-group__checkbox-text:before {
             flex-grow: 1;
     height: 22px;
     outline: none; }
-.b-form-group--error .b-form-group__input {
+.b-form-group__group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+.b-form-group__group .b-form-group__input {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      position: relative; }
+.b-form-group__group .b-form-group__input:not(:first-child) {
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0; }
+.b-form-group__group .b-form-group__input:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0; }
+.b-form-group__group .b-form-group__input:focus {
+        z-index: 1; }
+.b-form-group--error .b-form-group__label, .b-form-group.has-error .b-form-group__label {
+    color: #D84B2A !important; }
+.b-form-group--error .b-form-group__input, .b-form-group.has-error .b-form-group__input {
     color: #D84B2A;
-    border-color: #D84B2A; }
-.b-form-group--error .b-form-group__help-text {
+    border-color: #D84B2A;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+.b-form-group--error .b-form-group__help-text, .b-form-group.has-error .b-form-group__help-text {
     color: #D84B2A; }
 .b-form-group--mb-20 {
     margin-bottom: 20px; }
