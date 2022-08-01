@@ -6517,7 +6517,7 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
       -webkit-box-shadow: none;
               box-shadow: none; }
 .b-form-group__help-text {
-    margin: 0 0 -20px 0;
+    margin: 0 0 -16px 0;
     font-size: 12px;
     line-height: 20px;
     color: #A1A1A1; }
