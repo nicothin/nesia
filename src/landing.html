@@ -49,13 +49,13 @@
         <label for="email" class="b-form-group__label">Email *</label>
         <input type="text" class="form-control  b-form-control  b-form-group__input" id="email">
       </div>
-      <div class="form-group  b-form-group  b-promo-form__item">
+      <div class="form-group  b-form-group  b-form-group--error  b-promo-form__item">
         <label for="firstName" class="b-form-group__label">First name *</label>
-        <input type="text" class="form-control  b-form-control  b-form-group__input" id="firstName">
+        <input type="text" class="form-control  b-form-control  b-form-group__input" id="firstName" value="Ошибочное состояние">
       </div>
-      <div class="form-group  b-form-group  b-promo-form__item">
+      <div class="form-group  has-error  b-form-group  b-promo-form__item">
         <label for="lastName" class="b-form-group__label">Last name *</label>
-        <input type="text" class="form-control  b-form-control  b-form-group__input" id="lastName">
+        <input type="text" class="form-control  b-form-control  b-form-group__input" id="lastName" value="Ошибочное состояние">
       </div>
       <div class="form-group  b-form-group  b-promo-form__item">
         <label for="countrySelect" class="b-form-group__label">Country</label>
@@ -69,7 +69,10 @@
       </div>
       <div class="form-group  b-form-group  b-promo-form__item">
         <label for="cellPhone" class="b-form-group__label">Add cellphone *</label>
-        <input type="text" class="form-control  b-form-control  b-form-group__input" id="cellPhone">
+        <div class="b-form-group__group">
+          <input type="text" class="form-control  b-form-control  b-form-group__input" id="countryCode" style="width: 60px;">
+          <input type="text" class="form-control  b-form-control  b-form-group__input" id="cellPhone">
+        </div>
       </div>
       <div class="form-group  b-form-group  b-promo-form__item">
         <label for="password1" class="b-form-group__label">Create a password *</label>
@@ -124,6 +127,9 @@
         <li>@@include('./blocks/b-card-mini-3/b-card-mini-3.html')</li>
       </ul>
     </div>
+    <p class="b-promo-list__see-all-wrap">
+      <a href="">See all properties</a>
+    </p>
   </section>
 
   <section class="b-promo-list">
@@ -138,6 +144,9 @@
         <li>@@include('./blocks/b-card-mini-3/b-card-mini-3.html')</li>
       </ul>
     </div>
+    <p class="b-promo-list__see-all-wrap">
+      <a href="">See all properties</a>
+    </p>
   </section>
 
   <section class="b-promo-check">

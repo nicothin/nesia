@@ -94,6 +94,22 @@
     }
   }
 
+  &__see-all-wrap {
+    margin: 24px 0 0;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center;
+
+    a:not([class]) {
+      color: #D84B2A;
+
+      &:hover,
+      &:focus {
+        color: #D84B2A;
+      }
+    }
+  }
+
 
 
   &--explore {
