@@ -341,6 +341,224 @@
 
             </div>
           </div>
+
+          <div class="container-fluid  step_third  step_same">
+
+            <hr>
+
+            <p>Участок разметки из второго шага:</p>
+
+            <div class="field thd heating_conditioning">
+              <div class="coll">
+                <div class="name">Отопление</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" name="heating">
+                    <option></option>
+
+                    <option value="1">
+                      Индивидуальное</option>
+
+                    <option value="2">
+                      Центральное</option>
+
+                    <option value="3">
+                      Отсутствует</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="coll">
+                <div class="name">Вид отопления</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" name="heating_type">
+                    <option></option>
+
+                    <option value="1">
+                      Дизель</option>
+
+                    <option value="2">
+                      Газовое</option>
+
+                    <option value="3">
+                      Кондиционеры</option>
+
+                    <option value="4">
+                      Электрическое</option>
+
+                    <option value="5">
+                      Печка</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="coll">
+                <div class="name">Кондиционирование</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" name="conditioning">
+                    <option></option>
+
+                    <option value="1">
+                      В наличии</option>
+
+                    <option value="2">
+                      Отсутствует</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field thd parking">
+              <div class="coll">
+                <div class="name">Паркинг</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" class="styled"
+                    name="parking">
+                    <option></option>
+
+                    <option value="1">
+                      Отсутствует</option>
+
+                    <option value="2">
+                      В пешей доступности</option>
+
+                    <option value="3">
+                      В наличии</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field thd view">
+              <div class="coll">
+                <div class="name">Вид</div>
+                <div class="selectTime">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" class="styled"
+                    name="view">
+                    <option></option>
+
+                    <option value="1">
+                      Вид на горы</option>
+
+                    <option value="2">
+                      Вид на море</option>
+
+                    <option value="3">
+                      Вид на реку</option>
+
+                    <option value="5">
+                      Вид на город</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="field thd price">
+              <div class="name"><span id="ap">Цена</span><span id="ppm">Цена в месяц</span>*</div>
+              <input type="text" style="float: left;    width: 113px;" class="form-control short"
+                name="price_euro" value="">&nbsp;
+              <select class="styled" data-search="false" data-placeholder="Выбрать" style="width:100px;"
+                name="currency">
+
+                <option value="1">
+                  $ &nbsp;</option>
+
+                <option value="2">
+                  € &nbsp;</option>
+
+                <option value="3" selected="selected">
+                  Р &nbsp;</option>
+
+                <option value="4">
+                  £ &nbsp;</option>
+
+                <option value="5">
+                  $ &nbsp;</option>
+
+                <option value="6">
+                  $ &nbsp;</option>
+
+                <option value="7">
+                  ¥ &nbsp;</option>
+
+                <option value="8">
+                  ₺ &nbsp;</option>
+
+                <option value="9">
+                  ₴ &nbsp;</option>
+
+              </select>
+            </div>
+
+
+            <div class="field">
+              <label class="name  alx-until thd">Объект свободен с</label>
+              <input style="width: 300px;" class="alx-until thd form-control b-input-calendar" id="available_from" name="available_from" placeholder="Выбрать дату" type="text" value="">
+            </div>
+
+            <div class="field  lang-description-div thd b-description">
+              <!--  -->
+              <label class="b-description__label">
+              Добавить описание на
+                <div class="dropdown">
+                  <button class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="b-description__selected-lang-text">Русский</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="selectLang">
+                    <li><a data-value="en">English</a></li>
+                    <li><a data-value="ru">Русский</a></li>
+                    <li><a data-value="uk">Українська</a></li>
+                    <li><a data-value="el">Ελληνικά</a></li>
+                    <li><a data-value="sr">Srpski</a></li>
+                  </ul>
+                </div>
+              </label>
+              <p class="b-description__descr">Просим не вставлять в поле описания свои контактные данные и ссылки на сторонние сайты. В противном случае Ваше объявление будет удалено.</p>
+              <input class="b-description__input" type="hidden" value="ru">
+              <textarea class="b-description__textarea  form-control" name="description"></textarea>
+              <p class="b-description__subtextarea" minlength="100" data-default="Минимум 100 символов" data-left="characters left" data-max="500">Минимум 100 символов</p>
+            </div>
+
+            <template id="object-description">
+              <div class="lang-description-div thd b-description">
+                <label class="b-description__label">
+                  Добавить описание на
+                  <div class="dropdown">
+                    <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="b-description__selected-lang-text">English</span>
+                      <span class="caret"></span>
+                    </button>
+                    <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
+                      <li><a data-value="en">English</a></li>
+                      <li><a data-value="ru">Русский</a></li>
+                      <li><a data-value="uk">Українська</a></li>
+                      <li><a data-value="el">Ελληνικά</a></li>
+                      <li><a data-value="sr">Srpski</a></li>
+                    </ul>
+                  </div>
+                </label>
+
+                <p class="b-description__descr">Просим не вставлять в поле описания свои контактные данные и
+                  ссылки на сторонние сайты. В противном случае Ваше объявление будет удалено.</p>
+                <input class="b-description__input" type="hidden" value="">
+                <textarea class="b-description__textarea  form-control" name="description"></textarea>
+                <p class="b-description__subtextarea" minlength="100" data-default="Минимум 100 символов"
+                  data-left="characters left" data-max="500">Минимум 100 символов</p>
+              </div>
+            </template>
+
+            <div class="lang-description-div thd b-add-object-buttons">
+              <button id="add-description" class="b-btn-2  b-btn-2--secondary" type="button"
+                onclick="addDescription();">Добавить язык описания</button>
+            </div>
+
+            <hr>
+
+          </div>
+
         </form>
       </div>
 

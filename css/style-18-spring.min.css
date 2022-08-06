@@ -129,6 +129,11 @@ body {
     margin: auto; }
 .b-page .form-group p {
   padding: 0; }
+.field .name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit; }
 .b-page-header {
   position: fixed;
   top: 0;
@@ -7034,6 +7039,9 @@ input:checked ~ .b-form-group__checkbox-text:before {
     vertical-align: baseline; }
 .b-description .dropdown a {
       text-decoration: none; }
+.b-description__label {
+    font-weight: 500;
+    color: inherit; }
 .b-description__selected-lang {
     display: inline-block;
     vertical-align: baseline;
