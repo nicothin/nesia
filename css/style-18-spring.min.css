@@ -6245,11 +6245,25 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
 .b-chat__item-owner {
     margin-bottom: 16px;
     text-align: center;
-    font-size: 12px; }
+    font-size: 12px;
+    line-height: 1.4; }
 .b-chat__item-date + .b-chat__item-owner {
       margin-top: -8px; }
 .b-chat__item-owner a {
       color: #D84B2A; }
+.b-chat__item-owner svg {
+      margin-right: 6px;
+      vertical-align: middle; }
+.b-chat__item-owner--black {
+      color: #000; }
+.b-chat__item-description {
+    max-width: 342px;
+    margin: 0 auto 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #828282; }
 .b-chat__item-msg {
     display: -webkit-box;
     display: -ms-flexbox;
