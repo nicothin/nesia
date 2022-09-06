@@ -6241,6 +6241,8 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     line-height: 20px;
     text-align: center;
     color: #A1A1A1; }
+.b-chat__system-msg a {
+      color: #D84B2A; }
 .b-chat__item-date {
     margin: 0 0 16px;
     font-size: 12px;
