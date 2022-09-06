@@ -6170,6 +6170,11 @@ input:checked ~ .b-field-checkbox__name-wrap:after {
     text-overflow: ellipsis;
     font-size: 16px;
     font-weight: 500; }
+.b-chat__mobile-header-user-name-wrapper {
+    min-width: 0;
+    font-size: 16px; }
+.b-chat__mobile-header-user-name-wrapper .b-user-2__name {
+      padding: 0; }
 .b-chat__mobile-header-action-wrap {
     margin-left: auto;
     max-width: 50%; }
