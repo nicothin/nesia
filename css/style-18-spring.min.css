@@ -7204,9 +7204,28 @@ input:checked ~ .b-form-group__checkbox-text:before {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
-    margin: 0;
+    margin: 0 0 32px;
     padding: 0 16px;
     list-style: none; }
+.b-search__pagination {
+    margin-bottom: 32px !important; }
+.b-search__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A1A1A1; }
+.b-search__description p {
+      max-width: 670px; }
+.b-search__description p:first-child {
+        margin-top: 0; }
+.b-search__description p:last-child {
+        margin-bottom: 0; }
 .b-search__mobile-viewmode-btns {
     position: fixed;
     z-index: 2;
@@ -8175,6 +8194,73 @@ input[type='radio']:checked + .b-radio-buttons__label {
     margin-left: auto;
     padding-left: 16px;
     color: #D84B2A; }
+.b-pagination {
+  margin: 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center; }
+.b-pagination__prev, .b-pagination__next {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: top;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px;
+    border: 1px solid #CFCECE;
+    border-radius: 6px;
+    color: #535353; }
+.b-pagination__prev:hover, .b-pagination__prev:focus, .b-pagination__next:hover, .b-pagination__next:focus {
+      color: #fff;
+      text-decoration: none;
+      border-color: #A1BF4B;
+      background-color: #A1BF4B; }
+.b-pagination__prev {
+    margin-right: 8px; }
+.b-pagination__next {
+    margin-left: 8px; }
+.b-pagination__dots {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: top;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px; }
+.b-pagination__page {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 32px;
+    height: 32px;
+    margin: 0 2px 6px;
+    border: 1px solid #CFCECE;
+    border-radius: 6px;
+    padding: 0 4px;
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05); }
+.b-pagination__page:hover, .b-pagination__page:focus, .b-pagination__page--active {
+      color: #fff;
+      text-decoration: none;
+      border-color: #A1BF4B;
+      background-color: #A1BF4B; }
 @media (min-width: 421px) {
         .b-location__main-block .big_img_slider .jcarousel-control-next,
         .b-location__main-block .big_img_slider .jcarousel-control-prev {
@@ -9266,7 +9352,16 @@ input[type='radio']:checked + .b-radio-buttons__label {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px 20px;
         width: 502px;
+        margin-bottom: 64px;
         padding: 0 20px 0 40px; }
+      .b-search__pagination {
+        width: 502px;
+        margin-bottom: 86px; }
+      .b-search__description {
+        width: 502px;
+        padding-right: 40px;
+        padding-bottom: 0;
+        padding-left: 40px; }
       .b-search__mobile-viewmode-btns {
         display: none; }
     .b-promo {
@@ -9456,6 +9551,10 @@ input[type='radio']:checked + .b-radio-buttons__label {
         top: 245px; }
       .b-search__list {
         grid-template-columns: repeat(3, 1fr);
+        width: 730px; }
+      .b-search__pagination {
+        width: 730px; }
+      .b-search__description {
         width: 730px; }
     .b-promo {
       min-height: 683px; }
