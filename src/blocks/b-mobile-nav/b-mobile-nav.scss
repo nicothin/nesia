@@ -10,24 +10,15 @@
   z-index: 10;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: 264px;
+  right: 0;
+  width: 335px;
   overflow-y: auto;
   background: #fff;
-  transform: translateX(-101%);
+  transform: translateX(101%);
   transition: transform 0.3s;
 
   @media (min-width: $screen-md) {
     display: none;
-  }
-
-  &__user-wrap {
-    display: flex;
-    align-items: center;
-    min-height: 60px;
-    margin: 0 0 10px;
-    padding: 10px 24px;
-    border-bottom: 1px solid #E8E8E8;
   }
 
   &__avatar {
@@ -39,6 +30,15 @@
     object-fit: cover;
     overflow: hidden;
     background: #A1BF4B;
+  }
+
+  &__user-wrap {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    margin: 0 0 10px;
+    padding: 10px 24px;
+    border-bottom: 1px solid #E8E8E8;
   }
 
   &__user-msg {
@@ -55,7 +55,7 @@
     bottom: 0;
     left: 0;
     width: 0;
-    background: rgba(0,0,0,0.5);
+    background: #282828;
     opacity: 0;
     transition: opacity 0.3s;
 

@@ -1,0 +1,48 @@
+// В этом файле должны быть стили для БЭМ-блока b-breadcrumbs-invert, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-breadcrumbs-invert {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $screen-md) {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    color: #000;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 12px;
+      width: 8px;
+      height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 13L1 7L7 1' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  }
+}

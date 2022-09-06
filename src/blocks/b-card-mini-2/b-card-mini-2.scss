@@ -37,7 +37,7 @@
 
   &__text-wrap {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     padding: 16px 16px 0;
@@ -74,10 +74,19 @@
     }
   }
 
+  &__title-wrap {
+    display: flex;
+  }
+
+  &__edit-action {
+    margin-top: -6px;
+    margin-left: auto;
+  }
+
   &__name {
     display: block;
     margin: 0 0 4px;
-    padding: 0;
+    padding: 0 8px 0 0;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -86,10 +95,6 @@
 
     &:before {
       display: none;
-    }
-
-    @media (min-width: $screen-lg) {
-      padding-right: 70px;
     }
   }
 
@@ -175,7 +180,23 @@
     }
   }
 
+  // NOTE[@nicothin]: переименована в __icon-btn, но оставлена для обратной совместимости
   &__footer-icon-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    font: 0/0 a;
+    color: transparent;
+    outline: 0;
+  }
+  &__icon-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -286,6 +307,14 @@
     @media (min-width: $screen-sm-2) {
       margin-left: 0;
       margin-right: 16px;
+    }
+  }
+
+  &__edit-drop {
+
+    @media (min-width: $screen-lg) {
+      left: auto;
+      right: 0;
     }
   }
 }

@@ -1,0 +1,163 @@
+// В этом файле должны быть стили для БЭМ-блока b-promo-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-promo-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  max-width: 1354px;
+  margin: auto;
+  padding: 80px 16px 10px;
+
+  &__title {
+    margin: 0 0 40px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+
+    &:before {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 80px;
+      font-size: 32px;
+      line-height: 1.6;
+    }
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    margin: 0 -16px;
+
+    @media (min-width: 1360px) {
+      // margin: 0;
+    }
+
+    .tns-item {
+      padding-right: 8px;
+      padding-left: 8px;
+    }
+
+    .tns-controls {
+      display: none;
+
+      @media (min-width: 1360px) {
+        display: block !important; // NOTE[@nicothin]: странно: для лендинга у 2й карусели добавляется инлайновый display: none
+      }
+
+      @media (min-width: 1440px) {
+
+        [data-controls="prev"] {
+          left: -10px;
+        }
+
+        [data-controls="next"] {
+          right: -10px;
+        }
+      }
+
+      [data-controls="prev"],
+      [data-controls="next"] {
+        position: absolute;
+        z-index: 2;
+        top: 44px;
+        width: 52px;
+        height: 52px;
+        border: 1px solid #D9E0E9;
+        border-radius: 50%;
+        padding: 0;
+        font-size: 0;
+        color: transparent;
+        background-color: #FFFFFF;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &[disabled] {
+          display: none;
+        }
+      }
+
+      [data-controls="prev"] {
+        left: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 6L9 12L15 18' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+
+      [data-controls="next"] {
+        right: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 18L15 12L9 6' stroke='%2331353F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &__see-all-wrap {
+    margin: 24px 0 0;
+    font-size: 14px;
+    line-height: 1.43;
+    text-align: center;
+
+    a:not([class]) {
+      color: #D84B2A;
+
+      &:hover,
+      &:focus {
+        color: #D84B2A;
+      }
+    }
+  }
+
+
+
+  &--explore {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    #{$block-name}__slider-wrapper {
+      margin-right: -20px;
+      margin-left: -20px;
+
+      .tns-controls {
+
+        @media (min-width: 1360px) {
+
+          [data-controls="prev"],
+          [data-controls="next"] {
+            top: 175px;
+          }
+        }
+      }
+    }
+
+    .tns-item {
+      padding: 0 10px;
+    }
+  }
+
+  &--max-900 {
+    max-width: 900px;
+
+    @media (min-width: $screen-lg) {
+
+      .tns-controls {
+        display: block !important;
+      }
+
+      .b-tns-slider--only-6 .tns-controls [data-controls="prev"]:not([disabled]),
+      .b-tns-slider--only-6 .tns-controls [data-controls="next"]:not([disabled]) {
+        display: block !important;
+      }
+
+      [data-controls="prev"] {
+        left: -20px !important;
+      }
+
+      [data-controls="next"] {
+        right: -20px !important;
+      }
+    }
+  }
+}

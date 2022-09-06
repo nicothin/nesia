@@ -1,0 +1,64 @@
+// В этом файле должны быть стили для БЭМ-блока b-city-info-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-city-info-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000;
+
+  &__item {
+    position: relative;
+    min-height: 32px;
+    margin-bottom: 24px;
+    padding-left: 44px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__price {
+    color: #A1A1A1;
+  }
+
+  &__descr-wrap {
+    margin-top: 4px;
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #D84B2A;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #D84B2A;
+    }
+  }
+
+
+
+  &--sm-icons {
+
+    #{$block-name}__item {
+      min-height: 20px;
+      padding-left: 32px;
+      margin-bottom: 12px;
+    }
+
+    #{$block-name}__icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

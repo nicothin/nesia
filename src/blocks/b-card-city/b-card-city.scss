@@ -1,0 +1,48 @@
+// В этом файле должны быть стили для БЭМ-блока b-card-city, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-card-city {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    aspect-ratio: 210 / 162;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  &__link-wrap {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.43;
+
+    a {
+      color: #D84B2A;
+
+      &:hover,
+      &:focus {
+        color: #D84B2A;
+      }
+    }
+  }
+}

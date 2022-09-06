@@ -131,4 +131,11 @@
       margin-bottom: 6px;
     }
   }
+
+  &--is-search-page {
+
+    @media (max-width: ($screen-lg - 1)) {
+      padding-bottom: 72px;
+    }
+  }
 }

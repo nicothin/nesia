@@ -1,0 +1,87 @@
+// В этом файле должны быть стили для БЭМ-блока b-city, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-city {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-top: 41px;
+  padding-top: 0;
+
+  @media (min-width: $screen-md) {
+    padding-top: 0;
+    margin-top: 50px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-areas: "title" "image" "text";
+    max-width: 932px;
+    margin: 0 auto;
+    padding: 46px 16px 80px;
+
+    @media (min-width: $screen-md) {
+      grid-template-areas:
+        "image title"
+        "image text";
+      grid-template-columns: 430px 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 0 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      grid-template-columns: 555px 1fr;
+      padding-top: 83px;
+      padding-bottom: 104px;
+    }
+  }
+
+  &__img-wrap {
+    grid-area: image;
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    margin: 0 0 20px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: #000;
+
+    &:before {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+      font-size: 32px;
+      line-height: 1.6;
+    }
+  }
+
+  &__text-wrap {
+    grid-area: text;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__info-main-btn {
+    display: flex;
+    margin-top: 32px;
+
+     @media (min-width: $screen-md) {
+      display: inline-flex;
+      margin-top: 8px;
+     }
+  }
+}

@@ -2,63 +2,35 @@
 
       <div class="b-content">
         <div class="container-fluid simple_page">
-          <h2>Размещение объекта</h2>
+          <!-- Добавлен класс title-551-simple -->
+          <h2 class="title-551-simple">Размещение объекта</h2>
 
 
-          <div class="overflow">
+          <!-- Разметка та же, но добавился класс b-steps. Функциональность (добавление классов active и done) на шагах сохранена -->
+          <div class="overflow  b-steps">
             <ul class="steps four_steps step_one">
+              <li class="done">
+                <div class="a">
+                  <div class="number">1</div>
+                  <div class="name">Нанести на карту</div>
+                </div>
+              </li>
               <li class="active">
                 <div class="a">
-                  <div class="number">
-                    1
-                  </div>
-
-
-                  <div class="name">
-                    Нанести на карту
-                  </div>
+                  <div class="number">2</div>
+                  <div class="name">Добавить фотографии</div>
                 </div>
               </li>
-
-
               <li>
                 <div class="a">
-                  <div class="number">
-                    2
-                  </div>
-
-
-                  <div class="name">
-                    Добавить фотографии
-                  </div>
+                  <div class="number">3</div>
+                  <div class="name">Добавить описание</div>
                 </div>
               </li>
-
-
               <li>
                 <div class="a">
-                  <div class="number">
-                    3
-                  </div>
-
-
-                  <div class="name">
-                    Добавить описание
-                  </div>
-                </div>
-              </li>
-
-
-              <li>
-                <div class="a">
-                  <div class="number">
-                    4
-                  </div>
-
-
-                  <div class="name">
-                    Опубликовать
-                  </div>
+                  <div class="number">4</div>
+                  <div class="name">Опубликовать</div>
                 </div>
               </li>
             </ul>
@@ -79,7 +51,7 @@
                 <button class="btn btn-success" id="autocomplete_btn" type="button"></button>
 
                 <div class="col-xs-6">
-                  <div class="finded" style="font-size: 18px; color: #000; padding: 5px 0 0 0; }">
+                  <div class="finded" style="font-size: 18px; color: #000; padding: 5px 0 0 0;">
                     <span id="count_objects"></span>
                   </div>
                 </div>
@@ -88,151 +60,257 @@
           </div>
         </div>
 
-
-        <!-- <div style="padding: 0 50px;">
+        <div class="container  container--p0-25">
           <div id="map" style="height:400px">
+            место карты
           </div>
-        </div> -->
+        </div>
 
 
-        <form action="" id="locate_form" method="post" name="locate_form" role="form">
+        <form action="" id="locate_form" method="post" name="locate_form" role="form" style="padding-top: 1em">
           <input name="full_address" type="hidden"> <input name='csrfmiddlewaretoken' type='hidden' value='1U4ED1yqj0qAS48xiTznxlsEi4rZTESD'>
 
           <div class="container-fluid step_first">
             <div class="form-group">
-              <div class="checkbox">
-                <label class="change_checkbox"><input id="my_property" type="checkbox">Я являюсь собственником данного объекта недвижимости.*</label>
-              </div>
-              <input class="form-control" id="lat" name="lat" placeholder="" type="hidden" value="">
-              <input class="form-control" id="lng" name="lng" placeholder="" type="hidden" value="">
-              <label>Номер дома</label>
-              <input class="form-control" id="street_number" name="street_number" placeholder="" type="text" value="">
-              <label>Маршрут</label>
-              <input class="form-control" id="route" name="route" placeholder="" type="text" value="">
-              <label>Область/Район</label>
-              <input class="form-control" id="administrative_area_level_1" name="locality" placeholder="" type="text" value="">
-              <label>Город</label>
-              <input class="form-control" id="locality" name="city" placeholder="" type="text" value="">
-              <label>Страна</label>
-              <input class="form-control" id="country" name="country" placeholder="" type="text" value="">
+              <label class="change_checkbox" style="margin: 1em 0">
+                <input id="my_property" type="checkbox">Я являюсь собственником данного объекта недвижимости.*
+              </label>
 
-              <div class="b-form-item-wrapper">
-                <label>Property is available</label>
-                <input class="form-control  b-input-calendar" id="available" name="available" placeholder="Select date" type="text" value="">
-                <script>
-                  // Тут или в любом другом месте, когда DOM готов:
-                  $(function () {
-                    $("#available").datepicker( $.datepicker.regional["en"] );
-                  });
-                </script>
+              <p>ДЕМО чекбокса для последнего шага:</p>
+
+              <div style="margin: 1em 0">
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <div class="b-form-group__checkbox-text  b-form-group__checkbox-text--pl32">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
+                    document or a typeface without relying on meaningful content.
+                  </div>
+                </label>
               </div>
 
-              <div class="b-description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur sunt a labore voluptas aliquam alias minima provident rerum omnis, illum asperiores veritatis temporibus cumque fugiat natus excepturi consectetur at!</p>
+
+            </div>
+          </div>
+
+          <div class="container-fluid  step_third  step_same">
+
+            <hr>
+
+            <p>Участок разметки из второго шага:</p>
+
+            <div class="field thd heating_conditioning">
+              <div class="coll">
+                <div class="name">Отопление</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" name="heating">
+                    <option></option>
+
+                    <option value="1">
+                      Индивидуальное</option>
+
+                    <option value="2">
+                      Центральное</option>
+
+                    <option value="3">
+                      Отсутствует</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="coll">
+                <div class="name">Вид отопления</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" name="heating_type">
+                    <option></option>
+
+                    <option value="1">
+                      Дизель</option>
+
+                    <option value="2">
+                      Газовое</option>
+
+                    <option value="3">
+                      Кондиционеры</option>
+
+                    <option value="4">
+                      Электрическое</option>
+
+                    <option value="5">
+                      Печка</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="coll">
+                <div class="name">Кондиционирование</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" name="conditioning">
+                    <option></option>
+
+                    <option value="1">
+                      В наличии</option>
+
+                    <option value="2">
+                      Отсутствует</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field thd parking">
+              <div class="coll">
+                <div class="name">Паркинг</div>
+                <div class="selectTime exact">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" class="styled"
+                    name="parking">
+                    <option></option>
+
+                    <option value="1">
+                      Отсутствует</option>
+
+                    <option value="2">
+                      В пешей доступности</option>
+
+                    <option value="3">
+                      В наличии</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field thd view">
+              <div class="coll">
+                <div class="name">Вид</div>
+                <div class="selectTime">
+                  <select class="styled" data-search="false" data-placeholder="Выбрать" class="styled"
+                    name="view">
+                    <option></option>
+
+                    <option value="1">
+                      Вид на горы</option>
+
+                    <option value="2">
+                      Вид на море</option>
+
+                    <option value="3">
+                      Вид на реку</option>
+
+                    <option value="5">
+                      Вид на город</option>
+
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="field thd price">
+              <div class="name"><span id="ap">Цена</span><span id="ppm">Цена в месяц</span>*</div>
+              <input type="text" style="float: left;    width: 113px;" class="form-control short"
+                name="price_euro" value="">&nbsp;
+              <select class="styled" data-search="false" data-placeholder="Выбрать" style="width:100px;"
+                name="currency">
+
+                <option value="1">
+                  $ &nbsp;</option>
+
+                <option value="2">
+                  € &nbsp;</option>
+
+                <option value="3" selected="selected">
+                  Р &nbsp;</option>
+
+                <option value="4">
+                  £ &nbsp;</option>
+
+                <option value="5">
+                  $ &nbsp;</option>
+
+                <option value="6">
+                  $ &nbsp;</option>
+
+                <option value="7">
+                  ¥ &nbsp;</option>
+
+                <option value="8">
+                  ₺ &nbsp;</option>
+
+                <option value="9">
+                  ₴ &nbsp;</option>
+
+              </select>
+            </div>
+
+
+            <div class="field">
+              <label class="name  alx-until thd">Объект свободен с</label>
+              <input style="width: 300px;" class="alx-until thd form-control b-input-calendar" id="available_from" name="available_from" placeholder="Выбрать дату" type="text" value="">
+            </div>
+
+            <div class="field  lang-description-div thd b-description">
+              <!--  -->
+              <label class="b-description__label">
+              Добавить описание на
+                <div class="dropdown">
+                  <button class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="b-description__selected-lang-text">Русский</span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="selectLang">
+                    <li><a data-value="en">English</a></li>
+                    <li><a data-value="ru">Русский</a></li>
+                    <li><a data-value="uk">Українська</a></li>
+                    <li><a data-value="el">Ελληνικά</a></li>
+                    <li><a data-value="sr">Srpski</a></li>
+                  </ul>
+                </div>
+              </label>
+              <p class="b-description__descr">Просим не вставлять в поле описания свои контактные данные и ссылки на сторонние сайты. В противном случае Ваше объявление будет удалено.</p>
+              <input class="b-description__input" type="hidden" value="ru">
+              <textarea class="b-description__textarea  form-control" name="description"></textarea>
+              <p class="b-description__subtextarea" minlength="100" data-default="Минимум 100 символов" data-left="characters left" data-max="500">Минимум 100 символов</p>
+            </div>
+
+            <template id="object-description">
+              <div class="lang-description-div thd b-description">
                 <label class="b-description__label">
-                  Add Description on
+                  Добавить описание на
                   <div class="dropdown">
-                    <button class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="b-description__selected-lang-text">English</span>
                       <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="selectLang">
-                      <li><a href="#" data-value="en">English</a></li>
-                      <li><a href="#" data-value="ru">Русский</a></li>
-                      <li><a href="#" data-value="ua">Українська</a></li>
-                      <li><a href="#" data-value="gr">Ελληνικά</a></li>
-                      <li><a href="#" data-value="es">Srpski</a></li>
+                    <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
+                      <li><a data-value="en">English</a></li>
+                      <li><a data-value="ru">Русский</a></li>
+                      <li><a data-value="uk">Українська</a></li>
+                      <li><a data-value="el">Ελληνικά</a></li>
+                      <li><a data-value="sr">Srpski</a></li>
                     </ul>
                   </div>
                 </label>
-                <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will have to delete your listing.</p>
+
+                <p class="b-description__descr">Просим не вставлять в поле описания свои контактные данные и
+                  ссылки на сторонние сайты. В противном случае Ваше объявление будет удалено.</p>
                 <input class="b-description__input" type="hidden" value="">
                 <textarea class="b-description__textarea  form-control" name="description"></textarea>
-                <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left" data-max="120">Minimum 30 characters</p>
+                <p class="b-description__subtextarea" minlength="100" data-default="Минимум 100 символов"
+                  data-left="characters left" data-max="500">Минимум 100 символов</p>
               </div>
+            </template>
 
-              <script>
-                // ДЛЯ НЕСКОЛЬКИХ БЛОКОВ достаточно иметь один такой фрагмент,
-                // он активирует работу любого кол-ва описаний,
-                // независимо от того, были ли они на странице в момент срабатывания этого кода
-                $(function () {
-                  $(document).on('click', '.b-description .dropdown-menu a', function (e) {
-                    e.preventDefault();
-                    var parent = e.target.closest('.b-description');
-                    $(parent).find('.b-description__selected-lang-text').text(e.target.innerHTML);
-                    $(parent).find('b-description__input').attr('value', e.target.dataset.value);
-                  });
-
-                  $(document).on('keyup change', '.b-description__textarea', function (e) {
-                    var parent = e.target.closest('.b-description');
-                    var counter = this.value.length;
-                    var textBlock = $(parent).find('.b-description__subtextarea');
-                    var maxCounter = +textBlock.data('max')
-                    if (counter === 0) {
-                      textBlock.text(textBlock.data('default'));
-                    }
-                    else {
-                      textBlock.text(maxCounter - counter + ' ' + textBlock.data('left'));
-                    }
-                  });
-                });
-
-                function addDescription() {
-                  var MAX_DESCR_COUNT = 5;
-                  var descrCounter = document.querySelectorAll('.b-description').length;
-
-                  if ('content' in document.createElement('template') && descrCounter <= MAX_DESCR_COUNT) {
-                    var template = document.querySelector('#object-description');
-                    var clone = template.content.cloneNode(true);
-                    $('.b-description:last').after(clone);
-                  }
-                }
-              </script>
-
-              <template id="object-description">
-                <div class="b-description">
-                  <label class="b-description__label">
-                    Add Description on
-                    <div class="dropdown">
-                      <button id="selectLang" class="b-description__selected-lang  dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <span class="b-description__selected-lang-text">English</span>
-                        <span class="caret"></span>
-                      </button>
-                      <ul id="selectLangDrop" class="dropdown-menu" aria-labelledby="selectLang">
-                        <li><a href="#" data-value="en">English</a></li>
-                        <li><a href="#" data-value="ru">Русский</a></li>
-                        <li><a href="#" data-value="ua">Українська</a></li>
-                        <li><a href="#" data-value="gr">Ελληνικά</a></li>
-                        <li><a href="#" data-value="es">Srpski</a></li>
-                      </ul>
-                    </div>
-                  </label>
-                  <p class="b-description__descr">Do not leave your contact information and links in the description, otherwise we will
-                    have to delete your listing.</p>
-                  <input class="b-description__input" type="hidden" value="">
-                  <textarea class="b-description__textarea  form-control" name="description"></textarea>
-                  <p class="b-description__subtextarea" minlength="30" data-default="Minimum 30 characters" data-left="characters left"
-                    data-max="120">Minimum 30 characters</p>
-                </div>
-              </template>
-
-              <div class="b-add-object-buttons">
-                <button class="b-btn-2  b-btn-2--secondary" type="button" onclick="addDescription();">Add text in other language</button>
-                <button class="b-btn-2  gonext" type="button"onclick="onSubmit();">Save and review</button>
-              </div>
+            <div class="lang-description-div thd b-add-object-buttons">
+              <button id="add-description" class="b-btn-2  b-btn-2--secondary" type="button"
+                onclick="addDescription();">Добавить язык описания</button>
             </div>
+
+            <hr>
+
           </div>
+
         </form>
       </div>
 
-      <!-- <div class="b-info-bottom  b-info-bottom--cookies  b-info-bottom--invert">
-        <div class="b-info-bottom__inner">
-          <button type="button" class="close  b-info-bottom__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <div class="b-info-bottom__text">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. За заманивший лучше которое переписывается от всех выйти большого рекламных, подзаголовок она, риторический <a href="#">меня семь живет жизни не</a>. Lorem, ему продолжил.</div>
-          <div class="b-info-bottom__btn  b-info-bottom__btn--single-btn-right">
-            <button class="b-btn-2  b-btn-2--secondary  b-btn-2--block-md">Кнопка</button>
-          </div>
-        </div>
-      </div> -->
-
-@@include('./html-includes/footer.html')
+@@include('./html-includes/footer.html', { "needStickyFooter": "true" })

@@ -1,0 +1,71 @@
+// В этом файле должны быть стили для БЭМ-блока b-search-input, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-search-input {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-flex;
+
+  @media (min-width: $screen-lg) {
+    font-size: 16px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    min-height: 40px;
+    height: 100%;
+    padding: 4px 12px;
+    border: 1px solid #A1A1A1;
+    border-right: 0;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 2px 0 0 2px;
+    color: #000;
+
+    @media (min-width: $screen-lg) {
+      height: 60px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-shrink: 0;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 0 2px 2px 0;
+    padding: 5px;
+    font-size: 0;
+    color: transparent;
+
+    @media (min-width: $screen-lg) {
+      min-width: 60px;
+      min-height: 60px;
+    }
+
+    svg {
+
+      @media (min-width: $screen-lg) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &--no-border {
+
+    #{$block-name}__input {
+      border-width: 0;
+    }
+  }
+
+  &--input-gray-bg {
+
+    #{$block-name}__input {
+      background-color: #EFEFEF;
+    }
+  }
+}

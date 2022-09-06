@@ -1,0 +1,52 @@
+// В этом файле должны быть стили для БЭМ-блока b-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: 551px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+  }
+
+  a {
+    color: #A1A1A1;
+
+    &:hover,
+    &:focus {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  &__counter {
+    margin-left: auto;
+    padding-left: 16px;
+    color: #D84B2A;
+  }
+}

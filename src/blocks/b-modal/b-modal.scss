@@ -262,6 +262,16 @@
     }
   }
 
+  &--top {
+
+    @media (min-width: $screen-md) {
+
+      .modal-dialog {
+        margin-top: 30px;
+      }
+    }
+  }
+
 }
 
 .modal-backdrop {

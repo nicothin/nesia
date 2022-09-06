@@ -1,7 +1,23 @@
     </div>
 
-    <!-- Пришлось сменить тег footer на div из-за говна в мозгах первоначального верстака (каскад в стилях — ППЦ) -->
-    <div class="b-footer  @@if (context.hasInfoBottom) {b-footer--has-info-bottom}">
+    @@if (context.needStickyFooter) {
+      <div class="b-sticky-footer">
+        <div class="container-fluid">
+          <div class="b-sticky-footer__row">
+            <div class="b-sticky-footer__first">
+              <button class="b-btn-2  b-btn-2--text" type="button">Back</button>
+            </div>
+            <div class="b-sticky-footer__second">
+              <button class="b-btn-2  b-btn-2--secondary" type="button">Skip for now</button>
+              <button class="b-btn-2" type="button">Save & Continue</button>
+              <!-- <button class="b-btn-2" type="button">Publish</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+
+    <div class="b-footer  @@if (context.hasInfoBottom) {b-footer--has-info-bottom}  @@if (context.isSearchPage) {b-footer--is-search-page}">
       <div class="b-footer__container  container-fluid">
         <div class="b-footer__row  row">
 
@@ -513,6 +529,8 @@
       <a href="#reg" data-toggle="modal">reg</a>
       <a href="#login" data-toggle="modal">login</a>
     </div>
+
+
 
   </body>
 </html>

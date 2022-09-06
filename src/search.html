@@ -1,0 +1,499 @@
+@@include('./html-includes/header.html', { "isMainPage": "true" })
+
+
+
+      <div class="b-content  b-search">
+
+        <div class="b-search__search-and-filters-desktop">
+
+          <div class="b-search__search-form-wrapper">
+            <div class="b-search__search-form">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="product_cart_form" id="acform">
+
+                    <input id="autocomplete" placeholder="Введите адрес, район или город" name="full_address" type="text"
+                      class="form-control pac-target-input" value="" autocomplete="off">
+                    <div class="btn btn-success" id="autocomplete_btn"></div>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="finded"><span id="count_objects">Найден 1 объект.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="b-search__desktop-filters">
+            <!-- КОПИПАСТА разметки с работающей страницы. Глючит, соответственно -->
+            <div class="drops">
+              <div class="box">
+                <div class="boxdrop" id="listing_type_selects">
+                  <div id="alx_type_name" class="name"><span class="circle green"></span> Продажа<div class="select"></div>
+                  </div>
+                  <div class="selectdown" style="display: none;">
+                    <input type="hidden" name="selectdown" value="1">
+
+                    <ul>
+                      <li><label id="l-green" class="change_checkbox hide_inp check"><span class="ch_box"></span><input
+                            type="checkbox" name="sale_chb" value="1" id="green_disc" checked=""><span
+                            class="circle green"></span> Продажа</label></li>
+
+                      <li><label id="l-red" class="change_checkbox hide_inp"><span class="ch_box"></span><input type="checkbox"
+                            name="rent_chb" value="2" id="red_disc"><span class="circle red"></span> Аренда</label></li>
+
+                      <li><label id="l-yellow-sold" class="change_checkbox hide_inp"><span class="ch_box"></span><input
+                            type="checkbox" name="sold_chb" value="3" id="yellow_disc_sold"><span class="circle yellow"></span>
+                          продано</label></li>
+
+                      <li><label id="l-yellow-rented-out" class="change_checkbox hide_inp"><span class="ch_box"></span><input
+                            type="checkbox" name="rented_out_chb" value="4" id="yellow_disc_rented_out"><span
+                            class="circle yellow"></span> сдан</label></li>
+
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="boxdrop" id="price_boxdrop">
+                  <input type="hidden" value="Более чем" id="more_than">
+                  <input type="hidden" value="Любая цена" id="any_price">
+                  <input type="hidden" value="До" id="txt_upto">
+                  <div class="name"><span class="count">Любая цена</span>
+                    <div class="select"></div>
+                  </div>
+                  <div class="selectdown any-price" style="">
+                    <input type="hidden" name="selectdown" value="2">
+                    <input type="text" class="form-control min" placeholder="От" id="min_price_filter"><span
+                      class="dash">‐</span><input type="text" class="form-control max" placeholder="До" id="max_price_filter">
+                    <ul class="list-1" id="price_check">
+                      <li><a href="#" title="0">Р0</a></li>
+                      <li><a href="#" title="2,832,000">Р2,832,000</a></li>
+                      <li><a href="#" title="5,664,000">Р5,664,000</a></li>
+                      <li><a href="#" title="8,496,000">Р8,496,000</a></li>
+                      <li><a href="#" title="11,328,000">Р11,328,000</a></li>
+                      <li><a href="#" title="14,160,000">Р14,160,000</a></li>
+                      <li><a href="#" title="16,992,000">Р16,992,000</a></li>
+                      <li><a href="#" title="19,824,000">Р19,824,000</a></li>
+                    </ul>
+                    <ul class="list-2" style="display:none;">
+                    </ul>
+                    <div style="text-align: center; clear:both; padding: 1px 0 10px;"><button
+                        onclick="$('.closeAll').click();refreshMarkers('ApplyPrice');$('#now_drop').val('0');">Применить
+                        цену</button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="boxdrop">
+                  <div class="name">Тип недвижимости<div class="select"></div>
+                  </div>
+                  <div class="selectdown" id="prop_type" style="display: none;">
+                    <input type="hidden" name="selectdown" value="3">
+                    <ul>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch1" checked="">Апартаменты</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch2" checked="">Таунхаус</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch3" checked="">Дом</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch4" checked="">Вилла</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch5" checked="">Участок</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch6" checked="">Офис</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch8" checked="">Магазин</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch9" checked="">Склад</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch10" checked="">Парковочное место</label></li>
+                      <li><label class="change_checkbox hide_inp check"><span class="ch_box"></span><input class="alx-type-cb"
+                            type="checkbox" name="ch11" checked="">Промышленное здание</label></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="boxdrop" id="beds_select">
+                  <div class="name"><span class="count">Кол-во спален</span>
+                    <div class="select"></div>
+                  </div>
+                  <div class="selectdown all-beds" style="">
+                    <input type="hidden" name="selectdown" value="4">
+                    <input type="hidden" id="beds_val">
+                    <ul>
+                      <li><a href="#" onclick="$('#beds_val').val(0);refreshMarkers('beds 0');$('#now_drop').val('0');">0+</a>
+                      </li>
+                      <li><a href="#" onclick="$('#beds_val').val(1);refreshMarkers('beds 1');$('#now_drop').val('0');">1+</a>
+                      </li>
+                      <li><a href="#" onclick="$('#beds_val').val(2);refreshMarkers('beds 2');$('#now_drop').val('0');">2+</a>
+                      </li>
+                      <li><a href="#" onclick="$('#beds_val').val(3);refreshMarkers('beds 3');$('#now_drop').val('0');">3+</a>
+                      </li>
+                      <li><a href="#" onclick="$('#beds_val').val(4);refreshMarkers('beds 4');$('#now_drop').val('0');">4+</a>
+                      </li>
+                      <li><a href="#" onclick="$('#beds_val').val(5);refreshMarkers('beds 5');$('#now_drop').val('0');">5+</a>
+                      </li>
+                      <li><a href="#" onclick="$('#beds_val').val(6);refreshMarkers('beds 6');$('#now_drop').val('0');">6+</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="boxdrop">
+                  <div class="name">Доп фильтры<div class="select"></div>
+                  </div>
+                  <div class="selectdown more-filters" style="">
+                    <input type="hidden" name="selectdown" value="5">
+                    <ul>
+                      <li id="baths_li" style="display: block;">
+                        <div class="filter_name one">Ванные</div>
+                        <div class="filter_field">
+                          <div class="selectTime">
+                            <div id="baths_val-styler" class="jq-selectbox jqselect styled"
+                              style="display: inline-block; position: relative; z-index:100"><select class="styled"
+                                id="baths_val"
+                                style="margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0;">
+                                <option value="0">0+</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                                <option value="6">6+</option>
+                                <option value="7">7+</option>
+                              </select>
+                              <div class="jq-selectbox__select" style="position: relative">
+                                <div class="jq-selectbox__select-text">0+</div>
+                                <div class="jq-selectbox__trigger">
+                                  <div class="jq-selectbox__trigger-arrow"></div>
+                                </div>
+                              </div>
+                              <div class="jq-selectbox__dropdown"
+                                style="position: absolute; left: 0px; top: 0px; display: none;">
+                                <ul style="position: relative; list-style: none; overflow: auto; overflow-x: hidden">
+                                  <li class="selected sel" style="">0+</li>
+                                  <li style="">1+</li>
+                                  <li style="">2+</li>
+                                  <li style="">3+</li>
+                                  <li style="">4+</li>
+                                  <li style="">5+</li>
+                                  <li style="">6+</li>
+                                  <li style="">7+</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </li>
+                      <li id="square_li" style="display: block;">
+                        <div class="filter_name">Кв.м.</div>
+                        <div class="filter_field"><input value="" type="text" class="form-control" placeholder="От"
+                            id="sqm_min"><span class="dash">‐</span><input value="" id="sqm_max" type="text"
+                            class="form-control" placeholder="До"></div>
+                      </li>
+                      <li id="plot_li" style="display: block;">
+                        <div class="filter_name one">Пл.<br>участка</div>
+                        <div class="filter_field"><input value="" type="text" class="form-control" placeholder="От"
+                            id="plot_min"><span class="dash">‐</span><input value="" id="plot_max" type="text"
+                            class="form-control" placeholder="До"></div>
+                      </li>
+                      <li id="year_li" style="display: block;">
+                        <div class="filter_name">Год<br> постр.</div>
+                        <div class="filter_field"><input value="" type="text" class="form-control" placeholder="От"
+                            id="year_min"><span class="dash">‐</span><input value="" id="year_max" type="text"
+                            class="form-control" placeholder="До"></div>
+                      </li>
+                      <li>
+                        <div class="filter_name">Ключ.<br>слова</div>
+                        <div class="filter_field"><textarea id="keywords" class="form-control"
+                            placeholder="напр. бассейн, камин"></textarea></div>
+                      </li>
+                    </ul>
+                    <div style="text-align: center; padding: 1px 0 10px;"><button
+                        onclick="$('.closeAll').click();refreshMarkers('Apply filters');$('#now_drop').val('0');">Применить
+                        фильтры</button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / КОПИПАСТА разметки с работающей страницы. Глючит, соответственно -->
+          </div>
+
+        </div>
+
+        <div class="b-search__search-and-filters-mobile">
+          <form class="b-search__search-input  b-search-input">
+            <input placeholder="Athines, Greece" type="text" class="b-search-input__input">
+            <button class="b-search-input__btn  b-btn-2  b-btn-2--lg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M17.5 17.5L13.875 13.875" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Search
+            </button>
+          </form>
+          <!-- <form class="b-search__search-form-mobile">
+            <input placeholder="Athines, Greece" type="text" class="b-search__input  b-search__input--grow    b-search__input--before-btn">
+            <button class="b-search__search-btn  b-btn-2  b-btn-2--lg">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.5 17.5L13.875 13.875" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Search
+            </button>
+          </form> -->
+          <button class="b-search__mobile-filters-btn  b-btn-2  b-btn-2--secondary  b-btn-2--lg" type="button" data-target="#mobile-filters" data-toggle="modal">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.3334 2.5H1.66675L8.33342 10.3833V15.8333L11.6667 17.5V10.3833L18.3334 2.5Z" stroke="#D84B2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <!-- <span class="b-search__mobile-filters-btn-counter">5</span> -->
+            Filter
+          </button>
+        </div>
+
+        <div class="b-search__header">
+          <h1 class="b-search__header-title">Αποκόρωνος, Greece</h1>
+          <div class="b-search__header-inner">
+            <p class="b-search__header-descr">30 homes for sale available</p>
+            <div class="b-search__header-sort-select">
+              Sort:
+              <span class="dropdown">
+                <button class="b-btn-2  b-btn-2--link  b-btn-2--has-drop" type="button" data-toggle="dropdown" aria-expanded="false">New Listing</button>
+                <ul class="dropdown-menu  dropdown-menu-right  b-dropdown">
+                  <li class="selected">
+                    <a href="#">New Listing</a>
+                  </li>
+                  <li>
+                    <a href="#">Prices (Lo–Hi)</a>
+                  </li>
+                  <li>
+                    <a href="#">Prices (Hi–Lo)</a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <ul id="items-list" class="b-search__list">
+          <li class="b-search__item">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { hasSlider: true, liked: true })
+          </li>
+          <li class="b-search__item">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html')
+          </li>
+          <li class="b-search__item">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html')
+          </li>
+          <li class="b-search__item">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html')
+          </li>
+          <li class="b-search__item">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html')
+          </li>
+          <li class="b-search__item">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html')
+          </li>
+          <li class="b-search__item">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html')
+          </li>
+        </ul>
+
+        <div id="map-wrapper" class="b-search__map-wrapper">
+          <p style="padding: 1em; background-color: cornflowerblue;">Вместо этого параграфа - карта</p>
+          <div style="padding: 1em">
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { hasSlider: true, liked: true, isOnMap: true })
+            <hr>
+            @@include('./blocks/b-card-mini-3/b-card-mini-3.html', { isOnMap: true })
+          </div>
+        </div>
+
+        <div class="b-search__mobile-viewmode-btns">
+          <a href="#map-wrapper" class="b-search__mobile-viewmode-map  b-btn-2  b-btn-2--block  b-btn-2--lg">
+            Map
+          </a>
+          <a href="#items-list" class="b-search__mobile-viewmode-list  b-btn-2  b-btn-2--block  b-btn-2--lg  hidden">
+            List
+          </a>
+        </div>
+
+      </div>
+
+      <div class="modal  b-modal  b-modal--top  b-search__modal" tabindex="-1" role="dialog" id="mobile-filters">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <form action="" class="b-search__modal-form">
+
+              <div class="b-search__modal-form-item  b-search__modal-form-select-type">
+                <div class="b-radio-buttons">
+                  <input type="radio" name="type" value="0" id="type-0" checked>
+                  <label for="type-0" class="b-radio-buttons__label">Buy</label>
+                  <input type="radio" name="type" value="1" id="type-1">
+                  <label for="type-1" class="b-radio-buttons__label">Rent</label>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Price</label>
+                <div class="b-search__two-wrap">
+                  <select>
+                    <option>No Min 1111</option>
+                    <option>some option 1</option>
+                    <option>some option 2</option>
+                    <option>some option 3</option>
+                    <option>some long long long option 4</option>
+                  </select>
+                  <span class="b-search__selects-divider">-</span>
+                  <select>
+                    <option>No Max</option>
+                    <option>some option 1</option>
+                    <option>some option 2</option>
+                    <option>some option 3</option>
+                    <option>some long long long option 4</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-select-type">
+                <label class="b-form-group__label">Bedrooms</label>
+                <div class="b-radio-buttons">
+                  <!-- Если вдруг окажется, что надпись вначале - неактивный текст -->
+                  <!-- <span class="b-radio-buttons__text">Rent</span> -->
+                  <input type="radio" name="bedroms" value="0" id="bedroms-0" checked>
+                  <label for="bedroms-0" class="b-radio-buttons__label">Rent</label>
+                  <input type="radio" name="bedroms" value="1" id="bedroms-1">
+                  <label for="bedroms-1" class="b-radio-buttons__label">1+</label>
+                  <input type="radio" name="bedroms" value="2" id="bedroms-2">
+                  <label for="bedroms-2" class="b-radio-buttons__label">2+</label>
+                  <input type="radio" name="bedroms" value="3" id="bedroms-3">
+                  <label for="bedroms-3" class="b-radio-buttons__label">3+</label>
+                  <input type="radio" name="bedroms" value="4" id="bedroms-4">
+                  <label for="bedroms-4" class="b-radio-buttons__label">4+</label>
+                  <input type="radio" name="bedroms" value="5" id="bedroms-5">
+                  <label for="bedroms-5" class="b-radio-buttons__label">5+</label>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-checkboxes">
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox" checked>
+                  <span class="b-form-group__checkbox-text">Apartament</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Townhouse</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">House</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Villa</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Land plot</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Apartament</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Townhouse</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">House</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Villa</span>
+                </label>
+                <label class="b-form-group__label-checkbox">
+                  <input type="checkbox" class="b-form-group__checkbox">
+                  <span class="b-form-group__checkbox-text">Land plot</span>
+                </label>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-select-type">
+                <label class="b-form-group__label">Bathrooms</label>
+                <div class="b-radio-buttons">
+                  <!-- Если вдруг окажется, что надпись вначале - неактивный текст -->
+                  <!-- <span class="b-radio-buttons__text">Rent</span> -->
+                  <input type="radio" name="bathroms" value="0" id="bathroms-0" checked>
+                  <label for="bathroms-0" class="b-radio-buttons__label">Rent</label>
+                  <input type="radio" name="bathroms" value="1" id="bathroms-1">
+                  <label for="bathroms-1" class="b-radio-buttons__label">1+</label>
+                  <input type="radio" name="bathroms" value="2" id="bathroms-2">
+                  <label for="bathroms-2" class="b-radio-buttons__label">2+</label>
+                  <input type="radio" name="bathroms" value="3" id="bathroms-3">
+                  <label for="bathroms-3" class="b-radio-buttons__label">3+</label>
+                  <input type="radio" name="bathroms" value="4" id="bathroms-4">
+                  <label for="bathroms-4" class="b-radio-buttons__label">4+</label>
+                  <input type="radio" name="bathroms" value="5" id="bathroms-5">
+                  <label for="bathroms-5" class="b-radio-buttons__label">5+</label>
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Square meters</label>
+                <div class="b-search__two-wrap">
+                  <input type="number" placeholder="Min" class="form-control  b-form-control  b-form-group__input">
+                  <span class="b-search__selects-divider">-</span>
+                  <input type="number" placeholder="Max" class="form-control  b-form-control  b-form-group__input">
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Plot size</label>
+                <div class="b-search__two-wrap">
+                  <input type="number" placeholder="Min" class="form-control  b-form-control  b-form-group__input">
+                  <span class="b-search__selects-divider">-</span>
+                  <input type="number" placeholder="Max" class="form-control  b-form-control  b-form-group__input">
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item  b-search__modal-form-selects">
+                <label class="b-form-group__label">Year building</label>
+                <div class="b-search__two-wrap">
+                  <input type="number" placeholder="Min" class="form-control  b-form-control  b-form-group__input">
+                  <span class="b-search__selects-divider">-</span>
+                  <input type="number" placeholder="Max" class="form-control  b-form-control  b-form-group__input">
+                </div>
+              </div>
+
+              <div class="b-search__modal-form-item">
+                <label for="key-words" class="b-form-group__label">Key words</label>
+                <input type="text" class="form-control  b-form-control  b-form-group__input" id="key-words" placeholder="e.g. Pool, Firepalce, Parking...">
+              </div>
+
+              <div class="b-search__modal-form-action">
+                <button class="b-btn-2  b-btn-2--block  b-btn-2--lg" type="submit" data-dismiss="modal">
+                  View homes
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+@@include('./html-includes/footer.html', { isSearchPage: true, })

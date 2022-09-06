@@ -1,0 +1,101 @@
+ // В этом файле должны быть стили для БЭМ-блока b-index-search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.b-index-search {
+
+  $block-name:                &; // #{$block-name}__element
+
+  min-height: 304px;
+  padding: 40px 16px;
+  background-image: url(../img/index-search-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #696460;
+  color: #fff;
+
+  @media (min-width: $screen-lg) {
+    min-height: 572px;
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  // .b-search__input {
+  //   height: 41px;
+
+  //   @media (min-width: $screen-lg) {
+  //     height: 60px;
+  //     padding-right: 20px;
+  //     padding-left: 20px;
+  //   }
+  // }
+
+  // .b-search__search-btn {
+
+  //   @media (min-width: $screen-lg) {
+  //     width: 60px;
+
+  //     svg {
+  //       width: 30px;
+  //       height: 30px;
+  //     }
+  //   }
+  // }
+
+  // .b-search__search-form-mobile {
+
+  //   @media (min-width: $screen-lg) {
+  //     font-size: 16px;
+  //   }
+  // }
+
+
+
+  &__inner {
+    max-width: 1360px;
+    margin: auto;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: inherit;
+    text-align: center;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 56px;
+      font-size: 40px;
+      line-height: 1.3;
+    }
+  }
+
+  &__radio {
+    margin: 0 auto 40px;
+    justify-content: center;
+
+     @media (min-width: $screen-lg) {
+      margin-bottom: 32px;
+     }
+
+    .b-radio-buttons__label {
+      width: 115px;
+      flex-grow: 0;
+    }
+  }
+
+  &__radio-no-mobile {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__search-input {
+    display: flex !important;
+    max-width: 670px;
+    margin: 0 auto;
+  }
+}

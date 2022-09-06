@@ -17,6 +17,11 @@
     }
   }
 
+  &__label {
+    font-weight: 500;
+    color: inherit;
+  }
+
   &__selected-lang {
     display: inline-block;
     vertical-align: baseline;
