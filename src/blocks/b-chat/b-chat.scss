@@ -159,6 +159,7 @@
     margin-bottom: 16px;
     text-align: center;
     font-size: $font-size--small;
+    line-height: 1.4;
 
     #{$block-name}__item-date + & {
       margin-top: -8px;
@@ -167,6 +168,25 @@
     a {
       color: #D84B2A;
     }
+
+    svg {
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    &--black {
+      color: #000;
+    }
+  }
+
+  &__item-description {
+    max-width: 342px;
+    margin: 0 auto 32px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #828282;
   }
 
   &__item-msg {
