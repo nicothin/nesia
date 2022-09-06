@@ -63,6 +63,15 @@
     font-weight: 500;
   }
 
+  &__mobile-header-user-name-wrapper {
+    min-width: 0;
+    font-size: 16px;
+
+    .b-user-2__name {
+      padding: 0;
+    }
+  }
+
   &__mobile-header-action-wrap {
     margin-left: auto;
     max-width: 50%;
