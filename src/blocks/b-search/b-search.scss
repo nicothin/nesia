@@ -203,7 +203,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
-    margin: 0;
+    margin: 0 0 32px;
     padding: 0 16px;
     list-style: none;
 
@@ -219,12 +219,58 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 40px 20px;
       width: 502px;
+      margin-bottom: 64px;
       padding: 0 20px 0 40px;
     }
 
     @media (min-width: $screen-xl) {
       grid-template-columns: repeat(3, 1fr);
       width: 730px;
+    }
+  }
+
+  &__pagination {
+    margin-bottom: 32px !important;
+
+    @media (min-width: $screen-lg) {
+      width: 502px;
+      margin-bottom: 86px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 730px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A1A1A1;
+
+    @media (min-width: $screen-lg) {
+      width: 502px;
+      padding-right: 40px;
+      padding-bottom: 0;
+      padding-left: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 730px;
+    }
+
+    p {
+      max-width: 670px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

@@ -129,7 +129,8 @@
     "b-card-city": [],
     "b-сountries": [],
     "b-breadcrumbs-invert": [],
-    "b-list": []
+    "b-list": [],
+    "b-pagination": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
